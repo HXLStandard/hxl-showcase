@@ -1,4 +1,4 @@
 #!/bin/sh
 
 psql < reset.sql
-psql < schema.sql
+psql blue < schema.sql
