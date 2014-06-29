@@ -6,7 +6,8 @@ create table code (
 
 create table dataset (
   id bigserial primary key,
-  ident varchar(64) unique not null
+  ident varchar(64) unique not null,
+  name varchar(128) not null
 );
 
 create table import (
