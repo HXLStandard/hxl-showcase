@@ -11,7 +11,7 @@ if (count($argv) != 3) {
 
 list($script, $ident, $name) = $argv;
 
-$statement = $connection->prepare('insert into dataset (ident, name) values (?, ?)');
+$statement = $connection->prepare('select add_dataset(?, ?)');
 if ($statement->execute(array($ident, $name))) {
   printf("Added dataset %s (%s)\n", $ident, $name);
 } else {
