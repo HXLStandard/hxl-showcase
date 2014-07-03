@@ -26,7 +26,7 @@ if ($replace_flag) {
 }
 
 // a prepared statement can pay off here
-$statement = $connection->prepare('insert into code (code, name) values (?, ?)');
+$statement = $connection->prepare('select add_code(?, ?)');
 
 $headers = fgetcsv(STDIN);
 $n = 1; // count rows for error reporting

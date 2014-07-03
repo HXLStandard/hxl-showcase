@@ -3,4 +3,6 @@
 psql < reset.sql
 psql blue < schema.sql
 psql blue < perms.sql
+psql blue < procedures.sql
+
 
