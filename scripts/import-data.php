@@ -5,28 +5,32 @@
 
 require_once(__DIR__ . '/lib/database.php');
 
-$dataset = @$argv[1] || die("Usage: php import-data.php <dataset> < DATA.csv\n");
+($dataset = @$argv[1]) || die("Usage: php import-data.php <dataset> < DATA.csv\n");
 
 // Use a transaction, so that it's all or nothing
 $connection->beginTransaction();
 
-$statement = $connection->prepare('select add_import(?)');
-if (!$statement->execute(array($dataset))) {
-  die($statement->errorInfo()[2] . "\n");
-}
-$import_ref = $statement->fetchColumn();
-print_r($import_ref); exit;
+// Create a new import session
+$import_id = add_import($dataset);
 
-$hxl_row = fgetcsv(STDIN);
+// First row is HXL codes; second row is text headers
+$code_row = fgetcsv(STDIN);
 $header_row = fgetcsv(STDIN);
 
-// a prepared statement can pay off here
-$statement = $connection->prepare('insert into code (code, name) values (?, ?)');
+// Get codes for headers
+$cols = array();
+for ($i = 0; $i < count($code_row); $i++) {
+  array_push($cols, add_col($import_id, $code_row[$i], $header_row[$i]));
+}
 
-$headers = fgetcsv(STDIN);
-$n = 1; // count rows for error reporting
 while ($row = fgetcsv(STDIN)) {
-  $n++;
+  $row_id = add_row($import_id);
+  for ($i = 0; $i < count($code_row); $i++) {
+    $col_id = $cols[$i];
+    if ($row) {
+      $value_id = add_value($row_id, $col_id, $row[$i]);
+    }
+  }
 }
 
 $connection->commit();
