@@ -41,7 +41,7 @@ for ($i = 0; $i < count($code_row); $i++) {
 $n = 0;
 while ($row = fgetcsv(STDIN)) {
   $n++;
-  $row_id = add_row($import_id);
+  $row_id = add_row();
   // Read each value in the row
   for ($i = 0; $i < count($code_row); $i++) {
     $col_id = $cols[$i];

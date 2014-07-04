@@ -51,8 +51,8 @@ $$ language sql;
 --
 -- Create a new row.
 --
-create or replace function add_row(bigint) returns bigint as $$
-  insert into row (import) values ($1) returning id;
+create or replace function add_row() returns bigint as $$
+  insert into row (id) values (default) returning id;
 $$ language sql;
 
 --

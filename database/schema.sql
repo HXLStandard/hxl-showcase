@@ -14,6 +14,7 @@ create table import (
   id bigserial primary key,
   dataset bigint not null,
   stamp timestamp default now(),
+  unique (dataset, stamp),
   foreign key(dataset) references dataset(id)
     on update cascade on delete cascade
 );
@@ -30,10 +31,7 @@ create table col (
 );
 
 create table row (
-  id bigserial primary key,
-  import bigint not null,
-  foreign key(import) references import(id)
-    on update cascade on delete cascade
+  id bigserial primary key
 );
 
 create table value (
