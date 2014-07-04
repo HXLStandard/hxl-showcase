@@ -23,12 +23,20 @@ for ($i = 0; $i < count($code_row); $i++) {
   array_push($cols, add_col($import_id, $code_row[$i], $header_row[$i]));
 }
 
+$n = 0;
+$statement = $connection->prepare('select add_value(?, ?, ?)');
 while ($row = fgetcsv(STDIN)) {
+  $n++;
+  if (($n % 100) == 0) {
+    printf("%d...", $n);
+  }
   $row_id = add_row($import_id);
   for ($i = 0; $i < count($code_row); $i++) {
     $col_id = $cols[$i];
     if ($row) {
-      $value_id = add_value($row_id, $col_id, $row[$i]);
+      if (!$statement->execute(array($row_id, $col_id, $row[$i]))) {
+        die($statement->errorInfo()[2] . "\n");
+      }
     }
   }
 }
