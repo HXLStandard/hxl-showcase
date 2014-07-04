@@ -1,12 +1,17 @@
 <?php
-////////////////////////////////////////////////////////////////////////
-// Import HXL codes from a CSV file
-//
-// Expecting "code" and "name" headers in the CSV.
-//
-// If there's any problem, the script will fail completely, and the
-// database will be unchanged.
-////////////////////////////////////////////////////////////////////////
+/**
+ * Import HXL codes from a CSV file
+ *
+ * Usage: php import-codes.php [-r] < SOURCE.csv
+ *
+ * -r means remove all existing codes before reimporting
+ *
+ * SOURCE.csv is a CSV file with (at least) the headers "code" and
+ * "name"
+ *
+ * If there's any problem, the script will fail completely, and the
+ * database will be unchanged.
+ */
 
 require_once(__DIR__ . '/lib/database.php');
 
@@ -15,18 +20,14 @@ if (count($argv) > 2 || (count($argv) == 2 && $argv[1] != '-r')) {
 }
 
 // Use a transaction, so that it's all or nothing
-$connection->beginTransaction();
+_db()->beginTransaction();
 
 // if "-r" is specified, delete old codes first
-list($script, $replace_flag) = $argv;
-
+@list($script, $replace_flag) = $argv;
 if ($replace_flag) {
   print("Deleting old codes\n");
-  $connection->exec('delete from code');
+  _query('delete from code');
 }
-
-// a prepared statement can pay off here
-$statement = $connection->prepare('select add_code(?, ?)');
 
 $headers = fgetcsv(STDIN);
 $n = 1; // count rows for error reporting
@@ -35,11 +36,8 @@ while ($row = fgetcsv(STDIN)) {
   $fields = array_combine($headers, $row);
   if ($fields['code']) {
     if ($fields['name']) {
-      if ($statement->execute(array($fields['code'], $fields['name']))) {
-          printf("Added code %s (%s)\n", $fields['code'], $fields['name']);
-      } else {
-        die($statement->errorInfo()[2] . "\n");
-      }
+      add_code($fields['code'], $fields['name']);
+      printf("Added code %s (%s)\n", $fields['code'], $fields['name']);
     } else {
       die("Missing name in row $n\n");
     }
@@ -48,4 +46,6 @@ while ($row = fgetcsv(STDIN)) {
   }
 }
 
-$connection->commit();
+_db()->commit();
+
+// end

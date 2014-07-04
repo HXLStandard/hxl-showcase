@@ -7,6 +7,13 @@ create or replace function add_code(varchar(64), varchar(128)) returns bigint as
 $$ language sql;
 
 --
+-- Delete a HXL code.
+--
+create or replace function del_code(varchar(64)) returns bigint as $$
+  with deleted as (delete from code where code=$1 returning *) select count(*) from deleted;
+$$ language sql;
+
+--
 -- Look up a HXL code.
 --
 create or replace function ref_code(varchar(64)) returns bigint as $$

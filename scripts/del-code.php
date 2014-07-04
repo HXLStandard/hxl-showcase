@@ -1,20 +1,26 @@
 <?php
-////////////////////////////////////////////////////////////////////////
-// Delete a HXL code in the database
-////////////////////////////////////////////////////////////////////////
+/**
+ * Delete a HXL code from the database
+ *
+ * Usage: php del-code.php <code>
+ *
+ * code: the unique HXL code (e.g. "sector").
+ */
 
 require_once(__DIR__ . '/lib/database.php');
 
 if (count($argv) != 2) {
   die("Usage: php del-code.php <code>\n");
+} else {
+  list($script, $code) = $argv;
 }
 
-list($script, $code) = $argv;
-
-$statement = $connection->prepare('delete from code where code=?');
-if ($statement->execute(array($code))) {
+if (del_code($code)) {
   printf("Deleted code %s\n", $code);
 } else {
-  die($statement->errorInfo()[2] . "\n");
+  printf("Code %s not found\n", $code);
 }
+
+// end
+
 

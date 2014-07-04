@@ -1,20 +1,26 @@
 <?php
-////////////////////////////////////////////////////////////////////////
-// Add a new dataset in the database
-////////////////////////////////////////////////////////////////////////
+/**
+ * Add a new dataset to the database
+ *
+ * Usage: php add-dataset.php <ident> <name>
+ *
+ * ident: the short identifier for the dataset (e.g. "unhcr")
+ *
+ * name: the human-readable name for the dataset (e.g. "UNHCR refugee
+ * statistics")
+ */
 
 require_once(__DIR__ . '/lib/database.php');
 
 if (count($argv) != 3) {
   die("Usage: php add-dataset.php <ident> <name>\n");
-}
-
-list($script, $ident, $name) = $argv;
-
-$statement = $connection->prepare('select add_dataset(?, ?)');
-if ($statement->execute(array($ident, $name))) {
-  printf("Added dataset %s (%s)\n", $ident, $name);
 } else {
-  die($statement->errorInfo()[2] . "\n");
+  list($script, $ident, $name) = $argv;
 }
+
+add_dataset($ident, $name);
+
+printf("Added dataset %s (%s)\n", $ident, $name);
+
+// end
 
