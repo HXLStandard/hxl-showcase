@@ -68,6 +68,10 @@ function _function() {
   return $statement->fetchColumn();
 }
 
+function add_source($ident, $name) {
+  return _function('select add_source(?, ?)', $ident, $name);
+}
+
 /**
  * Add a HXL code.
  *
@@ -92,12 +96,13 @@ function del_code($code) {
 /**
  * Add a dataset.
  *
+ * @param $source the unique source identifier (string)
  * @param $ident the unique dataset identifier (string)
  * @param $name the dataset name (string)
  * @return the dataset database id (long int)
  */
-function add_dataset($ident, $name) {
-  return _function('select add_dataset(?, ?)', $ident, $name);
+function add_dataset($source, $ident, $name) {
+  return _function('select add_dataset(ref_source(?), ?, ?)', $source, $ident, $name);
 }
 
 /**

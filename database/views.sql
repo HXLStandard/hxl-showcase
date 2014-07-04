@@ -1,3 +1,8 @@
+create or replace view dataset_view as
+select D.*, S.ident as source_ident, S.name as source_name
+from dataset D
+join source S on D.source=S.id;
+
 create or replace view import_view as
 select I.*, D.ident as dataset_ident, D.name as dataset_name
 from import I
