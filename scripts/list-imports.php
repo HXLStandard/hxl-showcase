@@ -25,9 +25,9 @@ if ($dataset) {
   $statement = _query('select * from import_view');
 }
 
-fputcsv(STDOUT, array('id', 'stamp', 'dataset_ident', 'dataset_name', 'source_ident', 'source_name'));
+fputcsv(STDOUT, array('id', 'stamp', 'dataset_ident', 'dataset_name', 'source_ident', 'source_name', 'usr_ident', 'usr_name'));
 while ($row = $statement->fetch()) {
-  fputcsv(STDOUT, array($row->id, $row->stamp, $row->dataset_ident, $row->dataset_name, $row->source_ident, $row->source_name));
+  fputcsv(STDOUT, array($row->id, $row->stamp, $row->dataset_ident, $row->dataset_name, $row->source_ident, $row->source_name, $row->usr_ident, $row->usr_name));
 }
 
 // end

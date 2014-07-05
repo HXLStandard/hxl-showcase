@@ -17,17 +17,17 @@
 
 require_once(__DIR__ . '/lib/database.php');
 
-if (count($argv) == 3) {
-  list($script, $source, $dataset) = $argv;
+if (count($argv) == 4) {
+  list($script, $usr, $source, $dataset) = $argv;
 } else {
-  die("Usage: php import-data.php <source> <dataset> < DATA.csv\n");
+  die("Usage: php import-data.php <usr> <source> <dataset> < DATA.csv\n");
 }
 
 // Use a transaction, so that it's all or nothing
 _db()->beginTransaction();
 
 // Create a new import session
-$import_id = add_import($source, $dataset);
+$import_id = add_import($usr, $source, $dataset);
 
 // First row is HXL codes; second row is text headers
 $code_row = fgetcsv(STDIN);

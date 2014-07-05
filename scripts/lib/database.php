@@ -125,7 +125,7 @@ function ref_dataset($ident) {
  * @param $dataset_id the dataset identifier (long int)
  * @return the import id (long int)
  */
-function add_import($source_ident, $dataset_ident, $usr_ident) {
+function add_import($usr_ident, $source_ident, $dataset_ident) {
   return _function('select add_import(ref_dataset(?, ?), ref_usr(?))', $source_ident, $dataset_ident, $usr_ident);
 }
 
