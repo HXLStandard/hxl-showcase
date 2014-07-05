@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2014-07-05 12:51:44
+<?php /* Smarty version Smarty-3.0.7, created on 2014-07-05 12:55:39
          compiled from "/home/david/Source/BlueMonster/config/../views/templates/import.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:160945216953b82d20cb8f41-80171501%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:41450595853b82e0b4a5f08-30761215%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd8a0aefea5ec6f12c319c4927bb18d85cf97caa7' => 
     array (
       0 => '/home/david/Source/BlueMonster/config/../views/templates/import.tpl',
-      1 => 1404579103,
+      1 => 1404579338,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '160945216953b82d20cb8f41-80171501',
+  'nocache_hash' => '41450595853b82e0b4a5f08-30761215',
   'function' => 
   array (
   ),
@@ -23,8 +23,8 @@ $_smarty_tpl->decodeProperties(array (
 <html>
   <head>
     <title><?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->dataset_name);?>
- imported <?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->stamp);?>
-</title>
+ (<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->stamp);?>
+)</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -42,8 +42,8 @@ $_smarty_tpl->decodeProperties(array (
 
     <main>
       <h1><?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->dataset_name);?>
- imported <?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->stamp);?>
-</h1>
+ (<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->stamp);?>
+)</h1>
 
       <p>Imported by <a href="/user/<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->usr_ident,'url');?>
 "><?php echo smarty_modifier_escape($_smarty_tpl->getVariable('import')->value->usr_name);?>

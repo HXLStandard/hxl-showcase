@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>{$import->dataset_name|escape} imported {$import->stamp|escape}</title>
+    <title>{$import->dataset_name|escape} ({$import->stamp|escape})</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -14,7 +14,7 @@
     </nav>
 
     <main>
-      <h1>{$import->dataset_name|escape} imported {$import->stamp|escape}</h1>
+      <h1>{$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
       <p>Imported by <a href="/user/{$import->usr_ident|escape:'url'}">{$import->usr_name|escape}</a> on {$import->stamp|escape}.</p>
 
