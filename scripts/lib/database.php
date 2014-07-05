@@ -72,6 +72,10 @@ function add_source($ident, $name) {
   return _function('select add_source(?, ?)', $ident, $name);
 }
 
+function add_usr($ident, $name) {
+  return _function('select add_usr(?, ?)', $ident, $name);
+}
+
 /**
  * Add a HXL code.
  *
@@ -121,8 +125,8 @@ function ref_dataset($ident) {
  * @param $dataset_id the dataset identifier (long int)
  * @return the import id (long int)
  */
-function add_import($source_ident, $dataset_ident) {
-  return _function('select add_import(ref_dataset(?, ?))', $source_ident, $dataset_ident);
+function add_import($source_ident, $dataset_ident, $usr_ident) {
+  return _function('select add_import(ref_dataset(?, ?), ref_usr(?))', $source_ident, $dataset_ident, $usr_ident);
 }
 
 /**

@@ -1,4 +1,19 @@
 --
+-- Add a new user.
+--
+create or replace function add_usr(varchar(64), varchar(128)) returns bigint as $$
+  insert into usr(ident, name) values ($1, $2) returning id;
+$$ language sql;
+
+--
+-- Look up a user.
+--
+create or replace function ref_usr(varchar(64)) returns bigint as $$
+  select id from usr where ident=$1;
+$$ language sql;
+
+
+--
 -- Add a new source.
 --
 create or replace function add_source(varchar(64), varchar(128)) returns bigint as $$
@@ -43,8 +58,8 @@ $$ language sql;
 --
 -- Create a new import.
 --
-create or replace function add_import(bigint) returns bigint as $$
-  insert into import (dataset, stamp) values ($1, now()) returning id;
+create or replace function add_import(bigint, bigint) returns bigint as $$
+  insert into import (dataset, usr, stamp) values ($1, $2, now()) returning id;
 $$ language sql;
 
 --

@@ -1,3 +1,9 @@
+create table usr (
+  id bigserial primary key,
+  ident varchar(64) unique not null,
+  name varchar(128) not null
+);
+
 create table source (
   id bigserial primary key,
   ident varchar(64) unique not null,
@@ -22,9 +28,11 @@ create table dataset (
 create table import (
   id bigserial primary key,
   dataset bigint not null,
+  usr bigint not null,
   stamp timestamp default now(),
   unique (dataset, stamp),
-  foreign key(dataset) references dataset(id)
+  foreign key(dataset) references dataset(id),
+  foreign key(usr) references usr(id)
 );
 
 create table col (
