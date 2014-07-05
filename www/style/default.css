@@ -1,0 +1,15 @@
+
+
+nav.breadcrumbs li {
+    display: inline;
+    font-size: 90%;
+    font-style: italic;
+}
+
+nav.breadcrumbs li:after {
+    content: " >> ";
+}
+
+table, th, td {
+    border: 1px solid;
+}
