@@ -121,8 +121,8 @@ function ref_dataset($ident) {
  * @param $dataset_id the dataset identifier (long int)
  * @return the import id (long int)
  */
-function add_import($dataset_ident) {
-  return _function('select add_import(?)', $dataset_ident);
+function add_import($source_ident, $dataset_ident) {
+  return _function('select add_import(ref_dataset(?, ?))', $source_ident, $dataset_ident);
 }
 
 /**
@@ -134,7 +134,7 @@ function add_import($dataset_ident) {
  * @return the column id (long int)
  */
 function add_col($import_id, $code, $header) {
-  return _function('select add_col(?, ?, ?)', $import_id, $code, $header);
+  return _function('select add_col(?, ref_code(?), ?)', $import_id, $code, $header);
 }
 
 /**

@@ -2,24 +2,32 @@
 /**
  * List imports for a specific dataset in CSV format.
  *
- * Usage: php list-imports.php <dataset>
+ * Usage: php list-imports.php <source> <dataset>
  *
- * dataset: the unique identifier for the dataset (e.g. "unhcr")
+ * source: the unique identifier for the source (e.g. "unhcr")
+ *
+ * dataset: the unique identifier for the dataset (e.g. "refugees")
  */
 
 require_once(__DIR__ . '/lib/database.php');
 
-if (count($argv) == 2) {
-  $dataset = $argv[1];
+if (count($argv) <= 3) {
+  @list($script, $source, $dataset) = $argv;
 } else {
-  die("Usage: php list-imports.php <dataset>\n");
+  die("Usage: php list-imports.php <source> <dataset>\n");
 }
 
-$statement = _query('select * from import_view where dataset=ref_dataset(?)', $dataset);
+if ($dataset) {
+  $statement = _query('select * from import_view where source_ident=? and dataset_ident=?', $source, $dataset);
+} else if ($source) {
+  $statement = _query('select * from import_view where source_ident=?', $source);
+} else {
+  $statement = _query('select * from import_view');
+}
 
-fputcsv(STDOUT, array('id, dataset, stamp'));
+fputcsv(STDOUT, array('id', 'stamp', 'dataset_ident', 'dataset_name', 'source_ident', 'source_name'));
 while ($row = $statement->fetch()) {
-  fputcsv(STDOUT, array($row->id, $row->dataset_ident, $row->stamp));
+  fputcsv(STDOUT, array($row->id, $row->stamp, $row->dataset_ident, $row->dataset_name, $row->source_ident, $row->source_name));
 }
 
 // end

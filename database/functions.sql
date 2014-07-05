@@ -37,7 +37,7 @@ $$ language sql;
 -- Look up a dataset.
 --
 create or replace function ref_dataset(varchar(64), varchar(64)) returns bigint as $$
-  select id from dataset where source=ref_source($1) and ident=$1;
+  select id from dataset where source=ref_source($1) and ident=$2;
 $$ language sql;
 
 --

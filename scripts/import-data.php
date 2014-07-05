@@ -2,9 +2,11 @@
 /**
  * Import HXL data from a CSV file
  *
- * Usage: php import-data.php <dataset> < DATA.csv
+ * Usage: php import-data.php <source> <dataset> < DATA.csv
  *
- * dataset: the unique dataset identifier (e.g. "unhcr")
+ * source: the unique source identifier (e.g. "unhcr")
+ *
+ * dataset: the unique dataset identifier (e.g. "refugees")
  *
  * DATA.csv: the source CSV file, containing HXL codes on the first
  * line, and human-readable headers on the second. Remaining lines are
@@ -15,17 +17,17 @@
 
 require_once(__DIR__ . '/lib/database.php');
 
-if (count($argv) == 2) {
-  $dataset = @$argv[1];
+if (count($argv) == 3) {
+  list($script, $source, $dataset) = $argv;
 } else {
-  die("Usage: php import-data.php <dataset> < DATA.csv\n");
+  die("Usage: php import-data.php <source> <dataset> < DATA.csv\n");
 }
 
 // Use a transaction, so that it's all or nothing
 _db()->beginTransaction();
 
 // Create a new import session
-$import_id = add_import($dataset);
+$import_id = add_import($source, $dataset);
 
 // First row is HXL codes; second row is text headers
 $code_row = fgetcsv(STDIN);
