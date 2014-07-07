@@ -3,21 +3,21 @@
 class ReportController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
-    $cols = $request->get('cols');
+    $cols_raw = $request->get('cols');
 
-    $col_list = explode(',', $cols);
+    $col_list = explode(',', $cols_raw);
 
     // We need a list of code objects in the order provided by the user
-    $code_query = sprintf('select * from code where code in (%s)', implode(',', array_fill(0, count($col_list), '?')));
+    $col_query = sprintf('select * from code where code in (%s)', implode(',', array_fill(0, count($col_list), '?')));
     $params = $col_list;
-    array_unshift($params, $code_query);
-    $codes = call_user_method_array('doQuery', $this, $params);
-    foreach ($codes as $code) {
-      $code_map[$code->code] = $code;
+    array_unshift($params, $col_query);
+    $cols = call_user_method_array('doQuery', $this, $params);
+    foreach ($cols as $col) {
+      $col_map[$col->code] = $col;
     }
-    $codes = array();
+    $cols = array();
     foreach ($col_list as $col_code) {
-      array_push($codes, $code_map[$col_code]);
+      array_push($cols, $col_map[$col_code]);
     }
 
     // Now we need a list of matching values
@@ -26,7 +26,7 @@ class ReportController extends AbstractController {
     array_unshift($params, $value_query);
     $values = call_user_method_array('doQuery', $this, $params);
 
-    $response->setParameter('codes', $codes);
+    $response->setParameter('cols', $cols);
     $response->setParameter('values', $values);
     $response->setTemplate('report');
   }

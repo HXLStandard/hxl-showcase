@@ -13,31 +13,39 @@
     <main>
       <h1>Report</h1>
 
+      <form method="GET" action="">
+        <input name="cols" value="{$cols[0]|escape}" />
+        <input name="cols" />
+        <input name="cols" />
+        <input name="cols" />
+        <input name="cols" />
+        <input type="submit" />
+      </form>
+
       <table>
         <thead>
           <tr>
-            {foreach item=code from=$codes}
-            <th>{$code->code|escape}</th>
+            {foreach item=col from=$cols}
+            <th>{$col->code|escape}</th>
             {/foreach}
           </tr>
           <tr>
-            {foreach item=code from=$codes}
-            <th>{$code->name|escape}</th>
+            {foreach item=col from=$cols}
+            <th>{$col->name|escape}</th>
             {/foreach}
           </tr>
         </thead>
         <tbody>
-          {assign var=last_row value=-1}
-          <tr>
+          {$last_row = -1}
           {foreach item=value from=$values}
-          {if ($last_row > 0) and ($last_row != $value->row)}
-          </tr>
-          <tr>
+          {if $last_row != -1 and $last_row != $value->row}
+          {report_row cols=$cols cells=$cells}
+          {$cells = []}
           {/if}
-          <td>{$value->row|escape} {$value->value|escape}</td>
-          {assign var=last_row value=$value->row}
+          {append var=cells value=$value}
+          {$last_row = $value->row}
           {/foreach}
-          </tr>
+          {report_row cols=$cols cells=$cells}
         </tbody>
       </table>
 
