@@ -15,3 +15,7 @@ nav.breadcrumbs li:after {
 table, th, td {
     border: 1px solid;
 }
+
+th, td {
+    padding: .5ex;
+}
