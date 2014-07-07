@@ -18,6 +18,7 @@
           <tr>
             <th>HXL code</th>
             <th>Description</th>
+            <th>Usage count</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
           <tr>
             <td><a href="/code/{$code->code|escape:'url'}">{$code->code|escape}</a></td>
             <td>{$code->name|escape}</td>
+            <td>{$code->col_count|number_format}</td>
           </tr>
         {/foreach}
         </tbody>

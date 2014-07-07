@@ -43,6 +43,9 @@ for ($i = 0; $i < count($code_row); $i++) {
 $n = 0;
 while ($row = fgetcsv(STDIN)) {
   $n++;
+  if (($n % 100) == 0) {
+    print "$n...";
+  }
   $row_id = add_row();
   // Read each value in the row
   for ($i = 0; $i < count($code_row); $i++) {
