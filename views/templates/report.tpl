@@ -13,15 +13,6 @@
     <main>
       <h1>Report</h1>
 
-      <form method="GET" action="">
-        <input name="cols" value="{$cols[0]|escape}" />
-        <input name="cols" />
-        <input name="cols" />
-        <input name="cols" />
-        <input name="cols" />
-        <input type="submit" />
-      </form>
-
       <table>
         <thead>
           <tr>
