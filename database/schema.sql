@@ -42,6 +42,8 @@ create table import (
   foreign key(usr) references usr(id)
 );
 
+create index import_stamp on import(stamp);
+
 create table col (
   id bigserial primary key,
   import bigint not null,

@@ -15,7 +15,7 @@ class SearchController extends AbstractController {
     $users = $this->doQuery('select * from usr order by ident');
 
     $params = array($q);
-    $frag = "from value_view V where to_tsvector('english', V.value) @@ to_tsquery('english', ?)";
+    $frag = "from value_view V join latest_import_view LI on V.import=LI.id where to_tsvector('english', V.value) @@ to_tsquery('english', ?)";
 
     if ($source_ident) {
       array_push($params, $source_ident);
