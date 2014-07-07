@@ -16,13 +16,15 @@ RewriteRule ^images/    -               [L]
 RewriteRule ^style/     -               [L]
 RewriteRule ^scripts/   -               [L]
 
-RewriteRule ^data$ index.php?p=source-list
+RewriteRule ^data$ index.php?p=source-list [QSA,L]
 
-RewriteRule ^data/([^/]+)$ index.php?p=source&source=$1
+RewriteRule ^data/([^/]+)$ index.php?p=source&source=$1 [QSA,L]
 
-RewriteRule ^data/([^/]+)/([^/]+)$ index.php?p=dataset&source=$1&dataset=$2
+RewriteRule ^data/([^/]+)/([^/]+)$ index.php?p=dataset&source=$1&dataset=$2 [QSA,L]
 
-RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)$ index.php?p=import&source=$1&dataset=$2&import=$3
+RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)$ index.php?p=import&source=$1&dataset=$2&import=$3 [QSA,L]
+
+RewriteRule ^code$ index.php?p=code-list [QSA,L]
 
 #
 # Everything else goes to index.php

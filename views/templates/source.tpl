@@ -14,6 +14,12 @@
     <main>
       <h1>{$source->name|escape}</h1>
 
+      <form method="GET" action="/search">
+        <input type="hidden" name="source" value="{$source->ident|escape}" />
+        <input placeholder="Search within {$source->name|escape}" />
+        <input type="submit" />
+      </form>
+
       <section id="datasets">
         <h2>Datasets from {$source->name|escape}</h2>
 
