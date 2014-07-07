@@ -4,8 +4,9 @@ body {
 
 nav.breadcrumbs li {
     display: inline;
-    font-size: 90%;
+    font-size: 80%;
     font-style: italic;
+    color: #aaaaaa;
 }
 
 nav.breadcrumbs li:after {
@@ -18,4 +19,25 @@ table, th, td {
 
 th, td {
     padding: .5ex;
+}
+
+label {
+    display: block;
+    margin: 1ex 0;
+}
+
+label span {
+    display: block;
+    font-size:80%;
+    color: #aa0000;
+}
+
+label input {
+    width: 100%;
+    max-width: 30em;
+}
+
+label select {
+    width: 100%;
+    max-width: 30em;
 }

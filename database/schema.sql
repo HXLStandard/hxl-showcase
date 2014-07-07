@@ -1,3 +1,10 @@
+create table lang (
+  lang varchar(2) primary key,
+  name varchar(64) not null
+);
+
+insert into lang (lang, name) values ('en', 'English');
+
 create table usr (
   id bigserial primary key,
   ident varchar(64) unique not null,
@@ -53,7 +60,9 @@ create table value (
   row bigint not null,
   col bigint not null,
   value text not null,
+  lang varchar(2) default 'en',
   foreign key(row) references row(id),
   foreign key(col) references col(id)
 );
 
+create index value_idx on value using gin(to_tsvector('english', value));

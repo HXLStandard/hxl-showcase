@@ -15,8 +15,11 @@
       <h1>HXL code &ldquo;{$code->code|escape}&rdquo; ({$code->name|escape})</h1>
 
       <form method="GET" action="/search">
-        <input type="hidden" name="code" value="{$code->ident|escape}" />
-        <input placeholder="Search within &ldquo;{$code->code|escape}&rdquo;" />
+        <input type="hidden" name="code" value="{$code->code|escape}" />
+        <label>
+          <span>Search within &ldquo;{$code->code|escape}&rdquo;</span>
+          <input name="q" placeholder="Search text" />
+        </label>
         <input type="submit" />
       </form>
 

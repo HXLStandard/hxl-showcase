@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2014-07-06 21:33:57
+<?php /* Smarty version Smarty-3.0.7, created on 2014-07-07 09:23:47
          compiled from "/home/david/Source/BlueMonster/config/../views/templates/code.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:165892844953b9f905cbc2c0-73627699%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:118859597753ba9f63b817d8-91239669%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '958b087e199aa917b5b55fae956b23eafa38d3e4' => 
     array (
       0 => '/home/david/Source/BlueMonster/config/../views/templates/code.tpl',
-      1 => 1404696836,
+      1 => 1404739422,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '165892844953b9f905cbc2c0-73627699',
+  'nocache_hash' => '118859597753ba9f63b817d8-91239669',
   'function' => 
   array (
   ),
@@ -39,10 +39,13 @@ $_smarty_tpl->decodeProperties(array (
 )</h1>
 
       <form method="GET" action="/search">
-        <input type="hidden" name="code" value="<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('code')->value->ident);?>
+        <input type="hidden" name="code" value="<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('code')->value->code);?>
 " />
-        <input placeholder="Search within &ldquo;<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('code')->value->code);?>
-&rdquo;" />
+        <label>
+          <span>Search within &ldquo;<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('code')->value->code);?>
+&rdquo;</span>
+          <input name="q" placeholder="Search text" />
+        </label>
         <input type="submit" />
       </form>
 

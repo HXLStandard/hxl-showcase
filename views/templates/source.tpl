@@ -16,7 +16,10 @@
 
       <form method="GET" action="/search">
         <input type="hidden" name="source" value="{$source->ident|escape}" />
-        <input placeholder="Search within {$source->name|escape}" />
+        <label>
+          <span>Search within {$source->name|escape}</span>
+          <input name="q" placeholder="Search text" />
+        </label>
         <input type="submit" />
       </form>
 

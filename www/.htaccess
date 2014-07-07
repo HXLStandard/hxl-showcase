@@ -16,6 +16,8 @@ RewriteRule ^images/    -               [L]
 RewriteRule ^style/     -               [L]
 RewriteRule ^scripts/   -               [L]
 
+RewriteRule ^search$ index.php?p=search [QSA,L]
+
 RewriteRule ^data$ index.php?p=source-list [QSA,L]
 
 RewriteRule ^data/([^/]+)$ index.php?p=source&source=$1 [QSA,L]
