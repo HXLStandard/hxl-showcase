@@ -8,7 +8,7 @@
   <body>
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
-      <li><a href="/data">Data sources</a></li>
+      <li><a href="/user">Uploaders</a></li>
     </nav>
 
     <main>
