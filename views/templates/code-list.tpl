@@ -18,7 +18,7 @@
           <tr>
             <th>HXL code</th>
             <th>Description</th>
-            <th>Usage count</th>
+            <th>Number of datasets</th>
           </tr>
         </thead>
         <tbody>
