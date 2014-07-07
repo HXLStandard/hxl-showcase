@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2014-07-05 12:48:53
+<?php /* Smarty version Smarty-3.0.7, created on 2014-07-06 21:44:28
          compiled from "/home/david/Source/BlueMonster/config/../views/templates/source-list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:121146257553b82c75b580a1-47498204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:52600302653b9fb7c1d73e8-54214469%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fc344ea3042c265c301ab4923ed0154c55112594' => 
     array (
       0 => '/home/david/Source/BlueMonster/config/../views/templates/source-list.tpl',
-      1 => 1404578922,
+      1 => 1404697467,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '121146257553b82c75b580a1-47498204',
+  'nocache_hash' => '52600302653b9fb7c1d73e8-54214469',
   'function' => 
   array (
   ),
@@ -33,17 +33,27 @@ $_smarty_tpl->decodeProperties(array (
     <main>
       <h1>Data sources</h1>
 
-      <ul>
-        <?php  $_smarty_tpl->tpl_vars['source'] = new Smarty_Variable;
+      <table>
+        <thead>
+          <th>Data source</th>
+          <th>Datasets available</th>
+        </thead>
+        <tbody>
+          <?php  $_smarty_tpl->tpl_vars['source'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('sources')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['source']->key => $_smarty_tpl->tpl_vars['source']->value){
 ?>
-        <li><a href="/data/<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('source')->value->ident,'url');?>
+          <tr>
+            <td><a href="/data/<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('source')->value->ident,'url');?>
 "><?php echo smarty_modifier_escape($_smarty_tpl->getVariable('source')->value->name);?>
-</a></li>
-        <?php }} ?>      
-      </ul>
+</a></td>
+            <td><?php echo smarty_modifier_escape($_smarty_tpl->getVariable('source')->value->dataset_count);?>
+</td>
+          </tr>
+          <?php }} ?>      
+        </tbody>
+      </table>
     </main>
   </body>
 </html>

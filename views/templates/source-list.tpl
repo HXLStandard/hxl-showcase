@@ -13,11 +13,20 @@
     <main>
       <h1>Data sources</h1>
 
-      <ul>
-        {foreach item=source from=$sources}
-        <li><a href="/data/{$source->ident|escape:'url'}">{$source->name|escape}</a></li>
-        {/foreach}      
-      </ul>
+      <table>
+        <thead>
+          <th>Data source</th>
+          <th>Datasets available</th>
+        </thead>
+        <tbody>
+          {foreach item=source from=$sources}
+          <tr>
+            <td><a href="/data/{$source->ident|escape:'url'}">{$source->name|escape}</a></td>
+            <td>{$source->dataset_count|escape}</td>
+          </tr>
+          {/foreach}      
+        </tbody>
+      </table>
     </main>
   </body>
 </html>
