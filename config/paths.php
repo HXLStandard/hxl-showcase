@@ -14,6 +14,8 @@ $APP->paths = array(
   'import' => 'ImportController',
   'code-list' => 'CodeListController',
   'code' => 'CodeController',
+  'user-list' => 'UserListController',
+  'user' => 'UserController',
 );
 
 // end

@@ -36,6 +36,15 @@
             {/foreach}
           </select>
         </label>
+        <label>
+          <span>Uploader</span>
+          <select name="user">
+            <option value="">(all)</option>
+            {foreach item=user from=$users}
+            <option value="{$user->ident|escape}"{if $user->ident == $user_ident} selected="selected"{/if}>{$user->ident|escape} &mdash; {$user->name|escape}</option>
+            {/foreach}
+          </select>
+        </label>
         <input type="submit" />
       </form>
 
@@ -52,7 +61,7 @@
               <th>Field</th>
               <th>Value</th>
               <th>Dataset</th>
-              <th>Date updated</th>
+              <th>Version</th>
               <th>Data source</th>
               <th>Uploader</th>
             </tr>

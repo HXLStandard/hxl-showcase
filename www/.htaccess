@@ -30,6 +30,10 @@ RewriteRule ^code$ index.php?p=code-list [QSA,L]
 
 RewriteRule ^code/([^/]+)$ index.php?p=code&code=$1 [QSA,L]
 
+RewriteRule ^user$ index.php?p=user-list [QSA,L]
+
+RewriteRule ^user/([^/]+)$ index.php?p=user&user=$1 [QSA,L]
+
 #
 # Everything else goes to index.php
 #

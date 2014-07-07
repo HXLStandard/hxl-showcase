@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2014-07-07 09:14:25
+<?php /* Smarty version Smarty-3.0.7, created on 2014-07-07 09:37:05
          compiled from "/home/david/Source/BlueMonster/config/../views/templates/search.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:82615532953ba9d315a4694-37851487%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:183746970253baa281d4ef77-16479738%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e3115fb2d9e7bb0ca0f7617190e1b66fd8a1aae1' => 
     array (
       0 => '/home/david/Source/BlueMonster/config/../views/templates/search.tpl',
-      1 => 1404738864,
+      1 => 1404740224,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '82615532953ba9d315a4694-37851487',
+  'nocache_hash' => '183746970253baa281d4ef77-16479738',
   'function' => 
   array (
   ),
@@ -67,6 +67,22 @@ if ($_smarty_tpl->_count($_from) > 0){
             <option value="<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('source')->value->ident);?>
 "<?php if ($_smarty_tpl->getVariable('source')->value->ident==$_smarty_tpl->getVariable('source_ident')->value){?> selected="selected"<?php }?>><?php echo smarty_modifier_escape($_smarty_tpl->getVariable('source')->value->ident);?>
  &mdash; <?php echo smarty_modifier_escape($_smarty_tpl->getVariable('source')->value->name);?>
+</option>
+            <?php }} ?>
+          </select>
+        </label>
+        <label>
+          <span>Uploader</span>
+          <select name="user">
+            <option value="">(all)</option>
+            <?php  $_smarty_tpl->tpl_vars['user'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('users')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['user']->key => $_smarty_tpl->tpl_vars['user']->value){
+?>
+            <option value="<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('user')->value->ident);?>
+"<?php if ($_smarty_tpl->getVariable('user')->value->ident==$_smarty_tpl->getVariable('user_ident')->value){?> selected="selected"<?php }?>><?php echo smarty_modifier_escape($_smarty_tpl->getVariable('user')->value->ident);?>
+ &mdash; <?php echo smarty_modifier_escape($_smarty_tpl->getVariable('user')->value->name);?>
 </option>
             <?php }} ?>
           </select>
