@@ -31,13 +31,17 @@
             <tr>
               <th>Dataset</th>
               <th>Source</th>
+              <th>Latest copy</th>
+              <th>Imported by</th>
             </tr>
           </thead>
           <tbody>
-            {foreach item=dataset from=$datasets}
+            {foreach item=import from=$imports}
             <tr>
-              <td><a href="/data/{$dataset->source_ident|escape:'url'}/{$dataset->ident|escape:'url'}">{$dataset->name|escape}</a></td>
-              <td><a href="/data/{$dataset->source_ident|escape:'url'}">{$dataset->source_name|escape}</a></td>
+              <td><a href="/data/{$import->source_ident|escape:'url'}/{$import->dataset_ident|escape:'url'}">{$import->dataset_name|escape}</a></td>
+              <td><a href="/data/{$import->source_ident|escape:'url'}">{$import->source_name|escape}</a></td>
+              <td><a href="/data/{$import->source_ident|escape:'url'}/{$import->dataset_ident|escape:'url'}/{$import->stamp|escape:'url'}">{$import->stamp|escape}</a></td>
+              <td><a href="/user/{$import->usr_ident|escape:'url'}">{$import->usr_name|escape}</a></td>
             </tr>
             {/foreach}      
           </tbody>
