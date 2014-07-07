@@ -26,6 +26,8 @@ RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)$ index.php?p=import&source=$1&dataset=
 
 RewriteRule ^code$ index.php?p=code-list [QSA,L]
 
+RewriteRule ^code/([^/]+)$ index.php?p=code&code=$1 [QSA,L]
+
 #
 # Everything else goes to index.php
 #
