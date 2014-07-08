@@ -26,6 +26,8 @@ if (count($argv) == 4) {
 // Use a transaction, so that it's all or nothing
 _db()->beginTransaction();
 
+_db()->exec('set constraints all deferred');
+
 // Create a new import session
 $import_id = add_import($usr, $source, $dataset);
 
@@ -36,7 +38,12 @@ $header_row = fgetcsv(STDIN);
 // Get codes for headers
 $cols = array();
 for ($i = 0; $i < count($code_row); $i++) {
-  array_push($cols, add_col($import_id, $code_row[$i], $header_row[$i]));
+  if ($code_row[$i]) {
+    array_push($cols, add_col($import_id, $code_row[$i], $header_row[$i]));
+  } else {
+    printf("Skipping column \"%s\" (no HXL code)\n", $header_row[$i]);
+    array_push($cols, null);
+  }
 }
 
 // Read each row
@@ -50,7 +57,7 @@ while ($row = fgetcsv(STDIN)) {
   // Read each value in the row
   for ($i = 0; $i < count($code_row); $i++) {
     $col_id = $cols[$i];
-    if ($row) {
+    if ($row && $col_id) {
       add_value($row_id, $col_id, $row[$i]);
     }
   }

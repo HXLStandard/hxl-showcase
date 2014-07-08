@@ -63,8 +63,8 @@ create table value (
   col bigint not null,
   value text not null,
   lang varchar(2) default 'en',
-  foreign key(row) references row(id),
-  foreign key(col) references col(id)
+  foreign key(row) references row(id) deferrable,
+  foreign key(col) references col(id) deferrable
 );
 
 create index value_idx on value using gin(to_tsvector('english', value));
