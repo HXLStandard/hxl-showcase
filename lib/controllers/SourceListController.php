@@ -3,9 +3,15 @@
 class SourceListController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
-    $sources = $this->doQuery('select S.*, CNT.dataset_count from source S join (select source, count(*) as dataset_count from dataset group by source) CNT on S.id=CNT.source order by S.ident');
+    $imports = $this->doQuery('select source_ident, source_name, ' .
+                              ' max(stamp) as stamp, ' .
+                              ' count(distinct dataset) as dataset_count, ' .
+                              ' count(distinct id) as import_count ' .
+                              'from import_view '.
+                              'group by source_ident, source_name');
 
-    $response->setParameter('sources', $sources);
+
+    $response->setParameter('imports', $imports);
     $response->setTemplate('source-list');
   }
 

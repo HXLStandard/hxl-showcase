@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Data sources</title>
+    <title>Data providers</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -11,18 +11,23 @@
     </nav>
 
     <main>
-      <h1>Data sources</h1>
+      <h1>Data providers</h1>
 
       <table>
+        <caption>Select a provider to see its datasets</caption>
         <thead>
-          <th>Data source</th>
+          <th>Provider</th>
           <th>Datasets available</th>
+          <th>Total uploads</th>
+          <th>Latest upload</th>
         </thead>
         <tbody>
-          {foreach item=source from=$sources}
+          {foreach item=import from=$imports}
           <tr>
-            <td><a href="/data/{$source->ident|escape:'url'}">{$source->name|escape}</a></td>
-            <td>{$source->dataset_count|escape}</td>
+            <td><a href="/data/{$import->source_ident|escape:'url'}">{$import->source_name|escape}</a></td>
+            <td>{$import->dataset_count|escape}</td>
+            <td>{$import->import_count|escape}</td>
+            <td>{$import->stamp|timeAgo}</td>
           </tr>
           {/foreach}      
         </tbody>

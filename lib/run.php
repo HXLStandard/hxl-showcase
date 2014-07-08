@@ -39,6 +39,7 @@ try {
   }
 
   // set HTTP headers
+  header('Content-type: text/html; charset=utf8'); // force UTF-8 encoding
   if ($response->headers) {
     foreach ($response->headers as $name => $value) {
       header("$name: $value");

@@ -50,16 +50,14 @@
 
       {if $q}
       <section id="results">
-        <h2>Search results</h2>
-
         {if $result_count > 0}
-        <p>{$result_count|escape} matching values:</p>
 
         <table>
+          <caption>{$result_count|escape} match(es) found</caption>
           <thead>
             <tr>
               <th>Dataset</th>
-              <th>Source</th>
+              <th>Provider</th>
               <th>HXL code</th>
               <th>Value</th>
               <th>Matching rows</th>
