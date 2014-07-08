@@ -58,23 +58,21 @@
         <table>
           <thead>
             <tr>
-              <th>Field</th>
-              <th>Value</th>
               <th>Dataset</th>
-              <th>Version</th>
-              <th>Data source</th>
-              <th>Uploader</th>
+              <th>Source</th>
+              <th>HXL code</th>
+              <th>Value</th>
+              <th>Matching rows</th>
             </tr>
           </thead>
           <tbody>
             {foreach item=value from=$values}
             <tr>
+              <td><a href="/data/{$value->source_ident|escape:'url'}/{$value->dataset_ident|escape:'url'}">{$value->dataset_name|escape}</a></td>
+              <td><a href="/data/{$value->source_ident|escape:'url'}">{$value->source_name|escape}</a></td>
               <td><a href="/code/{$value->code_code|escape:'url'}">{$value->code_name|escape}</a></td>
               <td>{$value->value|escape}</td>
-              <td><a href="/data/{$value->source_ident|escape:'url'}/{$value->dataset_ident|escape:'url'}">{$value->dataset_name|escape}</a></td>
-              <td><a href="/data/{$value->source_ident|escape:'url'}/{$value->dataset_ident|escape:'url'}/{$value->stamp|escape:'url'}">{$value->stamp|escape}</a></td>
-              <td><a href="/data/{$value->source_ident|escape:'url'}">{$value->source_name|escape}</a></td>
-              <td><a href="/user/{$value->usr_ident|escape:'url'}">{$value->usr_name|escape}</a></td>
+              <td>{$value->row_count|number_format}</td>
             </tr>
             {/foreach}
           </tbody>

@@ -32,7 +32,7 @@ class SearchController extends AbstractController {
       $frag .= " and V.usr_ident=?";
     }
 
-    array_unshift($params, "select V.* $frag");
+    array_unshift($params, "select V.source_ident, V.source_name, V.dataset_ident, V.dataset_name, V.code_code, V.code_name, V.value, V.usr_ident, V.usr_name, count(V.id) as row_count $frag group by V.source_ident, V.source_name, V.dataset_ident, V.dataset_name, V.code_code, V.code_name, V.value, V.usr_ident, V.usr_name order by row_count desc");
     $values = call_user_method_array('doQuery', $this, $params);
 
     array_shift($params);
