@@ -33,10 +33,10 @@ class DatasetController extends AbstractController {
 
     // Change history (query from value table to get row count)
     $imports = $this->doQuery(
-      'select stamp, usr_ident, usr_name, count(distinct row) as row_count ' .
+      'select stamp, source_ident, dataset_ident, usr_ident, usr_name, count(distinct row) as row_count ' .
       'from value_view ' .
       'where dataset=? ' .
-      'group by dataset, stamp, usr_ident, usr_name ' .
+      'group by dataset, stamp, source_ident, dataset_ident, usr_ident, usr_name ' .
       'order by stamp desc',
       $import->dataset
     );

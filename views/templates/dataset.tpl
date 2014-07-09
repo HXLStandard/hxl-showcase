@@ -30,7 +30,7 @@
           <tbody>
             {foreach item=import from=$imports}
             <tr>
-            <td><a href="/data/{$import->source_ident|escape:'url'}/{$import->ident|escape:'url'}/{$import->stamp|escape:'url'}">{$import->stamp|escape}</a></td>
+            <td><a href="/data/{$import->source_ident|escape:'url'}/{$import->dataset_ident|escape:'url'}/{$import->stamp|escape:'url'}">{$import->stamp|escape}</a></td>
             <td><a href="/user/{$import->usr_ident|escape:'url'}">{$import->usr_name|escape}</a></td>
             <td>{$import->row_count|escape}</td>
             </tr>
