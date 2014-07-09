@@ -19,7 +19,10 @@ join (select dataset, max(stamp) as stamp from import group by dataset) MAX
 on I.dataset=MAX.dataset and I.stamp=MAX.stamp;
 
 create or replace view col_view as
-select C.*, I.stamp, D.ident as dataset_ident, D.name as dataset_name, CD.code as code_code, CD.name as code_name
+select C.*, I.stamp,
+  S.id as source, S.ident as source_ident, S.name as source_name,
+  D.id as dataset, D.ident as dataset_ident, D.name as dataset_name,
+  CD.code as code_code, CD.name as code_name
 from col C
 join import I on C.import=I.id
 join code CD on C.code=CD.id

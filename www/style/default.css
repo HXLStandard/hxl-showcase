@@ -72,12 +72,9 @@ label span {
     color: #aaaaaa;
 }
 
-label input {
+label input, label select {
+    background: white;
     width: 100%;
     max-width: 30em;
-}
-
-label select {
-    width: 100%;
-    max-width: 30em;
+    padding: 0.2ex;
 }
