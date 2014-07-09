@@ -1,4 +1,11 @@
 --
+-- Look up a datatype.
+--
+create or replace function ref_datatype(varchar(8)) returns bigint as $$
+  select id from datatype where type=$1;
+$$ language sql;
+
+--
 -- Add a new user.
 --
 create or replace function add_usr(varchar(64), varchar(128)) returns bigint as $$
@@ -30,8 +37,8 @@ $$ language sql;
 --
 -- Add a new HXL code.
 --
-create or replace function add_code(varchar(64), varchar(128)) returns bigint as $$
-  insert into code (code, name) values ($1, $2) returning id
+create or replace function add_code(varchar(64), varchar(128), bigint) returns bigint as $$
+  insert into code (code, name, datatype) values ($1, $2, $3) returning id
 $$ language sql;
 
 --

@@ -83,8 +83,8 @@ function add_usr($ident, $name) {
  * @param $name the name of the HXL data element.
  * @return the code database id (long int)
  */
-function add_code($code, $name) {
-  return _function('select add_code(?, ?)', $code, $name);
+function add_code($code, $name, $type) {
+  return _function('select add_code(?, ?, ref_datatype(?))', $code, $name, $type);
 }
 
 /**

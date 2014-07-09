@@ -18,6 +18,7 @@
           <tr>
             <th>HXL code</th>
             <th>Description</th>
+            <th>Data type</th>
             <th>Number of datasets</th>
           </tr>
         </thead>
@@ -26,6 +27,7 @@
           <tr>
             <td><a href="/code/{$code->code|escape:'url'}">{$code->code|escape}</a></td>
             <td>{$code->name|escape}</td>
+            <td>{$code->datatype_name|escape}</td>
             <td>{$code->col_count|number_format}</td>
           </tr>
         {/foreach}

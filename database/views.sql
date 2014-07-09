@@ -1,3 +1,8 @@
+create or replace view code_view as
+select C.*, DT.type, DT.name as datatype_name
+from code C
+join datatype DT on C.datatype=DT.id;
+
 create or replace view dataset_view as
 select D.*, S.ident as source_ident, S.name as source_name
 from dataset D

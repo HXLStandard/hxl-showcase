@@ -34,16 +34,15 @@ $n = 1; // count rows for error reporting
 while ($row = fgetcsv(STDIN)) {
   $n++;
   $fields = array_combine($headers, $row);
-  if ($fields['code']) {
-    if ($fields['name']) {
-      add_code($fields['code'], $fields['name']);
-      printf("Added code %s (%s)\n", $fields['code'], $fields['name']);
-    } else {
-      die("Missing name in row $n\n");
+
+  foreach (array('code', 'name', 'type') as $header) {
+    if (!$fields[$header]) {
+      die(sprintf("Missing value %s in row %d\n", $header, $n));
     }
-  } else {
-    die("Missing code in row $n\n");
   }
+
+  add_code($fields['code'], $fields['name'], $fields['type']);
+  printf("Added code %s (%s) %s\n", $fields['code'], $fields['name'], $fields['type']);
 }
 
 _db()->commit();

@@ -5,6 +5,20 @@ create table lang (
 
 insert into lang (lang, name) values ('en', 'English');
 
+create table datatype (
+  id bigserial primary key,
+  type varchar(8) unique not null,
+  name varchar(64) not null
+);
+
+insert into datatype (type, name) values
+  ('text', 'Text'),
+  ('id', 'Identifier or code'),
+  ('number', 'Number'),
+  ('date', 'Date'),
+  ('url', 'Web link'),
+  ('email', 'Email address');
+
 create table usr (
   id bigserial primary key,
   ident varchar(64) unique not null,
@@ -20,7 +34,9 @@ create table source (
 create table code (
   id bigserial primary key,
   code varchar(64) unique not null,
-  name varchar(128) not null
+  name varchar(128) not null,
+  datatype bigint not null,
+  foreign key(datatype) references datatype(id)
 );
 
 create table dataset (
