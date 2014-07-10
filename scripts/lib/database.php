@@ -54,7 +54,8 @@ function _query() {
   if ($statement->execute($args)) {
     return $statement;
   } else {
-    die($statement->errorInfo()[2] . "\n");
+    $err = $statement->errorInfo();
+    die($err[2] . "\n");
   }
 }
 

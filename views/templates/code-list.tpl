@@ -14,6 +14,7 @@
       <h1>HXL codes</h1>
 
       <table>
+        <caption>Select a code to see the datasets where it appears</caption>
         <thead>
           <tr>
             <th>HXL code</th>
