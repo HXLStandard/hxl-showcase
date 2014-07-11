@@ -9,23 +9,23 @@
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
       <li><a href="/data">Data providers</a></li>
-      <li><a href="/data/{$import->source_ident|escape:'url'}">{$import->source_name|escape}</a></li>
-      <li><a href="/data/{$import->source_ident|escape:'url'}/{$import->dataset_ident|escape:'url'}">{$import->dataset_name|escape}</a></li>
+      <li><a href="{$import|source_link}">{$import->source_name|escape}</a></li>
+      <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
     </nav>
 
     <main>
       <h1>{$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
-      <p class="download-link"><a href="{$import->stamp|escape:'url'}.csv">Download</a></p>
+      <p class="download-link"><a href="{$import|import_link}.csv">Download CSV</a></p>
 
       <section id="data">
 
         <table>
-          <caption>Imported by <a href="/user/{$import->usr_ident|escape:'url'}">{$import->usr_name|escape}</a> on {$import->stamp|escape}</caption>
+          <caption>Imported by <a href="{$import|user_link}">{$import->usr_name|escape}</a> on {$import->stamp|escape}</caption>
           <thead>
             <tr class="codes">
               {foreach item=col from=$cols}
-              <th><a href="/code/{$col->code_code|escape:'url'}">{$col->code_name|escape}</a></th>
+              <th><a href="{$col|code_link}">{$col->code_name|escape}</a></th>
               {/foreach}
             </tr>
           </thead>

@@ -22,7 +22,7 @@ table {
     margin: 2ex 0;
     border-collapse: collapse;
     font-size: 90%;
-    min-width: 50%;
+    width: 100%;
 }
 
 thead {
@@ -77,4 +77,9 @@ label input, label select {
     width: 100%;
     max-width: 30em;
     padding: 0.2ex;
+}
+
+.download-link {
+    float: right;
+    font-size: 90%;
 }

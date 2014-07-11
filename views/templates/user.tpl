@@ -37,19 +37,13 @@
           <tbody>
             {foreach item=import from=$imports}
             <tr>
-              <td><a href="/data/{$import->source_ident|escape:'url'}/{$import->dataset_ident|escape:'url'}/{$import->stamp|escape:'url'}">{$import->stamp|escape}</a></td>
-              <td><a href="/data/{$import->source_ident|escape:'url'}/{$import->dataset_ident|escape:'url'}">{$import->dataset_name|escape}</a></td>
-              <td><a href="/data/{$import->source_ident|escape:'url'}">{$import->source_name|escape}</a></td>
+              <td><a href="{$import|import_link}">{$import->stamp|escape}</a></td>
+              <td><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></td>
+              <td><a href="{$import|source_link}">{$import->source_name|escape}</a></td>
             </tr>
             {/foreach}
           </tbody>
         </table>
-
-        <ul>
-          {foreach item=import from=$imports}
-          <li><a href="/data/{$dataset->source_ident|escape:'url'}/{$dataset->ident|escape:'url'}/{$import->stamp|escape:'url'}">{$import->stamp|escape}</a></li>
-          {/foreach}      
-        </ul>
 
       </section>
     </main>

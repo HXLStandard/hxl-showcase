@@ -24,7 +24,7 @@
         <tbody>
           {foreach item=import from=$imports}
           <tr>
-            <td><a href="/data/{$import->source_ident|escape:'url'}">{$import->source_name|escape}</a></td>
+            <td><a href="{$import|source_link}">{$import->source_name|escape}</a></td>
             <td>{$import->dataset_count|escape}</td>
             <td>{$import->import_count|escape}</td>
             <td>{$import->stamp|timeAgo}</td>

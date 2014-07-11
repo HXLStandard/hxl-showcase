@@ -66,9 +66,9 @@
           <tbody>
             {foreach item=value from=$values}
             <tr>
-              <td><a href="/data/{$value->source_ident|escape:'url'}/{$value->dataset_ident|escape:'url'}">{$value->dataset_name|escape}</a></td>
-              <td><a href="/data/{$value->source_ident|escape:'url'}">{$value->source_name|escape}</a></td>
-              <td><a href="/code/{$value->code_code|escape:'url'}">{$value->code_name|escape}</a></td>
+              <td><a href="{$value|dataset_link}">{$value->dataset_name|escape}</a></td>
+              <td><a href="{$value|source_link}">{$value->source_name|escape}</a></td>
+              <td><a href="{$value|code_link}">{$value->code_name|escape}</a></td>
               <td>{$value->value|escape}</td>
               <td>{$value->row_count|number_format}</td>
             </tr>

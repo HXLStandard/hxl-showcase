@@ -18,9 +18,9 @@
       </form>
 
       <ul>
-        <li><a href="data">Data</a></li>
-        <li><a href="code">HXL codes</a></li>
-        <li><a href="user">Users</a></li>
+        <li><a href="/data">Data</a></li>
+        <li><a href="/code">HXL codes</a></li>
+        <li><a href="/user">Users</a></li>
       </ul>
 
     </main>

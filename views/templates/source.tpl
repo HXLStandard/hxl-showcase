@@ -28,7 +28,7 @@
 
         <ul>
           {foreach item=dataset from=$datasets}
-          <li><a href="/data/{$source->ident|escape:'url'}/{$dataset->ident|escape:'url'}">{$dataset->name|escape}</a></li>
+          <li><a href="{$dataset|dataset_link}">{$dataset->name|escape}</a></li>
           {/foreach}      
         </ul>
 

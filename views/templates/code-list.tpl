@@ -26,7 +26,7 @@
         <tbody>
           {foreach item=code from=$codes}
           <tr>
-            <td><a href="/code/{$code->code|escape:'url'}">{$code->code|escape}</a></td>
+            <td><a href="{$code|code_link}">{$code->code|escape}</a></td>
             <td>{$code->name|escape}</td>
             <td>{$code->datatype_name|escape}</td>
             <td>{$code->col_count|number_format}</td>
