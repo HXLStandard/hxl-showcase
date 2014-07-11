@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
+{include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
       <li><a href="/data">Data providers</a></li>

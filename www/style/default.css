@@ -3,6 +3,25 @@ body {
     color: #000011;
 }
 
+header {
+    background: #4B92DB;
+    padding: 1ex;
+    height: 4ex;
+    margin-bottom: 1ex;
+    vertical-align: middle;
+}
+
+header a.logo {
+    float: left;
+    font-size: 3ex;
+    color: white;
+    text-decoration: none;
+}
+
+header form {
+    float: right;
+}
+
 nav.breadcrumbs li {
     display: inline;
     font-size: 80%;
@@ -12,6 +31,10 @@ nav.breadcrumbs li {
 
 nav.breadcrumbs li:after {
     content: " >> ";
+}
+
+main {
+    position: relative;
 }
 
 section {

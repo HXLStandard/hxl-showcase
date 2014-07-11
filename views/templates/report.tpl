@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
+{include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
     </nav>
-
     <main>
       <h1>Report</h1>
 
