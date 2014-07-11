@@ -34,7 +34,7 @@ class DatasetController extends AbstractController {
 
     if ($format == 'csv') {
 
-      header('Content-type: text/plain;charset=utf-8');
+      header('Content-type: text/csv;charset=utf-8');
       dump_csv($cols, $values, fopen('php://output', 'w'));
       exit;
 
