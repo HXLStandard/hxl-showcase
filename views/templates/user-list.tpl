@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Users</title>
+    <title>Uploaders</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -11,7 +11,7 @@
     </nav>
 
     <main>
-      <h1>Users</h1>
+      <h1>Uploaders</h1>
 
       <table>
         <thead>
