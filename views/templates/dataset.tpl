@@ -43,6 +43,8 @@
       <section id="data">
         <h2>Latest version</h2>
 
+        <p class="download-link"><a href="{$import->dataset_ident|escape:'url'}.csv">Download</a></p>
+      
         <table>
           <caption>Uploaded by <a href="/user/{$import->usr_ident|escape:'url'}">{$import->usr_name|escape}</a> on {$import->stamp|escape}</caption>
           <thead>

@@ -24,7 +24,11 @@ RewriteRule ^data$ index.php?p=source-list [QSA,L]
 
 RewriteRule ^data/([^/]+)$ index.php?p=source&source=$1 [QSA,L]
 
+RewriteRule ^data/([^/]+)/([^/]+)\.csv$ index.php?p=dataset&source=$1&dataset=$2&format=csv [QSA,L]
+
 RewriteRule ^data/([^/]+)/([^/]+)$ index.php?p=dataset&source=$1&dataset=$2 [QSA,L]
+
+RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)\.csv$ index.php?p=import&source=$1&dataset=$2&import=$3&format=csv [QSA,L]
 
 RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)$ index.php?p=import&source=$1&dataset=$2&import=$3 [QSA,L]
 

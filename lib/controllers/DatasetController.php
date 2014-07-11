@@ -6,6 +6,7 @@ class DatasetController extends AbstractController {
 
     $source_ident = $request->get('source');
     $dataset_ident = $request->get('dataset');
+    $format = $request->get('format');
 
     // Latest import for the dataset
     $import = $this->doQuery(
@@ -21,7 +22,7 @@ class DatasetController extends AbstractController {
       'where import=? ' .
       'order by C.id',
       $import->id
-    );
+    )->fetchAll();
 
     // Values for the import
     $values = $this->doQuery(
@@ -31,23 +32,32 @@ class DatasetController extends AbstractController {
       $import->id
     );
 
-    // Change history (query from value table to get row count)
-    $imports = $this->doQuery(
-      'select stamp, source_ident, dataset_ident, usr_ident, usr_name, count(distinct row) as row_count ' .
-      'from value_view ' .
-      'where dataset=? ' .
-      'group by dataset, stamp, source_ident, dataset_ident, usr_ident, usr_name ' .
-      'order by stamp desc',
-      $import->dataset
-    );
+    if ($format == 'csv') {
 
-    $response->setParameter('cols', $cols);
-    $response->setParameter('values', $values);
+      header('Content-type: text/plain;charset=utf-8');
+      dump_csv($cols, $values, fopen('php://output', 'w'));
+      exit;
 
-    $response->setParameter('import', $import);
-    $response->setParameter('imports', $imports);
+    } else {
 
-    $response->setTemplate('dataset');
+      // Change history (query from value table to get row count)
+      $imports = $this->doQuery(
+        'select stamp, source_ident, dataset_ident, usr_ident, usr_name, count(distinct row) as row_count ' .
+        'from value_view ' .
+        'where dataset=? ' .
+        'group by dataset, stamp, source_ident, dataset_ident, usr_ident, usr_name ' .
+        'order by stamp desc',
+        $import->dataset
+      );
+
+      $response->setParameter('cols', $cols);
+      $response->setParameter('values', $values);
+
+      $response->setParameter('import', $import);
+      $response->setParameter('imports', $imports);
+
+      $response->setTemplate('dataset');
+    }
   }
 
 }

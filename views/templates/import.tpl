@@ -16,6 +16,8 @@
     <main>
       <h1>{$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
+      <p class="download-link"><a href="{$import->stamp|escape:'url'}.csv">Download</a></p>
+
       <section id="data">
 
         <table>
