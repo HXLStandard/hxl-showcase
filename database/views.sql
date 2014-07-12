@@ -47,3 +47,26 @@ join dataset D on I.dataset=D.id
 join source S on D.source=S.id
 join code CD on C.code=CD.id
 join usr U on I.usr=U.id;
+
+create or replace view report_3w_view as
+select sector.import,
+  sector.source_ident,
+  sector.dataset_ident,
+  sector.stamp,
+  sector.row,
+  country.value as country,
+  adm1.value as adm1,
+  adm2.value as adm2,
+  adm3.value as adm3,
+  sector.value as sector,
+  subsector.value as subsector
+from value_view sector
+  left join value_view subsector on sector.row=subsector.row and subsector.code_code='subsector'
+  left join value_view country on sector.row=country.row and country.code_code='country'
+  left join value_view adm1 on sector.row=adm1.row and adm1.code_code='adm1'
+  left join value_view adm2 on sector.row=adm2.row and adm2.code_code='adm2'
+  left join value_view adm3 on sector.row=adm3.row and adm3.code_code='adm3'
+where sector.code_code='sector';
+
+  
+

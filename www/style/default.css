@@ -84,22 +84,8 @@ th, td {
     padding: .5ex 1ex;
 }
 
-label {
-    display: block;
-    margin: 1ex 0;
-}
-
-label span {
-    display: block;
-    font-size:80%;
-    color: #aaaaaa;
-}
-
-label input, label select {
-    background: white;
-    width: 100%;
-    max-width: 30em;
-    padding: 0.2ex;
+label.checklist {
+    margin: 0 1em;
 }
 
 .download-link {
