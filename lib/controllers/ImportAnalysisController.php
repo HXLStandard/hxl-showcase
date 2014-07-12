@@ -32,14 +32,19 @@ class ImportAnalysisController extends AbstractController {
     }
     $col_names = join($group_by, ',');
 
-    $data = $this->doQuery(
-      sprintf('select %s, count(*) as count ' .
-              'from report_3w_view ' .
-              'where import=? ' .
-              'group by %s',
-              $col_names, $col_names),
-      $import->id
-    );
+    if ($col_names) {
+      $data = $this->doQuery(
+        sprintf('select %s, count(*) as count ' .
+                'from report_3w_view ' .
+                'where import=? ' .
+                'group by %s ' .
+                'order by %s',
+                $col_names, $col_names, $col_names),
+        $import->id
+      );
+    } else {
+      $data = null;
+    }
 
     // Render the results
     if ($format == 'csv') {

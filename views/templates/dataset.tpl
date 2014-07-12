@@ -44,7 +44,10 @@
       <section id="data">
         <h2>Latest version</h2>
 
-        <p class="download-link"><a href="{$import|dataset_link}.csv">Download CSV</a></p>
+        <nav class="options">
+          <li><a href="{$import|dataset_link}.csv">Download CSV</a></li>
+          <li><a href="{$import|import_link}/analysis">Analyse</a></li>
+        </nav>
       
         <table>
           <caption>Uploaded by <a href="{$import|user_link}">{$import->usr_name|escape}</a> on {$import->stamp|escape}</caption>

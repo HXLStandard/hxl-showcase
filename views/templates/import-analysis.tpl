@@ -35,6 +35,7 @@
 
       <section id="data">
 
+        {if $data}
         <table>
           <thead>
             <tr>
@@ -56,6 +57,9 @@
           </tbody>
           
         </table>
+        {else}
+        <p>(No matching data)</p>
+        {/if}
 
       </section>
     </main>

@@ -63,7 +63,7 @@ table a:hover {
 
 table caption {
     text-align: left;
-    margin: 2ex 0;
+    margin: 1ex 0;
     font-style: italic;
 }
 
@@ -84,8 +84,26 @@ th, td {
     padding: .5ex 1ex;
 }
 
-label.checklist {
-    margin: 0 1em;
+nav.options li {
+    display: inline;
+    margin-right: .5em;
+    border: 1px solid #aaaaaa;
+    padding: .5ex;
+    background: #eeeeee;
+}
+
+nav.options li a {
+    text-decoration: none;
+    color: #222222;
+}
+
+form, nav.options {
+    font-size: 90%;
+    color: #222222;
+}
+
+label {
+    margin: 0 1em 0 0;
 }
 
 .download-link {

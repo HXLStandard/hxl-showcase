@@ -21,6 +21,11 @@
 
       <section id="data">
 
+        <nav class="options">
+          <li><a href="{$import|dataset_link}.csv">Download CSV</a></li>
+          <li><a href="{$import|import_link}/analysis">Analyse</a></li>
+        </nav>
+      
         <table>
           <caption>Imported by <a href="{$import|user_link}">{$import->usr_name|escape}</a> on {$import->stamp|escape}</caption>
           <thead>
