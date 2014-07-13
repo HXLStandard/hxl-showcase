@@ -29,7 +29,7 @@
         {foreach item=field from=$allowed_fields}
         <label class="checklist">
           <span>{$field|escape}</span>
-          <input type="checkbox" name="groupBy[]" value="{$field|escape}"{if $field|in_array:$group_by} checked="checked"{/if} />
+          <input type="radio" name="groupBy[]" value="{$field|escape}"{if $field|in_array:$group_by} checked="checked"{/if} />
         </label>
         {/foreach}
         <input type="submit" />
@@ -70,6 +70,7 @@
       <script src="/scripts/d3.min.js"></script>
       <script>
 var url = '{$import|import_link}/analysis.csv?{$queryString|escape}';
+var code = '{$group_by[0]}';
           {literal}
 var width = 300,
     height = 300,
@@ -105,13 +106,13 @@ d3.csv(url, function(error, data) {
 
   g.append("path")
       .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.sector); });
+      .style("fill", function(d) { return color(d.data[code]); });
 
   g.append("text")
       .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
       .attr("dy", ".35em")
       .style("text-anchor", "middle")
-      .text(function(d) { return d.data.sector; });
+      .text(function(d) { return d.data[code]; });
 
 });
           {/literal}
