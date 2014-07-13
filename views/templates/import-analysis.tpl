@@ -18,9 +18,11 @@
     <main>
       <h1>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
-      {*
-      <p class="download-link"><a href="{$import|import_link}.csv">Download CSV</a></p>
-      *}
+      {if $data}
+      <nav class="options">
+        <li><a href="{$import|import_link}/analysis.csv?{$queryString|escape}">Download CSV</a></li>
+      </nav>
+      {/if}
 
       <form method="get" action="">
         <strong>Include:</strong>

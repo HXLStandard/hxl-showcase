@@ -32,6 +32,8 @@ RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)\.csv$ index.php?p=import&source=$1&dat
 
 RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)$ index.php?p=import&source=$1&dataset=$2&import=$3 [QSA,L]
 
+RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)/analysis\.csv$ index.php?p=import-analysis&source=$1&dataset=$2&import=$3&format=csv [QSA,L]
+
 RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)/analysis$ index.php?p=import-analysis&source=$1&dataset=$2&import=$3 [QSA,L]
 
 RewriteRule ^code$ index.php?p=code-list [QSA,L]
