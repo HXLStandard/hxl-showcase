@@ -2,20 +2,12 @@
 
 <html>
   <head>
-    <title>Blue Monster demo</title>
+    <title>#HXL showcase</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
 {include file="fragments/header.tpl"}
     <main>
-      <nav class="options">
-        <li><a href="/data">Data</a></li>
-        <li><a href="/code">HXL codes</a></li>
-        <li><a href="/code">Uploaders</a></li>
-      </nav>
-
-      <h1>Blue Monster demo</h1>
-
       <section id="uploads">
         <h2>Latest uploads</h2>
         <table>

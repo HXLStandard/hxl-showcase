@@ -7,7 +7,7 @@ header {
     background: #4B92DB;
     padding: 1ex;
     height: 4ex;
-    margin-bottom: 1ex;
+    margin: 0;
     vertical-align: middle;
 }
 
@@ -84,34 +84,8 @@ th, td {
     padding: .5ex 1ex;
 }
 
-nav.options {
-    margin: 2ex 0;
-    list-style: none;
-}
-
-nav.options:after {
-    display: block;
-    content: "";
-    clear: both;
-}
-
-nav.options li {
-    float: left;
-    margin-right: .5em;
-    border: 1px solid #aaaaaa;
-    padding: .5ex;
-    background: #eeeeee;
-    text-align: center;
-}
-
-nav.options li a {
-    text-decoration: none;
-    color: #222222;
-}
-
-form, nav.options {
+form {
     font-size: 90%;
-    color: #222222;
 }
 
 label {
@@ -121,5 +95,63 @@ label {
 .download-link {
     float: right;
     font-size: 90%;
+}
+
+/**
+ * Options menu
+ */
+
+.col2 li {
+    width: 50%;
+}
+
+.col3 li {
+    width: 33.3%;
+}
+
+.col3 li:last-child {
+    width: 33.4%;
+}
+
+nav.main, nav.options {
+    margin: 0;
+    list-style: none;
+    padding: none;
+}
+
+nav.main {
+    margin-top: .1ex;
+    margin-bottom: 1ex;
+}
+
+nav.main li, nav.options li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav.main li a, nav.options li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: .5ex 0;
+}
+
+nav.main li a {
+    background: #4B92DB;
+}
+
+nav.options li a {
+    background: #aaaaaa;
+}
+
+nav.main:after, nav.options:after {
+    display: block;
+    content: "";
+    clear: both;
 }
 

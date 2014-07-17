@@ -17,11 +17,9 @@
     <main>
       <h1>{$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
-      <p class="download-link"><a href="{$import|import_link}.csv">Download CSV</a></p>
-
       <section id="data">
 
-        <nav class="options">
+        <nav class="options col2">
           <li><a href="{$import|dataset_link}.csv">Download CSV</a></li>
           <li><a href="{$import|import_link}/analysis">Analyse</a></li>
         </nav>
