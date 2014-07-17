@@ -86,14 +86,22 @@ th, td {
 
 nav.options {
     margin: 2ex 0;
+    list-style: none;
+}
+
+nav.options:after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
 nav.options li {
-    display: inline;
+    float: left;
     margin-right: .5em;
     border: 1px solid #aaaaaa;
     padding: .5ex;
     background: #eeeeee;
+    text-align: center;
 }
 
 nav.options li a {

@@ -40,22 +40,9 @@ class DatasetController extends AbstractController {
 
     } else {
 
-      // Change history (query from value table to get row count)
-      $imports = $this->doQuery(
-        'select stamp, source_ident, dataset_ident, usr_ident, usr_name, count(distinct row) as row_count ' .
-        'from value_view ' .
-        'where dataset=? ' .
-        'group by dataset, stamp, source_ident, dataset_ident, usr_ident, usr_name ' .
-        'order by stamp desc',
-        $import->dataset
-      );
-
       $response->setParameter('cols', $cols);
       $response->setParameter('values', $values);
-
       $response->setParameter('import', $import);
-      $response->setParameter('imports', $imports);
-
       $response->setTemplate('dataset');
     }
   }

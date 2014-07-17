@@ -12,6 +12,7 @@ $APP->paths = array(
   'source-list' => 'SourceListController',
   'source' => 'SourceController',
   'dataset' => 'DatasetController',
+  'dataset-history' => 'DatasetHistoryController',
   'import' => 'ImportController',
   'import-analysis' => 'ImportAnalysisController',
   'code-list' => 'CodeListController',

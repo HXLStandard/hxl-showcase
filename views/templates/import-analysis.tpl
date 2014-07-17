@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
-{include file="fragments/header.tpl"}
+    {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
       <li><a href="/data">Data providers</a></li>
@@ -67,12 +67,14 @@
       <p>(No matching data)</p>
       {/if}
 
-      <script src="/scripts/d3.min.js"></script>
-      <script>
-        var url = '{$import|import_link}/analysis.csv?{$queryString|escape}';
-        var code = '{$group_by[0]}';
-      </script>
-      <script src="/scripts/pie-chart.js"></script>
     </main>
+
+    <script src="/scripts/d3.min.js"></script>
+    <script>
+      var url = '{$import|import_link}/analysis.csv?{$queryString|escape}';
+      var code = '{$group_by[0]}';
+    </script>
+    <script src="/scripts/pie-chart.js"></script>
+
   </body>
 </html>

@@ -28,6 +28,8 @@ RewriteRule ^data/([^/]+)/([^/]+)\.csv$ index.php?p=dataset&source=$1&dataset=$2
 
 RewriteRule ^data/([^/]+)/([^/]+)$ index.php?p=dataset&source=$1&dataset=$2 [QSA,L]
 
+RewriteRule ^data/([^/]+)/([^/]+)/_history$ index.php?p=dataset-history&source=$1&dataset=$2 [QSA,L]
+
 RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)\.csv$ index.php?p=import&source=$1&dataset=$2&import=$3&format=csv [QSA,L]
 
 RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)$ index.php?p=import&source=$1&dataset=$2&import=$3 [QSA,L]
