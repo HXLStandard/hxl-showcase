@@ -16,6 +16,8 @@ RewriteRule ^images/    -               [L]
 RewriteRule ^style/     -               [L]
 RewriteRule ^scripts/   -               [L]
 
+RewriteRule ^$ index.php?p=home [QSA,L]
+
 RewriteRule ^search$ index.php?p=search [QSA,L]
 
 RewriteRule ^report$ index.php?p=report [QSA,L]
@@ -45,10 +47,5 @@ RewriteRule ^code/([^/]+)$ index.php?p=code&code=$1 [QSA,L]
 RewriteRule ^user$ index.php?p=user-list [QSA,L]
 
 RewriteRule ^user/([^/]+)$ index.php?p=user&user=$1 [QSA,L]
-
-#
-# Everything else goes to index.php
-#
-RewriteRule ^(.*)$      index.php?p=$1  [QSA,L]
 
 </ifmodule>

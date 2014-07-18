@@ -19,7 +19,8 @@ class HttpRequest {
    */
   function __construct ($fill = true) {
     if ($fill) {
-      $this->assign($_SERVER, $_GET, $_POST, file_get_contents('php://input'));
+
+      $this->assign($_SERVER, self::decodeParams($_SERVER['QUERY_STRING']), $_POST, file_get_contents('php://input'));
     }
   }
 
@@ -87,15 +88,15 @@ class HttpRequest {
    * @return the variable value, or null if the parameter does not exist.
    */
   function get ($name = null, $default_value = null) {
-   if ($name) {
-     if (isset($this->_get[$name])) {
-       return $this->_get[$name];
-     } else {
-       return $default_value;
-     }
-   } else {
-     return $this->_get;
-   }
+    if ($name) {
+      if (isset($this->_get[$name])) {
+        return $this->_get[$name];
+      } else {
+        return $default_value;
+      }
+    } else {
+      return $this->_get;
+    }
   }
 
 
@@ -123,11 +124,11 @@ class HttpRequest {
    */
   function post ($name = null, $default_value = null) {
     if ($name) {
-     if (isset($this->_post[$name])) {
-       return $this->_post[$name];
-     } else {
-       return $default_value;
-     }
+      if (isset($this->_post[$name])) {
+        return $this->_post[$name];
+      } else {
+        return $default_value;
+      }
     } else {
       return $this->_post;
     }
@@ -152,6 +153,32 @@ class HttpRequest {
    */
   function data () {
     return @$this->_data;
+  }
+
+  /**
+   * Parse and decode a query string.
+   *
+   * We have to do this ourselves because PHP doesn't handle repeated values
+   * gracefully.  When there is more than one value provided for a parameter,
+   * this method will put all values into an array.
+   */
+  static function decodeParams($queryString) {
+    $params = array();
+    $assignments = explode('&', $queryString);
+    foreach ($assignments as $assignment) {
+      list($name, $value) = explode('=', $assignment);
+      $name = urldecode($name);
+      $value = urldecode($value);
+      if (@$params[$name]) {
+        if (!is_array($params[$name])) {
+          $params[$name] = array($params[$name]);
+        }
+        array_push($params[$name], $value);
+      } else {
+        $params[$name] = $value;
+      }
+    }
+    return $params;
   }
 
   private $_server;

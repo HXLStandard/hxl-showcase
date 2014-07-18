@@ -6,7 +6,7 @@
 global $APP;
 
 $APP->paths = array(
-  '' => 'HomeController',
+  'home' => 'HomeController',
   'search' => 'SearchController',
   'report' => 'ReportController',
   'source-list' => 'SourceListController',
