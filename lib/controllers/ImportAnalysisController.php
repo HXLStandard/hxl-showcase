@@ -13,41 +13,72 @@ class ImportAnalysisController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
 
-    // First, get the import
+    //
+    // Import
+    //
     $source_ident = $request->get('source');
     $dataset_ident = $request->get('dataset');
     $stamp = $request->get('import');
     $format = $request->get('format');
 
-    // Get the import
     $import = $this->doQuery(
       'select * from import_view ' .
       ' where source_ident=? and dataset_ident=? and stamp=?',
       $source_ident, $dataset_ident, $stamp
     )->fetch();
 
-    // Get the total rows
+    //
+    // Filters
+    //
+    $filter_map = array(
+      'country' => 'country',
+      'adm1' => 'adm1',
+      'sector' => 'sector',
+      'org' => 'org',
+    );
+
+    $sql_filter = '';
+    $active_filters = array();
+    foreach ($filter_map as $http => $sql) {
+      $value = $request->get($http);
+      if ($value) {
+        if (is_array($value)) {
+          $value = array_pop($value);
+        }
+        $active_filters[$http] = $value;
+        $sql_filter .= sprintf(" and %s='%s'", $sql, self::escape_sql($value));
+      }
+    }
+
+    //
+    // Metrics
+    //
     $total = $this->doQuery(
-      'select count(distinct row) from value_view where import=?',
+      'select count(distinct row) from report_3w_view' .
+      ' where import=?' . $sql_filter,
       $import->id
     )->fetchColumn();
 
     // Get the preview counts
-    $country_count = $this->get_value_count($import, 'country');
-
-    if ($country_count > 0) {
-      $countries = $this->get_value_preview($import, 'country');
-    } else {
-      $adm1_count = $this->get_value_count($import, 'adm1');
-      $adm1s = $this->get_value_preview($import, 'adm1');
-      
+    if (!$active_filters['country']) {
+      $country_count = $this->get_value_count($import, 'country', $sql_filter);
+      $countries = $this->get_value_preview($import, 'country', $sql_filter);
     }
 
-    $sector_count = $this->get_value_count($import, 'sector');
-    $sectors = $this->get_value_preview($import, 'sector');
+    if (!$active_filters['adm1'] && !@$country_count) {
+      $adm1_count = $this->get_value_count($import, 'adm1', $sql_filter);
+      $adm1s = $this->get_value_preview($import, 'adm1', $sql_filter);
+    }
 
-    $org_count = $this->get_value_count($import, 'org');
-    $orgs = $this->get_value_preview($import, 'org');
+    if (!$active_filters['sector']) {
+      $sector_count = $this->get_value_count($import, 'sector', $sql_filter);
+      $sectors = $this->get_value_preview($import, 'sector', $sql_filter);
+    }
+
+    if (!$active_filters['org']) {
+      $org_count = $this->get_value_count($import, 'org', $sql_filter);
+        $orgs = $this->get_value_preview($import, 'org', $sql_filter);
+    }
 
     $response->setParameter('import', $import);
     $response->setParameter('total', $total);
@@ -60,35 +91,34 @@ class ImportAnalysisController extends AbstractController {
       $response->setParameter('adm1_count', $adm1_count);
       $response->setParameter('adm1s', $adm1s);
     }
-    $response->setParameter('country_count', $country_count);
-    $response->setParameter('countries', $countries);
     $response->setParameter('org_count', $org_count);
     $response->setParameter('orgs', $orgs);
+    $response->setParameter('filters', $active_filters);
 
     $response->setTemplate('import-analysis');
   }
 
-  private function get_value_count($import, $code) {
+  private function get_value_count($import, $code, $sql_filter = '') {
     return $this->doQuery(
-      'select count(distinct value) as count' .
-      ' from value_view ' .
-      ' where import=? and code_code=?',
-      $import->id, $code
+      "select count(distinct $code) as count" .
+      ' from report_3w_view ' .
+      " where import=? and $code is not null $sql_filter",
+      $import->id
     )->fetchColumn();
   }
 
   /**
    * Get the top 5 values for a column.
    */
-  private function get_value_preview($import, $code) {
+  private function get_value_preview($import, $code, $sql_filter = '') {
     return $this->doQuery(
-      'select value, count(distinct row) as count ' .
-      ' from value_view' .
-      ' where import=? and code_code=?' .
-      ' group by value' .
-      ' order by count(distinct row) desc, value' .
+      "select $code, count(distinct row) as count " .
+      ' from report_3w_view' .
+      " where import=? and $code is not null $sql_filter" .
+      " group by $code" .
+      " order by count(distinct row) desc, $code" .
       ' limit 5',
-      $import->id, $code
+      $import->id
     );
   }
 
