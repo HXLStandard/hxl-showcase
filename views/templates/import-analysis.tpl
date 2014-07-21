@@ -19,23 +19,6 @@
       <h1>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
       {if $data}
-      <nav class="options">
-        <li><a href="{$import|import_link}/analysis.csv?{$queryString|escape}">Download CSV</a></li>
-      </nav>
-      {/if}
-
-      <form method="get" action="">
-        <strong>Include:</strong>
-        {foreach item=field from=$allowed_fields}
-        <label class="checklist">
-          <span>{$field|escape}</span>
-          <input type="radio" name="groupBy[]" value="{$field|escape}"{if $field|in_array:$group_by} checked="checked"{/if} />
-        </label>
-        {/foreach}
-        <input type="submit" />
-      </form>
-
-      {if $data}
       <section id="chart"></section>
 
       <section id="data">
@@ -43,10 +26,9 @@
         <table>
           <thead>
             <tr>
-              {foreach item=header from=$group_by}
+              {foreach item=header from=$headers}
               <th>{$header|escape}</th>
               {/foreach}
-              <th>Count</th>
             </tr>
           </thead>
 
@@ -68,13 +50,6 @@
       {/if}
 
     </main>
-
-    <script src="/scripts/d3.min.js"></script>
-    <script>
-      var url = '{$import|import_link}/analysis.csv?{$queryString|escape}';
-      var code = '{$group_by[0]}';
-    </script>
-    <script src="/scripts/pie-chart.js"></script>
 
   </body>
 </html>

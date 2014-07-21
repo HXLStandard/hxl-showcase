@@ -90,6 +90,10 @@ abstract class AbstractController {
     throw new Exception("DELETE method not supported");
   }
 
+
+  /**
+   * Execute a SQL query and return the statement with results.
+   */
   protected function doQuery() {
     global $APP;
     $args = func_get_args();
@@ -97,6 +101,15 @@ abstract class AbstractController {
     $statement = $APP->pdo->prepare($query);
     $statement->execute($args);
     return $statement;
+  }
+
+  /**
+   * Escape a string for SQL.
+   */
+  protected static function escape_sql($s) {
+    $s = str_replace('\\', '\\\\', $s);
+    $s = str_replace('\'', '\\\'', $s);
+    return $s;
   }
 
 
