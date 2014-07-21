@@ -18,36 +18,49 @@
     <main>
       <h1>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
-      {if $data}
-      <section id="chart"></section>
+      <p>Total activit{$total|plural:'y':'ies'}: {$total|number_format}</p>
 
-      <section id="data">
+      {if $country_count > 0}
+      <section id="countries">
+        <h2>Top countries</h2>
+        <p>Total countries: {$country_count|number_format}</p>
+        <ol>
+          {foreach item=country from=$countries}
+          <li>{$country->value|escape} ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
+      </section>
+      {else}
+      <section id="countries">
+        <h2>Top admin level 1 subdivisions</h2>
+        <p>Total admin level 1 subdivisions: {$adm1_count|number_format}</p>
+        <ol>
+          {foreach item=adm1 from=$adm1s}
+          <li>{$adm1->value|escape} ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
+      </section>
+      {/if}
 
-        <table>
-          <thead>
-            <tr>
-              {foreach item=header from=$headers}
-              <th>{$header|escape}</th>
-              {/foreach}
-            </tr>
-          </thead>
-
-          <tbody>
-            {foreach item=row from=$data}
-            <tr>
-              {foreach item=cell from=$row}
-              <td>{$cell|escape}</td>
-              {/foreach}
-            </tr>
-            {/foreach}
-          </tbody>
-          
-        </table>
+      <section id="sectors">
+        <h2>Top sectors</h2>
+        <p>Total sectors: {$sector_count|number_format}</p>
+        <ol>
+          {foreach item=sector from=$sectors}
+          <li>{$sector->value|escape} ({$sector->count|number_format} activit{$sector->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
       </section>
 
-      {else}
-      <p>(No matching data)</p>
-      {/if}
+      <section id="orgs">
+        <h2>Top organisations</h2>
+        <p>Total organisations: {$org_count|number_format}</p>
+        <ol>
+          {foreach item=org from=$orgs}
+          <li>{$org->value|escape} ({$org->count|number_format} activit{$org->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
+      </section>
 
     </main>
 

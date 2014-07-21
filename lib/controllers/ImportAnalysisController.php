@@ -19,76 +19,70 @@ class ImportAnalysisController extends AbstractController {
     $stamp = $request->get('import');
     $format = $request->get('format');
 
+    // Get the import
     $import = $this->doQuery(
       'select * from import_view ' .
-      'where source_ident=? and dataset_ident=? and stamp=?',
+      ' where source_ident=? and dataset_ident=? and stamp=?',
       $source_ident, $dataset_ident, $stamp
     )->fetch();
 
-    // Map request params to columns in the SQL view
-    $filter_map = array(
-      'country' => 'country',
-      'adm1' => 'adm1',
-      'adm2' => 'adm2',
-      'sector' => 'sector',
-      'subsector' => 'subsector',
-    );
-
-    // Build the SQL query fragment to filter
-    $filter_sql = '';
-    foreach ($filter_map as $http => $sql) {
-      $values = $request->get($http);
-      if (!$values) {
-        continue;
-      }
-      // FIXME logic is wrong -- should be "or" at this level
-      if (!is_array($values)) {
-        $values = array($values);
-      }
-      foreach ($values as $value) {
-        $filter_sql .= sprintf(" and %s='%s'", $sql, self::escape_sql($value));
-      }
-    }
-
-    // Fetch the matching rows
-    $data = $this->doQuery(
-      'select country, adm1, adm2, sector, subsector ' .
-      'from report_3w_view ' .
-      'where import=?' . $filter_sql,
+    // Get the total rows
+    $total = $this->doQuery(
+      'select count(distinct row) from value_view where import=?',
       $import->id
-    );
+    )->fetchColumn();
 
-    $headers = array('#country', '#adm1', '#adm2', '#sector', '#subsector');
+    // Get the preview counts
+    $country_count = $this->get_value_count($import, 'country');
 
-    // Render the results
-    if ($format == 'csv') {
-
-      // TODO HXL codes and names
-
-      $output = fopen('php://output', 'w');
-      
-      // special case: dump CSV and exit
-      header('Content-type: text/csv;charset=utf-8');
-
-      fputcsv($output, $headers);
-      foreach ($data as $row) {
-        $fields = array();
-        foreach ($headers as $code) {
-          array_push($fields,$row->$code);
-        }
-        fputcsv($output, $fields);
-      }
-      exit;
-
+    if ($country_count > 0) {
+      $countries = $this->get_value_preview($import, 'country');
     } else {
-
-      // otherwise, show a web page
-      $response->setParameter('import', $import);
-      $response->setParameter('data', $data);
-      $response->setParameter('headers', $headers);
-      $response->setTemplate('import-analysis');
-
+      $adm1_count = $this->get_value_count($import, 'adm1');
+      $adm1s = $this->get_value_preview($import, 'adm1');
     }
+
+    $sector_count = $this->get_value_count($import, 'sector');
+    $sectors = $this->get_value_preview($import, 'sector');
+
+    $org_count = $this->get_value_count($import, 'org');
+    $orgs = $this->get_value_preview($import, 'org');
+
+    $response->setParameter('import', $import);
+    $response->setParameter('total', $total);
+    $response->setParameter('sector_count', $sector_count);
+    $response->setParameter('sectors', $sectors);
+    $response->setParameter('country_count', $country_count);
+    $response->setParameter('countries', $countries);
+    $response->setParameter('org_count', $org_count);
+    $response->setParameter('orgs', $orgs);
+
+    $response->setTemplate('import-analysis');
   }
+
+  private function get_value_count($import, $code) {
+    return $this->doQuery(
+      'select count(distinct value) as count' .
+      ' from value_view ' .
+      ' where import=? and code_code=?',
+      $import->id, $code
+    )->fetchColumn();
+  }
+
+  /**
+   * Get the top 5 values for a column.
+   */
+  private function get_value_preview($import, $code) {
+    return $this->doQuery(
+      'select value, count(distinct row) as count ' .
+      ' from value_view' .
+      ' where import=? and code_code=?' .
+      ' group by value' .
+      ' order by count(distinct row) desc' .
+      ' limit 5',
+      $import->id, $code
+    );
+  }
+
 
 }
