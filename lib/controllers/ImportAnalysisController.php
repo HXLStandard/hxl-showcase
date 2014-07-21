@@ -40,6 +40,7 @@ class ImportAnalysisController extends AbstractController {
     } else {
       $adm1_count = $this->get_value_count($import, 'adm1');
       $adm1s = $this->get_value_preview($import, 'adm1');
+      
     }
 
     $sector_count = $this->get_value_count($import, 'sector');
@@ -52,6 +53,13 @@ class ImportAnalysisController extends AbstractController {
     $response->setParameter('total', $total);
     $response->setParameter('sector_count', $sector_count);
     $response->setParameter('sectors', $sectors);
+    if ($country_count > 0) {
+      $response->setParameter('country_count', $country_count);
+      $response->setParameter('countries', $countries);
+    } else {
+      $response->setParameter('adm1_count', $adm1_count);
+      $response->setParameter('adm1s', $adm1s);
+    }
     $response->setParameter('country_count', $country_count);
     $response->setParameter('countries', $countries);
     $response->setParameter('org_count', $org_count);
@@ -78,7 +86,7 @@ class ImportAnalysisController extends AbstractController {
       ' from value_view' .
       ' where import=? and code_code=?' .
       ' group by value' .
-      ' order by count(distinct row) desc' .
+      ' order by count(distinct row) desc, value' .
       ' limit 5',
       $import->id, $code
     );
