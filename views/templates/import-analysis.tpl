@@ -36,7 +36,7 @@
       </p>
       {/if}
 
-      <p>Total activit{$total|plural:'y':'ies'}: {$total|number_format}</p>
+      <p>{$total|number_format} matching activit{$total|plural:'y':'ies'}.</p>
 
       {if $country_count > 0}
       <section id="countries">

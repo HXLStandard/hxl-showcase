@@ -116,9 +116,8 @@ class ImportAnalysisController extends AbstractController {
       ' from report_3w_view' .
       " where import=? and $code is not null $sql_filter" .
       " group by $code" .
-      " order by count(distinct row) desc, $code" .
-      ' limit 5',
-      $import->id
+      " order by count(distinct row) desc, $code",
+       $import->id
     );
   }
 
