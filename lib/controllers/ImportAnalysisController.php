@@ -114,11 +114,11 @@ class ImportAnalysisController extends AbstractController {
    */
   private function get_value_preview($import, $code, $sql_filter = '') {
     return $this->doQuery(
-      "select V.value, count(distinct V.row) as count " .
-      ' from value_view V' . $sql_filter .
-      ' where V.import=? and V.code_code=?' .
-      ' group by V.value' .
-      " order by count(distinct V.row) desc, value",
+      "select R.value, count(distinct R.row) as count " .
+      ' from value_view R' . $sql_filter .
+      ' where R.import=? and R.code_code=?' .
+      ' group by R.value' .
+      " order by count(distinct R.row) desc, R.value",
       $import->id, $code
     );
   }
