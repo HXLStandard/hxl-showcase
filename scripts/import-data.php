@@ -53,7 +53,7 @@ while ($row = fgetcsv(STDIN)) {
   if (($n % 100) == 0) {
     print "$n...";
   }
-  $row_id = add_row();
+  $row_id = add_row($import_id);
   // Read each value in the row
   for ($i = 0; $i < count($code_row); $i++) {
     $col_id = $cols[$i];

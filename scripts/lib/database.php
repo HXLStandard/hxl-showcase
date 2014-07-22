@@ -145,10 +145,11 @@ function add_col($import_id, $code, $header) {
 /**
  * Add a new row for an import.
  *
+ * @param $import_id the import id (long int)
  * @return the row id (long int)
  */
-function add_row() {
-  return _function('select add_row()');
+function add_row($import_id) {
+  return _function('select add_row(?)', $import_id);
 }
 
 /**

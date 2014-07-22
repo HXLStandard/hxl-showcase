@@ -44,7 +44,7 @@
         <p>Total countries: {$country_count|number_format}</p>
         <ol>
           {foreach item=country from=$countries}
-          <li><a href="{$filters|params:'country':$country->country}">{$country->country|escape}</a> ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'country':$country->value}">{$country->value|escape}</a> ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -56,7 +56,7 @@
         <p>Total admin level 1 subdivisions: {$adm1_count|number_format}</p>
         <ol>
           {foreach item=adm1 from=$adm1s}
-          <li><a href="{$filters|params:'adm1':$adm1->adm1}">{$adm1->adm1|escape}</a> ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'adm1':$adm1->value}">{$adm1->value|escape}</a> ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -68,7 +68,7 @@
         <p>Total sectors: {$sector_count|number_format}</p>
         <ol>
           {foreach item=sector from=$sectors}
-          <li><a href="{$filters|params:'sector':$sector->sector}">{$sector->sector|escape}</a> ({$sector->count|number_format} activit{$sector->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'sector':$sector->value}">{$sector->value|escape}</a> ({$sector->count|number_format} activit{$sector->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -80,7 +80,7 @@
         <p>Total organisations: {$org_count|number_format}</p>
         <ol>
           {foreach item=org from=$orgs}
-          <li><a href="{$filters|params:'org':$org->org}">{$org->org|escape}</a> ({$org->count|number_format} activit{$org->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'org':$org->value}">{$org->value|escape}</a> ({$org->count|number_format} activit{$org->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>

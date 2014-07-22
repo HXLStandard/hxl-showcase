@@ -22,7 +22,7 @@ class ImportController extends AbstractController {
                              $source_ident, $dataset_ident, $stamp)->fetch();
 
     // Grab the contents of the data table
-    $cols = $this->doQuery('select * from col_view where import=? order by id', $import->id)->fetchAll();
+    $cols = $this->doQuery('select * from col_view where import=? order by col', $import->id)->fetchAll();
     $values = $this->doQuery('select * from value_view where import=? order by row, col', $import->id);
 
     // Render the results

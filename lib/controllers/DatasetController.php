@@ -20,7 +20,7 @@ class DatasetController extends AbstractController {
     $cols = $this->doQuery(
       'select C.* from col_view C ' .
       'where import=? ' .
-      'order by C.id',
+      'order by C.col',
       $import->id
     )->fetchAll();
 

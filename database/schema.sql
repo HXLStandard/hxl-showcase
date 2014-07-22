@@ -61,7 +61,7 @@ create table import (
 create index import_stamp on import(stamp);
 
 create table col (
-  id bigserial primary key,
+  col bigserial primary key,
   import bigint not null,
   code bigint not null,
   header text not null,
@@ -70,7 +70,9 @@ create table col (
 );
 
 create table row (
-  id bigserial primary key
+  row bigserial primary key,
+  import bigint not null,
+  foreign key(import) references import(id)
 );
 
 create table value (
@@ -79,8 +81,8 @@ create table value (
   col bigint not null,
   value text not null,
   lang varchar(2) default 'en',
-  foreign key(row) references row(id) deferrable,
-  foreign key(col) references col(id) deferrable
+  foreign key(row) references row(row) deferrable,
+  foreign key(col) references col(col) deferrable
 );
 
 create index value_idx on value using gin(to_tsvector('english', value));

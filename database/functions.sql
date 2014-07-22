@@ -73,14 +73,14 @@ $$ language sql;
 -- Create a new column.
 --
 create or replace function add_col(bigint, bigint, text) returns bigint as $$
-  insert into col (import, code, header) values ($1, $2, $3) returning id;
+  insert into col (import, code, header) values ($1, $2, $3) returning col;
 $$ language sql;
 
 --
 -- Create a new row.
 --
-create or replace function add_row() returns bigint as $$
-  insert into row (id) values (default) returning id;
+create or replace function add_row(bigint) returns bigint as $$
+  insert into row (import) values ($1) returning row;
 $$ language sql;
 
 --

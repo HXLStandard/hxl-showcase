@@ -4,10 +4,6 @@
  *
  * This controller renders HTML by default, but can also render CSV if
  * the parameter 'format' is set to 'csv'.
- * 
- * The controller takes advantage of a special view (report_3w_view)
- * that already arranges the values into a tabular format, so that
- * it's easy to perform aggregate operations on them.
  */
 class ImportAnalysisController extends AbstractController {
 
@@ -39,23 +35,29 @@ class ImportAnalysisController extends AbstractController {
 
     $sql_filter = '';
     $active_filters = array();
-    foreach ($filter_map as $http => $sql) {
+    $n = 0;
+    foreach ($filter_map as $http => $hxl) {
       $value = $request->get($http);
       if ($value) {
+        $n++;
         if (is_array($value)) {
           $value = array_pop($value);
         }
         $active_filters[$http] = $value;
-        $sql_filter .= sprintf(" and %s='%s'", $sql, self::escape_sql($value));
+        $sql_filter .= sprintf(
+          ' join value_view V%d on R.row=V%d.row and V%d.code_code=\'%s\' and V%d.value=\'%s\'',
+          $n, $n, $n, $hxl, $n, $value
+        );
       }
     }
 
     //
     // Metrics
     //
+
     $total = $this->doQuery(
-      'select count(distinct row) from report_3w_view' .
-      ' where import=?' . $sql_filter,
+      'select count(distinct R.row) from row R' . $sql_filter .
+      ' where R.import=?',
       $import->id
     )->fetchColumn();
 
@@ -100,10 +102,10 @@ class ImportAnalysisController extends AbstractController {
 
   private function get_value_count($import, $code, $sql_filter = '') {
     return $this->doQuery(
-      "select count(distinct $code) as count" .
-      ' from report_3w_view ' .
-      " where import=? and $code is not null $sql_filter",
-      $import->id
+      'select count(distinct R.value) as count' .
+      ' from value_view R ' . $sql_filter .
+      ' where R.import=? and R.code_code=?',
+      $import->id, $code
     )->fetchColumn();
   }
 
@@ -112,12 +114,12 @@ class ImportAnalysisController extends AbstractController {
    */
   private function get_value_preview($import, $code, $sql_filter = '') {
     return $this->doQuery(
-      "select $code, count(distinct row) as count " .
-      ' from report_3w_view' .
-      " where import=? and $code is not null $sql_filter" .
-      " group by $code" .
-      " order by count(distinct row) desc, $code",
-       $import->id
+      "select V.value, count(distinct V.row) as count " .
+      ' from value_view V' . $sql_filter .
+      ' where V.import=? and V.code_code=?' .
+      ' group by V.value' .
+      " order by count(distinct V.row) desc, value",
+      $import->id, $code
     );
   }
 
