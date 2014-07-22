@@ -1,21 +1,17 @@
 <?php
 /**
  * Controller to analyse an imported dataset.
- *
- * This controller renders HTML by default, but can also render CSV if
- * the parameter 'format' is set to 'csv'.
  */
 class ImportAnalysisController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
 
     //
-    // Import
+    // Get the import record
     //
     $source_ident = $request->get('source');
     $dataset_ident = $request->get('dataset');
     $stamp = $request->get('import');
-    $format = $request->get('format');
 
     $import = $this->doQuery(
       'select * from import_view ' .
@@ -24,7 +20,7 @@ class ImportAnalysisController extends AbstractController {
     )->fetch();
 
     //
-    // Filters
+    // Set the filters
     //
     $filter_map = array(
       'country' => 'country',
@@ -37,7 +33,6 @@ class ImportAnalysisController extends AbstractController {
     //
     // Metrics
     //
-
     $total = $this->doQuery(
       'select count(distinct R.row) from row R' . $sql_filter .
       ' where R.import=?',
@@ -62,23 +57,35 @@ class ImportAnalysisController extends AbstractController {
 
     if (!$active_filters['org']) {
       $org_count = $this->get_value_count($import->id, 'org', $sql_filter);
-        $orgs = $this->get_value_preview($import->id, 'org', $sql_filter);
+      $orgs = $this->get_value_preview($import->id, 'org', $sql_filter);
     }
 
+    //
+    // Set the response parameters for the template
+    //
     $response->setParameter('import', $import);
     $response->setParameter('total', $total);
-    $response->setParameter('sector_count', $sector_count);
-    $response->setParameter('sectors', $sectors);
+    $response->setParameter('filters', $active_filters);
+
+    if ($sector_count > 0) {
+      $response->setParameter('sector_count', $sector_count);
+      $response->setParameter('sectors', $sectors);
+    }
+
     if ($country_count > 0) {
       $response->setParameter('country_count', $country_count);
       $response->setParameter('countries', $countries);
-    } else {
+    }
+
+    if ($adm1_count > 0) {
       $response->setParameter('adm1_count', $adm1_count);
       $response->setParameter('adm1s', $adm1s);
     }
-    $response->setParameter('org_count', $org_count);
-    $response->setParameter('orgs', $orgs);
-    $response->setParameter('filters', $active_filters);
+
+    if ($org_count > 0) {
+      $response->setParameter('org_count', $org_count);
+      $response->setParameter('orgs', $orgs);
+    }
 
     $response->setTemplate('import-analysis');
   }
