@@ -44,7 +44,7 @@ function dump_csv_row($cols, $values, $output) {
   foreach ($cols as $col) {
     $v = null;
     foreach ($values as $i => $value) {
-      if ($col->id == $value->col) {
+      if ($col->col == $value->col) {
         $v = $value->value;
         unset($values[$i]);
         break;
