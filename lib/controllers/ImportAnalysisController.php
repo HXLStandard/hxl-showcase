@@ -32,24 +32,7 @@ class ImportAnalysisController extends AbstractController {
       'sector' => 'sector',
       'org' => 'org',
     );
-
-    $sql_filter = '';
-    $active_filters = array();
-    $n = 0;
-    foreach ($filter_map as $http => $hxl) {
-      $value = $request->get($http);
-      if ($value) {
-        $n++;
-        if (is_array($value)) {
-          $value = array_pop($value);
-        }
-        $active_filters[$http] = $value;
-        $sql_filter .= sprintf(
-          ' join value_view V%d on R.row=V%d.row and V%d.code_code=\'%s\' and V%d.value=\'%s\'',
-          $n, $n, $n, $hxl, $n, $value
-        );
-      }
-    }
+    list($sql_filter, $active_filters) = self::process_filters($request, $filter_map);
 
     //
     // Metrics
@@ -63,23 +46,23 @@ class ImportAnalysisController extends AbstractController {
 
     // Get the preview counts
     if (!$active_filters['country']) {
-      $country_count = $this->get_value_count($import, 'country', $sql_filter);
-      $countries = $this->get_value_preview($import, 'country', $sql_filter);
+      $country_count = $this->get_value_count($import->id, 'country', $sql_filter);
+      $countries = $this->get_value_preview($import->id, 'country', $sql_filter);
     }
 
     if (!$active_filters['adm1'] && !@$country_count) {
-      $adm1_count = $this->get_value_count($import, 'adm1', $sql_filter);
-      $adm1s = $this->get_value_preview($import, 'adm1', $sql_filter);
+      $adm1_count = $this->get_value_count($import->id, 'adm1', $sql_filter);
+      $adm1s = $this->get_value_preview($import->id, 'adm1', $sql_filter);
     }
 
     if (!$active_filters['sector']) {
-      $sector_count = $this->get_value_count($import, 'sector', $sql_filter);
-      $sectors = $this->get_value_preview($import, 'sector', $sql_filter);
+      $sector_count = $this->get_value_count($import->id, 'sector', $sql_filter);
+      $sectors = $this->get_value_preview($import->id, 'sector', $sql_filter);
     }
 
     if (!$active_filters['org']) {
-      $org_count = $this->get_value_count($import, 'org', $sql_filter);
-        $orgs = $this->get_value_preview($import, 'org', $sql_filter);
+      $org_count = $this->get_value_count($import->id, 'org', $sql_filter);
+        $orgs = $this->get_value_preview($import->id, 'org', $sql_filter);
     }
 
     $response->setParameter('import', $import);
@@ -100,27 +83,77 @@ class ImportAnalysisController extends AbstractController {
     $response->setTemplate('import-analysis');
   }
 
-  private function get_value_count($import, $code, $sql_filter = '') {
-    return $this->doQuery(
+  /**
+   * Count the number of distinct values for a column.
+   *
+   * @param $import The import identifier (long integer).
+   * @param $code The HXL code.
+   * @param $sql_filter The SQL filter subquery (optional).
+   * @return The number of distinct values (integer).
+   */
+  private function get_value_count($import_id, $code, $sql_filter = '') {
+    return 0 + $this->doQuery(
       'select count(distinct R.value) as count' .
       ' from value_view R ' . $sql_filter .
       ' where R.import=? and R.code_code=?',
-      $import->id, $code
+      $import_id, $code
     )->fetchColumn();
   }
 
   /**
    * Get the top 5 values for a column.
+   *
+   * The result objects will have a "count" property with the number
+   * of matches, and a "value" property with the cell value.
+   *
+   * @param $import The import identifier (long integer).
+   * @param $code The HXL code.
+   * @param $sql_filter The SQL filter subquery (optional).
+   * @return A list of result objects.
    */
-  private function get_value_preview($import, $code, $sql_filter = '') {
+  private function get_value_preview($import_id, $code, $sql_filter = '') {
     return $this->doQuery(
       "select R.value, count(distinct R.row) as count " .
       ' from value_view R' . $sql_filter .
       ' where R.import=? and R.code_code=?' .
       ' group by R.value' .
       " order by count(distinct R.row) desc, R.value",
-      $import->id, $code
+      $import_id, $code
     );
+  }
+
+  /**
+   * Static: process the requested filters, and create a SQL (sub)query.
+   *
+   * @param $request The incoming HTTP request object.
+   * @param $filter_map An associative array of request parameters mapped to HXL codes.
+   * @return A list containing the SQL fragment and an array of the actual filters selected.
+   */
+  private static function process_filters(HttpRequest $request, $filter_map) {
+
+    // Return values
+    $sql_filter = '';
+    $active_filters = array();
+
+    // Iterate through the filter map and construct the SQL query
+    $n = 0;
+    foreach ($filter_map as $http => $hxl) {
+      $value = $request->get($http);
+      if ($value) {
+        $n++;
+        if (is_array($value)) {
+          $value = array_pop($value);
+        }
+        $active_filters[$http] = $value;
+        $sql_filter .= sprintf(
+          ' join value_view V%d on R.row=V%d.row and V%d.code_code=\'%s\' and V%d.value=\'%s\'',
+          $n, $n, $n, $hxl, $n, $value
+        );
+      }
+    }
+
+    // Return the results
+    return array($sql_filter, $active_filters);
   }
 
 
