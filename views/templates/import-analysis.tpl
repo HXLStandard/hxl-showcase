@@ -32,10 +32,14 @@
       {if $filters.org}
       Organisation &ldquo;{$filters.org|escape}&rdquo;
       {/if}
-      (<a href="?">show all</a>)
       </p>
       {/if}
 
+      <nav class="options col2">
+        <li><a href="?">Show all</a></li>
+        <li><a href="analysis.csv{$filters|params}">Download CSV</a></li>
+      </nav>
+      
       <p>{$total|number_format} matching activit{$total|plural:'y':'ies'}.</p>
 
       {if $country_count > 0}
@@ -44,7 +48,7 @@
         <p>Total countries: {$country_count|number_format}</p>
         <ol>
           {foreach item=country from=$countries}
-          <li><a href="{$filters|params:'country':$country->value}">{$country->value|escape}</a> ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
+          <li><a href="analysis{$filters|params:'country':$country->value}">{$country->value|escape}</a> ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -85,6 +89,31 @@
         </ol>
       </section>
       {/if}
+
+      <section id="data">
+        <h2>Data</h2>
+        <table> 
+          <thead>
+            <tr class="codes">
+              {foreach item=col from=$cols}
+              <th><a href="{$col|code_link}">{$col->code_name|escape}</a></th>
+              {/foreach}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {foreach item=value from=$values}
+              {if $last_row and ($last_row != $value->row)}
+            </tr>
+            <tr>
+              {/if}
+              {assign var=last_row value=$value->row}
+              <td>{$value->value|escape}</td>
+              {/foreach}
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
     </main>
 

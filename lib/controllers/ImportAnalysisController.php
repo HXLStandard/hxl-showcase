@@ -6,6 +6,9 @@ class ImportAnalysisController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
 
+    // Output format
+    $format = $request->get('format', 'html');
+
     //
     // Get the import record
     //
@@ -31,9 +34,22 @@ class ImportAnalysisController extends AbstractController {
     list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $filter_map);
 
     //
+    // Get the output
+    //
+    $cols = $this->doQuery('select * from col_view where import=? order by col', $import->id)->fetchAll();
+    $values = $this->doQuery('select * from value_view where row in ' . $sql_filter . ' order by row, col');
+
+    //
+    // Early cut-off if it's CSV
+    if ($format == 'csv') {
+      header('Content-type: text/csv;charset=utf-8');
+      dump_csv($cols, $values, fopen('php://output', 'w'));
+      exit;
+    }
+
+    //
     // Metrics
     //
-
     $total = $this->get_total_count($sql_filter);
 
     // Get the preview counts
@@ -63,6 +79,8 @@ class ImportAnalysisController extends AbstractController {
     $response->setParameter('import', $import);
     $response->setParameter('total', $total);
     $response->setParameter('filters', $active_filters);
+    $response->setParameter('cols', $cols);
+    $response->setParameter('values', $values);
 
     if ($sector_count > 0) {
       $response->setParameter('sector_count', $sector_count);
