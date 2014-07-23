@@ -91,7 +91,7 @@
       {/if}
 
       <section id="data">
-        <h2>Data</h2>
+        <h2>Matching data</h2>
         <table> 
           <thead>
             <tr class="codes">
