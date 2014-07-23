@@ -184,7 +184,7 @@ class ImportAnalysisController extends AbstractController {
         } else {
         $sql_filter .= sprintf(
           ' join value_view V%d on V1.row=V%d.row and V%d.code_code=\'%s\' and V%d.value=\'%s\'',
-          $n, $n, $n, $hxl, $n, $value
+          $n, $n, $n, self::escape_sql($hxl), $n, self::escape_sql($value)
         );
         }
       }
