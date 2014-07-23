@@ -180,7 +180,7 @@ class ImportAnalysisController extends AbstractController {
         // Different treatment for the first one
         if ($n == 1) {
           $sql_filter = 'select V1.row from value_view V1';
-          $where_clause = sprintf(" where V1.import=%d and V1.code_code='%s' and V1.value='%s'", $import_id, $hxl, $value);
+          $where_clause = sprintf(" where V1.import=%d and V1.code_code='%s' and V1.value='%s'", $import_id, self::escape_sql($hxl), self::escape_sql($value));
         } else {
         $sql_filter .= sprintf(
           ' join value_view V%d on V1.row=V%d.row and V%d.code_code=\'%s\' and V%d.value=\'%s\'',
