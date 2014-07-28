@@ -7,17 +7,18 @@ insert into lang (lang, name) values ('en', 'English');
 
 create table datatype (
   id bigserial primary key,
-  type varchar(8) unique not null,
+  type varchar(32) unique not null,
   name varchar(64) not null
 );
 
 insert into datatype (type, name) values
-  ('text', 'Text'),
-  ('id', 'Identifier or code'),
-  ('number', 'Number'),
-  ('date', 'Date'),
-  ('url', 'Web link'),
-  ('email', 'Email address');
+  ('Text', 'Text'),
+  ('Code', 'Identifier or code'),
+  ('Number', 'Number'),
+  ('Date', 'Date'),
+  ('Phone number', 'Telephone number'),
+  ('URL', 'Web link'),
+  ('Email', 'Email address');
 
 create table usr (
   id bigserial primary key,

@@ -1,80 +1,86 @@
-code,name,type
-report.date,Date reported,date
-from.date,Start date applicable,date
-to.date,End date applicable,date
-period.date,Time period applicable,date
-source,Source description,text
-source.id,Source id,id
-method,Methodology description,text
-method.id,Methodology code,id
-method.lnk,Methodology link,url
-datatype,Data type description,text
-datatype.id,Data type code,id
-crisis,Crisis description,text
-crisis.id,Crisis id,id
-crisis.lnk,Crisis link,url
-origin.lnk,Data origin link,url
-loc,Location description,text
-loc.id,Location code,id
-country,Country description,text
-country.id,Country code,id
-region,Region description,text
-region.id,Region code,id
-adm,Full admin description,text
-adm1,Admin level 1 description,text
-adm1.id,Admin level 1 code,id
-adm2,Admin level 2 description,text
-adm2.id,Admin level 2 code,id
-adm3,Admin level 3 description,text
-adm3.id,Admin level 3 code,id
-adm4,Admin level 4 description,text
-adm4.id,Admin level 4 code,id
-adm5,Admin level 5 description,text
-adm5.id,Admin level 5 code,id
-lat.deg,Latitude,number
-lon.deg,Longitude,number
-sex,Sex category description,text
-sex.id,Sex category code,id
-age,Age category description,text
-age.id,Age category code,id
-agesex,Age/sex category description,text
-agesex.id,Age/sex category code,id
-aff.num,Number of people affected,number
-impact1,Impact type level 1 description,text
-impact1.id,Impact type level 1 code,id
-impact2,Impact type level 2 description,text
-impact2.id,Impact type level 2 code,id
-impact3,Impact type level 3 description,text
-impact3.id,Impact type level 3 code,id
-shelter1,Shelter type level 1 description,text
-shelter1.id,Shelter type level 1 code,id
-shelter2,Shelter type level 2 description,text
-shelter2.id,Shelter type level 2 code,id
-inneed.num,Number of people in need,number
-targeted.num,Number of people targeted,number
-reached.num,Number of people reached,number
-injured.num,Number of people injured,number
-activity,Project/activity description,text
-activity.id,Project/activity id,id
-status,Project/activity status description,text
-status.id,Project/activity status code,id
-name,Contact name,text
-email,Contact email,email
-phone,Contact phone,text
-org,Organisation description,text
-org.id,Organisation id,id
-prog,Programmer description,text
-prog.id,Programmer id,id
-impl,Implementer description,text
-impl.id,Implementer id,id
-funder,Funder/donor description,text
-funder.id,Funder/donor id,id
-sector,Sector/Cluster description,text
-sector.id,Sector/cluster code,id
-subsector,Subsector description,text
-subsector.id,Subsector code,id
-output,Output indicator description,text
-output.id,Output indicator code,id
-beneficiary,Beneficiary description,text
-beneficiary.id,Beneficiary code,id
-delivered.num,Number of items delivered,number
+code,name,type,Description,Example
+#report_date,Date reported,Date,The date that this data record was released.,2014-06-23
+#from_date,Start date applicable,Date,The date when the data in this report was first applicable.,2014-05-01
+#to_date,End date applicable,Date,The date when the data in this report was last applicable.,2014-05-31
+#period_date,Time period applicable,Date,The time period when the data in this report was applicable.,2010
+#source,Source description,Text,A free-text description of the source organisation for this data record.,OXFAM GB
+#source_id,Source id,Code,A unique identifier for the source organisation for this data record.,5120
+#method,Methodology description,Text,A free-text description of the methodology used to collect the data in this record.,Census
+#method_id,Methodology code,Code,A unique code for the methodology used to collect the data in this record.,003
+#method_lnk,Methodology link,URL,A link to an online description of the methodology.,
+#datatype,Data type description,Text,A free-text description of the type of data being collected.,Who-What-Where (3W)
+#datatype_id,Data type code,Code,A unique code for the methodology used to collect the data in this record.,CX569
+#crisis,Crisis description,Text,A free-text description of the crisis to which the data applies.,"Complex Emergency, Israel"
+#crisis_id,Crisis id,Code,An unique identifier for the crisis to which the data applies.,2012-000194
+#crisis_lnk,Crisis link,URL,A link to an online description of the crisis.,
+#origin_lnk,Data origin link,URL,"A link to an online source for this specific data (API, PDF, etc.)",
+#loc,Location description,Text,A free-text description of a specific location.,Capital Health Clinic
+#loc_id,Location code,Code,"A code uniquely identifying a location. Normally, a p-code from the COD registry for the country.",083700000
+#loctype,Location type,Text,Description of a location type.,Camp
+#loctype_id,Location type code,Code,A code uniquely identifying a location type.,01hosp
+#country,Country description,Text,A free-text description of a country.,Philippines
+#country_id,Country code,Code,"A code uniquely identifying a country, normally an ISO 3166-1 alpha-3 code.",PH
+#region,Region description,Text,"A free-text description of a super-national region (e.g. ""Sahel"").",Asia-Pacific
+#region_id,Region code,Code,A code uniquely identifying a super-national region.,APC
+#adm,Full admin description,Text,A free-text description of all administrative levels combined,"Sawa, Magsaysay, Occidental Mindoro, Mimaropa"
+#adm1,Admin level 1 description,Text,A free-text description of a level-one administrative area (ADM1).,Mimaropa region
+#adm1_id,Admin level 1 code,Code,A code uniquely identifying a level-one administrative area (ADM1).,
+#adm2,Admin level 2 description,Text,A free-text description of a level-two administrative area (ADM2).,Occidental Mindoro province
+#adm2_id,Admin level 2 code,Code,A code uniquely identifying a level-two administrative area (ADM2).,
+#adm3,Admin level 3 description,Text,A free-text description of a level-three administrative area (ADM3).,Magsaysay municipality
+#adm3_id,Admin level 3 code,Code,A code uniquely identifying a level-three administrative area (ADM3).,
+#adm4,Admin level 4 description,Text,A free-text description of a level-four administrative area (ADM4).,Sawa baranguay
+#adm4_id,Admin level 4 code,Code,A code uniquely identifying a level-four administrative area (ADM4).,
+#adm5,Admin level 5 description,Text,A free-text description of a level-five administrative area (ADM5).,
+#adm5_id,Admin level 5 code,Code,A code uniquely identifying a level-five administrative area (ADM5).,
+#lat_deg,Latitude,Number,"The decimal latitude of the location (e.g. 40.500000 for north 40 degrees, 30 minutes, 0 seconds).",13.216667
+#lon_deg,Longitude,Number,"The decimal longitude of the location (e.g. -70.250000 for west 70 degrees, 15 minutes, 0 seconds).",120.600000
+#sex,Sex category description,Text,A free-text description of a sex category.,Male
+#sex_id,Sex category code,Code,A unique code for a sex category.,m
+#age,Age category description,Text,A free-text description of an age category.,Infants (under 3)
+#age_id,Age category code,Code,A unique code for an age category.,0-3
+#agesex,Age/sex category description,Text,A free-text description of a combined age-sex category.,Girls 6-12
+#agesex_id,Age/sex category code,Code,A unique code for a combined age-sex category.,g_6_12
+#people_num,Number of people involved,Number,Number of people involved (without specifying status).,900
+#households_num,Number of households involved,Number,Number of households involved (without specifying status),350
+#females_num,Number of females involved.,Number,Number of females involved (without specifying status).,1000
+#males_num,Number of males involved.,Number,Number of males involved (without specifying status).,800
+#aff_num,Number of people affected,Number,Total number of affected people described in this data record/row.,150000
+#impact1,Impact type level 1 description,Text,Free-text description of the impact at a general level.,Affected
+#impact1_id,Impact type level 1 code,Code,Code for the impact at a general level.,V100
+#impact2,Impact type level 2 description,Text,Free-text description of the impact at a medium level of detail.,Displaced
+#impact2_id,Impact type level 2 code,Code,Code for the impact at a medium level of detail.,V110
+#impact3,Impact type level 3 description,Text,Free-text description of the impact at a specific level of detail.,IDP
+#impact3_id,Impact type level 3 code,Code,Code for the impact at a specific level of detail.,V111
+#shelter1,Shelter type level 1 description,Text,Free-text description of the group's shelter type at a high level of detail.,Camp or Camp-Like
+#shelter1_id,Shelter type level 1 code,Code,Code for the group's shelter type at a high level of detail.,A10
+#shelter2,Shelter type level 2 description,Text,Free-text description of the group's shelter type at a specific level of detail.,Reception or Transit Site
+#shelter2_id,Shelter type level 2 code,Code,Code for the group's shelter type at a specific level of detail.,A14
+#inneed_num,Number of people in need,Number,Number of people in need of (some kind of) assistance.,1200000
+#targeted_num,Number of people targeted,Number,Number of people targetted for (some kind of) assistance.,750000
+#reached_num,Number of people reached,Number,Number of people reached with (some kind of) assistance.,"237,805"
+#injured_num,Number of people injured,Number,Number of people injured.,"15,000"
+#activity,Project/activity description,Text,A free-text title/description of the project or activity.,Drought-resistant seed distribution
+#activity_id,Project/activity id,Code,A unique identifier for the project or activity.,PF2014-7795
+#status,Project/activity status description,Text,A free-text description of the status of the project/activity.,Currently active
+#status_id,Project/activity status code,Code,A code identifying the status of the project/activity.,active
+#name,Contact name,Text,The name of the contact person for the project/activity.,Jeanne Gervais
+#email,Contact email,Email,The email of the contact person for the project/activity.,jgervais@example.org
+#phone,Contact phone,Phone number,The phone number of the contact person for the project/activity.,+1-613-555-1111
+#org,Organisation description,Text,A free-text description of an organisation involved in an activity (without specifying role).,World Food Programme (WFP)
+#org_id,Organisation id,Code,A unique identifier for an organisation involved in an activity (without specifying role).,561
+#prog,Programmer description,Text,A free-text description of the organisation programming the project/activity.,World Food Programme (WFP)
+#prog_id,Programmer id,Code,A unique identifier for the organisation programming the project/activity.,561
+#impl,Implementer description,Text,A free-text description of the organisation implementing the project/activity.,Canadian Food Grains Bank
+#impl_id,Implementer id,Code,A unique identifier for the organisation implementing the project/activity.,5804
+#funder,Funder/donor description.,Text,The name of a funder/donor for the activity.,USAID
+#funder_id,Funder/donor id,Code,A unique identifier for a funder/donor for the activity.,590.us
+#sector,Sector/Cluster description,Text,A free-text description of the cluster in which a project/activity is taking place.,Food Security
+#sector_id,Sector/cluster code,Code,A code identifying the cluster in which a project/activity is taking place.,FS
+#subsector,Subsector description,Text,A free-text description of a subsector to which the project/activity applies.,Agriculture capacity
+#subsector_id,Subsector code,Code,A code identifying a subsector to which the project/activity applies.,F0104
+#output,Output indicator description,Text,A free-text description of an output indicator targetted by the project/activity.,Change in production compared to previous year’s harvest by commodity
+#output_id,Output indicator code,Code,A code identifying an output indicator targetted by the project/activity.,F-12
+#beneficiary,Beneficiary description,Text,A free-text description of an intended beneficiary group for the project/activity.,Agricultural food producers
+#beneficiary_id,Beneficiary code,Code,A code identifying an intended beneficiary group for the project/activity.,FS/11/16
+#delivered_num,Number of items delivered.,Number,"The number of units of aid delivered, however those units are defined (in the output indicator above).","3,000"
