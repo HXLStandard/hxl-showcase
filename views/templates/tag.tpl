@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>HXL tag "{$tag->tag|escape}" ({$tag->name|escape})</title>
+    <title>#{$tag->tag|escape}</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -13,7 +13,7 @@
     </nav>
 
     <main>
-      <h1>HXL tag &ldquo;{$tag->tag|escape}&rdquo; ({$tag->name|escape})</h1>
+      <h1>#{$tag->tag|escape} ({$tag->name|escape})</h1>
 
       <form method="GET" action="/search">
         <input type="hidden" name="tag" value="{$tag->tag|escape}" />
