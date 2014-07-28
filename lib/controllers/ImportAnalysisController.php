@@ -26,10 +26,14 @@ class ImportAnalysisController extends AbstractController {
     // Set the filters
     //
     $filter_map = array(
-      'country' => 'country',
-      'adm1' => 'adm1',
-      'sector' => 'sector',
-      'org' => 'org',
+      'country' => '#country',
+      '#country' => '#country',
+      'adm1' => '#adm1',
+      '#adm1' => '#adm1',
+      'sector' => '#sector',
+      '#sector' => '#sector',
+      'org' => '#org',
+      '#org' => '#org',
     );
     list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $filter_map);
 
@@ -53,24 +57,24 @@ class ImportAnalysisController extends AbstractController {
     $total = $this->get_total_count($sql_filter);
 
     // Get the preview counts
-    if (!@$active_filters['country']) {
-      $country_count = $this->get_value_count('country', $sql_filter);
-      $countries = $this->get_value_preview('country', $sql_filter);
+    if (!@$active_filters['#country']) {
+      $country_count = $this->get_value_count('#country', $sql_filter);
+      $countries = $this->get_value_preview('#country', $sql_filter);
     }
 
-    if (!@$active_filters['adm1'] && !@$country_count) {
-      $adm1_count = $this->get_value_count('adm1', $sql_filter);
-      $adm1s = $this->get_value_preview('adm1', $sql_filter);
+    if (!@$active_filters['#adm1'] && !@$country_count) {
+      $adm1_count = $this->get_value_count('#adm1', $sql_filter);
+      $adm1s = $this->get_value_preview('#adm1', $sql_filter);
     }
 
-    if (!@$active_filters['sector']) {
-      $sector_count = $this->get_value_count('sector', $sql_filter);
-      $sectors = $this->get_value_preview('sector', $sql_filter);
+    if (!@$active_filters['#sector']) {
+      $sector_count = $this->get_value_count('#sector', $sql_filter);
+      $sectors = $this->get_value_preview('#sector', $sql_filter);
     }
 
-    if (!@$active_filters['org']) {
-      $org_count = $this->get_value_count('org', $sql_filter);
-      $orgs = $this->get_value_preview('org', $sql_filter);
+    if (!@$active_filters['#org']) {
+      $org_count = $this->get_value_count('#org', $sql_filter);
+      $orgs = $this->get_value_preview('#org', $sql_filter);
     }
 
     //
