@@ -26,12 +26,25 @@
       {if $filters.adm1}
       Admin level 1 &ldquo;{$filters.adm1|escape}&rdquo;
       {/if}
+      {if $filters.adm2}
+      Admin level 2 &ldquo;{$filters.adm2|escape}&rdquo;
+      {/if}
+      {if $filters.adm3}
+      Admin level 3 &ldquo;{$filters.adm3|escape}&rdquo;
+      {/if}
+      {if $filters.adm4}
+      Admin level 4 &ldquo;{$filters.adm4|escape}&rdquo;
+      {/if}
+      {if $filters.adm5}
+      Admin level 5 &ldquo;{$filters.adm5|escape}&rdquo;
+      {/if}
       {if $filters.sector}
       Sector &ldquo;{$filters.sector|escape}&rdquo;
       {/if}
       {if $filters.org}
       Organisation &ldquo;{$filters.org|escape}&rdquo;
       {/if}
+      (<a href="?">Clear all</a>)
       </p>
       {/if}
 
@@ -61,6 +74,54 @@
         <ol>
           {foreach item=adm1 from=$adm1s}
           <li><a href="{$filters|params:'adm1':$adm1->value}">{$adm1->value|escape}</a> ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
+      </section>
+      {/if}
+
+      {if $adm2_count > 0}
+      <section id="adm2">
+        <h2>Top admin level 2 subdivisions</h2>
+        <p>Total admin level 2 subdivisions: {$adm2_count|number_format}</p>
+        <ol>
+          {foreach item=adm2 from=$adm2s}
+          <li><a href="{$filters|params:'adm2':$adm2->value}">{$adm2->value|escape}</a> ({$adm2->count|number_format} activit{$adm2->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
+      </section>
+      {/if}
+
+      {if $adm3_count > 0}
+      <section id="adm3">
+        <h2>Top admin level 3 subdivisions</h2>
+        <p>Total admin level 3 subdivisions: {$adm3_count|number_format}</p>
+        <ol>
+          {foreach item=adm3 from=$adm3s}
+          <li><a href="{$filters|params:'adm3':$adm3->value}">{$adm3->value|escape}</a> ({$adm3->count|number_format} activit{$adm3->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
+      </section>
+      {/if}
+
+      {if $adm4_count > 0}
+      <section id="adm4">
+        <h2>Top admin level 4 subdivisions</h2>
+        <p>Total admin level 4 subdivisions: {$adm4_count|number_format}</p>
+        <ol>
+          {foreach item=adm4 from=$adm4s}
+          <li><a href="{$filters|params:'adm4':$adm4->value}">{$adm4->value|escape}</a> ({$adm4->count|number_format} activit{$adm4->count|plural:'y':'ies'})</li>
+          {/foreach}
+        </ol>
+      </section>
+      {/if}
+
+      {if $adm5_count > 0}
+      <section id="adm5">
+        <h2>Top admin level 5 subdivisions</h2>
+        <p>Total admin level 5 subdivisions: {$adm5_count|number_format}</p>
+        <ol>
+          {foreach item=adm5 from=$adm5s}
+          <li><a href="{$filters|params:'adm5':$adm5->value}">{$adm5->value|escape}</a> ({$adm5->count|number_format} activit{$adm5->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>

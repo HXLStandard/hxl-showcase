@@ -28,6 +28,10 @@ class ImportAnalysisController extends AbstractController {
     $filter_map = array(
       'country' => 'country',
       'adm1' => 'adm1',
+      'adm2' => 'adm2',
+      'adm3' => 'adm3',
+      'adm4' => 'adm4',
+      'adm5' => 'adm5',
       'sector' => 'sector',
       'org' => 'org',
     );
@@ -63,6 +67,26 @@ class ImportAnalysisController extends AbstractController {
       $adm1s = $this->get_value_preview('adm1', $sql_filter);
     }
 
+    if (!@$active_filters['adm2'] && !@$adm1_count) {
+      $adm2_count = $this->get_value_count('adm2', $sql_filter);
+      $adm2s = $this->get_value_preview('adm2', $sql_filter);
+    }
+
+    if (!@$active_filters['adm3'] && !@$adm2_count) {
+      $adm3_count = $this->get_value_count('adm3', $sql_filter);
+      $adm3s = $this->get_value_preview('adm3', $sql_filter);
+    }
+
+    if (!@$active_filters['adm4'] && !@$adm3_count) {
+      $adm4_count = $this->get_value_count('adm4', $sql_filter);
+      $adm4s = $this->get_value_preview('adm4', $sql_filter);
+    }
+
+    if (!@$active_filters['adm5'] && !@$adm4_count) {
+      $adm5_count = $this->get_value_count('adm5', $sql_filter);
+      $adm5s = $this->get_value_preview('adm5', $sql_filter);
+    }
+
     if (!@$active_filters['sector']) {
       $sector_count = $this->get_value_count('sector', $sql_filter);
       $sectors = $this->get_value_preview('sector', $sql_filter);
@@ -95,6 +119,26 @@ class ImportAnalysisController extends AbstractController {
     if ($adm1_count > 0) {
       $response->setParameter('adm1_count', $adm1_count);
       $response->setParameter('adm1s', $adm1s);
+    }
+
+    if ($adm2_count > 0) {
+      $response->setParameter('adm2_count', $adm2_count);
+      $response->setParameter('adm2s', $adm2s);
+    }
+
+    if ($adm3_count > 0) {
+      $response->setParameter('adm3_count', $adm3_count);
+      $response->setParameter('adm3s', $adm3s);
+    }
+
+    if ($adm4_count > 0) {
+      $response->setParameter('adm4_count', $adm4_count);
+      $response->setParameter('adm4s', $adm4s);
+    }
+
+    if ($adm5_count > 0) {
+      $response->setParameter('adm5_count', $adm5_count);
+      $response->setParameter('adm5s', $adm5s);
     }
 
     if ($org_count > 0) {
