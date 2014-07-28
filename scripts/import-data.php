@@ -39,7 +39,12 @@ $header_row = fgetcsv(STDIN);
 $cols = array();
 for ($i = 0; $i < count($tag_row); $i++) {
   if ($tag_row[$i]) {
-    array_push($cols, add_col($import_id, $tag_row[$i], $header_row[$i]));
+    if (substr($tag_row[$i], 0, 1) != '#') {
+      die(sprintf("Tag \"%s\" does not start with '#'\n", $tag_row[$i]));
+    } else {
+      $tag = substr($tag_row[$i], 1);
+      array_push($cols, add_col($import_id, $tag, $header_row[$i]));
+    }
   } else {
     printf("Skipping column \"%s\" (no HXL tag)\n", $header_row[$i]);
     array_push($cols, null);

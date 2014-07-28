@@ -41,7 +41,13 @@ while ($row = fgetcsv(STDIN)) {
     }
   }
 
-  add_tag($fields['tag'], $fields['name'], $fields['type']);
+  if (substr($fields['tag'], 0 ,1) != '#') {
+    die(sprintf("Tag \"%s\" does not start with '#'\n", $fields['tag']));
+  } else {
+    $tag = substr($fields['tag'], 1);
+  }
+      
+  add_tag($tag, $fields['name'], $fields['type']);
   printf("Added tag %s (%s) %s\n", $fields['tag'], $fields['name'], $fields['type']);
 }
 
