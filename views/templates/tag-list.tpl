@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>HXL codes</title>
+    <title>HXL tags</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -12,25 +12,25 @@
     </nav>
 
     <main>
-      <h1>HXL codes</h1>
+      <h1>HXL tags</h1>
 
       <table>
-        <caption>Select a code to see the datasets where it appears</caption>
+        <caption>Select a tag to see the datasets where it appears</caption>
         <thead>
           <tr>
-            <th>HXL code</th>
+            <th>HXL tag</th>
             <th>Description</th>
             <th>Data type</th>
             <th>Number of datasets</th>
           </tr>
         </thead>
         <tbody>
-          {foreach item=code from=$codes}
+          {foreach item=tag from=$tags}
           <tr>
-            <td><a href="{$code|code_link}">{$code->code|escape}</a></td>
-            <td>{$code->name|escape}</td>
-            <td>{$code->datatype_name|escape}</td>
-            <td>{$code->col_count|number_format}</td>
+            <td><a href="{$tag|tag_link}">{$tag->tag|escape}</a></td>
+            <td>{$tag->name|escape}</td>
+            <td>{$tag->datatype_name|escape}</td>
+            <td>{$tag->col_count|number_format}</td>
           </tr>
         {/foreach}
         </tbody>

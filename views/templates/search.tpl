@@ -19,11 +19,11 @@
           <input name="q" placeholder="Search text" value="{$q|escape}" />
         </label>
         <label>
-          <span>HXL code</span>
-          <select name="code">
+          <span>HXL tag</span>
+          <select name="tag">
             <option value="">(all)</option>
-            {foreach item=code from=$codes}
-            <option value="{$code->code|escape}"{if $code->code == $code_code} selected="selected"{/if}>{$code->code|escape} &mdash; {$code->name|escape}</option>
+            {foreach item=tag from=$tags}
+            <option value="{$tag->tag|escape}"{if $tag->tag == $tag_tag} selected="selected"{/if}>{$tag->tag|escape} &mdash; {$tag->name|escape}</option>
             {/foreach}
           </select>
         </label>
@@ -58,7 +58,7 @@
             <tr>
               <th>Dataset</th>
               <th>Provider</th>
-              <th>HXL code</th>
+              <th>HXL tag</th>
               <th>Value</th>
               <th>Matching rows</th>
             </tr>
@@ -68,7 +68,7 @@
             <tr>
               <td><a href="{$value|dataset_link}">{$value->dataset_name|escape}</a></td>
               <td><a href="{$value|source_link}">{$value->source_name|escape}</a></td>
-              <td><a href="{$value|code_link}">{$value->code_name|escape}</a></td>
+              <td><a href="{$value|tag_link}">{$value->tag_name|escape}</a></td>
               <td>{$value->value|escape}</td>
               <td>{$value->row_count|number_format}</td>
             </tr>

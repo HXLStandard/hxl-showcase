@@ -78,24 +78,24 @@ function add_usr($ident, $name) {
 }
 
 /**
- * Add a HXL code.
+ * Add a HXL tag.
  *
- * @param $code the HXL code.
+ * @param $tag the HXL tag.
  * @param $name the name of the HXL data element.
- * @return the code database id (long int)
+ * @return the tag database id (long int)
  */
-function add_code($code, $name, $type) {
-  return _function('select add_code(?, ?, ref_datatype(?))', $code, $name, $type);
+function add_tag($tag, $name, $type) {
+  return _function('select add_tag(?, ?, ref_datatype(?))', $tag, $name, $type);
 }
 
 /**
- * Delete a HXL code.
+ * Delete a HXL tag.
  *
- * @param $code the HXL code.
- * @return the code database id (long int)
+ * @param $tag the HXL tag.
+ * @return the tag database id (long int)
  */
-function del_code($code) {
-  return _function('select del_code(?)', $code);
+function del_tag($tag) {
+  return _function('select del_tag(?)', $tag);
 }
 
 /**
@@ -134,12 +134,12 @@ function add_import($usr_ident, $source_ident, $dataset_ident) {
  * Add a new column for an import.
  *
  * @param $import_id the import id (long int)
- * @param $code the HXL field code (string)
+ * @param $tag the HXL field tag (string)
  * @param $header the text of the spreadsheet header (string)
  * @return the column id (long int)
  */
-function add_col($import_id, $code, $header) {
-  return _function('select add_col(?, ref_code(?), ?)', $import_id, $code, $header);
+function add_col($import_id, $tag, $header) {
+  return _function('select add_col(?, ref_tag(?), ?)', $import_id, $tag, $header);
 }
 
 /**

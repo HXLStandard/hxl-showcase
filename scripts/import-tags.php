@@ -1,12 +1,12 @@
 <?php
 /**
- * Import HXL codes from a CSV file
+ * Import HXL tags from a CSV file
  *
- * Usage: php import-codes.php [-r] < SOURCE.csv
+ * Usage: php import-tags.php [-r] < SOURCE.csv
  *
- * -r means remove all existing codes before reimporting
+ * -r means remove all existing tags before reimporting
  *
- * SOURCE.csv is a CSV file with (at least) the headers "code" and
+ * SOURCE.csv is a CSV file with (at least) the headers "tag" and
  * "name"
  *
  * If there's any problem, the script will fail completely, and the
@@ -16,17 +16,17 @@
 require_once(__DIR__ . '/lib/database.php');
 
 if (count($argv) > 2 || (count($argv) == 2 && $argv[1] != '-r')) {
-  die("Usage: php import-codes.php [-r] < SOURCE.csv\n");
+  die("Usage: php import-tags.php [-r] < SOURCE.csv\n");
 }
 
 // Use a transaction, so that it's all or nothing
 _db()->beginTransaction();
 
-// if "-r" is specified, delete old codes first
+// if "-r" is specified, delete old tags first
 @list($script, $replace_flag) = $argv;
 if ($replace_flag) {
-  print("Deleting old codes\n");
-  _query('delete from code');
+  print("Deleting old tags\n");
+  _query('delete from tag');
 }
 
 $headers = fgetcsv(STDIN);
@@ -35,14 +35,14 @@ while ($row = fgetcsv(STDIN)) {
   $n++;
   $fields = array_combine($headers, $row);
 
-  foreach (array('code', 'name', 'type') as $header) {
+  foreach (array('tag', 'name', 'type') as $header) {
     if (!$fields[$header]) {
       die(sprintf("Missing value %s in row %d\n", $header, $n));
     }
   }
 
-  add_code($fields['code'], $fields['name'], $fields['type']);
-  printf("Added code %s (%s) %s\n", $fields['code'], $fields['name'], $fields['type']);
+  add_tag($fields['tag'], $fields['name'], $fields['type']);
+  printf("Added tag %s (%s) %s\n", $fields['tag'], $fields['name'], $fields['type']);
 }
 
 _db()->commit();

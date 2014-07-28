@@ -1,4 +1,4 @@
-code,name,type,Description,Example
+tag,name,type,description,example
 #report_date,Date reported,Date,The date that this data record was released.,2014-06-23
 #from_date,Start date applicable,Date,The date when the data in this report was first applicable.,2014-05-01
 #to_date,End date applicable,Date,The date when the data in this report was last applicable.,2014-05-31

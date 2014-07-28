@@ -8,15 +8,15 @@
  */
 function dump_csv($cols, $values, $output) {
 
-  $code_row = array();
+  $tag_row = array();
   $header_row = array();
 
-  // HXL codes and original headers
+  // HXL tags and original headers
   foreach ($cols as $col) {
-    array_push($code_row, $col->code_code);
+    array_push($tag_row, $col->tag_tag);
     array_push($header_row, $col->header);
   }
-  fputcsv($output, $code_row);
+  fputcsv($output, $tag_row);
   fputcsv($output, $header_row);
 
   $last_row = -1;
@@ -69,11 +69,11 @@ function user_link($item) {
 }
 
 /**
- * Make a link to a HXL code
+ * Make a link to a HXL tag
  */
-function code_link($item) {
-  $code = ($item->code_code ? $item->code_code : $item->code);
-  return sprintf('/code/%s', urlencode($code));
+function tag_link($item) {
+  $tag = ($item->tag_tag ? $item->tag_tag : $item->tag);
+  return sprintf('/tag/%s', urlencode($tag));
 }
 
 /**

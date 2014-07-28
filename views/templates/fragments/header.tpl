@@ -7,7 +7,7 @@
     </header>
     <nav class="main col3">
       <li><a href="/data">Data</a></li>
-      <li><a href="/code">HXL codes</a></li>
+      <li><a href="/tag">HXL tags</a></li>
       <li><a href="/user">Uploaders</a></li>
     </nav>
 

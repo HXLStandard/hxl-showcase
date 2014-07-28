@@ -7,7 +7,7 @@ class SearchController extends AbstractController {
     // HTTP GET parameters
     $q = $request->get('q');
     $source_ident = $request->get('source');
-    $code_code = $request->get('code');
+    $tag_tag = $request->get('tag');
     $user_ident = $request->get('user');
 
     // Clean up query string to match search syntax
@@ -17,7 +17,7 @@ class SearchController extends AbstractController {
     $q = preg_replace("/\\++$/", "", $q);
 
     // Options for select lists
-    $codes = $this->doQuery('select * from code order by code');
+    $tags = $this->doQuery('select * from tag order by tag');
     $sources = $this->doQuery('select * from source order by ident');
     $users = $this->doQuery('select * from usr order by ident');
 
@@ -33,9 +33,9 @@ class SearchController extends AbstractController {
       $frag .= " and V.source_ident=?";
     }
 
-    if ($code_code) {
-      array_push($params, $code_code);
-      $frag .= " and V.code_code=?";
+    if ($tag_tag) {
+      array_push($params, $tag_tag);
+      $frag .= " and V.tag_tag=?";
     }
 
     if ($user_ident) {
@@ -46,13 +46,13 @@ class SearchController extends AbstractController {
     // Crazy grouping statement to get aggregate totals for datasets
     $sql = "select V.source_ident, V.source_name, " .
       "V.dataset_ident, V.dataset_name, " .
-      "V.code_code, V.code_name, " .
+      "V.tag_tag, V.tag_name, " .
       "V.value, V.usr_ident, V.usr_name, " .
       "count(V.id) as row_count " .
       $frag . ' ' .
       "group by V.source_ident, V.source_name, " .
       "V.dataset_ident, V.dataset_name, " .
-      "V.code_code, V.code_name, " .
+      "V.tag_tag, V.tag_name, " .
       "V.value, V.usr_ident, V.usr_name " .
       "order by row_count desc";
     array_unshift($params, $sql);
@@ -65,12 +65,12 @@ class SearchController extends AbstractController {
     // Set up the template parameters
     $response->setParameter('q', $q);
 
-    $response->setParameter('codes', $codes);
+    $response->setParameter('tags', $tags);
     $response->setParameter('sources', $sources);
     $response->setParameter('users', $users);
 
     $response->setParameter('source_ident', $source_ident);
-    $response->setParameter('code_code', $code_code);
+    $response->setParameter('tag_tag', $tag_tag);
     $response->setParameter('user_ident', $user_ident);
     $response->setParameter('values', $values);
     $response->setParameter('result_count', $result_count);

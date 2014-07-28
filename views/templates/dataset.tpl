@@ -26,9 +26,9 @@
       <table>
         <caption>Uploaded by <a href="{$import|user_link}">{$import->usr_name|escape}</a> on {$import->stamp|escape}</caption>
         <thead>
-          <tr class="codes">
+          <tr class="tags">
             {foreach item=col from=$cols}
-            <th><a href="{$col|code_link}">{$col->code_name|escape}</a></th>
+            <th><a href="{$col|tag_link}">{$col->tag_name|escape}</a></th>
             {/foreach}
           </tr>
         </thead>

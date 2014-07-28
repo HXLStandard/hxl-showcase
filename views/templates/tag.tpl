@@ -2,23 +2,23 @@
 
 <html>
   <head>
-    <title>HXL code "{$code->code|escape}" ({$code->name|escape})</title>
+    <title>HXL tag "{$tag->tag|escape}" ({$tag->name|escape})</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
 {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
-      <li><a href="/code">HXL codes</a></li>
+      <li><a href="/tag">HXL tags</a></li>
     </nav>
 
     <main>
-      <h1>HXL code &ldquo;{$code->code|escape}&rdquo; ({$code->name|escape})</h1>
+      <h1>HXL tag &ldquo;{$tag->tag|escape}&rdquo; ({$tag->name|escape})</h1>
 
       <form method="GET" action="/search">
-        <input type="hidden" name="code" value="{$code->code|escape}" />
+        <input type="hidden" name="tag" value="{$tag->tag|escape}" />
         <label>
-          <span>Search within &ldquo;{$code->code|escape}&rdquo;</span>
+          <span>Search within &ldquo;{$tag->tag|escape}&rdquo;</span>
           <input name="q" placeholder="Search text" />
         </label>
         <input type="submit" />
@@ -28,7 +28,7 @@
         <h2>Datasets</h2>
 
         {if $dataset_count > 0}
-        <p>{$dataset_count|escape} dataset(s) use the HXL code &ldquo;{$code->code|escape}&rdquo;:</p>
+        <p>{$dataset_count|escape} dataset(s) use the HXL tag &ldquo;{$tag->tag|escape}&rdquo;:</p>
 
         <table>
           <thead>
@@ -51,7 +51,7 @@
           </tbody>
         </table>
         {else}
-        <p>No datasets use the HXL code &ldquo;{$code->code|escape}&rdquo; yet.</p>
+        <p>No datasets use the HXL tag &ldquo;{$tag->tag|escape}&rdquo; yet.</p>
         {/if}
 
       </section>

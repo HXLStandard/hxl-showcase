@@ -40,9 +40,9 @@ RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)/analysis\.csv$ index.php?p=import-anal
 
 RewriteRule ^data/([^/]+)/([^/]+)/([^/]+)/analysis$ index.php?p=import-analysis&source=$1&dataset=$2&import=$3 [QSA,L]
 
-RewriteRule ^code$ index.php?p=code-list [QSA,L]
+RewriteRule ^tag$ index.php?p=tag-list [QSA,L]
 
-RewriteRule ^code/([^/]+)$ index.php?p=code&code=$1 [QSA,L]
+RewriteRule ^tag/([^/]+)$ index.php?p=tag&tag=$1 [QSA,L]
 
 RewriteRule ^user$ index.php?p=user-list [QSA,L]
 

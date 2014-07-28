@@ -16,16 +16,16 @@ if (count($argv) == 2) {
   die("Usage: php list-import.php <import_id>\n");
 }
 
-// First, get a list of the column headers and codes
+// First, get a list of the column headers and tags
 
 $statement = _query('select * from col_view where import=? order by id', $import_id);
-$codes = array();
+$tags = array();
 $headers = array();
 while ($col = $statement->fetch()) {
-  array_push($codes, $col->code_code);
+  array_push($tags, $col->tag_tag);
   array_push($headers, $col->header);
 }
-fputcsv(STDOUT, $codes);
+fputcsv(STDOUT, $tags);
 fputcsv(STDOUT, $headers);
 
 // Next, get the spreadsheet values

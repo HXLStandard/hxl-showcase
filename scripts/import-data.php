@@ -8,11 +8,11 @@
  *
  * dataset: the unique dataset identifier (e.g. "refugees")
  *
- * DATA.csv: the source CSV file, containing HXL codes on the first
+ * DATA.csv: the source CSV file, containing HXL tags on the first
  * line, and human-readable headers on the second. Remaining lines are
  * data rows.
  *
- * Will fail if it finds an unrecognized HXL code.
+ * Will fail if it finds an unrecognized HXL tag.
  */
 
 require_once(__DIR__ . '/lib/database.php');
@@ -31,17 +31,17 @@ _db()->exec('set constraints all deferred');
 // Create a new import session
 $import_id = add_import($usr, $source, $dataset);
 
-// First row is HXL codes; second row is text headers
-$code_row = fgetcsv(STDIN);
+// First row is HXL tags; second row is text headers
+$tag_row = fgetcsv(STDIN);
 $header_row = fgetcsv(STDIN);
 
-// Get codes for headers
+// Get tags for headers
 $cols = array();
-for ($i = 0; $i < count($code_row); $i++) {
-  if ($code_row[$i]) {
-    array_push($cols, add_col($import_id, $code_row[$i], $header_row[$i]));
+for ($i = 0; $i < count($tag_row); $i++) {
+  if ($tag_row[$i]) {
+    array_push($cols, add_col($import_id, $tag_row[$i], $header_row[$i]));
   } else {
-    printf("Skipping column \"%s\" (no HXL code)\n", $header_row[$i]);
+    printf("Skipping column \"%s\" (no HXL tag)\n", $header_row[$i]);
     array_push($cols, null);
   }
 }
@@ -55,7 +55,7 @@ while ($row = fgetcsv(STDIN)) {
   }
   $row_id = add_row($import_id);
   // Read each value in the row
-  for ($i = 0; $i < count($code_row); $i++) {
+  for ($i = 0; $i < count($tag_row); $i++) {
     $col_id = $cols[$i];
     if ($row && $col_id) {
       add_value($row_id, $col_id, $row[$i]);
@@ -65,6 +65,6 @@ while ($row = fgetcsv(STDIN)) {
 
 _db()->commit();
 
-printf("Added %d rows of data in %d columns\n", $n, count($code_row));
+printf("Added %d rows of data in %d columns\n", $n, count($tag_row));
 
 // end

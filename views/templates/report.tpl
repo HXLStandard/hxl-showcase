@@ -17,7 +17,7 @@
         <thead>
           <tr>
             {foreach item=col from=$cols}
-            <th>{$col->code|escape}</th>
+            <th>{$col->tag|escape}</th>
             {/foreach}
           </tr>
           <tr>

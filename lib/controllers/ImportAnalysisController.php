@@ -122,16 +122,16 @@ class ImportAnalysisController extends AbstractController {
    * Count the number of distinct values for a column.
    *
    * @param $import The import identifier (long integer).
-   * @param $code The HXL code.
+   * @param $tag The HXL tag.
    * @param $sql_filter The SQL filter subquery (optional).
    * @return The number of distinct values (integer).
    */
-  private function get_value_count($code, $sql_filter) {
+  private function get_value_count($tag, $sql_filter) {
     return 0 + $this->doQuery(
       'select count(distinct V.value) as count' .
       ' from value_view V ' .
-      ' where V.code_code=? and V.row in ' . $sql_filter,
-      $code
+      ' where V.tag_tag=? and V.row in ' . $sql_filter,
+      $tag
     )->fetchColumn();
   }
 
@@ -142,18 +142,18 @@ class ImportAnalysisController extends AbstractController {
    * of matches, and a "value" property with the cell value.
    *
    * @param $import The import identifier (long integer).
-   * @param $code The HXL code.
+   * @param $tag The HXL tag.
    * @param $sql_filter The SQL filter subquery (optional).
    * @return A list of result objects.
    */
-  private function get_value_preview($code, $sql_filter) {
+  private function get_value_preview($tag, $sql_filter) {
     return $this->doQuery(
       'select V.value, count(distinct V.row) as count ' .
       ' from value_view V' .
-      ' where V.code_code=? and V.row in ' . $sql_filter .
+      ' where V.tag_tag=? and V.row in ' . $sql_filter .
       ' group by V.value' .
       ' order by count(distinct V.row) desc, V.value',
-      $code
+      $tag
     );
   }
 
@@ -161,7 +161,7 @@ class ImportAnalysisController extends AbstractController {
    * Static: process the requested filters, and create a SQL (sub)query.
    *
    * @param $request The incoming HTTP request object.
-   * @param $filter_map An associative array of request parameters mapped to HXL codes.
+   * @param $filter_map An associative array of request parameters mapped to HXL tags.
    * @return A list containing the SQL fragment and an array of the actual filters selected.
    */
   private static function process_filters(HttpRequest $request, $import_id, $filter_map) {
@@ -184,10 +184,10 @@ class ImportAnalysisController extends AbstractController {
         // Different treatment for the first one
         if ($n == 1) {
           $sql_filter = 'select V1.row from value_view V1';
-          $where_clause = sprintf(" where V1.import=%d and V1.code_code='%s' and V1.value='%s'", $import_id, self::escape_sql($hxl), self::escape_sql($value));
+          $where_clause = sprintf(" where V1.import=%d and V1.tag_tag='%s' and V1.value='%s'", $import_id, self::escape_sql($hxl), self::escape_sql($value));
         } else {
         $sql_filter .= sprintf(
-          ' join value_view V%d on V1.row=V%d.row and V%d.code_code=\'%s\' and V%d.value=\'%s\'',
+          ' join value_view V%d on V1.row=V%d.row and V%d.tag_tag=\'%s\' and V%d.value=\'%s\'',
           $n, $n, $n, self::escape_sql($hxl), $n, self::escape_sql($value)
         );
         }

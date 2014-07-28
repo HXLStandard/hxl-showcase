@@ -2,7 +2,7 @@
 
 sh init-db.sh
 
-php ../scripts/import-codes.php < ../hxl-codes.csv
+php ../scripts/import-tags.php < ../hxl-tags.csv
 
 php ../scripts/add-usr.php dpm 'David Megginson'
 

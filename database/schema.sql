@@ -32,9 +32,9 @@ create table source (
   name varchar(128) not null
 );
 
-create table code (
+create table tag (
   id bigserial primary key,
-  code varchar(64) unique not null,
+  tag varchar(64) unique not null,
   name varchar(128) not null,
   datatype bigint not null,
   foreign key(datatype) references datatype(id)
@@ -64,10 +64,10 @@ create index import_stamp on import(stamp);
 create table col (
   col bigserial primary key,
   import bigint not null,
-  code bigint not null,
+  tag bigint not null,
   header text not null,
   foreign key(import) references import(id),
-  foreign key(code) references code(id)
+  foreign key(tag) references tag(id)
 );
 
 create table row (

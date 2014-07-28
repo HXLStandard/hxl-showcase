@@ -35,17 +35,17 @@ create or replace function ref_source(varchar(64)) returns bigint as $$
 $$ language sql;
 
 --
--- Add a new HXL code.
+-- Add a new HXL tag.
 --
-create or replace function add_code(varchar(64), varchar(128), bigint) returns bigint as $$
-  insert into code (code, name, datatype) values ($1, $2, $3) returning id
+create or replace function add_tag(varchar(64), varchar(128), bigint) returns bigint as $$
+  insert into tag (tag, name, datatype) values ($1, $2, $3) returning id
 $$ language sql;
 
 --
--- Look up a HXL code.
+-- Look up a HXL tag.
 --
-create or replace function ref_code(varchar(64)) returns bigint as $$
-  select id from code where code=$1;
+create or replace function ref_tag(varchar(64)) returns bigint as $$
+  select id from tag where tag=$1;
 $$ language sql;
 
 --
@@ -73,7 +73,7 @@ $$ language sql;
 -- Create a new column.
 --
 create or replace function add_col(bigint, bigint, text) returns bigint as $$
-  insert into col (import, code, header) values ($1, $2, $3) returning col;
+  insert into col (import, tag, header) values ($1, $2, $3) returning col;
 $$ language sql;
 
 --
