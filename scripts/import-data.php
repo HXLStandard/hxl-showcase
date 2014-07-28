@@ -31,19 +31,21 @@ _db()->exec('set constraints all deferred');
 // Create a new import session
 $import_id = add_import($usr, $source, $dataset);
 
-// First row is HXL tags; second row is text headers
-$tag_row = fgetcsv(STDIN);
+// First row is text headers; second row is HXL tags
 $header_row = fgetcsv(STDIN);
+$tag_row = fgetcsv(STDIN);
 
 // Get tags for headers
 $cols = array();
 for ($i = 0; $i < count($tag_row); $i++) {
+  printf("Trying %s...", $tag_row[$i]);
   if ($tag_row[$i]) {
     if (substr($tag_row[$i], 0, 1) != '#') {
       die(sprintf("Tag \"%s\" does not start with '#'\n", $tag_row[$i]));
     } else {
       $tag = substr($tag_row[$i], 1);
       array_push($cols, add_col($import_id, $tag, $header_row[$i]));
+      print("success\n");
     }
   } else {
     printf("Skipping column \"%s\" (no HXL tag)\n", $header_row[$i]);
