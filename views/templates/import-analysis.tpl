@@ -19,31 +19,10 @@
       <h1>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</h1>
       
       {if $filters}
-      <p><strong>Showing:</strong>
-      {if $filters.country}
-      Country &ldquo;{$filters.country|escape}&rdquo;
-      {/if}
-      {if $filters.adm1}
-      Admin level 1 &ldquo;{$filters.adm1|escape}&rdquo;
-      {/if}
-      {if $filters.adm2}
-      Admin level 2 &ldquo;{$filters.adm2|escape}&rdquo;
-      {/if}
-      {if $filters.adm3}
-      Admin level 3 &ldquo;{$filters.adm3|escape}&rdquo;
-      {/if}
-      {if $filters.adm4}
-      Admin level 4 &ldquo;{$filters.adm4|escape}&rdquo;
-      {/if}
-      {if $filters.adm5}
-      Admin level 5 &ldquo;{$filters.adm5|escape}&rdquo;
-      {/if}
-      {if $filters.sector}
-      Sector &ldquo;{$filters.sector|escape}&rdquo;
-      {/if}
-      {if $filters.org}
-      Organisation &ldquo;{$filters.org|escape}&rdquo;
-      {/if}
+      <p><strong>Showing:</strong><br />
+      {foreach key=tag item=value from=$filters}
+      #{$tag|escape} = &ldquo;{$value|none}&rdquo;<br />
+      {/foreach}
       (<a href="?">Clear all</a>)
       </p>
       {/if}
@@ -61,7 +40,7 @@
         <p>Total countries: {$country_count|number_format}</p>
         <ol>
           {foreach item=country from=$countries}
-          <li><a href="analysis{$filters|params:'country':$country->value}">{$country->value|escape}</a> ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
+          <li><a href="analysis{$filters|params:'country':$country->value}">{$country->value|none}</a> ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -73,7 +52,7 @@
         <p>Total admin level 1 subdivisions: {$adm1_count|number_format}</p>
         <ol>
           {foreach item=adm1 from=$adm1s}
-          <li><a href="{$filters|params:'adm1':$adm1->value}">{$adm1->value|escape}</a> ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'adm1':$adm1->value}">{$adm1->value|none}</a> ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -85,7 +64,7 @@
         <p>Total admin level 2 subdivisions: {$adm2_count|number_format}</p>
         <ol>
           {foreach item=adm2 from=$adm2s}
-          <li><a href="{$filters|params:'adm2':$adm2->value}">{$adm2->value|escape}</a> ({$adm2->count|number_format} activit{$adm2->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'adm2':$adm2->value}">{$adm2->value|none}</a> ({$adm2->count|number_format} activit{$adm2->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -97,7 +76,7 @@
         <p>Total admin level 3 subdivisions: {$adm3_count|number_format}</p>
         <ol>
           {foreach item=adm3 from=$adm3s}
-          <li><a href="{$filters|params:'adm3':$adm3->value}">{$adm3->value|escape}</a> ({$adm3->count|number_format} activit{$adm3->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'adm3':$adm3->value}">{$adm3->value|none}</a> ({$adm3->count|number_format} activit{$adm3->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -109,7 +88,7 @@
         <p>Total admin level 4 subdivisions: {$adm4_count|number_format}</p>
         <ol>
           {foreach item=adm4 from=$adm4s}
-          <li><a href="{$filters|params:'adm4':$adm4->value}">{$adm4->value|escape}</a> ({$adm4->count|number_format} activit{$adm4->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'adm4':$adm4->value}">{$adm4->value|none}</a> ({$adm4->count|number_format} activit{$adm4->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -121,7 +100,7 @@
         <p>Total admin level 5 subdivisions: {$adm5_count|number_format}</p>
         <ol>
           {foreach item=adm5 from=$adm5s}
-          <li><a href="{$filters|params:'adm5':$adm5->value}">{$adm5->value|escape}</a> ({$adm5->count|number_format} activit{$adm5->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'adm5':$adm5->value}">{$adm5->value|none}</a> ({$adm5->count|number_format} activit{$adm5->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -133,7 +112,7 @@
         <p>Total sectors: {$sector_count|number_format}</p>
         <ol>
           {foreach item=sector from=$sectors}
-          <li><a href="{$filters|params:'sector':$sector->value}">{$sector->value|escape}</a> ({$sector->count|number_format} activit{$sector->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'sector':$sector->value}">{$sector->value|none}</a> ({$sector->count|number_format} activit{$sector->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>
@@ -145,7 +124,7 @@
         <p>Total organisations: {$org_count|number_format}</p>
         <ol>
           {foreach item=org from=$orgs}
-          <li><a href="{$filters|params:'org':$org->value}">{$org->value|escape}</a> ({$org->count|number_format} activit{$org->count|plural:'y':'ies'})</li>
+          <li><a href="{$filters|params:'org':$org->value}">{$org->value|none}</a> ({$org->count|number_format} activit{$org->count|plural:'y':'ies'})</li>
           {/foreach}
         </ol>
       </section>

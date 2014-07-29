@@ -57,33 +57,36 @@ class ImportAnalysisController extends AbstractController {
     $total = $this->get_total_count($sql_filter);
 
     // Get the preview counts
+
+    $geo_count = 0;
+
     if (!@$active_filters['country']) {
-      $country_count = $this->get_value_count('country', $sql_filter);
+      $geo_count = $country_count = $this->get_value_count('country', $sql_filter);
       $countries = $this->get_value_preview('country', $sql_filter);
     }
 
-    if (!@$active_filters['adm1'] && !@$country_count) {
-      $adm1_count = $this->get_value_count('adm1', $sql_filter);
+    if (!@$active_filters['adm1'] && !$geo_count) {
+      $geo_count = $adm1_count = $this->get_value_count('adm1', $sql_filter);
       $adm1s = $this->get_value_preview('adm1', $sql_filter);
     }
 
-    if (!@$active_filters['adm2'] && !@$adm1_count) {
-      $adm2_count = $this->get_value_count('adm2', $sql_filter);
+    if (!@$active_filters['adm2'] && !$geo_count) {
+      $geo_count = $adm2_count = $this->get_value_count('adm2', $sql_filter);
       $adm2s = $this->get_value_preview('adm2', $sql_filter);
     }
 
-    if (!@$active_filters['adm3'] && !@$adm2_count) {
-      $adm3_count = $this->get_value_count('adm3', $sql_filter);
+    if (!@$active_filters['adm3'] && !$geo_count) {
+      $geo_count = $adm3_count = $this->get_value_count('adm3', $sql_filter);
       $adm3s = $this->get_value_preview('adm3', $sql_filter);
     }
 
-    if (!@$active_filters['adm4'] && !@$adm3_count) {
-      $adm4_count = $this->get_value_count('adm4', $sql_filter);
+    if (!@$active_filters['adm4'] && !$geo_count) {
+      $geo_count = $adm4_count = $this->get_value_count('adm4', $sql_filter);
       $adm4s = $this->get_value_preview('adm4', $sql_filter);
     }
 
-    if (!@$active_filters['adm5'] && !@$adm4_count) {
-      $adm5_count = $this->get_value_count('adm5', $sql_filter);
+    if (!@$active_filters['adm5'] && !$geo_count) {
+      $geo_count = $adm5_count = $this->get_value_count('adm5', $sql_filter);
       $adm5s = $this->get_value_preview('adm5', $sql_filter);
     }
 
@@ -214,7 +217,7 @@ class ImportAnalysisController extends AbstractController {
     $n = 0;
     foreach ($filter_map as $http => $hxl) {
       $value = $request->get($http);
-      if ($value) {
+      if ($value !== null) {
         $n++;
         if (is_array($value)) {
           $value = array_pop($value);
