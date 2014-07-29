@@ -9,6 +9,7 @@
     <script type="text/javascript" src="/scripts/jquery.csv-0.71.min.js"></script>
     <script type="text/javascript">
       var chart_tags = [];
+      var filters = {$filters|json_encode};
     </script>
   </head>
   <body>
@@ -25,32 +26,32 @@
       <h1>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</h1>
       
       {if $filters}
-      <p><strong>Showing:</strong><br />
-      {foreach key=tag item=value from=$filters}
-      #{$tag|escape} = &ldquo;{$value|none}&rdquo;<br />
+      <p>{$total|number_format} matching entr{$total|plural:'y':'ies'}.</p>
+
+      <section id="filters">
+        <h2>Filters</h2>
+        {foreach key=tag item=value from=$filters}
+        <p>#{$tag|escape} = &ldquo;{$value|none}&rdquo;</p>
       {/foreach}
-      (<a href="?">Clear all</a>)
-      </p>
+      </section>
       {/if}
 
       <nav class="options col2">
-        <li><a href="?">Show all</a></li>
+        <li><a href="?">Clear filters</a></li>
         <li><a href="analysis.csv{$filters|params}">Download CSV</a></li>
       </nav>
       
-      <p>{$total|number_format} matching activit{$total|plural:'y':'ies'}.</p>
-
       {foreach key=tag item=total from=$tag_totals}
       {if $total > 0}
       <section id="tag_{$tag|escape}">
         <h2>#{$tag|escape} ({$total|number_format})</h2>
         <aside id="{$tag|escape}_chart"></aside>
-        <div>
-          <b>Filter by:</b>
+        <p class="filters">
+          <b>Filter by</b>
           {foreach item=value from=$tag_values[$tag]}
-          <a href="analysis{$filters|params:$tag:$value->value}">{$value->value|none}</a> ({$value->count|number_format})
+          <span><a href="analysis{$filters|params:$tag:$value->value}">{$value->value|none}</a> ({$value->count|number_format})</span>
           {/foreach}
-        </div>
+        </p>
         <script type="text/javascript">
           chart_tags.push({$tag|json_encode});
         </script>

@@ -52,7 +52,7 @@ class ImportAnalysisController extends AbstractController {
       $output = fopen('php://output', 'w');
       fputcsv($output, array("#$tag", 'count'));
       foreach ($result as $row) {
-        fputcsv($output, array($row->value, $row->count));
+        fputcsv($output, array(($row->value?$row->value:'<none>'), $row->count));
       }
       fclose($output);
       exit;
@@ -82,7 +82,7 @@ class ImportAnalysisController extends AbstractController {
     // Get the preview counts
 
     foreach ($allowed_filters as $tag) {
-      if (!isset($active_filters[$tag])) {
+      if (!isset($active_filters[$tag]) && !$this->is_tag_covered($tag, $tag_totals)) {
         $tag_totals[$tag]  = $this->get_value_count($tag, $sql_filter);
         $tag_values[$tag] = $this->get_value_preview($tag, $sql_filter);
       }
@@ -198,6 +198,34 @@ class ImportAnalysisController extends AbstractController {
 
     // Return the results
     return array($sql_filter, $active_filters);
+  }
+
+  /**
+   * Check if a potential filter tag is covered by one higher in the hierarchy.
+   */
+  private function is_tag_covered($tag, $tag_totals) {
+
+    $hierarchies = array(
+      array('country', 'adm1', 'adm2', 'adm3', 'adm4', 'adm5'),
+      array('sector', 'subsector'),
+    );
+
+    foreach ($hierarchies as $hierarchy) {
+      if (in_array($tag, $hierarchy)) {
+        foreach ($hierarchy as $parent) {
+          if ($parent == $tag) {
+            // stop when we've made it to our level in the hiearchy
+            break;
+          } else if ($tag_totals[$parent] > 0) {
+            // if we're still higher and have a count, we're covered
+            return true;
+          }
+        }
+      }
+    }
+
+    // if we get to here, we're not covered
+    return false;
   }
 
 

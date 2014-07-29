@@ -155,3 +155,15 @@ nav.main:after, nav.options:after {
     clear: both;
 }
 
+.filters {
+    font-size: 90%;
+    margin-top: 2ex;
+}
+
+.filters span:after {
+    content: ', ';
+}
+
+.filters span:last-child:after {
+    content: '';
+}

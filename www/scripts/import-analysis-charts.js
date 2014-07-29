@@ -1,9 +1,33 @@
+/**
+ * JavaScript module to set up charts on analysis page.
+ */
+
+// Should be defined earlier
+var chart_tags;
+var filters;
+
+// Load the Google stuff
 google.load("visualization", "1", {packages:["corechart"]});
+
+// Set the callback
 google.setOnLoadCallback(drawCharts);
 
+/**
+ * Main callback - try to load all requested charts.
+ *
+ * Uses the variable 'chart_tags', which should have been
+ * set earlier (e.g. on the web page itself).
+ */
+function drawCharts() {
+    chart_tags.forEach(drawChart);
+}
+
+/**
+ * Draw an individual chart.
+ */
 function drawChart(tag) {
     // grab the CSV
-    $.get('?tag=' + tag, function(csvString) {
+    $.get(makeDataURL(tag), function(csvString) {
         // transform the CSV string into a 2-dimensional array
         var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
 
@@ -27,7 +51,18 @@ function drawChart(tag) {
     });
 }
 
-function drawCharts() {
-    chart_tags.forEach(drawChart);
+/**
+ * Construct an AJAX query URL using current filters.
+ *
+ * Uses the global variable 'filters', which should have been set earlier (e.g. on the web page).
+ *
+ * @param tag The tag that we want to get for visualisation.
+ * @return The query string, starting with "?"
+ */
+function makeDataURL(tag) {
+    var request = '?' + 'tag=' + escape(tag);
+    for (var key in filters) {
+        request += '&' + escape(key) + '=' + escape(filters[key]);
+    }
+    return request;
 }
-
