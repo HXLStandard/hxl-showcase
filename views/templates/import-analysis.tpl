@@ -40,6 +40,7 @@
       {if $country_count > 0}
       <section id="countries">
         <h2>Top countries</h2>
+        <aside id="country_chart"></aside>
         <p>Total countries: {$country_count|number_format}</p>
         <ol>
           {foreach item=country from=$countries}
@@ -53,6 +54,7 @@
       <section id="adm1">
         <h2>Top admin level 1 subdivisions</h2>
         <p>Total admin level 1 subdivisions: {$adm1_count|number_format}</p>
+        <aside id="adm1_chart"></aside>
         <ol>
           {foreach item=adm1 from=$adm1s}
           <li><a href="{$filters|params:'adm1':$adm1->value}">{$adm1->value|none}</a> ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
@@ -65,6 +67,7 @@
       <section id="adm2">
         <h2>Top admin level 2 subdivisions</h2>
         <p>Total admin level 2 subdivisions: {$adm2_count|number_format}</p>
+        <aside id="adm2_chart"></aside>
         <ol>
           {foreach item=adm2 from=$adm2s}
           <li><a href="{$filters|params:'adm2':$adm2->value}">{$adm2->value|none}</a> ({$adm2->count|number_format} activit{$adm2->count|plural:'y':'ies'})</li>
@@ -76,8 +79,9 @@
       {if $adm3_count > 0}
       <section id="adm3">
         <h2>Top admin level 3 subdivisions</h2>
+        <aside id="adm3_chart"></aside>
         <p>Total admin level 3 subdivisions: {$adm3_count|number_format}</p>
-        <aside id="chart"></aside>
+        <aside id="adm3_chart"></aside>
         <ol>
           {foreach item=adm3 from=$adm3s}
           <li><a href="{$filters|params:'adm3':$adm3->value}">{$adm3->value|none}</a> ({$adm3->count|number_format} activit{$adm3->count|plural:'y':'ies'})</li>
@@ -90,6 +94,7 @@
       <section id="adm4">
         <h2>Top admin level 4 subdivisions</h2>
         <p>Total admin level 4 subdivisions: {$adm4_count|number_format}</p>
+        <aside id="adm4_chart"></aside>
         <ol>
           {foreach item=adm4 from=$adm4s}
           <li><a href="{$filters|params:'adm4':$adm4->value}">{$adm4->value|none}</a> ({$adm4->count|number_format} activit{$adm4->count|plural:'y':'ies'})</li>
@@ -102,6 +107,7 @@
       <section id="adm5">
         <h2>Top admin level 5 subdivisions</h2>
         <p>Total admin level 5 subdivisions: {$adm5_count|number_format}</p>
+        <aside id="adm5_chart"></aside>
         <ol>
           {foreach item=adm5 from=$adm5s}
           <li><a href="{$filters|params:'adm5':$adm5->value}">{$adm5->value|none}</a> ({$adm5->count|number_format} activit{$adm5->count|plural:'y':'ies'})</li>
@@ -114,6 +120,7 @@
       <section id="sectors">
         <h2>Top sectors</h2>
         <p>Total sectors: {$sector_count|number_format}</p>
+        <aside id="sector_chart"></aside>
         <ol>
           {foreach item=sector from=$sectors}
           <li><a href="{$filters|params:'sector':$sector->value}">{$sector->value|none}</a> ({$sector->count|number_format} activit{$sector->count|plural:'y':'ies'})</li>
@@ -126,6 +133,7 @@
       <section id="orgs">
         <h2>Top organisations</h2>
         <p>Total organisations: {$org_count|number_format}</p>
+        <aside id="org_chart"></aside>
         <ol>
           {foreach item=org from=$orgs}
           <li><a href="{$filters|params:'org':$org->value}">{$org->value|none}</a> ({$org->count|number_format} activit{$org->count|plural:'y':'ies'})</li>
@@ -161,39 +169,7 @@
 
     </main>
 
-    <script type="text/javascript">
-      {literal}
-google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart);
-function drawChart() {
-   // grab the CSV
-   $.get("?tag=adm3", function(csvString) {
-      // transform the CSV string into a 2-dimensional array
-      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
-
-      // this new DataTable object holds all the data
-      var data = new google.visualization.arrayToDataTable(arrayData);
-
-      // this view can select a subset of the data at a time
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0,1]);
-
-     // set chart options
-     var options = {
-        title: "#adm3",
-        hAxis: {title: data.getColumnLabel(0), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
-        vAxis: {title: data.getColumnLabel(1), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
-        height: 600,
-        width: 600
-     };
-
-     // create the chart object and draw it
-     var chart = new google.visualization.PieChart(document.getElementById('chart'));
-     chart.draw(view, options);
-  });
-}
-      {/literal}
-    </script>
+    <script type="text/javascript" src="/scripts/import-analysis-charts.js"></script>
 
   </body>
 </html>
