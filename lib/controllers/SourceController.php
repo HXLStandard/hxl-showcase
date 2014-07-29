@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Data provider page controller.
+ *
+ * Lists all datasets uploaded by a source.
+ */
 class SourceController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
@@ -7,11 +12,11 @@ class SourceController extends AbstractController {
     $source = $this->doQuery('select * from source where ident=?', $request->get('source'))->fetch();
 
     $uploads = $this->doQuery(
-      'select max(stamp) as stamp, dataset_ident, dataset_name, source_ident, source_name, usr_ident, usr_name, count(distinct row) as row_count ' .
-      'from value_view ' .
-      'where source=? ' .
-      'group by dataset_ident, dataset_name, source_ident, source_name, usr_ident, usr_name ',
-      $source->id);
+      'select I.* ' .
+      'from import_view I ' .
+      'join latest_import_view L using(id) ' .
+      'where source_ident=?',
+      $source->ident);
 
     $response->setParameter('source', $source);
     $response->setParameter('uploads', $uploads);

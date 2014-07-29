@@ -48,6 +48,8 @@ class ImportAnalysisController extends AbstractController {
       'subsector',
       'org',
       'loctype',
+      'origin',
+      'period_date',
     );
     list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $allowed_filters);
 

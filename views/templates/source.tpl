@@ -33,7 +33,6 @@
               <th>Dataset</th>
               <th>Uploader</th>
               <th>Latest update</th>
-              <th># rows</th>
             </tr>
           </thead>
           <tbody>
@@ -42,7 +41,6 @@
             <td><a href="{$upload|dataset_link}">{$upload->dataset_name|escape}</a></td>
             <td><a href="{$upload|user_link}">{$upload->usr_name|escape}</a></td>
             <td><a href="{$upload|import_link}">{$upload->stamp|timeAgo}</a></td>
-            <td>{$upload->row_count|number_format}</td>
           </tr>
           {/foreach}      
           </tbody>
