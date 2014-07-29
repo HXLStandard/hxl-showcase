@@ -23,7 +23,7 @@
           <select name="tag">
             <option value="">(all)</option>
             {foreach item=tag from=$tags}
-            <option value="{$tag->tag|escape}"{if $tag->tag == $tag_tag} selected="selected"{/if}>{$tag->tag|escape} &mdash; {$tag->name|escape}</option>
+            <option value="{$tag->tag|escape}"{if $tag->tag == $tag_tag} selected="selected"{/if}>#{$tag->tag|escape} &mdash; {$tag->name|escape}</option>
             {/foreach}
           </select>
         </label>
@@ -68,7 +68,7 @@
             <tr>
               <td><a href="{$value|dataset_link}">{$value->dataset_name|escape}</a></td>
               <td><a href="{$value|source_link}">{$value->source_name|escape}</a></td>
-              <td><a href="{$value|tag_link}">{$value->tag_name|escape}</a></td>
+              <td><a href="{$value|tag_link}"><code>#{$value->tag_tag|escape}</code></a> &mdash; {$value->tag_name|escape}</td>
               <td>{$value->value|escape}</td>
               <td>{$value->row_count|number_format}</td>
             </tr>

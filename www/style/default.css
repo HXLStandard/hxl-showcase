@@ -54,10 +54,6 @@ thead {
 
 table a {
     text-decoration: none;
-    color: black;
-}
-
-table a:hover {
     color: blue;
 }
 
