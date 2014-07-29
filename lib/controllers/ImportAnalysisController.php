@@ -60,42 +60,42 @@ class ImportAnalysisController extends AbstractController {
 
     $geo_count = 0;
 
-    if (!@$active_filters['country']) {
+    if (!isset($active_filters['country'])) {
       $geo_count = $country_count = $this->get_value_count('country', $sql_filter);
       $countries = $this->get_value_preview('country', $sql_filter);
     }
 
-    if (!@$active_filters['adm1'] && !$geo_count) {
+    if (!isset($active_filters['adm1']) && !$geo_count) {
       $geo_count = $adm1_count = $this->get_value_count('adm1', $sql_filter);
       $adm1s = $this->get_value_preview('adm1', $sql_filter);
     }
 
-    if (!@$active_filters['adm2'] && !$geo_count) {
+    if (!isset($active_filters['adm2']) && !$geo_count) {
       $geo_count = $adm2_count = $this->get_value_count('adm2', $sql_filter);
       $adm2s = $this->get_value_preview('adm2', $sql_filter);
     }
 
-    if (!@$active_filters['adm3'] && !$geo_count) {
+    if (!isset($active_filters['adm3']) && !$geo_count) {
       $geo_count = $adm3_count = $this->get_value_count('adm3', $sql_filter);
       $adm3s = $this->get_value_preview('adm3', $sql_filter);
     }
 
-    if (!@$active_filters['adm4'] && !$geo_count) {
+    if (!isset($active_filters['adm4']) && !$geo_count) {
       $geo_count = $adm4_count = $this->get_value_count('adm4', $sql_filter);
       $adm4s = $this->get_value_preview('adm4', $sql_filter);
     }
 
-    if (!@$active_filters['adm5'] && !$geo_count) {
+    if (!isset($active_filters['adm5']) && !$geo_count) {
       $geo_count = $adm5_count = $this->get_value_count('adm5', $sql_filter);
       $adm5s = $this->get_value_preview('adm5', $sql_filter);
     }
 
-    if (!@$active_filters['sector']) {
+    if (!isset($active_filters['sector'])) {
       $sector_count = $this->get_value_count('sector', $sql_filter);
       $sectors = $this->get_value_preview('sector', $sql_filter);
     }
 
-    if (!@$active_filters['org']) {
+    if (!isset($active_filters['org'])) {
       $org_count = $this->get_value_count('org', $sql_filter);
       $orgs = $this->get_value_preview('org', $sql_filter);
     }

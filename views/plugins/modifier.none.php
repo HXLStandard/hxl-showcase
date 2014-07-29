@@ -8,7 +8,7 @@
 
 /** 
  * Smarty none modifier plugin 
- * Purpose:  escapes a string, replacing the empty string with "<none>"
+ * Purpose:  escapes a string, replacing the empty string with "<none>" (italicised)
  * Type:     modifier<br> 
  * Name:     none<br> 
  * @author   David Megginson
@@ -20,6 +20,6 @@ function smarty_modifier_none($s)
   if ($s) {
     return htmlspecialchars($s);
   } else {
-    return "&lt;none&gt;";
+    return "<i>&lt;none&gt;</i>";
   }
 } 
