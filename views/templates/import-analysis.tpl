@@ -4,6 +4,9 @@
   <head>
     <title>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</title>
     <link rel="stylesheet" href="/style/default.css" />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.csv-0.71.min.js"></script>
   </head>
   <body>
     {include file="fragments/header.tpl"}
@@ -74,6 +77,7 @@
       <section id="adm3">
         <h2>Top admin level 3 subdivisions</h2>
         <p>Total admin level 3 subdivisions: {$adm3_count|number_format}</p>
+        <aside id="chart"></aside>
         <ol>
           {foreach item=adm3 from=$adm3s}
           <li><a href="{$filters|params:'adm3':$adm3->value}">{$adm3->value|none}</a> ({$adm3->count|number_format} activit{$adm3->count|plural:'y':'ies'})</li>
@@ -156,6 +160,40 @@
       </section>
 
     </main>
+
+    <script type="text/javascript">
+      {literal}
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+   // grab the CSV
+   $.get("?tag=adm3", function(csvString) {
+      // transform the CSV string into a 2-dimensional array
+      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+
+      // this new DataTable object holds all the data
+      var data = new google.visualization.arrayToDataTable(arrayData);
+
+      // this view can select a subset of the data at a time
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0,1]);
+
+     // set chart options
+     var options = {
+        title: "#adm3",
+        hAxis: {title: data.getColumnLabel(0), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
+        vAxis: {title: data.getColumnLabel(1), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
+        height: 600,
+        width: 600
+     };
+
+     // create the chart object and draw it
+     var chart = new google.visualization.PieChart(document.getElementById('chart'));
+     chart.draw(view, options);
+  });
+}
+      {/literal}
+    </script>
 
   </body>
 </html>

@@ -45,20 +45,14 @@ class ImportAnalysisController extends AbstractController {
     // TODO refactor code to make this more modular
     //
     if ($tag) {
-      header('Content-type: application/json');
+      header('Content-type: text/plain;charset=utf-8');
       $result = $this->get_value_preview($tag, $sql_filter);
-      $is_first = true;
-      print("[");
+      $output = fopen('php://output', 'w');
+      fputcsv($output, array("#$tag", 'count'));
       foreach ($result as $row) {
-        if ($is_first) {
-          print("\n");
-          $is_first = false;
-        } else {
-          print(",\n");
-        }
-        printf("  [%s, %d]", json_encode($row->value), $row->count);
+        fputcsv($output, array($row->value, $row->count));
       }
-      print("\n]\n");
+      fclose($output);
       exit;
     }
 

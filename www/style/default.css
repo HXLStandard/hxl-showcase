@@ -155,3 +155,6 @@ nav.main:after, nav.options:after {
     clear: both;
 }
 
+aside {
+    float: left;
+}
