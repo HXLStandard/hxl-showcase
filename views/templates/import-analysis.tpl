@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</title>
+    <title>Analysis: {$import->dataset_name|escape} ({if $stamp}{$stamp|escape}{else}latest{/if})</title>
     <link rel="stylesheet" href="/style/default.css" />
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -19,11 +19,13 @@
       <li><a href="/data">Data providers</a></li>
       <li><a href="{$import|source_link}">{$import->source_name|escape}</a></li>
       <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
+      {if $stamp}
       <li><a href="{$import|import_link}">{$import->stamp|escape}</a></li>
+      {/if}
     </nav>
 
     <main>
-      <h1>3W analysis of {$import->dataset_name|escape} ({$import->stamp|escape})</h1>
+      <h1>Analysis: {$import->dataset_name|escape} ({if $stamp}{$stamp|escape}{else}latest{/if})</h1>
       
       {if $filters}
       <p>{$total|number_format} matching entr{$total|plural:'y':'ies'}.</p>

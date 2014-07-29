@@ -19,11 +19,20 @@ class ImportAnalysisController extends AbstractController {
     $dataset_ident = $request->get('dataset');
     $stamp = $request->get('import');
 
-    $import = $this->doQuery(
-      'select * from import_view ' .
-      ' where source_ident=? and dataset_ident=? and stamp=?',
-      $source_ident, $dataset_ident, $stamp
-    )->fetch();
+    if ($stamp) {
+      $import = $this->doQuery(
+        'select * from import_view ' .
+        ' where source_ident=? and dataset_ident=? and stamp=?',
+        $source_ident, $dataset_ident, $stamp
+      )->fetch();
+    } else {
+      $import = $this->doQuery(
+        'select I.* from import_view I ' .
+        'join latest_import_view LI on I.id=LI.id ' .
+        'where I.source_ident=? and I.dataset_ident=?',
+        $source_ident, $dataset_ident
+      )->fetch();
+    }
 
     //
     // Set the filters
@@ -92,6 +101,7 @@ class ImportAnalysisController extends AbstractController {
     // Set the response parameters for the template
     //
     $response->setParameter('import', $import);
+    $response->setParameter('stamp', $stamp); // if null, then not import-specific
     $response->setParameter('total', $total);
     $response->setParameter('filters', $active_filters);
 
