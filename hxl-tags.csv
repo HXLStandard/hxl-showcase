@@ -13,7 +13,7 @@ tag,name,type,description,example
 #crisis,Crisis description,Text,A free-text description of the crisis to which the data applies.,"Complex Emergency, Israel"
 #crisis_id,Crisis id,Code,An unique identifier for the crisis to which the data applies.,2012-000194
 #crisis_lnk,Crisis link,URL,A link to an online description of the crisis.,
-#origin_lnk,Data origin link,URL,"A link to an online source for this specific data (API, PDF, etc.)",
+#data_lnk,Data origin link,URL,"A link to an online source for this specific data (API, PDF, etc.)",
 #loc,Location description,Text,A free-text description of a specific location.,Capital Health Clinic
 #loc_id,Location code,Code,"A code uniquely identifying a location. Normally, a p-code from the COD registry for the country.",083700000
 #loctype,Location type,Text,Description of a location type.,Camp
@@ -45,6 +45,8 @@ tag,name,type,description,example
 #households_num,Number of households involved,Number,Number of households involved (without specifying status),350
 #females_num,Number of females involved.,Number,Number of females involved (without specifying status).,1000
 #males_num,Number of males involved.,Number,Number of males involved (without specifying status).,800
+#origin,Place of origin description,Text,Place of origin of a person or group.,Syria
+#origin_id,Place of origin code,Code,Unique identifier for the place of origin of a person or group.,SYR
 #aff_num,Number of people affected,Number,Total number of affected people described in this data record/row.,150000
 #impact1,Impact type level 1 description,Text,Free-text description of the impact at a general level.,Affected
 #impact1_id,Impact type level 1 code,Code,Code for the impact at a general level.,V100
