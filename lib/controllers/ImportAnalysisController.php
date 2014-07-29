@@ -9,6 +9,9 @@ class ImportAnalysisController extends AbstractController {
     // Output format
     $format = $request->get('format', 'html');
 
+    // Focus tag
+    $tag = $request->get('tag');
+
     //
     // Get the import record
     //
@@ -38,6 +41,28 @@ class ImportAnalysisController extends AbstractController {
     list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $filter_map);
 
     //
+    // Early cutoff for focus on a single tag.
+    // TODO refactor code to make this more modular
+    //
+    if ($tag) {
+      header('Content-type: application/json');
+      $result = $this->get_value_preview($tag, $sql_filter);
+      $is_first = true;
+      print("[");
+      foreach ($result as $row) {
+        if ($is_first) {
+          print("\n");
+          $is_first = false;
+        } else {
+          print(",\n");
+        }
+        printf("  [%s, %d]", json_encode($row->value), $row->count);
+      }
+      print("\n]\n");
+      exit;
+    }
+
+    //
     // Get the output
     //
     $cols = $this->doQuery('select * from col_view where import=? order by col', $import->id)->fetchAll();
@@ -45,6 +70,8 @@ class ImportAnalysisController extends AbstractController {
 
     //
     // Early cut-off if it's CSV
+    // TODO refactor code to make this more modular
+    //
     if ($format == 'csv') {
       header('Content-type: text/csv;charset=utf-8');
       dump_csv($cols, $values, fopen('php://output', 'w'));
