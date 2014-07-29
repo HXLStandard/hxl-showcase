@@ -28,19 +28,19 @@ class ImportAnalysisController extends AbstractController {
     //
     // Set the filters
     //
-    $filter_map = array(
-      'country' => 'country',
-      'adm1' => 'adm1',
-      'adm2' => 'adm2',
-      'adm3' => 'adm3',
-      'adm4' => 'adm4',
-      'adm5' => 'adm5',
-      'sector' => 'sector',
-      'subsector' => 'subsector',
-      'org' => 'org',
-      'loctype' => 'loctype',
+    $allowed_filters = array(
+      'country',
+      'adm1',
+      'adm2',
+      'adm3',
+      'adm4',
+      'adm5',
+      'sector',
+      'subsector',
+      'org',
+      'loctype',
     );
-    list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $filter_map);
+    list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $allowed_filters);
 
     //
     // Early cutoff for focus on a single tag.
@@ -81,7 +81,7 @@ class ImportAnalysisController extends AbstractController {
 
     // Get the preview counts
 
-    foreach ($filter_map as $key => $tag) {
+    foreach ($allowed_filters as $tag) {
       if (!isset($active_filters[$tag])) {
         $tag_totals[$tag]  = $this->get_value_count($tag, $sql_filter);
         $tag_values[$tag] = $this->get_value_preview($tag, $sql_filter);
@@ -156,10 +156,10 @@ class ImportAnalysisController extends AbstractController {
    * Static: process the requested filters, and create a SQL (sub)query.
    *
    * @param $request The incoming HTTP request object.
-   * @param $filter_map An associative array of request parameters mapped to HXL tags.
+   * @param $allowed_filters An array of allowed tags for filtering.
    * @return A list containing the SQL fragment and an array of the actual filters selected.
    */
-  private static function process_filters(HttpRequest $request, $import_id, $filter_map) {
+  private static function process_filters(HttpRequest $request, $import_id, $allowed_filters) {
 
     // Return values
     $sql_filter = '';
@@ -167,23 +167,23 @@ class ImportAnalysisController extends AbstractController {
 
     // Iterate through the filter map and construct the SQL query
     $n = 0;
-    foreach ($filter_map as $http => $hxl) {
-      $value = $request->get($http);
+    foreach ($allowed_filters as $tag) {
+      $value = $request->get($tag);
       if ($value !== null) {
         $n++;
         if (is_array($value)) {
           $value = array_pop($value);
         }
-        $active_filters[$http] = $value;
+        $active_filters[$tag] = $value;
 
         // Different treatment for the first one
         if ($n == 1) {
           $sql_filter = 'select V1.row from value_view V1';
-          $where_clause = sprintf(" where V1.import=%d and V1.tag_tag='%s' and V1.value='%s'", $import_id, self::escape_sql($hxl), self::escape_sql($value));
+          $where_clause = sprintf(" where V1.import=%d and V1.tag_tag='%s' and V1.value='%s'", $import_id, self::escape_sql($tag), self::escape_sql($value));
         } else {
         $sql_filter .= sprintf(
           ' join value_view V%d on V1.row=V%d.row and V%d.tag_tag=\'%s\' and V%d.value=\'%s\'',
-          $n, $n, $n, self::escape_sql($hxl), $n, self::escape_sql($value)
+          $n, $n, $n, self::escape_sql($tag), $n, self::escape_sql($value)
         );
         }
       }
