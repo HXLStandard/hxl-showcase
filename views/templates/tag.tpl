@@ -13,12 +13,12 @@
     </nav>
 
     <main>
-      <h1>#{$tag->tag|escape} ({$tag->name|escape})</h1>
+      <h1><code>#{$tag->tag|escape}</code> &mdash; <i>{$tag->name|escape}</i></h1>
 
       <form method="GET" action="/search">
         <input type="hidden" name="tag" value="{$tag->tag|escape}" />
         <label>
-          <span>Search within &ldquo;{$tag->tag|escape}&rdquo;</span>
+          <span>Search within <code>#{$tag->tag|escape}</code>:</span>
           <input name="q" placeholder="Search text" />
         </label>
         <input type="submit" />
@@ -28,7 +28,7 @@
         <h2>Datasets</h2>
 
         {if $dataset_count > 0}
-        <p>{$dataset_count|escape} dataset(s) use the HXL tag &ldquo;{$tag->tag|escape}&rdquo;:</p>
+        <p>{$dataset_count|escape} dataset(s) use the HXL tag <code>#{$tag->tag|escape}</code>:</p>
 
         <table>
           <thead>
@@ -36,7 +36,7 @@
               <th>Dataset</th>
               <th>Source</th>
               <th>Imported by</th>
-              <th>Latest copy</th>
+              <th>Time</th>
             </tr>
           </thead>
           <tbody>
@@ -45,7 +45,7 @@
               <td><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></td>
               <td><a href="{$import|source_link}">{$import->source_name|escape}</a></td>
               <td><a href="{$import|user_link}">{$import->usr_name|escape}</a></td>
-              <td><a href="{$import|import_link}">{$import->stamp|escape}</a></td>
+              <td><a href="{$import|import_link}">{$import->stamp|timeAgo}</a></td>
             </tr>
             {/foreach}      
           </tbody>
