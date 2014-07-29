@@ -30,17 +30,17 @@
         <table>
           <thead>
             <tr>
-              <th>Version</th>
               <th>Dataset</th>
               <th>Data source</th>
+              <th>Time</th>
             </tr>
           </thead>
           <tbody>
             {foreach item=import from=$imports}
             <tr>
-              <td><a href="{$import|import_link}">{$import->stamp|escape}</a></td>
               <td><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></td>
               <td><a href="{$import|source_link}">{$import->source_name|escape}</a></td>
+              <td><a href="{$import|import_link}">{$import->stamp|timeAgo}</a></td>
             </tr>
             {/foreach}
           </tbody>

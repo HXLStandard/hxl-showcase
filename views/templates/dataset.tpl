@@ -18,9 +18,9 @@
       <h1>{$import->dataset_name|escape}</h1>
 
       <nav class="options col3">
+        <li><a href="{$import|dataset_link}/analysis">Analyse</a></li>
         <li><a href="{$import|dataset_link}.csv">Download CSV</a></li>
         <li><a href="{$import|dataset_link}/_history">See upload history</a></li>
-        <li><a href="{$import|dataset_link}/analysis">Analyse</a></li>
       </nav>
       
       <table>

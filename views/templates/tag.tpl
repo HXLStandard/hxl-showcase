@@ -35,8 +35,8 @@
             <tr>
               <th>Dataset</th>
               <th>Source</th>
-              <th>Latest copy</th>
               <th>Imported by</th>
+              <th>Latest copy</th>
             </tr>
           </thead>
           <tbody>
@@ -44,8 +44,8 @@
             <tr>
               <td><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></td>
               <td><a href="{$import|source_link}">{$import->source_name|escape}</a></td>
-              <td><a href="{$import|import_link}">{$import->stamp|escape}</a></td>
               <td><a href="{$import|user_link}">{$import->usr_name|escape}</a></td>
+              <td><a href="{$import|import_link}">{$import->stamp|escape}</a></td>
             </tr>
             {/foreach}      
           </tbody>

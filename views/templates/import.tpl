@@ -20,8 +20,8 @@
       <section id="data">
 
         <nav class="options col2">
-          <li><a href="{$import|dataset_link}.csv">Download CSV</a></li>
           <li><a href="{$import|import_link}/analysis">Analyse</a></li>
+          <li><a href="{$import|dataset_link}.csv">Download CSV</a></li>
         </nav>
       
         <table>
