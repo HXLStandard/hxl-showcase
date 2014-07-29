@@ -1,17 +1,6 @@
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawCharts);
 
-var chart_tags = [
-    'country',
-    'adm1',
-    'adm2',
-    'adm3',
-    'adm4',
-    'adm5',
-    'sector',
-    'org'
-];
-
 function drawChart(tag) {
     // grab the CSV
     $.get('?tag=' + tag, function(csvString) {

@@ -7,6 +7,9 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/jquery.csv-0.71.min.js"></script>
+    <script type="text/javascript">
+      var chart_tags = [];
+    </script>
   </head>
   <body>
     {include file="fragments/header.tpl"}
@@ -37,110 +40,23 @@
       
       <p>{$total|number_format} matching activit{$total|plural:'y':'ies'}.</p>
 
-      {if $country_count > 0}
-      <section id="countries">
-        <h2>Top countries</h2>
-        <aside id="country_chart"></aside>
-        <p>Total countries: {$country_count|number_format}</p>
-        <ol>
-          {foreach item=country from=$countries}
-          <li><a href="analysis{$filters|params:'country':$country->value}">{$country->value|none}</a> ({$country->count|number_format} activit{$country->count|plural:'y':'ies'})</li>
+      {foreach key=tag item=total from=$tag_totals}
+      {if $total > 0}
+      <section id="tag_{$tag|escape}">
+        <h2>#{$tag|escape} ({$total|number_format})</h2>
+        <aside id="{$tag|escape}_chart"></aside>
+        <div>
+          <b>Filter by:</b>
+          {foreach item=value from=$tag_values[$tag]}
+          <a href="analysis{$filters|params:$tag:$value->value}">{$value->value|none}</a> ({$value->count|number_format})
           {/foreach}
-        </ol>
+        </div>
+        <script type="text/javascript">
+          chart_tags.push({$tag|json_encode});
+        </script>
       </section>
       {/if}
-
-      {if $adm1_count > 0}
-      <section id="adm1">
-        <h2>Top admin level 1 subdivisions</h2>
-        <p>Total admin level 1 subdivisions: {$adm1_count|number_format}</p>
-        <aside id="adm1_chart"></aside>
-        <ol>
-          {foreach item=adm1 from=$adm1s}
-          <li><a href="{$filters|params:'adm1':$adm1->value}">{$adm1->value|none}</a> ({$adm1->count|number_format} activit{$adm1->count|plural:'y':'ies'})</li>
-          {/foreach}
-        </ol>
-      </section>
-      {/if}
-
-      {if $adm2_count > 0}
-      <section id="adm2">
-        <h2>Top admin level 2 subdivisions</h2>
-        <p>Total admin level 2 subdivisions: {$adm2_count|number_format}</p>
-        <aside id="adm2_chart"></aside>
-        <ol>
-          {foreach item=adm2 from=$adm2s}
-          <li><a href="{$filters|params:'adm2':$adm2->value}">{$adm2->value|none}</a> ({$adm2->count|number_format} activit{$adm2->count|plural:'y':'ies'})</li>
-          {/foreach}
-        </ol>
-      </section>
-      {/if}
-
-      {if $adm3_count > 0}
-      <section id="adm3">
-        <h2>Top admin level 3 subdivisions</h2>
-        <aside id="adm3_chart"></aside>
-        <p>Total admin level 3 subdivisions: {$adm3_count|number_format}</p>
-        <aside id="adm3_chart"></aside>
-        <ol>
-          {foreach item=adm3 from=$adm3s}
-          <li><a href="{$filters|params:'adm3':$adm3->value}">{$adm3->value|none}</a> ({$adm3->count|number_format} activit{$adm3->count|plural:'y':'ies'})</li>
-          {/foreach}
-        </ol>
-      </section>
-      {/if}
-
-      {if $adm4_count > 0}
-      <section id="adm4">
-        <h2>Top admin level 4 subdivisions</h2>
-        <p>Total admin level 4 subdivisions: {$adm4_count|number_format}</p>
-        <aside id="adm4_chart"></aside>
-        <ol>
-          {foreach item=adm4 from=$adm4s}
-          <li><a href="{$filters|params:'adm4':$adm4->value}">{$adm4->value|none}</a> ({$adm4->count|number_format} activit{$adm4->count|plural:'y':'ies'})</li>
-          {/foreach}
-        </ol>
-      </section>
-      {/if}
-
-      {if $adm5_count > 0}
-      <section id="adm5">
-        <h2>Top admin level 5 subdivisions</h2>
-        <p>Total admin level 5 subdivisions: {$adm5_count|number_format}</p>
-        <aside id="adm5_chart"></aside>
-        <ol>
-          {foreach item=adm5 from=$adm5s}
-          <li><a href="{$filters|params:'adm5':$adm5->value}">{$adm5->value|none}</a> ({$adm5->count|number_format} activit{$adm5->count|plural:'y':'ies'})</li>
-          {/foreach}
-        </ol>
-      </section>
-      {/if}
-
-      {if $sector_count > 0}
-      <section id="sectors">
-        <h2>Top sectors</h2>
-        <p>Total sectors: {$sector_count|number_format}</p>
-        <aside id="sector_chart"></aside>
-        <ol>
-          {foreach item=sector from=$sectors}
-          <li><a href="{$filters|params:'sector':$sector->value}">{$sector->value|none}</a> ({$sector->count|number_format} activit{$sector->count|plural:'y':'ies'})</li>
-          {/foreach}
-        </ol>
-      </section>
-      {/if}
-
-      {if $org_count > 0}
-      <section id="orgs">
-        <h2>Top organisations</h2>
-        <p>Total organisations: {$org_count|number_format}</p>
-        <aside id="org_chart"></aside>
-        <ol>
-          {foreach item=org from=$orgs}
-          <li><a href="{$filters|params:'org':$org->value}">{$org->value|none}</a> ({$org->count|number_format} activit{$org->count|plural:'y':'ies'})</li>
-          {/foreach}
-        </ol>
-      </section>
-      {/if}
+      {/foreach}
 
       <section id="data">
         <h2>Matching data</h2>

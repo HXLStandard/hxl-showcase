@@ -36,7 +36,9 @@ class ImportAnalysisController extends AbstractController {
       'adm4' => 'adm4',
       'adm5' => 'adm5',
       'sector' => 'sector',
+      'subsector' => 'subsector',
       'org' => 'org',
+      'loctype' => 'loctype',
     );
     list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $filter_map);
 
@@ -79,46 +81,11 @@ class ImportAnalysisController extends AbstractController {
 
     // Get the preview counts
 
-    $geo_count = 0;
-
-    if (!isset($active_filters['country'])) {
-      $geo_count = $country_count = $this->get_value_count('country', $sql_filter);
-      $countries = $this->get_value_preview('country', $sql_filter);
-    }
-
-    if (!isset($active_filters['adm1']) && !$geo_count) {
-      $geo_count = $adm1_count = $this->get_value_count('adm1', $sql_filter);
-      $adm1s = $this->get_value_preview('adm1', $sql_filter);
-    }
-
-    if (!isset($active_filters['adm2']) && !$geo_count) {
-      $geo_count = $adm2_count = $this->get_value_count('adm2', $sql_filter);
-      $adm2s = $this->get_value_preview('adm2', $sql_filter);
-    }
-
-    if (!isset($active_filters['adm3']) && !$geo_count) {
-      $geo_count = $adm3_count = $this->get_value_count('adm3', $sql_filter);
-      $adm3s = $this->get_value_preview('adm3', $sql_filter);
-    }
-
-    if (!isset($active_filters['adm4']) && !$geo_count) {
-      $geo_count = $adm4_count = $this->get_value_count('adm4', $sql_filter);
-      $adm4s = $this->get_value_preview('adm4', $sql_filter);
-    }
-
-    if (!isset($active_filters['adm5']) && !$geo_count) {
-      $geo_count = $adm5_count = $this->get_value_count('adm5', $sql_filter);
-      $adm5s = $this->get_value_preview('adm5', $sql_filter);
-    }
-
-    if (!isset($active_filters['sector'])) {
-      $sector_count = $this->get_value_count('sector', $sql_filter);
-      $sectors = $this->get_value_preview('sector', $sql_filter);
-    }
-
-    if (!isset($active_filters['org'])) {
-      $org_count = $this->get_value_count('org', $sql_filter);
-      $orgs = $this->get_value_preview('org', $sql_filter);
+    foreach ($filter_map as $key => $tag) {
+      if (!isset($active_filters[$tag])) {
+        $tag_totals[$tag]  = $this->get_value_count($tag, $sql_filter);
+        $tag_values[$tag] = $this->get_value_preview($tag, $sql_filter);
+      }
     }
 
     //
@@ -127,48 +94,12 @@ class ImportAnalysisController extends AbstractController {
     $response->setParameter('import', $import);
     $response->setParameter('total', $total);
     $response->setParameter('filters', $active_filters);
+
+    $response->setParameter('tag_totals', $tag_totals);
+    $response->setParameter('tag_values', $tag_values);
+
     $response->setParameter('cols', $cols);
     $response->setParameter('values', $values);
-
-    if ($sector_count > 0) {
-      $response->setParameter('sector_count', $sector_count);
-      $response->setParameter('sectors', $sectors);
-    }
-
-    if ($country_count > 0) {
-      $response->setParameter('country_count', $country_count);
-      $response->setParameter('countries', $countries);
-    }
-
-    if ($adm1_count > 0) {
-      $response->setParameter('adm1_count', $adm1_count);
-      $response->setParameter('adm1s', $adm1s);
-    }
-
-    if ($adm2_count > 0) {
-      $response->setParameter('adm2_count', $adm2_count);
-      $response->setParameter('adm2s', $adm2s);
-    }
-
-    if ($adm3_count > 0) {
-      $response->setParameter('adm3_count', $adm3_count);
-      $response->setParameter('adm3s', $adm3s);
-    }
-
-    if ($adm4_count > 0) {
-      $response->setParameter('adm4_count', $adm4_count);
-      $response->setParameter('adm4s', $adm4s);
-    }
-
-    if ($adm5_count > 0) {
-      $response->setParameter('adm5_count', $adm5_count);
-      $response->setParameter('adm5s', $adm5s);
-    }
-
-    if ($org_count > 0) {
-      $response->setParameter('org_count', $org_count);
-      $response->setParameter('orgs', $orgs);
-    }
 
     $response->setTemplate('import-analysis');
   }
