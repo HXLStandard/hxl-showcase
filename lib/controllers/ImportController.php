@@ -17,13 +17,13 @@ class ImportController extends AbstractController {
 
     // Grab the metadata for this import (version)
     $import = $this->doQuery('select * from import_view ' .
-                             'where source_ident=? and dataset_ident=? and stamp=? ' .
+                             'where source=? and dataset=? and stamp=? ' .
                              'order by stamp desc',
                              $source_ident, $dataset_ident, $stamp)->fetch();
 
     // Grab the contents of the data table
-    $cols = $this->doQuery('select * from col_view where import=? order by col', $import->id)->fetchAll();
-    $values = $this->doQuery('select * from value_view where import=? order by row, col', $import->id);
+    $cols = $this->doQuery('select * from col_view where import=? order by col', $import->import)->fetchAll();
+    $values = $this->doQuery('select * from value_view where import=? order by row, col', $import->import);
 
     // Render the results
     if ($format == 'csv') {

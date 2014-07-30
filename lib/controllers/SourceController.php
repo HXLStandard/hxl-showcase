@@ -9,14 +9,14 @@ class SourceController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
 
-    $source = $this->doQuery('select * from source where ident=?', $request->get('source'))->fetch();
+    $source = $this->doQuery('select * from source where source=?', $request->get('source'))->fetch();
 
     $uploads = $this->doQuery(
       'select I.* ' .
       'from import_view I ' .
-      'join latest_import_view L using(id) ' .
-      'where source_ident=?',
-      $source->ident);
+      'join latest_import_view L using(import) ' .
+      'where source=?',
+      $source->source);
 
     $response->setParameter('source', $source);
     $response->setParameter('uploads', $uploads);

@@ -9,17 +9,17 @@ class DatasetHistoryController extends AbstractController {
 
     $dataset = $this->doQuery(
       'select * from dataset_view ' .
-      'where source_ident=? and ident=?',
+      'where source=? and dataset=?',
       $source_ident, $dataset_ident)->fetch();
 
     // Change history (query from value table to get row count)
     $imports = $this->doQuery(
-      'select stamp, source_ident, dataset_ident, usr_ident, usr_name, count(distinct row) as row_count ' .
+      'select stamp, source, dataset, usr, usr_name, count(distinct row) as row_count ' .
       'from value_view ' .
       'where dataset=? ' .
-      'group by dataset, stamp, source_ident, dataset_ident, usr_ident, usr_name ' .
+      'group by dataset, stamp, source, dataset, usr, usr_name ' .
       'order by stamp desc',
-      $dataset->id
+      $dataset->dataset
     );
 
     $response->setParameter('dataset', $dataset);

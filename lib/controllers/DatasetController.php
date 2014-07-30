@@ -4,16 +4,16 @@ class DatasetController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
 
-    $source_ident = $request->get('source');
-    $dataset_ident = $request->get('dataset');
+    $source_param = $request->get('source');
+    $dataset_param = $request->get('dataset');
     $format = $request->get('format');
 
     // Latest import for the dataset
     $import = $this->doQuery(
-      'select I.* from import_view I ' .
-      'join latest_import_view LI on I.id=LI.id ' .
-      'where I.source_ident=? and I.dataset_ident=?',
-      $source_ident, $dataset_ident
+      'select I.* from import_view I' .
+      ' join latest_import_view LI using(import) ' .
+      ' where I.source=? and I.dataset=?',
+      $source_param, $dataset_param
     )->fetch();
 
     // Columns for the import
@@ -21,7 +21,7 @@ class DatasetController extends AbstractController {
       'select C.* from col_view C ' .
       'where import=? ' .
       'order by C.col',
-      $import->id
+      $import->import
     )->fetchAll();
 
     // Values for the import
@@ -29,7 +29,7 @@ class DatasetController extends AbstractController {
       'select V.* from value_view V ' .
       'where import=? ' .
       'order by row, col',
-      $import->id
+      $import->import
     );
 
     if ($format == 'csv') {

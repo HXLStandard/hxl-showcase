@@ -3,7 +3,7 @@
 
 <html>
   <head>
-    <title>Upload history: {$dataset->name|escape}</title>
+    <title>Upload history: {$dataset->dataset_name|escape}</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -12,11 +12,11 @@
       <li><a href="/">Home</a></li>
       <li><a href="/data">Data providers</a></li>
       <li><a href="{$dataset|source_link}">{$dataset->source_name|escape}</a></li>
-      <li><a href="{$dataset|dataset_link}">{$dataset->name|escape}</a></li>
+      <li><a href="{$dataset|dataset_link}">{$dataset->dataset_name|escape}</a></li>
     </nav>
 
     <main>
-      <h1>Upload history: {$dataset->name|escape}</h1>
+      <h1>Upload history: {$dataset->dataset_name|escape}</h1>
 
       <table>
         <thead>
