@@ -11,7 +11,7 @@ function smarty_function_report_row($params, $template) {
 
   foreach ($cols as $col) {
     foreach ($cells as $i => $cell) {
-      if ($cell->tag_tag == $col->tag) {
+      if ($cell->tag == $col->tag) {
         array_push($values_out, $cell);
         unset($cells[$i]);
         break;

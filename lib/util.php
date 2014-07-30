@@ -13,7 +13,7 @@ function dump_csv($cols, $values, $output) {
 
   // HXL tags and original headers
   foreach ($cols as $col) {
-    array_push($tag_row, $col->tag_tag);
+    array_push($tag_row, $col->tag);
     array_push($header_row, $col->header);
   }
   fputcsv($output, $tag_row);
@@ -64,35 +64,31 @@ function dump_csv_row($cols, $values, $output) {
  * Make a link to a user
  */
 function user_link($item) {
-  $ident = ($item->usr_ident ? $item->usr_ident : $item->ident);
-  return sprintf('/user/%s', urlencode($ident));
+  return sprintf('/user/%s', urlencode($item->usr));
 }
 
 /**
  * Make a link to a HXL tag
  */
 function tag_link($item) {
-  $tag = ($item->tag_tag ? $item->tag_tag : $item->tag);
-  return sprintf('/tag/%s', urlencode($tag));
+  return sprintf('/tag/%s', urlencode($item->tag));
 }
 
 /**
  * Make a link to a source
  */
 function source_link($item) {
-  $ident = ($item->source_ident ? $item->source_ident : $item->ident);
-  return sprintf('/data/%s', urlencode($ident));
+  return sprintf('/data/%s', urlencode($item->source));
 }
 
 /**
  * Make a link to a dataset
  */
 function dataset_link($item) {
-  $ident = ($item->dataset_ident ? $item->dataset_ident : $item->ident);
   return sprintf(
     '/data/%s/%s',
-    urlencode($item->source_ident),
-    urlencode($ident)
+    urlencode($item->source),
+    urlencode($item->dataset)
   );
 }
 
@@ -102,8 +98,8 @@ function dataset_link($item) {
 function import_link($item) {
   return sprintf(
     '/data/%s/%s/%s',
-    urlencode($item->source_ident),
-    urlencode($item->dataset_ident),
+    urlencode($item->source),
+    urlencode($item->dataset),
     urlencode($item->stamp)
   );
 }

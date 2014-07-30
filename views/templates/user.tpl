@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>{$user->name|escape} ({$user->ident|escape})</title>
+    <title>{$user->usr_name|escape} ({$user->usr|escape})</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -13,19 +13,19 @@
     </nav>
 
     <main>
-      <h1>{$user->name|escape} ({$user->ident|escape})</h1>
+      <h1>{$user->usr_name|escape} ({$user->usr|escape})</h1>
 
       <form method="GET" action="/search">
-        <input type="hidden" name="user" value="{$user->ident|escape}" />
+        <input type="hidden" name="user" value="{$user->usr|escape}" />
         <label>
-          <span>Search uploads by {$user->name|escape}</span>
+          <span>Search uploads by {$user->usr_name|escape}</span>
           <input name="q" placeholder="Search text" />
         </label>
         <input type="submit" />
       </form>
 
       <section id="imports">
-        <h2>Uploads by {$user->name|escape}</h2>
+        <h2>Uploads by {$user->usr_name|escape}</h2>
 
         <table>
           <thead>

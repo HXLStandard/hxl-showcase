@@ -21,7 +21,7 @@ class ReportController extends AbstractController {
     }
 
     // Now we need a list of matching values
-    $value_query = sprintf('select V.* from value_view V join latest_import_view LI on V.import=LI.id where V.tag_tag in (%s) order by V.row, V.col', implode(',', array_fill(0, count($col_list), '?')));
+    $value_query = sprintf('select V.* from value_view V join latest_import_view LI on V.import=LI.id where V.tag in (%s) order by V.row, V.col', implode(',', array_fill(0, count($col_list), '?')));
     $params = $col_list;
     array_unshift($params, $value_query);
     $values = call_user_method_array('doQuery', $this, $params);

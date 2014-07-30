@@ -7,7 +7,7 @@ class SearchController extends AbstractController {
     // HTTP GET parameters
     $q = $request->get('q');
     $source_ident = $request->get('source');
-    $tag_tag = $request->get('tag');
+    $tag = $request->get('tag');
     $user_ident = $request->get('user');
 
     // Clean up query string to match search syntax
@@ -33,9 +33,9 @@ class SearchController extends AbstractController {
       $frag .= " and V.source_ident=?";
     }
 
-    if ($tag_tag) {
-      array_push($params, $tag_tag);
-      $frag .= " and V.tag_tag=?";
+    if ($tag) {
+      array_push($params, $tag);
+      $frag .= " and V.tag=?";
     }
 
     if ($user_ident) {
@@ -46,13 +46,13 @@ class SearchController extends AbstractController {
     // Crazy grouping statement to get aggregate totals for datasets
     $sql = "select V.source_ident, V.source_name, " .
       "V.dataset_ident, V.dataset_name, " .
-      "V.tag_tag, V.tag_name, " .
+      "V.tag, V.tag_name, " .
       "V.value, V.usr_ident, V.usr_name, " .
       "count(V.id) as row_count " .
       $frag . ' ' .
       "group by V.source_ident, V.source_name, " .
       "V.dataset_ident, V.dataset_name, " .
-      "V.tag_tag, V.tag_name, " .
+      "V.tag, V.tag_name, " .
       "V.value, V.usr_ident, V.usr_name " .
       "order by row_count desc";
     array_unshift($params, $sql);
@@ -70,7 +70,7 @@ class SearchController extends AbstractController {
     $response->setParameter('users', $users);
 
     $response->setParameter('source_ident', $source_ident);
-    $response->setParameter('tag_tag', $tag_tag);
+    $response->setParameter('tag', $tag);
     $response->setParameter('user_ident', $user_ident);
     $response->setParameter('values', $values);
     $response->setParameter('result_count', $result_count);

@@ -22,7 +22,7 @@ $statement = _query('select * from col_view where import=? order by id', $import
 $tags = array();
 $headers = array();
 while ($col = $statement->fetch()) {
-  array_push($tags, $col->tag_tag);
+  array_push($tags, $col->tag);
   array_push($headers, $col->header);
 }
 fputcsv(STDOUT, $tags);

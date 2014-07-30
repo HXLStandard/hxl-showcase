@@ -137,7 +137,7 @@ class ImportAnalysisController extends AbstractController {
     return 0 + $this->doQuery(
       'select count(distinct V.value) as count' .
       ' from value_view V ' .
-      ' where V.tag_tag=? and V.row in ' . $sql_filter,
+      ' where V.tag=? and V.row in ' . $sql_filter,
       $tag
     )->fetchColumn();
   }
@@ -157,7 +157,7 @@ class ImportAnalysisController extends AbstractController {
     return $this->doQuery(
       'select V.value, count(distinct V.row) as count ' .
       ' from value_view V' .
-      ' where V.tag_tag=? and V.row in ' . $sql_filter .
+      ' where V.tag=? and V.row in ' . $sql_filter .
       ' group by V.value' .
       ' order by count(distinct V.row) desc, V.value',
       $tag
@@ -191,10 +191,10 @@ class ImportAnalysisController extends AbstractController {
         // Different treatment for the first one
         if ($n == 1) {
           $sql_filter = 'select V1.row from value_view V1';
-          $where_clause = sprintf(" where V1.import=%d and V1.tag_tag='%s' and V1.value='%s'", $import_id, self::escape_sql($tag), self::escape_sql($value));
+          $where_clause = sprintf(" where V1.import=%d and V1.tag='%s' and V1.value='%s'", $import_id, self::escape_sql($tag), self::escape_sql($value));
         } else {
         $sql_filter .= sprintf(
-          ' join value_view V%d on V1.row=V%d.row and V%d.tag_tag=\'%s\' and V%d.value=\'%s\'',
+          ' join value_view V%d on V1.row=V%d.row and V%d.tag=\'%s\' and V%d.value=\'%s\'',
           $n, $n, $n, self::escape_sql($tag), $n, self::escape_sql($value)
         );
         }
