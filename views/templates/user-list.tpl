@@ -23,8 +23,8 @@
         <tbody>
           {foreach item=user from=$users}
           <tr>
-            <td><a href="{$user|user_link}">{$user->ident|escape}</a></td>
-            <td>{$user->name|escape}</td>
+            <td><a href="{$user|user_link}">{$user->usr|escape}</a></td>
+            <td>{$user->usr_name|escape}</td>
             <td>{$user->import_count|escape}</td>
           </tr>
           {/foreach}      

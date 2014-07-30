@@ -28,7 +28,7 @@
           {foreach item=tag from=$tags}
           <tr>
             <td><a href="{$tag|tag_link}"><code>#{$tag->tag|escape}</code></a></td>
-            <td>{$tag->name|escape}</td>
+            <td>{$tag->tag_name|escape}</td>
             <td>{$tag->datatype_name|escape}</td>
             <td>{$tag->col_count|number_format}</td>
           </tr>

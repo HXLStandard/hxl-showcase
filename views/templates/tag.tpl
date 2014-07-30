@@ -13,7 +13,7 @@
     </nav>
 
     <main>
-      <h1><code>#{$tag->tag|escape}</code> &mdash; <i>{$tag->name|escape}</i></h1>
+      <h1><code>#{$tag->tag|escape}</code> &mdash; <i>{$tag->tag_name|escape}</i></h1>
 
       <form method="GET" action="/search">
         <input type="hidden" name="tag" value="{$tag->tag|escape}" />
