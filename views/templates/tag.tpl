@@ -15,6 +15,8 @@
     <main>
       <h1><code>#{$tag->tag|escape}</code> &mdash; <i>{$tag->tag_name|escape}</i></h1>
 
+      <p><b>Data type:</b> {$tag->datatype_name|escape}</p>
+
       <form method="GET" action="/search">
         <input type="hidden" name="tag" value="{$tag->tag|escape}" />
         <label>
