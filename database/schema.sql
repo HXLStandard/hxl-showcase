@@ -1,17 +1,16 @@
 create table lang (
   lang varchar(2) primary key,
-  name varchar(64) not null
+  lang_name varchar(64) not null
 );
 
-insert into lang (lang, name) values ('en', 'English');
+insert into lang (lang, lang_name) values ('en', 'English');
 
 create table datatype (
-  id bigserial primary key,
-  type varchar(32) unique not null,
-  name varchar(64) not null
+  datatype varchar(32) primary key,
+  datatype_name varchar(128) not null
 );
 
-insert into datatype (type, name) values
+insert into datatype (datatype, datatype_name) values
   ('Text', 'Text'),
   ('Code', 'Identifier or code'),
   ('Number', 'Number'),
@@ -21,42 +20,37 @@ insert into datatype (type, name) values
   ('Email', 'Email address');
 
 create table usr (
-  id bigserial primary key,
-  ident varchar(64) unique not null,
-  name varchar(128) not null
+  usr varchar(32) unique not null,
+  usr_name varchar(128) not null
 );
 
 create table source (
-  id bigserial primary key,
-  ident varchar(64) unique not null,
-  name varchar(128) not null
+  source varchar(32) unique not null,
+  source_name varchar(128) not null
 );
 
 create table tag (
-  id bigserial primary key,
-  tag varchar(64) unique not null,
-  name varchar(128) not null,
-  datatype bigint not null,
-  foreign key(datatype) references datatype(id)
+  tag varchar(32) primary key,
+  tag_name varchar(128) not null,
+  datatype varchar(32) not null,
+  foreign key(datatype) references datatype(datatype)
 );
 
 create table dataset (
-  id bigserial primary key,
-  source bigint not null,
-  ident varchar(64) not null,
-  name varchar(128) not null,
-  unique(source, ident),
-  foreign key(source) references source(id)
+  dataset varchar(32) primary key,
+  source varchar(32) not null,
+  dataset_name varchar(128) not null,
+  foreign key(source) references source(source)
 );
 
 create table import (
-  id bigserial primary key,
-  dataset bigint not null,
-  usr bigint not null,
+  import bigserial primary key,
   stamp timestamp default now(),
-  unique (dataset, stamp),
-  foreign key(dataset) references dataset(id),
-  foreign key(usr) references usr(id)
+  dataset varchar(32) not null,
+  usr varchar(32) not null,
+  unique(dataset, stamp),
+  foreign key(dataset) references dataset(dataset),
+  foreign key(usr) references usr(usr)
 );
 
 create index import_stamp on import(stamp);
@@ -64,16 +58,14 @@ create index import_stamp on import(stamp);
 create table col (
   col bigserial primary key,
   import bigint not null,
-  tag bigint not null,
+  tag varchar(32) not null,
   header text not null,
-  foreign key(import) references import(id),
-  foreign key(tag) references tag(id)
+  foreign key(import) references import(import),
+  foreign key(tag) references tag(tag)
 );
 
 create table row (
-  row bigserial primary key,
-  import bigint not null,
-  foreign key(import) references import(id)
+  row bigserial primary key
 );
 
 create table value (

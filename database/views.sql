@@ -1,50 +1,48 @@
 create or replace view tag_view as
-select C.*, DT.type, DT.name as datatype_name
-from tag C
-join datatype DT on C.datatype=DT.id;
+select T.*, DT.datatype_name
+from tag T
+join datatype DT using(datatype);
 
 create or replace view dataset_view as
-select D.*, S.ident as source_ident, S.name as source_name
+select D.*, S.source_name
 from dataset D
-join source S on D.source=S.id;
+join source S using(source);
 
 create or replace view import_view as
-select I.*, D.ident as dataset_ident, D.name as dataset_name,
-  S.ident as source_ident, S.name as source_name,
-  U.ident as usr_ident, U.name as usr_name
+select I.*, D.dataset_name, S.source, S.source_name, U.usr_name
 from import I
-join dataset D on I.dataset=D.id
-join source S on D.source=S.id
-join usr U on I.usr=U.id;
+join dataset D using(dataset)
+join source S using(source)
+join usr U using(usr);
 
 create or replace view latest_import_view as
-select I.id
+select I.import
 from import I
 join (select dataset, max(stamp) as stamp from import group by dataset) MAX
 on I.dataset=MAX.dataset and I.stamp=MAX.stamp;
 
 create or replace view col_view as
 select C.*, I.stamp,
-  S.id as source, S.ident as source_ident, S.name as source_name,
-  D.id as dataset, D.ident as dataset_ident, D.name as dataset_name,
-  CD.tag as tag_tag, CD.name as tag_name
+  S.source, S.source_name,
+  D.dataset_name,
+  T.tag_name
 from col C
-join import I on C.import=I.id
-join tag CD on C.tag=CD.id
-join dataset D on I.dataset=D.id
-join source S on D.source=S.id;
+join import I using(import)
+join tag T using(tag)
+join dataset D using(dataset)
+join source S using(source);
 
 create or replace view value_view as
-select V.*, C.header, I.id as import, I.stamp, CD.tag as tag_tag, CD.name as tag_name,
-       D.id as dataset, D.ident as dataset_ident, D.name as dataset_name, 
-       S.id as source, S.ident as source_ident, S.name as source_name,
-       U.id as user, U.ident as usr_ident, U.name as usr_name
+select V.*, C.header, I.import, I.stamp, T.tag, T.tag_name,
+       D.dataset, D.dataset_name, 
+       S.source, S.source_name,
+       U.usr, U.usr_name
 from value V
 join row R using(row)
 join col C using(col)
-join import I on C.import=I.id
-join dataset D on I.dataset=D.id
-join source S on D.source=S.id
-join tag CD on C.tag=CD.id
-join usr U on I.usr=U.id;
+join import I using(import)
+join dataset D using(dataset)
+join source S using(source)
+join tag T using(tag)
+join usr U using(usr);
 

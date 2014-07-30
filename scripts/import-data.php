@@ -29,7 +29,7 @@ _db()->beginTransaction();
 _db()->exec('set constraints all deferred');
 
 // Create a new import session
-$import_id = add_import($usr, $source, $dataset);
+$import_id = add_import($usr, $dataset);
 
 // First row is text headers; second row is HXL tags
 $header_row = fgetcsv(STDIN);

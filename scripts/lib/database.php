@@ -60,86 +60,50 @@ function _query() {
 }
 
 /**
- * Execute a SQL query containing a stored function.
- *
- * By convention, the function returns a single result value.
+ * Add a new source.
  */
-function _function() {
-  $statement = call_user_func_array("_query", func_get_args());
-  return $statement->fetchColumn();
+function add_source($source, $source_name) {
+  _query('insert into source (source, source_name) values (?, ?)', $source, $source_name);
+  return $source;
 }
 
-function add_source($ident, $name) {
-  return _function('select add_source(?, ?)', $ident, $name);
-}
-
-function add_usr($ident, $name) {
-  return _function('select add_usr(?, ?)', $ident, $name);
+/**
+ * Add a new user.
+ */
+function add_usr($usr, $usr_name) {
+  _query('insert into usr (usr, usr_name) values (?, ?)', $usr, $usr_name);
+  return $usr;
 }
 
 /**
  * Add a HXL tag.
- *
- * @param $tag the HXL tag.
- * @param $name the name of the HXL data element.
- * @return the tag database id (long int)
  */
-function add_tag($tag, $name, $type) {
-  return _function('select add_tag(?, ?, ref_datatype(?))', $tag, $name, $type);
-}
-
-/**
- * Delete a HXL tag.
- *
- * @param $tag the HXL tag.
- * @return the tag database id (long int)
- */
-function del_tag($tag) {
-  return _function('select del_tag(?)', $tag);
+function add_tag($tag, $tag_name, $datatype) {
+  _query('insert into tag (tag, tag_name, datatype) values (?, ?, ?)', $tag, $tag_name, $datatype);
 }
 
 /**
  * Add a dataset.
- *
- * @param $source the unique source identifier (string)
- * @param $ident the unique dataset identifier (string)
- * @param $name the dataset name (string)
- * @return the dataset database id (long int)
  */
-function add_dataset($source, $ident, $name) {
-  return _function('select add_dataset(ref_source(?), ?, ?)', $source, $ident, $name);
-}
-
-/**
- * Look up the id of a dataset.
- *
- * @param $ident the dataset identifier (string)
- * @return the dataset database id (long int)
- */
-function ref_dataset($ident) {
-  return _function('select ref_dataset(?)', $ident);
+function add_dataset($source, $dataset, $dataset_name) {
+  _query('insert into dataset (source, dataset, dataset_name) values (?, ?, ?)', $source, $dataset, $dataset_name);
+  return $dataset;
 }
 
 /**
  * Add a new import for a dataset.
- *
- * @param $dataset_id the dataset identifier (long int)
- * @return the import id (long int)
  */
-function add_import($usr_ident, $source_ident, $dataset_ident) {
-  return _function('select add_import(ref_dataset(?, ?), ref_usr(?))', $source_ident, $dataset_ident, $usr_ident);
+function add_import($usr, $dataset) {
+  _query('insert into import (usr, dataset) values (?, ?)', $usr, $dataset);
+  return _query('select lastval()')->fetchColumn();
 }
 
 /**
  * Add a new column for an import.
- *
- * @param $import_id the import id (long int)
- * @param $tag the HXL field tag (string)
- * @param $header the text of the spreadsheet header (string)
- * @return the column id (long int)
  */
-function add_col($import_id, $tag, $header) {
-  return _function('select add_col(?, ref_tag(?), ?)', $import_id, $tag, $header);
+function add_col($import, $tag, $header) {
+  _query('insert into col (import, tag, header) values (?, ?, ?)', $import, $tag, $header);
+  return _query('select lastval()')->fetchColumn();
 }
 
 /**
@@ -148,8 +112,9 @@ function add_col($import_id, $tag, $header) {
  * @param $import_id the import id (long int)
  * @return the row id (long int)
  */
-function add_row($import_id) {
-  return _function('select add_row(?)', $import_id);
+function add_row($import) {
+  _query('insert into row (row) values (default)');
+  return _query('select lastval()')->fetchColumn();
 }
 
 /**
@@ -159,8 +124,9 @@ function add_row($import_id) {
  * @param $col_id the database id of the column (long int)
  * @param $value the cell value (string)
  */
-function add_value($row_id, $col_id, $value) {
-  return _function('select add_value(?, ?, ?)', $row_id, $col_id, $value);
+function add_value($row, $col, $value) {
+  _query('insert into value(row, col, value) values (?, ?, ?)', $row, $col, $value);
+  return _query('select lastval()')->fetchColumn();
 }
 
 // end
