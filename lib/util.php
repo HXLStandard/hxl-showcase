@@ -13,11 +13,11 @@ function dump_csv($cols, $values, $output) {
 
   // HXL tags and original headers
   foreach ($cols as $col) {
-    array_push($tag_row, $col->tag);
     array_push($header_row, $col->header);
+    array_push($tag_row, '#' . $col->tag);
   }
-  fputcsv($output, $tag_row);
   fputcsv($output, $header_row);
+  fputcsv($output, $tag_row);
 
   $last_row = -1;
   $row = array();

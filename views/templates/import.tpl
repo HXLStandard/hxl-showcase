@@ -19,9 +19,10 @@
 
       <section id="data">
 
-        <nav class="options col2">
+        <nav class="options col3">
           <li><a href="{$import|import_link}/analysis">Analyse</a></li>
-          <li><a href="{$import|dataset_link}.csv">Download CSV</a></li>
+          <li><a href="{$import|dataset_link}">View current version</a></li>
+          <li><a href="{$import|import_link}.csv">Download HXL</a></li>
         </nav>
       
         <table>

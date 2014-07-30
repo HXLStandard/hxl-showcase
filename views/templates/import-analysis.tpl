@@ -40,7 +40,7 @@
 
       <nav class="options col2">
         <li><a href="?">Clear filters</a></li>
-        <li><a href="analysis.csv{$filters|params}">Download CSV</a></li>
+        <li><a href="analysis.csv{$filters|params}">Download HXL</a></li>
       </nav>
       
       {foreach key=tag item=total from=$tag_totals}
