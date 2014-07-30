@@ -49,7 +49,6 @@ class ImportAnalysisController extends AbstractController {
       'org',
       'loctype',
       'origin',
-      'period_date',
     );
     list($sql_filter, $active_filters) = self::process_filters($request, $import->import, $allowed_filters);
 
@@ -159,7 +158,7 @@ class ImportAnalysisController extends AbstractController {
       ' from value_view V' .
       ' where V.tag=? and V.row in ' . $sql_filter .
       ' group by V.value' .
-      ' order by count(distinct V.row) desc, V.value',
+      ' order by V.value',
       $tag
     );
   }
