@@ -44,7 +44,7 @@
       </nav>
       
       {foreach key=tag item=total from=$tag_totals}
-      {if $total > 1}
+      {if $total > 0}
       <section id="tag_{$tag|escape}">
         <h2>#{$tag|escape} ({$total|number_format})</h2>
         <aside id="{$tag|escape}_chart"></aside>

@@ -22,14 +22,14 @@ class ImportAnalysisController extends AbstractController {
     if ($stamp) {
       $import = $this->doQuery(
         'select * from import_view ' .
-        ' where source_ident=? and dataset_ident=? and stamp=?',
+        ' where source=? and dataset=? and stamp=?',
         $source_ident, $dataset_ident, $stamp
       )->fetch();
     } else {
       $import = $this->doQuery(
         'select I.* from import_view I ' .
-        'join latest_import_view LI on I.id=LI.id ' .
-        'where I.source_ident=? and I.dataset_ident=?',
+        'join latest_import_view LI using(import) ' .
+        'where I.source=? and I.dataset=?',
         $source_ident, $dataset_ident
       )->fetch();
     }
@@ -51,7 +51,7 @@ class ImportAnalysisController extends AbstractController {
       'origin',
       'period_date',
     );
-    list($sql_filter, $active_filters) = self::process_filters($request, $import->id, $allowed_filters);
+    list($sql_filter, $active_filters) = self::process_filters($request, $import->import, $allowed_filters);
 
     //
     // Early cutoff for focus on a single tag.
@@ -72,7 +72,7 @@ class ImportAnalysisController extends AbstractController {
     //
     // Get the output
     //
-    $cols = $this->doQuery('select * from col_view where import=? order by col', $import->id)->fetchAll();
+    $cols = $this->doQuery('select * from col_view where import=? order by col', $import->import)->fetchAll();
     $values = $this->doQuery('select * from value_view where row in ' . $sql_filter . ' order by row, col');
 
     //
@@ -205,7 +205,7 @@ class ImportAnalysisController extends AbstractController {
       $sql_filter = sprintf('(%s %s)', $sql_filter, $where_clause);
     } else {
       // count all rows
-      $sql_filter = sprintf('(select row from row where import=%d)', $import_id);
+      $sql_filter = sprintf('(select R.row from row R join value V using(row) join col C using(col) where C.import=%d)', $import_id);
     }
 
     // Return the results
