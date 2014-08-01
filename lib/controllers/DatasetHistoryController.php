@@ -15,7 +15,8 @@ class DatasetHistoryController extends AbstractController {
     // Change history (query from value table to get row count)
     $imports = $this->doQuery(
       'select stamp, source, dataset, usr, usr_name, count(distinct row) as row_count ' .
-      'from value_view ' .
+      'from search_view ' .
+      'join usr using(usr) ' .
       'where dataset=? ' .
       'group by dataset, stamp, source, dataset, usr, usr_name ' .
       'order by stamp desc',
