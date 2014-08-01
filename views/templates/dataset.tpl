@@ -17,8 +17,9 @@
     <main>
       <h1>{$import->dataset_name|escape}</h1>
 
-      <p>This page shows the latest version of the
-      <cite>{$import->dataset_name|escape}</cite> dataset from <a
+      <p>This page shows the latest version of the dataset
+      <cite>{$import->dataset_name|escape}</cite> dataset from the
+      source <a
       href="{$import|source_link}">{$import->source_name}</a>. In
       addition to browsing the data, you can select one of the options
       from the navigation bar below:</p>
