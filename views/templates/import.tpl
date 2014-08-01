@@ -17,6 +17,12 @@
     <main>
       <h1>{$import->dataset_name|escape} ({$import->stamp|escape})</h1>
 
+      <p>This page shows a specific version of the <a
+      href="{$import|dataset_link}">{$import->dataset_name|escape}</a>
+      dataset, uploaded at {$import->stamp|escape}. If you bookmark
+      this page, you will always get to this specific version of the
+      dataset, even if people upload new versions in the future.</p>
+
       <section id="data">
 
         <nav class="options col3">

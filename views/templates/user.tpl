@@ -15,6 +15,11 @@
     <main>
       <h1>{$user->usr_name|escape} ({$user->usr|escape})</h1>
 
+      <p>This page shows the upload activity for the user <a
+      href="{$user|user_link}">{$user->usr_name|escape}</a>
+      ({$user->usr|escape}). You can also search just within data that
+      this user has uploaded.</p>
+
       <form method="GET" action="/search">
         <input type="hidden" name="user" value="{$user->usr|escape}" />
         <label>

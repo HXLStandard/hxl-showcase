@@ -15,6 +15,11 @@
     <main>
       <h1><code>#{$tag->tag|escape}</code> &mdash; <i>{$tag->tag_name|escape}</i></h1>
 
+      <p>This page contains an overview of a specific HXL tag
+      (<code>#{$tag->tag|escape}</code>), along with basic
+      documentation and a list of the datasets in the showcase that
+      currently use the tag.</p>
+
       <p><b>Data type:</b> {$tag->datatype_name|escape}</p>
 
       <form method="GET" action="/search">

@@ -13,6 +13,15 @@
     <main>
       <h1>Search</h1>
 
+      <p>This page shows full-text search results across the data
+      imported into the HXL showcase. The search includes only the
+      latest version of each dataset. HXL tags let you make your
+      search more intelligent: for example, instead of searching for
+      the word "water" anywhere, you can search for it just in columns
+      with the tag &ldquo;<code>#sector</code>&rdquo;.  The results
+      show the number of matches in each dataset, listing the datasets
+      with the most matches first.</p>
+
       <form method="GET" action="/search">
         <label>
           <span>Search for</span>

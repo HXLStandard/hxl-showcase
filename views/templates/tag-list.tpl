@@ -14,8 +14,15 @@
     <main>
       <h1>HXL tags</h1>
 
+      <p>This page lists all of the HXL tags currently available in
+      the showcase, along with the number of datasets that currently
+      use each tag. Note that this is not (currently) the official
+      definition of the HXL tags. Please see the <cite><a
+      href="https://docs.google.com/spreadsheets/d/1aq2ojDnceIcTNdLWVKP856AuFPItJP1TWwMaPrKPXXw/edit?usp=sharing">HXL
+      tag dictionary</a></cite> for the latest list, including
+      more-detailed documentation.</p>
+
       <table>
-        <caption>Select a tag to see the datasets where it appears</caption>
         <thead>
           <tr>
             <th>HXL tag</th>

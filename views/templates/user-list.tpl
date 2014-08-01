@@ -14,6 +14,10 @@
     <main>
       <h1>Uploaders</h1>
 
+      <p>This page shows a list of the individual users who have
+      uploaded datasets to the HXL showcase. You may select a user for
+      more information about her/his activity.</p>
+
       <table>
         <thead>
           <th>User</th>

@@ -18,6 +18,13 @@
     <main>
       <h1>Upload history: {$dataset->dataset_name|escape}</h1>
 
+      <p>This page shows the upload history for the <a
+      href="{$dataset|dataset_link}">{$dataset->dataset_name|escape}</a>
+      dataset from the source <a
+      href="{$dataset|source_link}">{$dataset->source_name|escape}</a>. You
+      can choose any previous versions for visualisation and
+      analysis.</p>
+
       <table>
         <thead>
           <tr>
