@@ -26,7 +26,8 @@ class DatasetController extends AbstractController {
 
     // Values for the import
     $values = $this->doQuery(
-      'select V.* from value_view V ' .
+      'select value.* from value ' .
+      'join col using(col) ' .
       'where import=? ' .
       'order by row, col',
       $import->import

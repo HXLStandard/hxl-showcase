@@ -8,13 +8,7 @@ RewriteEngine On
 
 RewriteBase /
 
-#
-# Patterns for static files
-# (add any additional ones here)
-#
-RewriteRule ^images/    -               [L]
-RewriteRule ^style/     -               [L]
-RewriteRule ^scripts/   -               [L]
+# General
 
 RewriteRule ^$ index.php?p=home [QSA,L]
 
@@ -22,34 +16,38 @@ RewriteRule ^search$ index.php?p=search [QSA,L]
 
 RewriteRule ^report$ index.php?p=report [QSA,L]
 
+# Sources
+
 RewriteRule ^data$ index.php?p=source-list [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)$ index.php?p=source&source=$1 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})$ index.php?p=source&source=$1 [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)\.csv$ index.php?p=dataset&source=$1&dataset=$2&format=csv [QSA,L]
+# Datasets
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)$ index.php?p=dataset&source=$1&dataset=$2 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})$ index.php?p=dataset&source=$1&dataset=$2 [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)/history$ index.php?p=dataset-history&source=$1&dataset=$2 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/history$ index.php?p=dataset-history&source=$1&dataset=$2 [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)/analysis\.csv$ index.php?p=import-analysis&source=$1&dataset=$2&format=csv [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/analysis\.csv$ index.php?p=import-analysis&source=$1&dataset=$2&format=csv [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)/analysis$ index.php?p=import-analysis&source=$1&dataset=$2 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/analysis$ index.php?p=import-analysis&source=$1&dataset=$2 [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)/(\d\d\d\d-\d\d-\d\d[^/]+)\.csv$ index.php?p=import&source=$1&dataset=$2&import=$3&format=csv [QSA,L]
+# Imports
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)/(\d\d\d\d-\d\d-\d\d[^/]+)$ index.php?p=import&source=$1&dataset=$2&import=$3 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/([\d:.+-]+)(?:\.(csv))?$ index.php?p=import&source=$1&dataset=$2&import=$3&format=$4 [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)/(\d\d\d\d-\d\d-\d\d[^/]+)/analysis\.csv$ index.php?p=import-analysis&source=$1&dataset=$2&import=$3&format=csv [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/([\d:.+-]+)/analysis(?:\.(csv))?$ index.php?p=import-analysis&source=$1&dataset=$2&import=$3&format=$4 [QSA,L]
 
-RewriteRule ^data/([a-zA-Z][a-zA-Z0-9_-]*)/([a-zA-Z][a-zA-Z0-9_-]*)/(\d\d\d\d-\d\d-\d\d[^/]+)/analysis$ index.php?p=import-analysis&source=$1&dataset=$2&import=$3 [QSA,L]
+# Tags
 
 RewriteRule ^tag$ index.php?p=tag-list [QSA,L]
 
-RewriteRule ^tag/([a-zA-Z][a-zA-Z0-9_]*)$ index.php?p=tag&tag=$1 [QSA,L]
+RewriteRule ^tag/([\w]{1,32})$ index.php?p=tag&tag=$1 [QSA,L]
+
+# Users
 
 RewriteRule ^user$ index.php?p=user-list [QSA,L]
 
-RewriteRule ^user/([a-zA-Z][a-zA-Z0-9_-]*)$ index.php?p=user&user=$1 [QSA,L]
+RewriteRule ^user/([\w-]{1,32})$ index.php?p=user&user=$1 [QSA,L]
 
 </ifmodule>
