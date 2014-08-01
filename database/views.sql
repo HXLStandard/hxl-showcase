@@ -33,16 +33,15 @@ join dataset D using(dataset)
 join source S using(source);
 
 create or replace view value_view as
-select V.*, C.header, I.import, I.stamp, T.tag, T.tag_name,
-       D.dataset, D.dataset_name, 
-       S.source, S.source_name,
-       U.usr, U.usr_name
-from value V
-join row R using(row)
-join col C using(col)
-join import I using(import)
-join dataset D using(dataset)
-join source S using(source)
-join tag T using(tag)
-join usr U using(usr);
+select *
+from value
+join col using(col);
+
+create or replace view search_view as
+select *
+from value
+join col using(col)
+join import using(import)
+join dataset using(dataset)
+join source using(source);
 

@@ -26,40 +26,40 @@ class SearchController extends AbstractController {
     // the user has specified
     //
     $params = array($q);
-    $frag = "from value_view V join latest_import_view LI using(import) where to_tsvector('english', V.value) @@ to_tsquery('english', ?)";
+    $frag = "from search_view join latest_import_view LI using(import) where to_tsvector('english', value) @@ to_tsquery('english', ?)";
 
     if ($source_ident) {
       array_push($params, $source_ident);
-      $frag .= " and V.source=?";
+      $frag .= " and source=?";
     }
 
     if ($tag) {
       array_push($params, $tag);
-      $frag .= " and V.tag=?";
+      $frag .= " and tag=?";
     }
 
     if ($user_ident) {
       array_push($params, $user_ident);
-      $frag .= " and V.usr_ident=?";
+      $frag .= " and usr=?";
     }
 
     // Crazy grouping statement to get aggregate totals for datasets
-    $sql = "select V.source, V.source_name, " .
-      "V.dataset, V.dataset_name, " .
-      "V.tag, V.tag_name, " .
-      "V.value, V.usr, V.usr_name, " .
-      "count(V.id) as row_count " .
+    $sql = "select source, source_name, " .
+      "dataset, dataset_name, " .
+      "tag, " .
+      "value, usr, " .
+      "count(id) as row_count " .
       $frag . ' ' .
-      "group by V.source, V.source_name, " .
-      "V.dataset, V.dataset_name, " .
-      "V.tag, V.tag_name, " .
-      "V.value, V.usr, V.usr_name " .
+      "group by source, source_name, " .
+      "dataset, dataset_name, " .
+      "tag, " .
+      "value, usr " .
       "order by row_count desc";
     array_unshift($params, $sql);
     $values = call_user_method_array('doQuery', $this, $params);
 
     array_shift($params);
-    array_unshift($params, "select count(V.*) $frag");
+    array_unshift($params, "select count(*) $frag");
     $result_count = call_user_method_array('doQuery', $this, $params)->fetchColumn();
 
     // Set up the template parameters
@@ -70,7 +70,7 @@ class SearchController extends AbstractController {
     $response->setParameter('users', $users);
 
     $response->setParameter('source_ident', $source_ident);
-    $response->setParameter('tag', $tag);
+    $response->setParameter('tag_ident', $tag);
     $response->setParameter('user_ident', $user_ident);
     $response->setParameter('values', $values);
     $response->setParameter('result_count', $result_count);

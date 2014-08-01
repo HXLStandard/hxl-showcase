@@ -23,7 +23,7 @@
           <select name="tag">
             <option value="">(all)</option>
             {foreach item=tag from=$tags}
-            <option value="{$tag->tag|escape}"{if $tag->tag == $tag} selected="selected"{/if}>#{$tag->tag|escape} &mdash; {$tag->name|escape}</option>
+            <option value="{$tag->tag|escape}"{if $tag->tag == $tag_ident} selected="selected"{/if}>#{$tag->tag|escape}</option>
             {/foreach}
           </select>
         </label>
@@ -32,7 +32,7 @@
           <select name="source">
             <option value="">(all)</option>
             {foreach item=source from=$sources}
-            <option value="{$source->ident|escape}"{if $source->ident == $source_ident} selected="selected"{/if}>{$source->ident|escape} &mdash; {$source->name|escape}</option>
+            <option value="{$source->source|escape}"{if $source->source == $source_ident} selected="selected"{/if}>{$source->source_name|escape}</option>
             {/foreach}
           </select>
         </label>
@@ -41,7 +41,7 @@
           <select name="user">
             <option value="">(all)</option>
             {foreach item=user from=$users}
-            <option value="{$user->ident|escape}"{if $user->ident == $user_ident} selected="selected"{/if}>{$user->ident|escape} &mdash; {$user->name|escape}</option>
+            <option value="{$user->usr|escape}"{if $user->usr == $user_ident} selected="selected"{/if}>{$user->usr|escape}</option>
             {/foreach}
           </select>
         </label>
@@ -68,7 +68,7 @@
             <tr>
               <td><a href="{$value|dataset_link}/analysis?{$value->tag|escape:'url'}={$value->value|escape:'url'}">{$value->dataset_name|escape}</a></td>
               <td><a href="{$value|source_link}">{$value->source_name|escape}</a></td>
-              <td><a href="{$value|tag_link}"><code>#{$value->tag|escape}</code></a> &mdash; {$value->tag_name|escape}</td>
+              <td><a href="{$value|tag_link}"><code>#{$value->tag|escape}</code></a></td>
               <td>{$value->value|escape}</td>
               <td>{$value->row_count|number_format}</td>
             </tr>
