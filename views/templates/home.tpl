@@ -20,10 +20,10 @@
         and analysis during a humanitarian crisis, by defining a
         standard set of <a href="/tag">hashtags</a> that data creators
         can add to the columns of their spreadsheets: for example, the
-        <a href="/tag/sector"><code>#sector</code></a> at the top of a
-        spreadsheet column (immediately under the header) means that
-        the column refers to a humanitarian sector or cluster, such as
-        <i>Education</i>.</p>
+        HXL tag <a href="/tag/sector"><code>#sector</code></a> at the
+        top of a spreadsheet column (immediately under the header)
+        means that the column refers to a humanitarian sector or
+        cluster, such as <i>Education</i>.</p>
 
         <p>The datasets featured in this showcase are all samples of
         real humanitarian data from the field. The only changes made
