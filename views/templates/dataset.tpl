@@ -17,9 +17,27 @@
     <main>
       <h1>{$import->dataset_name|escape}</h1>
 
+      <p>This page shows the latest version of the
+      <cite>{$import->dataset_name|escape}</cite> dataset from <a
+      href="{$import|source_link}">{$import->source_name}</a>. In
+      addition to browsing the data, you can select one of the options
+      from the navigation bar below:</p>
+
+      <dl>
+        <dt>Analyse</dt>
+        <dd>Generate an analysis of the dataset, including charts, and
+        filter or drill down by varioius facets (including geography
+        and sector).</dd>
+        <dt>History</dt>
+        <dd>Browse, analyse, or download previous versions of this
+        dataset, if available.</dd>
+        <dt>Download HXL</dt>
+        <dd>Download a HXL version of this dataset.</dd>
+      </dl>
+
       <nav class="options col3">
         <li><a href="{$import|dataset_link}/analysis">Analyse</a></li>
-        <li><a href="{$import|dataset_link}/history">See upload history</a></li>
+        <li><a href="{$import|dataset_link}/history">History</a></li>
         <li><a href="{$import|dataset_link}.csv">Download HXL</a></li>
       </nav>
       

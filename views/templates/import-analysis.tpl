@@ -26,17 +26,26 @@
 
     <main>
       <h1>Analysis: {$import->dataset_name|escape} ({if $stamp}{$stamp|escape}{else}latest{/if})</h1>
-      
-      {if $filters}
-      <p>{$total|number_format} matching entr{$total|plural:'y':'ies'}.</p>
 
+      <p>This page demonstrates how HXL tags enable advanced analysis
+      and filtering of humanitarian data. Select items below to filter
+      the views (by geography, sector, organisation, etc.): the totals
+      and visualisations will update automatically to match your
+      filters. You can also download a filtered version of your HXL
+      data.</p>
+      
       <section id="filters">
-        <h2>Filters</h2>
+        <h2>Current filters</h2>
+
+        <p>({$total|number_format} matching entr{$total|plural:'y':'ies'}.)</p>
+
         {foreach key=tag item=value from=$filters}
         <p>#{$tag|escape} = &ldquo;{$value|none}&rdquo;</p>
-      {/foreach}
+        {foreachelse}
+        <p>(No active filters: showing the full dataset.)</p>
+        {/foreach}
+
       </section>
-      {/if}
 
       <nav class="options col2">
         <li><a href="?">Clear filters</a></li>

@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>{$source->name|escape}</title>
+    <title>{$source->source_name|escape}</title>
     <link rel="stylesheet" href="/style/default.css" />
   </head>
   <body>
@@ -13,7 +13,7 @@
     </nav>
 
     <main>
-      <h1>{$source->name|escape}</h1>
+      <h1>{$source->source_name|escape}</h1>
 
       <form method="GET" action="/search">
         <input type="hidden" name="source" value="{$source->ident|escape}" />
@@ -25,7 +25,11 @@
       </form>
 
       <section id="datasets">
-        <h2>Datasets from {$source->name|escape}</h2>
+        <h2>Datasets from {$source->source_name|escape}</h2>
+
+        <p>The HXL showcase contains the following dataset(s) from
+        {$source->source_name|escape}. Please select a dataset to
+        continue.</p>
 
         <table>
           <thead>

@@ -14,8 +14,11 @@
     <main>
       <h1>Data providers</h1>
 
+      <p>Data from the following providers is available in the HXL
+      showcase. Please select a provider or a dataset to see more
+      information.</p>
+
       <table>
-        <caption>Select a provider to see its datasets</caption>
         <thead>
           <th>Provider</th>
           <th>Datasets available</th>

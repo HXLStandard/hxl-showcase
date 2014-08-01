@@ -163,3 +163,7 @@ nav.main:after, nav.options:after {
 .filters span:last-child:after {
     content: '';
 }
+
+dt {
+    font-weight: bold;
+}
