@@ -62,7 +62,7 @@ function dump_csv_row($cols, $values, $output) {
  */
 function dump_json($cols, $values, $output) {
   $opts = JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE;
-  header('Content-type: application/json');
+  header('Content-type: application/json;charset=utf8');
   print("{");
   print("\n  \"cols\": [");
   $is_first = true;
@@ -101,7 +101,7 @@ function dump_json($cols, $values, $output) {
 }
 
 /**
- * Dump a row of a CSV spreadsheet
+ * Dump a row of JSON data
  */
 function dump_json_row($cols, $values, $is_first) {
   $opts = JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE;
@@ -122,6 +122,56 @@ function dump_json_row($cols, $values, $is_first) {
   }
   print("\n    " . json_encode($row, $opts));
   
+}
+
+/**
+ * Dump a dataset as XML.
+ */
+function dump_xml($cols, $values, $output = null) {
+  header("Content-type: application/xml;charset=utf8");
+  print("<?xml version=\"1.0\"?>\n\n");
+  printf(
+    "<hxl source=\"%s\" dataset=\"%s\" timestamp=\"%s\">\n",
+    htmlspecialchars($cols[0]->source),
+    htmlspecialchars($cols[0]->dataset),
+    htmlspecialchars($cols[0]->stamp)
+  );
+  print("  <cols>\n");
+  $col_counter = 0;
+  foreach($cols as $col) {
+    printf(
+      "    <col n=\"%d\" hxl=\"#%s\" original-header=\"%s\">%s</col>\n",
+      ++$col_counter,
+      htmlspecialchars($col->tag),
+      htmlspecialchars($col->header),
+      htmlspecialchars($col->tag_name)
+    );
+  }
+  print("  </cols>\n");
+  print("  <rows>\n");
+  $last_row = -1;
+  $row_counter = 0;
+  $col_counter = 0;
+  foreach($values as $value) {
+    $col_counter++;
+    if ($value->row != $last_row) {
+      $col_counter = 1;
+      if ($last_row == -1) {
+        printf("    <row n=\"%d\">\n", ++$row_counter);
+      } else {
+        printf("    </row>\n    <row n=\"%d\">\n", ++$row_counter);
+      }
+    }
+    if ($value->value) {
+      printf("      <%s col=\"%d\">%s</%s>\n", $cols[$col_counter]->tag, $col_counter, htmlspecialchars($value->value), $cols[$col_counter]->tag);
+    }
+    $last_row = $value->row;
+  }
+  if ($last_row != -1) {
+    print("    </row>\n  </rows>\n</hxl>\n");
+  } else {
+    print("  </rows>\n</hxl>\n");
+  }
 }
 
 
