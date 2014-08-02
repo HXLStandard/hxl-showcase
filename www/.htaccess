@@ -14,7 +14,9 @@ RewriteRule ^$ index.php?p=home [QSA,L]
 
 RewriteRule ^search$ index.php?p=search [QSA,L]
 
-RewriteRule ^report$ index.php?p=report [QSA,L]
+# Reports and downloads
+
+RewriteRule ^report(?:\.(csv|json|xml))?$ index.php?p=report&format=$1 [QSA,L]
 
 # Sources
 

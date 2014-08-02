@@ -167,3 +167,8 @@ nav.main:after, nav.options:after {
 dt {
     font-weight: bold;
 }
+
+.tag {
+    font-family: monospace;
+    font-weight: normal;
+}

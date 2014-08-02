@@ -25,7 +25,7 @@ create or replace view col_view as
 select C.*, I.stamp,
   S.source, S.source_name,
   D.dataset_name,
-  T.tag_name
+  T.tag_name, T.datatype
 from col C
 join import I using(import)
 join tag T using(tag)
