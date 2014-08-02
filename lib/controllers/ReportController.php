@@ -15,13 +15,16 @@ class ReportController extends AbstractController {
 
     switch($format) {
     case 'csv':
-      dump_csv($cols, $values, fopen('php://output', 'w'));
+      dump_csv($cols, $values);
       exit;
     case 'json':
-      dump_json($cols, $values, fopen('php://output', 'w'));
+      dump_json($cols, $values);
       exit;
     case 'xml':
-      dump_xml($cols, $values, fopen('php://output', 'w'));
+      dump_xml($cols, $values);
+      exit;
+    case 'n3':
+      dump_n3($cols, $values);
       exit;
     default:
       $response->setParameter('params', $params);

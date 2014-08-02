@@ -6,9 +6,11 @@
 /**
  * Dump a dataset as CSV.
  */
-function dump_csv($cols, $values, $output) {
+function dump_csv($cols, $values) {
 
-  header('Content-type: text/plain');
+  $output = fopen('php://output', 'w');
+
+  header('Content-type: text/csv;charset=utf8');
 
   $tag_row = array();
   $header_row = array();
@@ -35,6 +37,7 @@ function dump_csv($cols, $values, $output) {
     dump_csv_row($cols, $row, $output);
   }
 
+  fclose($output);
 }
 
 
@@ -60,7 +63,7 @@ function dump_csv_row($cols, $values, $output) {
 /**
  * Dump a dataset as JSON.
  */
-function dump_json($cols, $values, $output) {
+function dump_json($cols, $values) {
   $opts = JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE;
   header('Content-type: application/json;charset=utf8');
   print("{");
@@ -127,7 +130,7 @@ function dump_json_row($cols, $values, $is_first) {
 /**
  * Dump a dataset as XML.
  */
-function dump_xml($cols, $values, $output = null) {
+function dump_xml($cols, $values) {
   header("Content-type: application/xml;charset=utf8");
   print("<?xml version=\"1.0\"?>\n\n");
   printf(

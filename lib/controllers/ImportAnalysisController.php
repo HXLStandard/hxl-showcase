@@ -80,7 +80,7 @@ class ImportAnalysisController extends AbstractController {
     //
     if ($format == 'csv') {
       header('Content-type: text/csv;charset=utf-8');
-      dump_csv($cols, $values, fopen('php://output', 'w'));
+      dump_csv($cols, $values);
       exit;
     }
 

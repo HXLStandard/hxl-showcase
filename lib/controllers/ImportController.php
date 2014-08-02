@@ -30,7 +30,7 @@ class ImportController extends AbstractController {
 
       // special case: dump CSV and exit
       header('Content-type: text/csv;charset=utf-8');
-      dump_csv($cols, $values, fopen('php://output', 'w'));
+      dump_csv($cols, $values);
       exit;
 
     } else {
