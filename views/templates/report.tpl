@@ -12,7 +12,7 @@
       {if $import}
       <li><a href="{$import|source_link}">{$import->source_name|escape}</a></li>
       <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
-      {if $params->stamp}
+      {if $params->import}
       <li><a href="{$import|import_link}">{$import->stamp|escape}</a></li>
       {/if}
       {/if}
@@ -25,27 +25,24 @@
       <table>
         <thead>
           <tr>
-            {foreach item=col from=$cols}
+            {foreach $cols as $col}
             <th>{$col->tag_name|escape}</th>
             {/foreach}
           </tr>
           <tr>
-            {foreach item=col from=$cols}
+            {foreach $cols as $col}
             <th class="tag"><a href="{$col|tag_link}">#{$col->tag|escape}</a></th>
             {/foreach}
           </tr>
         </thead>
         <tbody>
-          {$last_row = -1}
-          {foreach item=value from=$values}
-          {if $last_row != -1 and $last_row != $value->row}
-          {report_row cols=$cols cells=$cells}
-          {$cells = []}
-          {/if}
-          {append var=cells value=$value}
-          {$last_row = $value->row}
+          {foreach $rows as $row}
+          <tr>
+            {foreach $row as $value}
+            <td>{$value->value|escape}</td>
+            {/foreach}
+          </tr>
           {/foreach}
-          {report_row cols=$cols cells=$cells}
         </tbody>
       </table>
 

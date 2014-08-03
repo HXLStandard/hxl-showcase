@@ -17,6 +17,16 @@
     <main>
       <h1>{$import->dataset_name|escape}</h1>
 
+      <dl>
+        <dt>Source</dt>
+        <dd><a href="{$import->source_name}">{$import->source_name|escape}</a></dd>
+        <dt>Latest upload</dt>
+        <dd>{$import->stamp|timeAgo} by <a href="{$import|user_link}">{$import->usr_name|escape}</a>.</dd>
+      </dl>
+
+
+      <p>Rows: {$row_count|number_format} (<a href="{$import|dataset_link}/data">view data</a>)</p>
+
       <p>This page shows the latest version of the dataset
       <cite>{$import->dataset_name|escape}</cite> dataset from the
       source <a

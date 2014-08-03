@@ -7,15 +7,17 @@ class ReportController extends AbstractController {
     $format = $request->get('format');
 
     $params->dataset = $request->get('dataset');
-    $params->stamp = $request->get('stamp');
+    $params->import = $request->get('import');
 
-    $import = get_import($params->dataset, $params->stamp);
+    $import = get_import($params->dataset, $params->import);
     $cols = get_cols($import);
     $values = get_values($import);
 
+    $rows = new RowIterator($values);
+
     switch($format) {
     case 'csv':
-      dump_csv($cols, $values);
+      dump_csv($cols, $rows);
       exit;
     case 'json':
       dump_json($cols, $values);
@@ -30,7 +32,7 @@ class ReportController extends AbstractController {
       $response->setParameter('params', $params);
       $response->setParameter('import', $import);
       $response->setParameter('cols', $cols);
-      $response->setParameter('values', $values);
+      $response->setParameter('rows', $rows);
       $response->setTemplate('report');
       break;
     }

@@ -16,36 +16,14 @@ class DatasetController extends AbstractController {
       $source_param, $dataset_param
     )->fetch();
 
-    // Columns for the import
-    $cols = $this->doQuery(
-      'select C.* from col_view C ' .
-      'where import=? ' .
-      'order by C.col',
+    $row_count = $this->doQuery(
+      'select count(distinct row) from value_view where import=?',
       $import->import
-    )->fetchAll();
+    )->fetchColumn();
 
-    // Values for the import
-    $values = $this->doQuery(
-      'select value.* from value ' .
-      'join col using(col) ' .
-      'where import=? ' .
-      'order by row, col',
-      $import->import
-    );
-
-    if ($format == 'csv') {
-
-      header('Content-type: text/csv;charset=utf-8');
-      dump_csv($cols, $values);
-      exit;
-
-    } else {
-
-      $response->setParameter('cols', $cols);
-      $response->setParameter('values', $values);
-      $response->setParameter('import', $import);
-      $response->setTemplate('dataset');
-    }
+    $response->setParameter('import', $import);
+    $response->setParameter('row_count', $row_count);
+    $response->setTemplate('dataset');
   }
 
 }

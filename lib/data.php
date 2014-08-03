@@ -57,3 +57,11 @@ function get_values($import) {
     $import->import
   );
 }
+
+function get_row_count($import) {
+  return do_query(
+    'select count(distinct row) from value_view' .
+    ' where import=?',
+    $import->import
+  )->fetchColumn();
+}

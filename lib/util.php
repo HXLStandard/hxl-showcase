@@ -8,7 +8,7 @@ define('HXL_JSON_OPTS', JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
 /**
  * Dump a dataset as CSV.
  */
-function dump_csv($cols, $values) {
+function dump_csv($cols, $rows) {
 
   $output = fopen('php://output', 'w');
 
@@ -24,6 +24,15 @@ function dump_csv($cols, $values) {
   }
   fputcsv($output, $header_row);
   fputcsv($output, $tag_row);
+
+  foreach ($rows as $row) {
+    $fields = array();
+    foreach ($row as $value) {
+      array_push($fields, $value->value);
+    }
+    fputcsv($output, $fields);
+  }
+  return;
 
   $last_row = -1;
   $row = array();
