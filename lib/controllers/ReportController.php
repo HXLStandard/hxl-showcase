@@ -11,9 +11,7 @@ class ReportController extends AbstractController {
 
     $import = get_import($params->dataset, $params->import);
     $cols = get_cols($import);
-    $values = get_values($import);
-
-    $rows = new RowIterator($values);
+    $rows = get_rows($import);
 
     switch($format) {
     case 'csv':
@@ -23,7 +21,7 @@ class ReportController extends AbstractController {
       dump_json($cols, $rows);
       exit;
     case 'xml':
-      dump_xml($cols, $values);
+      dump_xml($cols, $rows);
       exit;
     case 'n3':
       dump_n3($cols, $rows);

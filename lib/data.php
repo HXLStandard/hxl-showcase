@@ -40,6 +40,9 @@ function get_import($dataset_param, $stamp_param = null) {
   }
 }
 
+/**
+ * Get the columns for an import.
+ */
 function get_cols($import) {
   return do_query(
     'select * from col_view' .
@@ -49,6 +52,9 @@ function get_cols($import) {
   )->fetchAll();
 }
 
+/**
+ * Get the values for an import.
+ */
 function get_values($import) {
   return do_query(
     'select * from value_view' .
@@ -58,6 +64,16 @@ function get_values($import) {
   );
 }
 
+/**
+ * Get the values for an import organised by row.
+ */
+function get_rows($import) {
+  return new RowIterator(get_values($import));
+}
+
+/**
+ * Return the number of rows in an import.
+ */
 function get_row_count($import) {
   return do_query(
     'select count(distinct row) from value_view' .

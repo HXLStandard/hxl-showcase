@@ -129,11 +129,11 @@ function dump_json_row($cols, $values, $is_first) {
 /**
  * Dump a dataset as XML.
  */
-function dump_xml($cols, $values) {
+function dump_xml($cols, $rows) {
   header("Content-type: application/xml;charset=utf8");
   print("<?xml version=\"1.0\"?>\n\n");
   printf(
-    "<hxl source=\"%s\" dataset=\"%s\" timestamp=\"%s\">\n",
+    "<hxl-data xmlns=\"http://hxlstandard.org/ns#\" source=\"%s\" dataset=\"%s\" timestamp=\"%s\">\n",
     htmlspecialchars($cols[0]->source),
     htmlspecialchars($cols[0]->dataset),
     htmlspecialchars($cols[0]->stamp)
@@ -143,7 +143,7 @@ function dump_xml($cols, $values) {
   foreach($cols as $col) {
     printf(
       "    <col n=\"%d\" hxl=\"#%s\" original-header=\"%s\">%s</col>\n",
-      ++$col_counter,
+      $col_counter++,
       htmlspecialchars($col->tag),
       htmlspecialchars($col->header),
       htmlspecialchars($col->tag_name)
@@ -151,29 +151,20 @@ function dump_xml($cols, $values) {
   }
   print("  </cols>\n");
   print("  <rows>\n");
-  $last_row = -1;
-  $row_counter = 0;
-  $col_counter = 0;
-  foreach($values as $value) {
-    $col_counter++;
-    if ($value->row != $last_row) {
-      $col_counter = 1;
-      if ($last_row == -1) {
-        printf("    <row n=\"%d\">\n", ++$row_counter);
-      } else {
-        printf("    </row>\n    <row n=\"%d\">\n", ++$row_counter);
+
+  foreach ($rows as $n => $row) {
+    $col_counter = 0;
+    printf("    <row n=\"%d\">\n", $n);
+    foreach ($row as $value) {
+      if ($value->value) {
+        printf("      <%s col=\"%d\">%s</%s>\n", $value->tag, $col_counter, htmlspecialchars($value->value), $value->tag);
       }
+      $col_counter++;
     }
-    if ($value->value) {
-      printf("      <%s col=\"%d\">%s</%s>\n", $cols[$col_counter]->tag, $col_counter, htmlspecialchars($value->value), $cols[$col_counter]->tag);
-    }
-    $last_row = $value->row;
+    printf("    </row>\n");
   }
-  if ($last_row != -1) {
-    print("    </row>\n  </rows>\n</hxl>\n");
-  } else {
-    print("  </rows>\n</hxl>\n");
-  }
+
+  print("  </rows>\n</hxl-data>\n");
 }
 
 
