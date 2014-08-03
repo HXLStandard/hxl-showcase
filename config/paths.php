@@ -19,6 +19,7 @@ $APP->paths = array(
   'tag' => 'TagController',
   'user-list' => 'UserListController',
   'user' => 'UserController',
+  'stats' => 'StatsController',
 );
 
 // end

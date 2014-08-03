@@ -15,6 +15,13 @@ function do_query() {
   return $statement;
 }
 
+function get_tag($tag_param) {
+  return do_query(
+    'select * from tag_view where tag=?',
+    $tag_param
+  )->fetch();
+}
+
 
 /**
  * Fetch an import for a dataset.

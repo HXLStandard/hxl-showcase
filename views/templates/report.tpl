@@ -26,7 +26,7 @@
         <thead>
           <tr>
             {foreach $cols as $col}
-            <th>{$col->tag_name|escape}</th>
+            <th>{$col->header|escape}</th>
             {/foreach}
           </tr>
           <tr>
