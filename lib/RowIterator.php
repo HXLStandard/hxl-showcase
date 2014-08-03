@@ -17,6 +17,7 @@ class RowIterator implements Iterator {
   private $row_count;
   private $current_row = array();
   private $current_row_number = -1;
+  private $next_row_value = null;
 
   function __construct(PDOStatement $statement) {
     $this->statement = $statement;
@@ -37,9 +38,14 @@ class RowIterator implements Iterator {
   function next() {
     $n = -1;
     $this->current_row = array();
+    if ($this->next_row_value) {
+      array_push($this->current_row, $this->next_row_value);
+      $this->next_row_value = null;
+    }
     foreach ($this->statement as $value) {
       if ($value->row != $n && $n != -1) {
         $this->current_row_number++;
+        $this->next_row_value = $value;
         return;
       } else {
         $n = $value->row;
