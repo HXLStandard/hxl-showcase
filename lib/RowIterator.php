@@ -16,6 +16,7 @@ class RowIterator implements Iterator {
   private $statement;
   private $row_count;
   private $current_row = array();
+  private $current_row_number = -1;
 
   function __construct(PDOStatement $statement) {
     $this->statement = $statement;

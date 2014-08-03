@@ -74,7 +74,7 @@ function dump_csv_row($cols, $values, $output) {
 /**
  * Dump a dataset as JSON.
  */
-function dump_json($cols, $values) {
+function dump_json($cols, $rows) {
   header('Content-type: application/json;charset=utf8');
   print("{");
   print("\n  \"cols\": [");
@@ -94,20 +94,10 @@ function dump_json($cols, $values) {
   }
   print("\n  ],");
   print("\n  \"rows\": [");
-  $last_row = -1;
-  $row = array();
   $is_first = true;
-  foreach ($values as $value) {
-    if ($last_row != $value->row && $row) {
-      dump_json_row($cols, $row, $is_first);
-      $is_first = false;
-      $row = array();
-    }
-    array_push($row, $value);
-    $last_row = $value->row;
-  }
-  if ($row) {
+  foreach ($rows as $row) {
     dump_json_row($cols, $row, $is_first);
+    $is_first = false;
   }
   print("\n  ]");
   print("\n}\n");
@@ -186,22 +176,28 @@ function dump_xml($cols, $values) {
   }
 }
 
-function dump_n3($cols, $values) {
+
+/**
+ * Dump a dataset as N3 triples.
+ */
+function dump_n3($cols, $rows) {
   header('Content-type: text/n3;charset=utf8');
   print("@PREFIX hxl: <http://hxlstandard.org/ns#>");
-
-  $last_row = -1;
-  foreach($values as $value) {
-    if ($value->row != $last_row) {
-      printf(".\n\n<http://demo.hxlstandard.org%s#row%d>", import_link($cols[0]), $value->row);
-    } else if ($value->value) {
-      print(';');
+  foreach ($rows as $n => $row) {
+    printf(".\n\n<http://demo.hxlstandard.org%s#row%d>", import_link($cols[0]), $n);
+    $is_first = true;
+    foreach ($row as $value) {
+      if ($value->value) {
+        if ($is_first) {
+          $is_first = false;
+        } else {
+          print(';');
+        }
+        printf("\n  hxl:%s %s", $value->tag, json_encode($value->value, HXL_JSON_OPTS));
+      }
     }
-    if ($value->value) {
-      printf("\n  hxl:%s %s", $value->tag, json_encode($value->value, HXL_JSON_OPTS));
-    }
-    $last_row = $value->row;
   }
+  print(".\n");
 }
 
 

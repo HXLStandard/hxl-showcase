@@ -20,13 +20,13 @@ class ReportController extends AbstractController {
       dump_csv($cols, $rows);
       exit;
     case 'json':
-      dump_json($cols, $values);
+      dump_json($cols, $rows);
       exit;
     case 'xml':
       dump_xml($cols, $values);
       exit;
     case 'n3':
-      dump_n3($cols, $values);
+      dump_n3($cols, $rows);
       exit;
     default:
       $response->setParameter('params', $params);
