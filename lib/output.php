@@ -214,18 +214,14 @@ function tag_link($item) {
  * Make a link to a source
  */
 function source_link($item) {
-  return sprintf('/data/%s', urlencode($item->source));
+  return sprintf('/source/%s', urlencode($item->source));
 }
 
 /**
  * Make a link to a dataset
  */
 function dataset_link($item) {
-  return sprintf(
-    '/data/%s/%s',
-    urlencode($item->source),
-    urlencode($item->dataset)
-  );
+  return sprintf('/data/%s', urlencode($item->dataset));
 }
 
 /**
@@ -233,8 +229,7 @@ function dataset_link($item) {
  */
 function import_link($item) {
   return sprintf(
-    '/data/%s/%s/%s',
-    urlencode($item->source),
+    '/data/%s/%s',
     urlencode($item->dataset),
     urlencode($item->stamp)
   );

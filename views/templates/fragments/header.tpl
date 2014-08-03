@@ -5,9 +5,10 @@
         <input type="submit" value="Search" />
       </form>
     </header>
-    <nav class="main col3">
+    <nav class="main col4">
       <li><a href="/data">Data</a></li>
       <li><a href="/tag">HXL tags</a></li>
+     <li><a href="/source">Sources</a></li>
       <li><a href="/user">Uploaders</a></li>
     </nav>
 

@@ -1,20 +1,19 @@
 <?php
 
+/**
+ * Controller for dataset landing page.
+ */
 class DatasetController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
 
-    $source_param = $request->get('source');
-    $dataset_param = $request->get('dataset');
-    $format = $request->get('format');
+    $params->dataset = $request->get('dataset');
+    $params->import = $request->get('import');
 
     // Latest import for the dataset
-    $import = $this->doQuery(
-      'select I.* from import_view I' .
-      ' join latest_import_view LI using(import) ' .
-      ' where I.source=? and I.dataset=?',
-      $source_param, $dataset_param
-    )->fetch();
+    $import = get_import($params->dataset, $params->import);
+
+    $cols = get_cols($import);
 
     $row_count = $this->doQuery(
       'select count(distinct row) from value_view where import=?',
@@ -22,6 +21,7 @@ class DatasetController extends AbstractController {
     )->fetchColumn();
 
     $response->setParameter('import', $import);
+    $response->setParameter('cols', $cols);
     $response->setParameter('row_count', $row_count);
     $response->setTemplate('dataset');
   }

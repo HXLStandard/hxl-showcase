@@ -109,6 +109,10 @@ label {
     width: 33.4%;
 }
 
+.col4 li {
+    width: 25%;
+}
+
 nav.main, nav.options {
     margin: 0;
     list-style: none;

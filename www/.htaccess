@@ -20,33 +20,33 @@ RewriteRule ^report(?:\.(csv|json|xml|n3))?$ index.php?p=report&format=$1 [QSA,L
 
 # Sources
 
-RewriteRule ^data$ index.php?p=source-list [QSA,L]
+RewriteRule ^source$ index.php?p=source-list [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})$ index.php?p=source&source=$1 [QSA,L]
+RewriteRule ^source/([\w-]{1,32})$ index.php?p=source&source=$1 [QSA,L]
 
 # Datasets
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})$ index.php?p=dataset&source=$1&dataset=$2 [QSA,L]
+RewriteRule ^data$ index.php?p=dataset-list [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/data(?:\.(csv|json|xml|n3))?$ index.php?p=report&source=$1&dataset=$2&format=$3 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})$ index.php?p=dataset&dataset=$1 [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/history$ index.php?p=dataset-history&source=$1&dataset=$2 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/data(?:\.(csv|json|xml|n3))?$ index.php?p=report&dataset=$1&format=$2 [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/analysis\.csv$ index.php?p=import-analysis&source=$1&dataset=$2&format=csv [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/history$ index.php?p=dataset-history&dataset=$1 [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/analysis$ index.php?p=import-analysis&source=$1&dataset=$2 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/analysis\.csv$ index.php?p=import-analysis&dataset=$1&format=csv [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/stats(?:\.(csv|json|xml|n3))?$ index.php?p=stats&source=$1&dataset=$2&format=$3 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/analysis$ index.php?p=import-analysis&dataset=$1 [QSA,L]
+
+RewriteRule ^data/([\w-]{1,32})/stats(?:\.(csv|json|xml|n3))?$ index.php?p=stats&dataset=$1&format=$2 [QSA,L]
 
 # Imports
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/([\d:.+-]+)$ index.php?p=import&source=$1&dataset=$2&import=$3 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\d:.+-]+)$ index.php?p=import&dataset=$1&import=$2 [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/([\d:.+-]+)/data(?:\.(csv))?$ index.php?p=report&source=$1&dataset=$2&import=$3&format=$4 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/([\d:.+-]+)/data(?:\.(csv))?$ index.php?p=report&dataset=$1&import=$2&format=$3 [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/([\w-]{1,32})/([\d:.+-]+)/analysis(?:\.(csv))?$ index.php?p=import-analysis&source=$1&dataset=$2&import=$3&format=$4 [QSA,L]
-
-# Sta
+RewriteRule ^data/([\w-]{1,32})/([\d:.+-]+)/analysis(?:\.(csv))?$ index.php?p=import-analysis&dataset=$1&import=$2&format=$3 [QSA,L]
 
 # Tags
 

@@ -31,7 +31,7 @@
           <tbody>
             {foreach $stats as $stat}
             <tr>
-              <td>{$stat->value|escape}</td>
+              <td>{$stat->value|none}</td>
               <td>{$stat->count|number_format}</td>
             </tr>
             {/foreach}
