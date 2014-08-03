@@ -178,7 +178,7 @@ function dump_xml($cols, $values) {
 }
 
 function dump_n3($cols, $values) {
-  header('Content-type: text/plain;charset=utf8');
+  header('Content-type: text/n3;charset=utf8');
   print("@PREFIX hxl: <http://hxlstandard.org/ns#>");
 
   $last_row = -1;
