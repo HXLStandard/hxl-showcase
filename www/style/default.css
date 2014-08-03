@@ -176,3 +176,7 @@ dt {
     font-family: monospace;
     font-weight: normal;
 }
+
+#chart {
+    margin: 2ex 0;
+}
