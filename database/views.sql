@@ -22,7 +22,7 @@ join (select dataset, max(stamp) as stamp from import group by dataset) MAX
 on I.dataset=MAX.dataset and I.stamp=MAX.stamp;
 
 create or replace view col_view as
-select C.*, I.stamp,
+select C.*, I.stamp, I.dataset,
   S.source, S.source_name,
   D.dataset_name,
   T.tag_name, T.datatype

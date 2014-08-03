@@ -3,6 +3,8 @@
  * Utility functions
  */
 
+define('HXL_JSON_OPTS', JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
+
 /**
  * Dump a dataset as CSV.
  */
@@ -64,7 +66,6 @@ function dump_csv_row($cols, $values, $output) {
  * Dump a dataset as JSON.
  */
 function dump_json($cols, $values) {
-  $opts = JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE;
   header('Content-type: application/json;charset=utf8');
   print("{");
   print("\n  \"cols\": [");
@@ -80,7 +81,7 @@ function dump_json($cols, $values) {
       'hxl_name' => $col->tag_name,
       'hxl_datatype' => $col->datatype,
       'original_header' => $col->header,
-    ), $opts));
+    ), HXL_JSON_OPTS));
   }
   print("\n  ],");
   print("\n  \"rows\": [");
@@ -107,7 +108,6 @@ function dump_json($cols, $values) {
  * Dump a row of JSON data
  */
 function dump_json_row($cols, $values, $is_first) {
-  $opts = JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE;
   $row = array();
   foreach ($cols as $col) {
     $v = null;
@@ -123,7 +123,7 @@ function dump_json_row($cols, $values, $is_first) {
   if (!$is_first) {
     print(',');
   }
-  print("\n    " . json_encode($row, $opts));
+  print("\n    " . json_encode($row, HXL_JSON_OPTS));
   
 }
 
@@ -174,6 +174,24 @@ function dump_xml($cols, $values) {
     print("    </row>\n  </rows>\n</hxl>\n");
   } else {
     print("  </rows>\n</hxl>\n");
+  }
+}
+
+function dump_n3($cols, $values) {
+  header('Content-type: text/plain;charset=utf8');
+  print("@PREFIX hxl: <http://hxlstandard.org/ns#>");
+
+  $last_row = -1;
+  foreach($values as $value) {
+    if ($value->row != $last_row) {
+      printf(".\n\n<http://demo.hxlstandard.org%s#row%d>", dataset_link($cols[0]), $value->row);
+    } else if ($value->value) {
+      print(';');
+    }
+    if ($value->value) {
+      printf("\n  hxl:%s %s", $value->tag, json_encode($value->value, HXL_JSON_OPTS));
+    }
+    $last_row = $value->row;
   }
 }
 
