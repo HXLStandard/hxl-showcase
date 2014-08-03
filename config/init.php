@@ -35,7 +35,7 @@ $APP->smarty->template_dir = $APP->root . "/views/templates/";
 $APP->smarty->compile_dir = $APP->root . "/views/templates_c/";
 $APP->smarty->config_dir = $APP->root . "/views/config/";
 $APP->smarty->cache_dir = $APP->root . "/views/cache/";
-array_push($APP->smarty->plugins_dir, $APP->root . "/views/plugins");
+$APP->smarty->addPluginsDir($APP->root . "/views/plugins");
 
 // autoload classes from <classname>.php
 spl_autoload_register(function ($class_name) {
