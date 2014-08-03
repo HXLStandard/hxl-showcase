@@ -184,7 +184,7 @@ function dump_n3($cols, $values) {
   $last_row = -1;
   foreach($values as $value) {
     if ($value->row != $last_row) {
-      printf(".\n\n<http://demo.hxlstandard.org%s#row%d>", dataset_link($cols[0]), $value->row);
+      printf(".\n\n<http://demo.hxlstandard.org%s#row%d>", import_link($cols[0]), $value->row);
     } else if ($value->value) {
       print(';');
     }
