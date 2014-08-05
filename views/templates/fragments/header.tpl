@@ -1,7 +1,6 @@
     <header>
       <div id="logo">
         <a href="/">
-          <img src="/hxl.png" />
           HXL showcase
         </a>
       </div>
