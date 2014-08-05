@@ -22,15 +22,6 @@
 
       <p><b>Data type:</b> {$tag->datatype_name|escape}</p>
 
-      <form method="GET" action="/search">
-        <input type="hidden" name="tag" value="{$tag->tag|escape}" />
-        <label>
-          <span>Search within <code>#{$tag->tag|escape}</code>:</span>
-          <input name="q" placeholder="Search text" />
-        </label>
-        <input type="submit" />
-      </form>
-
       <section id="datasets">
         <h2>Datasets</h2>
 
