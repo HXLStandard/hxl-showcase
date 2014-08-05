@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>#{$tag->tag|escape} in {$import->dataset_name|escape}</title>
-    <link rel="stylesheet" href="/style/default.css" />
+{include file="fragments/metadata.tpl"}
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/jquery.csv-0.71.min.js"></script>

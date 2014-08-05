@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>Data providers</title>
-    <link rel="stylesheet" href="/style/default.css" />
+{include file="fragments/metadata.tpl"}
   </head>
   <body>
 {include file="fragments/header.tpl"}

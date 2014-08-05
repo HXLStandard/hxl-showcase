@@ -1,28 +1,39 @@
+@import url(wide.css) (min-width: 30em);
+
 body {
     font-family: Helvetica, Arial, sansserif;
     color: #000011;
 }
 
 header {
-    background: #4B92DB;
-    padding: 1ex;
-    height: 4ex;
-    margin: 0;
+    margin-bottom: .5ex;
     vertical-align: middle;
 }
 
-header a.logo {
-    float: left;
+header #logo {
+    vertical-align: middle;
+    margin: .5ex 0;
+}
+
+header #logo a {
+    vertical-align: middle;
     font-size: 3ex;
-    color: white;
+    color: #4B92DB;
     text-decoration: none;
 }
 
-header form {
-    float: right;
+header #logo img {
+    vertical-align: middle;
+    height: 2em;
+    width: 2em;
+}
+
+header #searchbox {
+    margin: 1ex 0;
 }
 
 nav.breadcrumbs li {
+    white-space: nowrap;
     display: inline;
     font-size: 80%;
     font-style: italic;

@@ -1,6 +1,9 @@
     <header>
-      <a class="logo" href="/">#HXL showcase</a>
-      <form method="get" action="/search">
+      <div id="logo">
+        <img src="/hxl.png" />
+        <a href="/"> HXL showcase</a>
+      </div>
+      <form id="searchbox" method="get" action="/search">
         <input name="q" placeholder="Search text" />
         <input type="submit" value="Search" />
       </form>

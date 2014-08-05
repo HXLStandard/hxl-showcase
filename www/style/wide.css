@@ -1,0 +1,16 @@
+header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header #logo {
+    float: left;
+    margin: 0;
+}
+
+header #searchbox {
+    float: right;
+    margin: 0;
+}
+
