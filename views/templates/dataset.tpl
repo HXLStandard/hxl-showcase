@@ -18,7 +18,7 @@
 
       <dl>
         <dt>Source</dt>
-        <dd><a href="{$import->source_name}">{$import->source_name|escape}</a></dd>
+        <dd><a href="{$import|source_link}">{$import->source_name|escape}</a></dd>
         <dt>Latest upload</dt>
         <dd>{$import->stamp|timeAgo} by <a href="{$import|user_link}">{$import->usr_name|escape}</a> (<a href="{$import|dataset_link}/history">history</a>)</dd>
         <dt>Rows</dt>
