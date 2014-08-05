@@ -196,6 +196,21 @@ dt {
     font-weight: normal;
 }
 
-#chart {
-    margin: 2ex 0;
+section {
+    margin: 3ex 0;
+}
+
+#filter-list {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#filter-list li {
+    font-size: 90%
+    display: inline;
+    border: solid 1px;
+    padding: .5ex;
+    background: #ffff55;
 }

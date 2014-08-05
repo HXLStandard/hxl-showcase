@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>#{$tag->tag|escape} in {$import->dataset_name|escape}</title>
-{include file="fragments/metadata.tpl"}
+    {include file="fragments/metadata.tpl"}
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/jquery.csv-0.71.min.js"></script>
@@ -27,6 +27,16 @@
 
       {if $params->import}
       <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
+      {/if}
+
+      {if $filters}
+      <section id="filters">
+        <ul id="filter-list">
+          {foreach $filters as $tagname=>$tagvalue}
+          <li>#{$tagname|escape}: {$tagvalue|escape} [<a href="{$baseurl}/stats{$filters|params:tag:$tag->tag:$tagname:null}">x</a>]</li>
+          {/foreach}
+        </ul>
+      </section>
       {/if}
 
       <section id="chart">

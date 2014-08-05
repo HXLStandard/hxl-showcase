@@ -15,12 +15,20 @@
  * @param number, string, string
  * @return string 
  */ 
-function smarty_modifier_params($params, $name, $value) { 
-  $params[$name] = $value;
+function smarty_modifier_params() { 
+  $args = func_get_args();
+  $params = array_shift($args);
+  while ($args) {
+    $name = array_shift($args);
+    $value = array_shift($args);
+    $params[$name] = $value;
+  }
   $j = '?';
   foreach ($params as $n => $v) {
-    $q .= sprintf('%s%s=%s', $j, urlencode($n), urlencode($v));
-    $j = '&';
+    if ($v !== null) {
+      $q .= sprintf('%s%s=%s', $j, urlencode($n), urlencode($v));
+      $j = '&';
+    }
   }
   return $q;
 } 
