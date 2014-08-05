@@ -19,6 +19,16 @@
     <main>
       <h1>{$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
 
+      {if $filters}
+      <section id="filters">
+        <ul id="filter-list">
+          {foreach $filters as $tagname=>$tagvalue}
+          <li>#{$tagname|escape}: {$tagvalue|escape} [<a href="{$filters|params:tag:$tag->tag:$tagname:null}">x</a>]</li>
+          {/foreach}
+        </ul>
+      </section>
+      {/if}
+
       {if $params->import}
       <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
       {$baseurl=$import|import_link}
@@ -32,7 +42,11 @@
         <dt>Latest upload</dt>
         <dd>{$import->stamp|timeAgo} by <a href="{$import|user_link}">{$import->usr_name|escape}</a> (<a href="{$import|dataset_link}/history">history</a>)</dd>
         <dt>Rows</dt>
+        {if $filters}
+        <dd>{$filtered_row_count|number_format} of {$row_count|number_format} (<a href="{$baseurl}/data">view data</a>)</dd>
+        {else}
         <dd>{$row_count|number_format} (<a href="{$baseurl}/data">view data</a>)</dd>
+        {/if}
       </dl>
 
       <section id="analyse">
@@ -42,7 +56,7 @@
 
         <ul>
           {foreach $cols as $col}
-          <li><a href="{$baseurl}/stats?tag={$col->tag|escape:'url'}">#{$col->tag|escape}</a> ({$col->tag_name|escape})</li>
+          <li><a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">#{$col->tag|escape}</a> ({$col->tag_name|escape})</li>
           {/foreach}
         </ul>
 

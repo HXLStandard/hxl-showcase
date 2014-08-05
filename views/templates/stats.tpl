@@ -58,7 +58,7 @@
           <tbody>
             {foreach $stats as $stat}
             <tr>
-              <td>{$stat->value|none}</td>
+              <td><a href="{$import|dataset_link}{$filters|params:$tag->tag:$stat->value}">{$stat->value|none}</a></td>
               <td>{$stat->count|number_format}</td>
             </tr>
             {/foreach}

@@ -170,19 +170,6 @@ nav.main:after, nav.options:after {
     clear: both;
 }
 
-.filters {
-    font-size: 90%;
-    margin-top: 2ex;
-}
-
-.filters span:after {
-    content: ', ';
-}
-
-.filters span:last-child:after {
-    content: '';
-}
-
 dt {
     font-weight: bold;
 }
@@ -197,16 +184,15 @@ section {
 }
 
 #filter-list {
-    display: block;
-    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 #filter-list li {
-    font-size: 90%
     display: inline;
+    list-style: none;
     border: solid 1px;
     padding: .5ex;
-    background: #ffff55;
+    background: #ffffaa;
+    width: 10ex;
 }
