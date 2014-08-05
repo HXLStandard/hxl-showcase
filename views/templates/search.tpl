@@ -75,7 +75,7 @@
           <tbody>
             {foreach item=value from=$values}
             <tr>
-              <td><a href="{$value|dataset_link}/analysis?{$value->tag|escape:'url'}={$value->value|escape:'url'}">{$value->dataset_name|escape}</a></td>
+              <td><a href="{$value|dataset_link}">{$value->dataset_name|escape}</a></td>
               <td><a href="{$value|source_link}">{$value->source_name|escape}</a></td>
               <td><a href="{$value|tag_link}"><code>#{$value->tag|escape}</code></a></td>
               <td>{$value->value|escape}</td>

@@ -120,7 +120,6 @@ nav.main, nav.options {
 }
 
 nav.main {
-    margin-top: .1ex;
     margin-bottom: 1ex;
 }
 
@@ -129,6 +128,15 @@ nav.main li, nav.options li {
     float: left;
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+
+nav.main li:first-child, nav.options li:first-child {
+    border-left: none;
 }
 
 nav.main li a, nav.options li a {

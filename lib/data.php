@@ -4,6 +4,14 @@
  */
 
 /**
+ * Escape a string for SQL.
+ */
+function escape_sql($s) {
+  $s = str_replace("'", "''", $s);
+  return $s;
+}
+
+/**
  * Execute a SQL query and return the statement with results.
  */
 function do_query() {
@@ -20,6 +28,20 @@ function get_tag($tag_param) {
     'select * from tag_view where tag=?',
     $tag_param
   )->fetch();
+}
+
+function get_tags() {
+  static $tags;
+  if ($tags == null) {
+    $tags = array();
+    $result = do_query(
+      'select tag from tag'
+    );
+    foreach ($result as $tag) {
+      array_push($tags, $tag->tag);
+    }
+  }
+  return $tags;
 }
 
 
@@ -88,3 +110,53 @@ function get_row_count($import) {
     $import->import
   )->fetchColumn();
 }
+
+
+/**
+ * Process the requested filters, and create a SQL (sub)query.
+ *
+ * @param $request The incoming HTTP request object.
+ * @param $allowed_filters An array of allowed tags for filtering.
+ * @return A list containing the SQL fragment and an array of the actual filters selected.
+ */
+function process_filters(HttpRequest $request, $import_id, $allowed_filters) {
+
+  // Return values
+  $sql_filter = '';
+  $active_filters = array();
+
+  // Iterate through the filter map and construct the SQL query
+  $n = 0;
+  foreach ($allowed_filters as $tag) {
+    $value = $request->get($tag);
+    if ($value !== null) {
+      $n++;
+      if (is_array($value)) {
+        $value = array_pop($value);
+      }
+      $active_filters[$tag] = $value;
+
+      // Different treatment for the first one
+      if ($n == 1) {
+        $sql_filter = 'select V1.row from value_view V1';
+        $where_clause = sprintf(" where V1.import=%d and V1.tag='%s' and V1.value='%s'", $import_id, escape_sql($tag), escape_sql($value));
+      } else {
+        $sql_filter .= sprintf(
+          ' join value_view V%d on V1.row=V%d.row and V%d.tag=\'%s\' and V%d.value=\'%s\'',
+          $n, $n, $n, escape_sql($tag), $n, escape_sql($value)
+        );
+      }
+    }
+  }
+
+  if ($sql_filter) {
+    $sql_filter = sprintf('(%s %s)', $sql_filter, $where_clause);
+  } else {
+    // count all rows
+    $sql_filter = sprintf('(select R.row from row R join value V using(row) join col C using(col) where C.import=%d)', $import_id);
+  }
+
+  // Return the results
+  return array($sql_filter, $active_filters);
+}
+

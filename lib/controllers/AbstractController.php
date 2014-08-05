@@ -103,13 +103,4 @@ abstract class AbstractController {
     return $statement;
   }
 
-  /**
-   * Escape a string for SQL.
-   */
-  protected static function escape_sql($s) {
-    $s = str_replace("'", "''", $s);
-    return $s;
-  }
-
-
 }

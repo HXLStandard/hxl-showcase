@@ -16,13 +16,15 @@ class StatsController extends AbstractController {
     $import = get_import($params->dataset, $params->import);
     $tag = get_tag($params->tag);
 
+    list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
+
     $stats = do_query(
       'select value, count(distinct row) as count' .
       ' from value_view' .
-      ' where import=? and tag=?' .
+      ' where tag=? and row in ' . $filter_fragment .
       ' group by value' .
       ' order by count(distinct row) desc',
-      $import->import, $params->tag
+      $params->tag
     );
 
     switch ($format) {
@@ -34,6 +36,7 @@ class StatsController extends AbstractController {
       exit;
     default:
       $response->setParameter('params', $params);
+      $response->setParameter('filters', $filters);
       $response->setParameter('import', $import);
       $response->setParameter('tag', $tag);
       $response->setParameter('stats', $stats);
@@ -48,7 +51,7 @@ class StatsController extends AbstractController {
     $output = fopen('php://output', 'w');
     fputcsv($output, array('value', 'count'));
     foreach ($stats as $stat) {
-      fputcsv($output, array($stat->value, $stat->count));
+      fputcsv($output, array(($stat->value?$stat->value:'<none>'), $stat->count));
     }
     fclose($output);
   }

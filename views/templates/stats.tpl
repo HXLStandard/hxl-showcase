@@ -12,8 +12,7 @@
     {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
-      <li><a href="/data">Data providers</a></li>
-      <li><a href="{$import|source_link}">{$import->source_name|escape}</a></li>
+      <li><a href="/data">Datasets</a></li>
       <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
     </nav>
 
@@ -50,7 +49,7 @@
     </main>
     <script type="text/javascript" src="/scripts/charts.js"></script>
     <script type="text/javascript">
-      var chart_url = "{$import|dataset_link}/stats.csv?tag={$tag->tag|escape:'url'}";
+      var chart_url = "{$import|dataset_link}/stats.csv{$filters|params:'tag':$tag->tag}";
       {literal}
       // Load the Google stuff
       google.load("visualization", "1", {packages:["corechart"]});
