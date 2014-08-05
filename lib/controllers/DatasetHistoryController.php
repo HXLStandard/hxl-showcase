@@ -4,24 +4,11 @@ class DatasetHistoryController extends AbstractController {
 
   function doGET(HttpRequest $request, HttpResponse $response) {
 
-    $source_ident = $request->get('source');
-    $dataset_ident = $request->get('dataset');
+    $params['dataset'] = $request->get('dataset');
 
-    $dataset = $this->doQuery(
-      'select * from dataset_view ' .
-      'where source=? and dataset=?',
-      $source_ident, $dataset_ident)->fetch();
+    $dataset = get_dataset($params['dataset']);
 
-    // Change history (query from value table to get row count)
-    $imports = $this->doQuery(
-      'select stamp, source, dataset, usr, usr_name, count(distinct row) as row_count ' .
-      'from search_view ' .
-      'join usr using(usr) ' .
-      'where dataset=? ' .
-      'group by dataset, stamp, source, dataset, usr, usr_name ' .
-      'order by stamp desc',
-      $dataset->dataset
-    );
+    $imports = get_imports($params['dataset']);
 
     $response->setParameter('dataset', $dataset);
     $response->setParameter('imports', $imports);

@@ -10,7 +10,7 @@ class DatasetController extends AbstractController {
     $params->dataset = $request->get('dataset');
     $params->import = $request->get('import');
 
-    // Latest import for the dataset
+    // Latest import for the dataset if not specified
     $import = get_import($params->dataset, $params->import);
 
     $cols = get_cols($import);
@@ -20,6 +20,7 @@ class DatasetController extends AbstractController {
       $import->import
     )->fetchColumn();
 
+    $response->setParameter('params', $params);
     $response->setParameter('import', $import);
     $response->setParameter('cols', $cols);
     $response->setParameter('row_count', $row_count);

@@ -23,6 +23,22 @@ function do_query() {
   return $statement;
 }
 
+function get_dataset($dataset_param) {
+  return do_query(
+    'select * from dataset_view where dataset=?',
+    $dataset_param
+  )->fetch();
+}
+
+function get_imports($dataset_param) {
+  return do_query(
+    'select V.*, (select count(distinct row) from value_view where import=V.import) as row_count ' .
+    'from import_view V ' .
+    'where dataset=? order by stamp desc',
+    $dataset_param
+  );
+}
+
 function get_tag($tag_param) {
   return do_query(
     'select * from tag_view where tag=?',

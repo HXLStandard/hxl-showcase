@@ -14,7 +14,6 @@ $APP->paths = array(
   'dataset-list' => 'DatasetListController',
   'dataset' => 'DatasetController',
   'dataset-history' => 'DatasetHistoryController',
-  'import' => 'ImportController',
   'tag-list' => 'TagListController',
   'tag' => 'TagController',
   'user-list' => 'UserListController',

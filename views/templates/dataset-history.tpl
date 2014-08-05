@@ -38,7 +38,7 @@
           <tr>
             <td><a href="{$import|import_link}">{$import->stamp|timeAgo}</a></td>
             <td><a href="{$import|user_link}">{$import->usr_name|escape}</a></td>
-            <td>{$import->row_count|escape}</td>
+            <td>{$import->row_count|number_format}</td>
           </tr>
           {/foreach}      
         </tbody>

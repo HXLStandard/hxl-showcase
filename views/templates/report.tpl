@@ -22,6 +22,10 @@
       <h1>{$import->dataset_name|escape}</h1>
       {/if}
 
+      {if $params->import}
+      <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
+      {/if}
+
       <table>
         <thead>
           <tr>
