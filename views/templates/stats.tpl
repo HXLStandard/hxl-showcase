@@ -31,11 +31,7 @@
 
       {if $filters}
       <section id="filters">
-        <ul id="filter-list">
-          {foreach $filters as $tagname=>$tagvalue}
-          <li>#{$tagname|escape}: {$tagvalue|escape} [<a href="{$baseurl}/stats{$filters|params:tag:$tag->tag:$tagname:null}">x</a>]</li>
-          {/foreach}
-        </ul>
+{include file="fragments/filter-list.tpl"}
       </section>
       {/if}
 
@@ -45,7 +41,8 @@
 
       <section id="data">
 
-        <nav class="options col2">
+        <nav class="options col3">
+          <li><a href="{$baseurl}/data{$filters|params:'tag':$tag->tag}">Browse data</a></li>
           <li><a href="{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}">Download as CSV</a></li>
           <li><a href="{$baseurl}/stats.json{$filters|params:'tag':$tag->tag}">Download as JSON</a></li>
         </nav>

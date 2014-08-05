@@ -100,20 +100,19 @@ function get_cols($import) {
 /**
  * Get the values for an import.
  */
-function get_values($import) {
+function get_values($filter_fragment) {
   return do_query(
     'select * from value_view' .
-    ' where import=?' .
-    ' order by row, col',
-    $import->import
+    ' where row in ' . $filter_fragment .
+    ' order by row, col'
   );
 }
 
 /**
  * Get the values for an import organised by row.
  */
-function get_rows($import) {
-  return new RowIterator(get_values($import));
+function get_rows($filter_fragment) {
+  return new RowIterator(get_values($filter_fragment));
 }
 
 /**
