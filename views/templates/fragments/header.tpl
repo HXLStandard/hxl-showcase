@@ -1,7 +1,9 @@
     <header>
       <div id="logo">
-        <img src="/hxl.png" />
-        <a href="/"> HXL showcase</a>
+        <a href="/">
+          <img src="/hxl.png" />
+          HXL showcase
+        </a>
       </div>
       <form id="searchbox" method="get" action="/search">
         <input name="q" placeholder="Search text" />
