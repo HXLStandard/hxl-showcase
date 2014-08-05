@@ -43,7 +43,7 @@
         <dd>{$import->stamp|timeAgo} by <a href="{$import|user_link}">{$import->usr_name|escape}</a> (<a href="{$import|dataset_link}/history">history</a>)</dd>
         <dt>Rows</dt>
         {if $filters}
-        <dd>{$filtered_row_count|number_format} of {$row_count|number_format} (<a href="{$baseurl}/data">view data</a>)</dd>
+        <dd>{$filtered_row_count|number_format} of {$row_count|number_format} (<a href="{$baseurl}/data{$filters|params}">view data</a>)</dd>
         {else}
         <dd>{$row_count|number_format} (<a href="{$baseurl}/data">view data</a>)</dd>
         {/if}
