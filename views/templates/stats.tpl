@@ -29,11 +29,18 @@
       <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
       {/if}
 
-      {if $filters}
       <section id="filters">
-{include file="fragments/filter-list.tpl"}
+        {if $filters}
+        {include file="fragments/filter-list.tpl"}
+        {/if}
+
+        <p>
+          Add filter:
+          {foreach $filter_tags as $filter_tag}
+          <a href="stats/filter/{$filter_tag|escape:'url'}{$filters|params:'tag':$tag->tag}">#{$filter_tag|escape}</a>
+          {/foreach}
+        </p>
       </section>
-      {/if}
 
       <section id="chart">
         <div id="chart_div"></div>
@@ -55,7 +62,7 @@
           <tbody>
             {foreach $stats as $stat}
             <tr>
-              <td><a href="{$import|dataset_link}{$filters|params:$tag->tag:$stat->value}">{$stat->value|none}</a></td>
+              <td>{$stat->value|none}</td>
               <td>{$stat->count|number_format}</td>
             </tr>
             {/foreach}

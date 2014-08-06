@@ -9,6 +9,7 @@ $APP->paths = array(
   'home' => 'HomeController',
   'search' => 'SearchController',
   'report' => 'ReportController',
+  'filter' => 'FilterController',
   'source-list' => 'SourceListController',
   'source' => 'SourceController',
   'dataset-list' => 'DatasetListController',
