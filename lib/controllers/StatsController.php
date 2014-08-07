@@ -66,18 +66,15 @@ class StatsController extends AbstractController {
     print "[";
     $is_first = true;
     foreach ($stats as $stat) {
-      print(json_encode(array('foo', 'bar'),JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE));exit;
       if ($is_first) {
         $is_first = false;
       } else {
         print(',');
       }
-      print("\n  " . json_encode(
-        array(
-          $stat->value,
-          $stat->count,
-        ), JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE
-      ));
+      print("\n  " . json_encode(array(
+        $stat->value,
+        $stat->count,
+      )));
     }
     print("\n]\n");
   }

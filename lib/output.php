@@ -3,8 +3,6 @@
  * Utility functions
  */
 
-define('HXL_JSON_OPTS', JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
-
 /**
  * Dump a dataset as CSV.
  */
@@ -90,7 +88,7 @@ function dump_json($cols, $rows) {
       'hxl_name' => $col->tag_name,
       'hxl_datatype' => $col->datatype,
       'original_header' => $col->header,
-    ), HXL_JSON_OPTS));
+    )));
   }
   print("\n  ],");
   print("\n  \"rows\": [");
@@ -122,7 +120,7 @@ function dump_json_row($cols, $values, $is_first) {
   if (!$is_first) {
     print(',');
   }
-  print("\n    " . json_encode($row, HXL_JSON_OPTS));
+  print("\n    " . json_encode($row));
   
 }
 
@@ -184,7 +182,7 @@ function dump_n3($cols, $rows) {
         } else {
           print(';');
         }
-        printf("\n  hxl:%s %s", $value->tag, json_encode($value->value, HXL_JSON_OPTS));
+        printf("\n  hxl:%s %s", $value->tag, json_encode($value->value));
       }
     }
   }
