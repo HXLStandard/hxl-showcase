@@ -52,7 +52,7 @@
       <section id="data">
 
         <nav class="options col3">
-          <li><a href="{$baseurl}/data{$filters|params:'tag':$tag->tag}">Browse data</a></li>
+          <li><a href="{$baseurl}/data{$filters|params}">Browse data</a></li>
           <li><a href="{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}">Download as CSV</a></li>
           <li><a href="{$baseurl}/stats.json{$filters|params:'tag':$tag->tag}">Download as JSON</a></li>
         </nav>

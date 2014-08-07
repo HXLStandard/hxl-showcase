@@ -32,6 +32,13 @@
       <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
       {/if}
 
+      <nav class="options col4">
+        <li><a href="data.csv{$filters|params:'tag':$tag->tag}">CSV</a></li>
+        <li><a href="data.json{$filters|params:'tag':$tag->tag}">JSON</a></li>
+        <li><a href="data.xml{$filters|params:'tag':$tag->tag}">XML</a></li>
+        <li><a href="data.n3{$filters|params:'tag':$tag->tag}">RDF (N3)</a></li>
+      </nav>
+
       <table>
         <thead>
           <tr>
