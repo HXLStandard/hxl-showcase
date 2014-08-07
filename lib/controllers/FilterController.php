@@ -14,6 +14,8 @@ class FilterController extends AbstractController {
 
     $import = get_import($params->dataset, $params->import);
 
+    $filter_tag = get_tag($params->filter_tag);
+
     list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
 
     $options = do_query(
@@ -26,6 +28,7 @@ class FilterController extends AbstractController {
     );
 
     $response->setParameter('params', $params);
+    $response->setParameter('filter_tag', $filter_tag);
     $response->setParameter('filters', $filters);
     $response->setParameter('import', $import);
     $response->setParameter('options', $options);

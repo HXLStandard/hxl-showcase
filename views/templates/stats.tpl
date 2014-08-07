@@ -34,10 +34,11 @@
         {include file="fragments/filter-list.tpl"}
         {/if}
 
-        <p>
+        <p id="new-filters">
           Add filter:
           {foreach $filter_tags as $filter_tag}
-          <a href="stats/filter/{$filter_tag|escape:'url'}{$filters|params:'tag':$tag->tag}">#{$filter_tag|escape}</a>
+          {$url = "stats/filter/`$filter_tag|escape:'url'``$filters|params:'tag':$tag->tag`"}
+          <a href="{$url|escape}" onclick="window.open('{$url|escape}', 'Filter', 'height=600, width=400').focus(); return false;">#{$filter_tag|escape}</a>
           {/foreach}
         </p>
       </section>

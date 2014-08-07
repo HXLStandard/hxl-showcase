@@ -196,3 +196,7 @@ section {
     background: #ffffaa;
     width: 10ex;
 }
+
+#new-filters a {
+    margin-right: 2ex;
+}
