@@ -25,6 +25,8 @@
     <main>
       <h1>#{$tag->tag|escape} in {$import->dataset_name|escape}</h1>
 
+      <p><i><a href="{$baseurl|escape}">View a different tag</a></i></p>
+
       {if $params->import}
       <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
       {/if}
