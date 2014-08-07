@@ -66,6 +66,7 @@ class StatsController extends AbstractController {
     print "[";
     $is_first = true;
     foreach ($stats as $stat) {
+      print_r($stat);exit;
       if ($is_first) {
         $is_first = false;
       } else {
