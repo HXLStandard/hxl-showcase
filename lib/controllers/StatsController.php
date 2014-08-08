@@ -18,14 +18,18 @@ class StatsController extends AbstractController {
 
     list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
 
-    $stats = do_query(
-      'select value, count(distinct row) as count' .
-      ' from value_view' .
-      ' where tag=? and row in ' . $filter_fragment .
-      ' group by value' .
-      ' order by count(distinct row) desc',
-      $params->tag
-    );
+    if ($tag->datatype == 'Number') {
+      $stats = get_histogram($tag, $filter_fragment);
+    } else {
+      $stats = do_query(
+        'select value, count(distinct row) as count' .
+        ' from value_view' .
+        ' where tag=? and row in ' . $filter_fragment .
+        ' group by value' .
+        ' order by count(distinct row) desc',
+        $params->tag
+      );
+    }
 
     switch ($format) {
     case 'csv':

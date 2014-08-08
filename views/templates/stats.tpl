@@ -77,6 +77,11 @@
     <script type="text/javascript" src="/scripts/charts.js"></script>
     <script type="text/javascript">
       var chart_url = "{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}";
+      {if $tag->datatype == 'Number'}
+      var chart_type = 'column';
+      {else}
+      var chart_type = 'pie';
+      {/if}
       {literal}
       // Load the Google stuff
       google.load("visualization", "1", {packages:["corechart"]});

@@ -129,17 +129,17 @@ function get_row_count($import) {
 /**
  * Generate a histogram of a numeric value.
  *
- * Currently hard-coded to 10 buckets.
+ * Currently hard-coded to 25 buckets.
  */
 function get_histogram($tag, $filter_fragment) {
   // Get the bucket size
-  $max_value = do_query('select max(value::integer) from value_view where tag=?', $tag->tag)->fetchColumn();
-  $bucket_size = ceil($max_value / 10);
+  $max_value = do_query('select max(to_int(value)) from value_view where tag=? and row in ' . $filter_fragment, $tag->tag)->fetchColumn();
+  $bucket_size = ceil($max_value / 25);
 
   $stats = do_query(
     'select bucket || \' to \' || (bucket + ? - 1) as value, count(V.row) as count' .
     ' from generate_series(0, ?, ?) bucket' .
-    ' left join value_view V on V.tag=? and bucket=floor(V.value::integer/?)*?' .
+    ' left join value_view V on V.tag=? and bucket=floor(to_int(V.value) / ?)*?' .
     ' where V.id is null or V.row in ' . $filter_fragment .
     ' group by bucket order by bucket', $bucket_size, $max_value, $bucket_size, $tag->tag, $bucket_size, $bucket_size);
 
