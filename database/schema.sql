@@ -73,9 +73,11 @@ create table value (
   row bigint not null,
   col bigint not null,
   value text not null,
+  norm text,
   lang varchar(2) default 'en',
   foreign key(row) references row(row) deferrable,
   foreign key(col) references col(col) deferrable
 );
 
 create index value_idx on value using gin(to_tsvector('english', value));
+create index norm_idx on norm;

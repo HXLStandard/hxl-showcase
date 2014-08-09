@@ -23,4 +23,4 @@ php ../scripts/add-dataset.php ocha-phl philippines-3w 'OCHA Philippines 3W, 16 
 php ../scripts/import-data.php dpm ocha-phl philippines-3w < ../sample-data/phl-32-hxl.csv
 
 vacuumdb blue
-vacuumlo blue
+vacuumlo blue # requires postgresql-contrib package in Ubuntu

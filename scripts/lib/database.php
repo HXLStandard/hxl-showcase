@@ -82,6 +82,10 @@ function add_tag($tag, $tag_name, $datatype) {
   _query('insert into tag (tag, tag_name, datatype) values (?, ?, ?)', $tag, $tag_name, $datatype);
 }
 
+function get_tag($tag) {
+  return _query('select * from tag_view where tag=?', $tag)->fetch();
+}
+
 /**
  * Add a dataset.
  */
@@ -124,8 +128,8 @@ function add_row($import) {
  * @param $col_id the database id of the column (long int)
  * @param $value the cell value (string)
  */
-function add_value($row, $col, $value) {
-  _query('insert into value(row, col, value) values (?, ?, ?)', $row, $col, $value);
+function add_value($row, $col, $value, $norm = null) {
+  _query('insert into value(row, col, value, norm) values (?, ?, ?, ?)', $row, $col, $value, $norm);
   return _query('select lastval()')->fetchColumn();
 }
 
