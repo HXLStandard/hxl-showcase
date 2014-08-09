@@ -48,7 +48,7 @@ class SearchController extends AbstractController {
       "dataset, dataset_name, " .
       "tag, " .
       "content, usr, " .
-      "count(id) as row_count " .
+      "count(value) as row_count " .
       $frag . ' ' .
       "group by source, source_name, " .
       "dataset, dataset_name, " .

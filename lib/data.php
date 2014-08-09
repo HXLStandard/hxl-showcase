@@ -140,7 +140,7 @@ function get_histogram($tag, $filter_fragment) {
     'select bucket || \' to \' || (bucket + ? - 1) as content, count(V.row) as count' .
     ' from generate_series(0, ?, ?) bucket' .
     ' left join value_view V on V.tag=? and bucket=floor(V.norm::float8 / ?)*?' .
-    ' where V.id is null or V.row in ' . $filter_fragment .
+    ' where V.value is null or V.row in ' . $filter_fragment .
     ' group by bucket order by bucket', $bucket_size, $max_value, $bucket_size, $tag->tag, $bucket_size, $bucket_size);
 
   return $stats;

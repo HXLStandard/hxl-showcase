@@ -69,7 +69,7 @@ create table row (
 );
 
 create table value (
-  id bigserial primary key,
+  value bigserial primary key,
   row bigint not null,
   col bigint not null,
   content text not null,
