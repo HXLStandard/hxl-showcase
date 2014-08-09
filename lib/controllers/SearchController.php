@@ -26,7 +26,7 @@ class SearchController extends AbstractController {
     // the user has specified
     //
     $params = array($q);
-    $frag = "from search_view join latest_import_view LI using(import) where to_tsvector('english', value) @@ to_tsquery('english', ?)";
+    $frag = "from search_view join latest_import_view LI using(import) where to_tsvector('english', content) @@ to_tsquery('english', ?)";
 
     if ($source_ident) {
       array_push($params, $source_ident);
@@ -47,13 +47,13 @@ class SearchController extends AbstractController {
     $sql = "select source, source_name, " .
       "dataset, dataset_name, " .
       "tag, " .
-      "value, usr, " .
+      "content, usr, " .
       "count(id) as row_count " .
       $frag . ' ' .
       "group by source, source_name, " .
       "dataset, dataset_name, " .
       "tag, " .
-      "value, usr " .
+      "content, usr " .
       "order by row_count desc";
     array_unshift($params, $sql);
     $values = call_user_method_array('doQuery', $this, $params);

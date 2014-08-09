@@ -49,7 +49,7 @@
             <tr>
               {/if}
               {assign var=last_row value=$value->row}
-              <td>{$value->value|escape}</td>
+              <td>{$value->content|escape}</td>
               {/foreach}
             </tr>
           </tbody>

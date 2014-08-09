@@ -26,7 +26,7 @@ function dump_csv($cols, $rows) {
   foreach ($rows as $row) {
     $fields = array();
     foreach ($row as $value) {
-      array_push($fields, $value->value);
+      array_push($fields, $value->content);
     }
     fputcsv($output, $fields);
   }
@@ -59,7 +59,7 @@ function dump_csv_row($cols, $values, $output) {
     $v = null;
     foreach ($values as $i => $value) {
       if ($col->col == $value->col) {
-        $v = $value->value;
+        $v = $value->content;
         unset($values[$i]);
         break;
       }
@@ -110,7 +110,7 @@ function dump_json_row($cols, $values, $is_first) {
     $v = null;
     foreach ($values as $i => $value) {
       if ($col->col == $value->col) {
-        $v = $value->value;
+        $v = $value->content;
         unset($values[$i]);
         break;
       }
@@ -154,8 +154,8 @@ function dump_xml($cols, $rows) {
     $col_counter = 0;
     printf("    <row n=\"%d\">\n", $n);
     foreach ($row as $value) {
-      if ($value->value) {
-        printf("      <%s col=\"%d\">%s</%s>\n", $value->tag, $col_counter, htmlspecialchars($value->value), $value->tag);
+      if ($value->content) {
+        printf("      <%s col=\"%d\">%s</%s>\n", $value->tag, $col_counter, htmlspecialchars($value->content), $value->tag);
       }
       $col_counter++;
     }
@@ -176,13 +176,13 @@ function dump_n3($cols, $rows) {
     printf(".\n\n<http://demo.hxlstandard.org%s#row%d>", import_link($cols[0]), $n);
     $is_first = true;
     foreach ($row as $value) {
-      if ($value->value) {
+      if ($value->content) {
         if ($is_first) {
           $is_first = false;
         } else {
           print(';');
         }
-        printf("\n  hxl:%s %s", $value->tag, json_encode($value->value));
+        printf("\n  hxl:%s %s", $value->tag, json_encode($value->content));
       }
     }
   }

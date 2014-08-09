@@ -56,7 +56,7 @@
           {foreach $rows as $row}
           <tr>
             {foreach $row as $value}
-            <td>{$value->value|escape}</td>
+            <td>{$value->content|escape}</td>
             {/foreach}
           </tr>
           {/foreach}

@@ -78,7 +78,7 @@
               <td><a href="{$value|dataset_link}">{$value->dataset_name|escape}</a></td>
               <td><a href="{$value|source_link}">{$value->source_name|escape}</a></td>
               <td><a href="{$value|tag_link}"><code>#{$value->tag|escape}</code></a></td>
-              <td>{$value->value|escape}</td>
+              <td>{$value->content|escape}</td>
               <td>{$value->row_count|number_format}</td>
             </tr>
             {/foreach}

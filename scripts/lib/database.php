@@ -126,10 +126,10 @@ function add_row($import) {
  *
  * @param $row_id the database id of the row (long int)
  * @param $col_id the database id of the column (long int)
- * @param $value the cell value (string)
+ * @param $content the cell content (string)
  */
-function add_value($row, $col, $value, $norm = null) {
-  _query('insert into value(row, col, value, norm) values (?, ?, ?, ?)', $row, $col, $value, $norm);
+function add_value($row, $col, $content, $norm = null) {
+  _query('insert into value(row, col, content, norm) values (?, ?, ?, ?)', $row, $col, $content, $norm);
   return _query('select lastval()')->fetchColumn();
 }
 

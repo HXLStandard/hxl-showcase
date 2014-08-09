@@ -22,10 +22,10 @@ class StatsController extends AbstractController {
       $stats = get_histogram($tag, $filter_fragment);
     } else {
       $stats = do_query(
-        'select value, count(distinct row) as count' .
+        'select content, count(distinct row) as count' .
         ' from value_view' .
         ' where tag=? and row in ' . $filter_fragment .
-        ' group by value' .
+        ' group by content' .
         ' order by count(distinct row) desc',
         $params->tag
       );
@@ -57,9 +57,9 @@ class StatsController extends AbstractController {
   private static function dump_csv($stats) {
     header('Content-type: text/csv;charset=utf8');
     $output = fopen('php://output', 'w');
-    fputcsv($output, array('value', 'count'));
+    fputcsv($output, array('content', 'count'));
     foreach ($stats as $stat) {
-      fputcsv($output, array(($stat->value?$stat->value:'<none>'), $stat->count));
+      fputcsv($output, array(($stat->content?$stat->content:'<none>'), $stat->count));
     }
     fclose($output);
   }
@@ -76,7 +76,7 @@ class StatsController extends AbstractController {
         print(',');
       }
       print("\n  " . json_encode(array(
-        $stat->value,
+        $stat->content,
         $stat->count,
       )));
     }

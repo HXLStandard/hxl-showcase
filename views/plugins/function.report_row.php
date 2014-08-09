@@ -21,7 +21,7 @@ function smarty_function_report_row($params, $template) {
 
   print("<tr>\n");
   foreach ($values_out as $value) {
-    printf("<td>%s</td>\n", htmlspecialchars($value->value));
+    printf("<td>%s</td>\n", htmlspecialchars($value->content));
   }
   print("</tr>\n");
 }

@@ -137,7 +137,7 @@ function get_histogram($tag, $filter_fragment) {
   $bucket_size = ceil($max_value / 25);
 
   $stats = do_query(
-    'select bucket || \' to \' || (bucket + ? - 1) as value, count(V.row) as count' .
+    'select bucket || \' to \' || (bucket + ? - 1) as content, count(V.row) as count' .
     ' from generate_series(0, ?, ?) bucket' .
     ' left join value_view V on V.tag=? and bucket=floor(V.norm::float8 / ?)*?' .
     ' where V.id is null or V.row in ' . $filter_fragment .
@@ -163,22 +163,22 @@ function process_filters(HttpRequest $request, $import_id, $allowed_filters) {
   // Iterate through the filter map and construct the SQL query
   $n = 0;
   foreach ($allowed_filters as $tag) {
-    $value = $request->get($tag);
-    if ($value !== null) {
+    $content = $request->get($tag);
+    if ($content !== null) {
       $n++;
-      if (is_array($value)) {
-        $value = array_pop($value);
+      if (is_array($content)) {
+        $content = array_pop($content);
       }
-      $active_filters[$tag] = $value;
+      $active_filters[$tag] = $content;
 
       // Different treatment for the first one
       if ($n == 1) {
         $sql_filter = 'select V1.row from value_view V1';
-        $where_clause = sprintf(" where V1.import=%d and V1.tag='%s' and V1.value='%s'", $import_id, escape_sql($tag), escape_sql($value));
+        $where_clause = sprintf(" where V1.import=%d and V1.tag='%s' and V1.content='%s'", $import_id, escape_sql($tag), escape_sql($content));
       } else {
         $sql_filter .= sprintf(
-          ' join value_view V%d on V1.row=V%d.row and V%d.tag=\'%s\' and V%d.value=\'%s\'',
-          $n, $n, $n, escape_sql($tag), $n, escape_sql($value)
+          ' join value_view V%d on V1.row=V%d.row and V%d.tag=\'%s\' and V%d.content=\'%s\'',
+          $n, $n, $n, escape_sql($tag), $n, escape_sql($content)
         );
       }
     }

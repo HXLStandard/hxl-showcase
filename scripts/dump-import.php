@@ -42,7 +42,7 @@ while ($row = $statement->fetch()) {
     $row_out = array();
     $last_row = $row->row;
   }
-  array_push($row_out, $row->value);
+  array_push($row_out, $row->content);
 }
 
 if ($row_out) {
