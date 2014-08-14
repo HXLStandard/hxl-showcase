@@ -290,11 +290,11 @@ function process_filters(HttpRequest $request, $import_id, $allowed_filters) {
       // Different treatment for the first one
       if ($n == 1) {
         $sql_filter = 'select V1.row from value_view V1';
-        $where_clause = sprintf(" where V1.import=%d and V1.tag='%s' and V1.content='%s'", $import_id, escape_sql($tag), escape_sql($content));
+        $where_clause = sprintf(" where V1.import=%d and V1.tag='%s' and V1.norm='%s'", $import_id, escape_sql($tag), escape_sql(normalise_text($content)));
       } else {
         $sql_filter .= sprintf(
-          ' join value_view V%d on V1.row=V%d.row and V%d.tag=\'%s\' and V%d.content=\'%s\'',
-          $n, $n, $n, escape_sql($tag), $n, escape_sql($content)
+          ' join value_view V%d on V1.row=V%d.row and V%d.tag=\'%s\' and V%d.norm=\'%s\'',
+          $n, $n, $n, escape_sql($tag), $n, escape_sql(normalise_text($content))
         );
       }
     }

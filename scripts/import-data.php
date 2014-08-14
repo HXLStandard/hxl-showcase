@@ -82,7 +82,7 @@ while ($row = fgetcsv(STDIN)) {
         }
         break;
       default:
-        $norm = $value;
+        $norm = normalise_text($value);
         break;
       }
       add_value($row_id, $col_id, $row[$i], $norm);
