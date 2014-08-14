@@ -31,13 +31,19 @@
       <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
       {/if}
 
+      <p>This is a summary of the different values that appear for <a
+      href="{$tag|tag_link}">#{$tag->tag|escape}</a>
+      ({$tag->tag_name|escape}) in the dataset <cite><a
+      href="{$dataset|dataset_link}">{$import->dataset_name|escape}</a></cite>.</p>
+
       <section id="filters">
         {if $filters}
+        <p><b>Active filters:</b></p>
         {include file="fragments/filter-list.tpl"}
         {/if}
 
         <p id="new-filters">
-          Add filter:
+          <b>Add a new filter:</b>
           {foreach $filter_tags as $filter_tag}
           {$url = "stats/filter/`$filter_tag|escape:'url'``$filters|params:'tag':$tag->tag`"}
           <a href="{$url|escape}" onclick="window.open('{$url|escape}', 'Filter', 'height=600, width=400').focus(); return false;">#{$filter_tag|escape}</a>
@@ -52,9 +58,9 @@
       <section id="data">
 
         <nav class="options col3">
-          <li><a href="{$baseurl}/data{$filters|params}">Browse data</a></li>
-          <li><a href="{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}">Download as CSV</a></li>
-          <li><a href="{$baseurl}/stats.json{$filters|params:'tag':$tag->tag}">Download as JSON</a></li>
+          <li><a href="{$baseurl}/data{$filters|params}">Full data</a></li>
+          <li><a href="{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}">Summary CSV</a></li>
+          <li><a href="{$baseurl}/stats.json{$filters|params:'tag':$tag->tag}">Summary JSON</a></li>
         </nav>
 
         <table>

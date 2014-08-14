@@ -29,8 +29,8 @@ ul li a {
     line-height: 100%;
 }
 
-ul li:hover {
-    background: #eeeeee;
+ul li a:hover {
+    text-decoration: underline;
 }
 
 ul li span.count {
