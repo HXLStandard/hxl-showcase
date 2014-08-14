@@ -46,9 +46,15 @@ while ($row = fgetcsv(STDIN)) {
   } else {
     $tag = substr($fields['tag'], 1);
   }
-      
-  add_tag($tag, $fields['name'], $fields['type']);
-  printf("Added tag %s (%s) %s\n", $fields['tag'], $fields['name'], $fields['type']);
+
+  $tag_obj = get_tag($tag);
+  if ($tag_obj) {
+    update_tag($tag, $fields['name'], $fields['type']);
+    printf("Updated existing tag %s (%s) %s\n", $fields['tag'], $fields['name'], $fields['type']);
+  } else {
+    add_tag($tag, $fields['name'], $fields['type']);
+    printf("Added tag %s (%s) %s\n", $fields['tag'], $fields['name'], $fields['type']);
+  }
 }
 
 commit_db_transaction();

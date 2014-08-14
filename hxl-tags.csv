@@ -62,6 +62,8 @@ tag,name,type,description,example
 #targeted_num,Number of people targeted,Number,Number of people targetted for (some kind of) assistance.,750000
 #reached_num,Number of people reached,Number,Number of people reached with (some kind of) assistance.,"237,805"
 #injured_num,Number of people injured,Number,Number of people injured.,"15,000"
+#idp_num,Number of internally-displaced people,Number,Number of internally-displaced people (not refugees).,"1,119"
+#refugee_num,Number of refugees.,Number,Number of refugees from a country or area.,"2,050"
 #activity,Project/activity description,Text,A free-text title/description of the project or activity.,Drought-resistant seed distribution
 #activity_id,Project/activity id,Code,A unique identifier for the project or activity.,PF2014-7795
 #status,Project/activity status description,Text,A free-text description of the status of the project/activity.,Currently active

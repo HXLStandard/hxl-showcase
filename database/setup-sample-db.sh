@@ -18,6 +18,9 @@ php ../scripts/add-source.php unhcr 'United Nations High Commissioner for Refuge
 php ../scripts/add-dataset.php unhcr refugees 'UNHCR refugee data'
 php ../scripts/import-data.php dpm unhcr refugees < ../sample-data/unhcr-refugee-data-full.csv
 
+php ../scripts/add-dataset.php unhcr mali-population-movements 'Mali monthly population-movement data'
+php ../scripts/import-data.php dpm unhcr mali-population-movements < ../sample-data/mali-population-movements.csv
+
 php ../scripts/add-source.php ocha-phl 'OCHA Philippines'
 php ../scripts/add-dataset.php ocha-phl philippines-3w 'OCHA Philippines 3W, 16 June 2014'
 php ../scripts/import-data.php dpm ocha-phl philippines-3w < ../sample-data/phl-32-hxl.csv

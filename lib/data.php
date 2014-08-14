@@ -65,6 +65,10 @@ function add_tag($tag, $tag_name, $datatype) {
   do_query('insert into tag (tag, tag_name, datatype) values (?, ?, ?)', $tag, $tag_name, $datatype);
 }
 
+function update_tag($tag, $tag_name, $datatype) {
+  do_query('update tag set tag_name=?, datatype=? where tag=?', $tag_name, $datatype, $tag);
+}
+
 function get_tag($tag_param) {
   return do_query(
     'select * from tag_view where tag=?',
