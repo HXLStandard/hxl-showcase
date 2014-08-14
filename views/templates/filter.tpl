@@ -1,6 +1,8 @@
 <html>
   <head>
-    <title>Filter by tag</title>
+    <title>Filter by {$filter_tag->tag_name|escape}</title>
+    <link rel="stylesheet" href="/style/popup.css" />
+    <meta name="viewport" content="width=device-width" />
     {if $params->import}
     {$baseurl = $import|import_link}
     {else}
@@ -8,11 +10,12 @@
     {/if}
   </head>
   <body>
-    <p>Choose a filter value for #{$filter_tag->tag|escape} ({$filter_tag->tag_name|escape}):</p>
+    <h1>Filter by &ldquo;{$filter_tag->tag_name|escape}&rdquo;</h1>
+    <p>Show only data rows where #{$filter_tag->tag|escape} has the following value:</p>
     <ul>
     {foreach $options as $option}
     {$url = "`$baseurl`/stats`$filters|params:'tag':$params->tag:$params->filter_tag:$option->content`"}
-    <li><a href="{$url|escape}" onclick="return do_link('{$url|escape}')">{$option->content|none}</a> ({$option->count|number_format})</li>
+    <li><a href="{$url|escape}" onclick="return do_link('{$url|escape}')">{$option->content|none}</a> <span class="count">{$option->count|number_format}</span></li>
     {/foreach}
     </ul>
     <script type="text/javascript">

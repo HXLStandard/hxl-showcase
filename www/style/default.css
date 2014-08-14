@@ -1,9 +1,6 @@
-@import url(wide.css) (min-width: 30em);
+@import url(base.css);
 
-body {
-    font-family: Helvetica, Arial, sansserif;
-    color: #000011;
-}
+@import url(wide.css) (min-width: 30em);
 
 header {
     margin-bottom: .5ex;

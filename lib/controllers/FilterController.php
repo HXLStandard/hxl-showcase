@@ -19,11 +19,11 @@ class FilterController extends AbstractController {
     list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
 
     $options = do_query(
-      'select content, count(distinct row) as count' .
+      'select norm as content, count(distinct row) as count' .
       ' from value_view' .
       ' where tag=? and row in ' . $filter_fragment .
-      ' group by content' .
-      ' order by content',
+      ' group by norm' .
+      ' order by norm',
       $params->filter_tag
     );
 
