@@ -2,6 +2,8 @@
 error_reporting(E_ALL|E_STRICT);
 
 require_once(__DIR__ . '/../lib/smarty/Smarty.class.php');
+require_once(__DIR__ . '/../lib/data.php');
+require_once(__DIR__ . '/../lib/output.php');
 
 //
 // Global application state

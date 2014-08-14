@@ -1,8 +1,6 @@
 <?php
 
 require_once(__DIR__ . '/../config/init.php');
-require_once(__DIR__ . '/data.php');
-require_once(__DIR__ . '/output.php');
 
 $request = new HttpRequest();
 $response = new HttpResponse();

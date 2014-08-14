@@ -10,7 +10,7 @@
  * High Commissioner for Refugees").
  */
 
-require_once(__DIR__ . '/lib/database.php');
+require_once(__DIR__ . '/../config/init.php');
 
 if (count($argv) != 3) {
   die("Usage: php add-source.php <ident> <name>\n");
@@ -23,4 +23,3 @@ add_source($ident, $name);
 printf("Added source %s (%s)\n", $ident, $name);
 
 // end
-

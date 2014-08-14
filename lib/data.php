@@ -23,6 +23,36 @@ function do_query() {
   return $statement;
 }
 
+
+////////////////////////////////////////////////////////////////////////
+// User
+////////////////////////////////////////////////////////////////////////
+
+function add_usr($usr, $usr_name) {
+  do_query('insert into usr (usr, usr_name) values (?, ?)', $usr, $usr_name);
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Source
+////////////////////////////////////////////////////////////////////////
+
+function add_source($source, $source_name) {
+  do_query('insert into source (source, source_name) values (?, ?)', $source, $source_name);
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Dataset
+////////////////////////////////////////////////////////////////////////
+
+/**
+ * Add a new dataset.
+ */
+function add_dataset($source, $dataset, $dataset_name) {
+  do_query('insert into dataset (source, dataset, dataset_name) values (?, ?, ?)', $source, $dataset, $dataset_name);
+}
+
 function get_dataset($dataset_param) {
   return do_query(
     'select * from dataset_view where dataset=?',

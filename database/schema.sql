@@ -105,5 +105,5 @@ create table value (
 
 comment on table value is 'A cell value in a specific import of a dataset.';
 
-create index value_content_idx on value using gin(to_tsvector('english', content));
-create index value_norm_idx on value(norm);
+create index on value using gin(to_tsvector('english', content));
+create index on value (norm);

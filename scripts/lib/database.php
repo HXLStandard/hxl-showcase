@@ -60,22 +60,6 @@ function _query() {
 }
 
 /**
- * Add a new source.
- */
-function add_source($source, $source_name) {
-  _query('insert into source (source, source_name) values (?, ?)', $source, $source_name);
-  return $source;
-}
-
-/**
- * Add a new user.
- */
-function add_usr($usr, $usr_name) {
-  _query('insert into usr (usr, usr_name) values (?, ?)', $usr, $usr_name);
-  return $usr;
-}
-
-/**
  * Add a HXL tag.
  */
 function add_tag($tag, $tag_name, $datatype) {
@@ -84,14 +68,6 @@ function add_tag($tag, $tag_name, $datatype) {
 
 function get_tag($tag) {
   return _query('select * from tag_view where tag=?', $tag)->fetch();
-}
-
-/**
- * Add a dataset.
- */
-function add_dataset($source, $dataset, $dataset_name) {
-  _query('insert into dataset (source, dataset, dataset_name) values (?, ?, ?)', $source, $dataset, $dataset_name);
-  return $dataset;
 }
 
 /**
