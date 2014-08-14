@@ -13,20 +13,20 @@
  * database will be unchanged.
  */
 
-require_once(__DIR__ . '/lib/database.php');
+require_once(__DIR__ . '/../config/init.php');
 
 if (count($argv) > 2 || (count($argv) == 2 && $argv[1] != '-r')) {
   die("Usage: php import-tags.php [-r] < SOURCE.csv\n");
 }
 
 // Use a transaction, so that it's all or nothing
-_db()->beginTransaction();
+begin_db_transaction();
 
 // if "-r" is specified, delete old tags first
 @list($script, $replace_flag) = $argv;
 if ($replace_flag) {
   print("Deleting old tags\n");
-  _query('delete from tag');
+  do_query('delete from tag');
 }
 
 $headers = fgetcsv(STDIN);
@@ -51,6 +51,6 @@ while ($row = fgetcsv(STDIN)) {
   printf("Added tag %s (%s) %s\n", $fields['tag'], $fields['name'], $fields['type']);
 }
 
-_db()->commit();
+commit_db_transaction();
 
 // end

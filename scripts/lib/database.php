@@ -59,13 +59,6 @@ function _query() {
   }
 }
 
-/**
- * Add a HXL tag.
- */
-function add_tag($tag, $tag_name, $datatype) {
-  _query('insert into tag (tag, tag_name, datatype) values (?, ?, ?)', $tag, $tag_name, $datatype);
-}
-
 function get_tag($tag) {
   return _query('select * from tag_view where tag=?', $tag)->fetch();
 }

@@ -23,6 +23,22 @@ function do_query() {
   return $statement;
 }
 
+/**
+ * Start a database transaction.
+ */
+function begin_db_transaction() {
+  global $APP;
+  $APP->pdo->beginTransaction();
+}
+
+/**
+ * Commit a database transaction.
+ */
+function commit_db_transaction() {
+  global $APP;
+  $APP->pdo->commit();
+}
+
 
 ////////////////////////////////////////////////////////////////////////
 // User
@@ -30,6 +46,18 @@ function do_query() {
 
 function add_usr($usr, $usr_name) {
   do_query('insert into usr (usr, usr_name) values (?, ?)', $usr, $usr_name);
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Tag
+////////////////////////////////////////////////////////////////////////
+
+/**
+ * Add a HXL tag.
+ */
+function add_tag($tag, $tag_name, $datatype) {
+  do_query('insert into tag (tag, tag_name, datatype) values (?, ?, ?)', $tag, $tag_name, $datatype);
 }
 
 
