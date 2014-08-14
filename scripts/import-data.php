@@ -15,7 +15,7 @@
  * Will fail if it finds an unrecognized HXL tag.
  */
 
-require_once(__DIR__ . '/lib/database.php');
+require_once(__DIR__ . '/../config/init.php');
 
 if (count($argv) == 4) {
   list($script, $usr, $source, $dataset) = $argv;
@@ -24,9 +24,9 @@ if (count($argv) == 4) {
 }
 
 // Use a transaction, so that it's all or nothing
-_db()->beginTransaction();
+begin_db_transaction();
 
-_db()->exec('set constraints all deferred');
+db()->exec('set constraints all deferred');
 
 // Create a new import session
 $import_id = add_import($usr, $dataset);
@@ -90,7 +90,7 @@ while ($row = fgetcsv(STDIN)) {
   }
 }
 
-_db()->commit();
+commit_db_transaction();
 
 printf("Added %d rows of data in %d columns\n", $n, count($tag_row));
 

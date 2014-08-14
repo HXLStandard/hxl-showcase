@@ -12,13 +12,20 @@ function escape_sql($s) {
 }
 
 /**
+ * Get the database connection.
+ */
+function db() {
+  global $APP;
+  return $APP->pdo;
+}
+
+/**
  * Execute a SQL query and return the statement with results.
  */
 function do_query() {
-  global $APP;
   $args = func_get_args();
   $query = array_shift($args);
-  $statement = $APP->pdo->prepare($query);
+  $statement = db()->prepare($query);
   $statement->execute($args);
   return $statement;
 }
@@ -27,16 +34,14 @@ function do_query() {
  * Start a database transaction.
  */
 function begin_db_transaction() {
-  global $APP;
-  $APP->pdo->beginTransaction();
+  db()->beginTransaction();
 }
 
 /**
  * Commit a database transaction.
  */
 function commit_db_transaction() {
-  global $APP;
-  $APP->pdo->commit();
+  db()->commit();
 }
 
 
@@ -60,6 +65,26 @@ function add_tag($tag, $tag_name, $datatype) {
   do_query('insert into tag (tag, tag_name, datatype) values (?, ?, ?)', $tag, $tag_name, $datatype);
 }
 
+function get_tag($tag_param) {
+  return do_query(
+    'select * from tag_view where tag=?',
+    $tag_param
+  )->fetch();
+}
+
+function get_tags() {
+  static $tags;
+  if ($tags == null) {
+    $tags = array();
+    $result = do_query(
+      'select tag from tag'
+    );
+    foreach ($result as $tag) {
+      array_push($tags, $tag->tag);
+    }
+  }
+  return $tags;
+}
 
 ////////////////////////////////////////////////////////////////////////
 // Source
@@ -88,6 +113,18 @@ function get_dataset($dataset_param) {
   )->fetch();
 }
 
+////////////////////////////////////////////////////////////////////////
+// Import
+////////////////////////////////////////////////////////////////////////
+
+/**
+ * Add a new import for a dataset.
+ */
+function add_import($usr, $dataset) {
+  do_query('insert into import (usr, dataset) values (?, ?)', $usr, $dataset);
+  return do_query('select lastval()')->fetchColumn();
+}
+
 function get_imports($dataset_param) {
   return do_query(
     'select V.*, (select count(distinct row) from value_view where import=V.import) as row_count ' .
@@ -96,28 +133,6 @@ function get_imports($dataset_param) {
     $dataset_param
   );
 }
-
-function get_tag($tag_param) {
-  return do_query(
-    'select * from tag_view where tag=?',
-    $tag_param
-  )->fetch();
-}
-
-function get_tags() {
-  static $tags;
-  if ($tags == null) {
-    $tags = array();
-    $result = do_query(
-      'select tag from tag'
-    );
-    foreach ($result as $tag) {
-      array_push($tags, $tag->tag);
-    }
-  }
-  return $tags;
-}
-
 
 /**
  * Fetch an import for a dataset.
@@ -143,6 +158,18 @@ function get_import($dataset_param, $stamp_param = null) {
   }
 }
 
+////////////////////////////////////////////////////////////////////////
+// Column
+////////////////////////////////////////////////////////////////////////
+
+/**
+ * Add a new column for an import.
+ */
+function add_col($import, $tag, $header) {
+  do_query('insert into col (import, tag, header) values (?, ?, ?)', $import, $tag, $header);
+  return do_query('select lastval()')->fetchColumn();
+}
+
 /**
  * Get the columns for an import.
  */
@@ -153,6 +180,37 @@ function get_cols($import) {
     ' order by col',
     $import->import
   )->fetchAll();
+}
+
+////////////////////////////////////////////////////////////////////////
+// Row
+////////////////////////////////////////////////////////////////////////
+
+/**
+ * Add a new row for an import.
+ *
+ * @param $import_id the import id (long int)
+ * @return the row id (long int)
+ */
+function add_row($import) {
+  do_query('insert into row (row) values (default)');
+  return do_query('select lastval()')->fetchColumn();
+}
+
+////////////////////////////////////////////////////////////////////////
+// Value
+////////////////////////////////////////////////////////////////////////
+
+/**
+ * Add a new value (cell).
+ *
+ * @param $row_id the database id of the row (long int)
+ * @param $col_id the database id of the column (long int)
+ * @param $content the cell content (string)
+ */
+function add_value($row, $col, $content, $norm = null) {
+  do_query('insert into value(row, col, content, norm) values (?, ?, ?, ?)', $row, $col, $content, $norm);
+  return do_query('select lastval()')->fetchColumn();
 }
 
 /**
