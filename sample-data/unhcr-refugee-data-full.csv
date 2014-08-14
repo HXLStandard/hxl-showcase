@@ -1,5 +1,5 @@
 "Year","Country.or.territory.of.asylum.or.residence","Country.or.territory.of.origin","Refugees","Refugees.assisted.by.UNHCR","Total.refugees.and.people.in.refugee.like.situations","Total.refugees.and.people.in.refugee.like.situations.assisted.by.UNHCR"
-#period_date,#country,#origin,#refugees_num,#reached_num,,
+#period_date,#country,#origin,#refugee_num,#reached_num,,
 "1975","ALG","CHL",350,NA,350,NA
 "1975","ALG","VAR",650,NA,650,NA
 "1975","ALG","WSH",20000,NA,20000,NA
