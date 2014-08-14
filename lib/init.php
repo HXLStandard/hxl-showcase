@@ -1,9 +1,9 @@
 <?php
 error_reporting(E_ALL|E_STRICT);
 
-require_once(__DIR__ . '/../lib/smarty/Smarty.class.php');
-require_once(__DIR__ . '/../lib/data.php');
-require_once(__DIR__ . '/../lib/output.php');
+require_once(__DIR__ . '/smarty/Smarty.class.php');
+require_once(__DIR__ . '/data.php');
+require_once(__DIR__ . '/output.php');
 
 //
 // Global application state
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/paths.php');
 //
 // Set up the database
 //
-require_once(__DIR__ . '/database.php');
+require_once(__DIR__ . '/../config/database.php');
 
 //
 // Fire up the Smarty template engine.

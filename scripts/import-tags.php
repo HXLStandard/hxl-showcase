@@ -13,7 +13,7 @@
  * database will be unchanged.
  */
 
-require_once(__DIR__ . '/../config/init.php');
+require_once(__DIR__ . '/../lib/init.php');
 
 if (count($argv) > 2 || (count($argv) == 2 && $argv[1] != '-r')) {
   die("Usage: php import-tags.php [-r] < SOURCE.csv\n");

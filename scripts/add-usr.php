@@ -9,7 +9,7 @@
  * name: the human-readable name for the dataset (e.g. "Jane Smith")
  */
 
-require_once(__DIR__ . '/../config/init.php');
+require_once(__DIR__ . '/../lib/init.php');
 
 if (count($argv) != 3) {
   die("Usage: php add-usr.php <ident> <name>\n");

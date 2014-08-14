@@ -10,7 +10,7 @@
  * High Commissioner for Refugees").
  */
 
-require_once(__DIR__ . '/../config/init.php');
+require_once(__DIR__ . '/../lib/init.php');
 
 if (count($argv) != 3) {
   die("Usage: php add-source.php <ident> <name>\n");
