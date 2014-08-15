@@ -3,6 +3,7 @@
     <title>Filter by {$filter_tag->tag_name|escape}</title>
     <link rel="stylesheet" href="/style/popup.css" />
     <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="/scripts/ga.js"></script>
     {if $params->import}
     {$baseurl = $import|import_link}
     {else}
