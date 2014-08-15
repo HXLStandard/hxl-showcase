@@ -5,6 +5,8 @@ require_once(__DIR__ . '/init.php');
 $request = new HttpRequest();
 $response = new HttpResponse();
 
+global $APP;
+
 try {
   $path = $request->get('p');
   $controller_name = @$APP->paths[$path];
@@ -63,6 +65,7 @@ try {
       $APP->smarty->assign($name, $value);
     }
   }
+  $APP->smarty->assign('APP', $APP);
 
   // render the response
   if ($response->template) {
