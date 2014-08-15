@@ -26,7 +26,7 @@ require_once(__DIR__ . '/paths.php');
 //
 // Set up the database
 //
-require_once(__DIR__ . '/../config/database.php');
+require_once(__DIR__ . '/../config/config.php');
 
 //
 // Fire up the Smarty template engine.

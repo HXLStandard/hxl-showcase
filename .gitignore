@@ -1,4 +1,4 @@
-config.php
+config/config.php
 views/templates_c
 TAGS
 make-tags.sh
