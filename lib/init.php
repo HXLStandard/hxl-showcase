@@ -1,10 +1,6 @@
 <?php
 error_reporting(E_ALL|E_STRICT);
 
-require_once(__DIR__ . '/smarty/Smarty.class.php');
-require_once(__DIR__ . '/util.php');
-require_once(__DIR__ . '/data.php');
-require_once(__DIR__ . '/output.php');
 
 //
 // Global application state
@@ -18,6 +14,13 @@ set_include_path(get_include_path() . PATH_SEPARATOR .
                  $APP->root . "/lib/controllers" . PATH_SEPARATOR .
                  $APP->root . "/lib");
 
+$APP->config = new StdClass();
+require_once(__DIR__ . '/../config/config.php');
+require_once(__DIR__ . '/smarty/Smarty.class.php');
+require_once(__DIR__ . '/util.php');
+require_once(__DIR__ . '/data.php');
+require_once(__DIR__ . '/output.php');
+
 //
 // Load web controller path mappings.
 //
@@ -26,7 +29,6 @@ require_once(__DIR__ . '/paths.php');
 //
 // Set up the database
 //
-require_once(__DIR__ . '/../config/config.php');
 if (@$APP->config->database_dsn) {
   $APP->pdo = new PDO($APP->config->database_dsn, @$APP->config->database_username, @$APP->config->database_password);
   $APP->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
