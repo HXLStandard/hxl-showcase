@@ -20,7 +20,7 @@ spl_autoload_register(function ($class_name) {
 //
 // Local configuration
 //
-$APP->config = new StdClass();
+$APP->config = new stdClass();
 require_once(__DIR__ . '/../config/config.php');
 
 //
@@ -35,11 +35,16 @@ require_once(__DIR__ . '/paths.php');
 //
 // Set up the database
 //
+if (@$APP->config->database_dsn) {
+  $APP->pdo = new PDO($APP->config->database_dsn, @$APP->config->database_username, @$APP->config->database_password);
+  $APP->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $APP->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+}
+
 
 //
-// Fire up the Smarty template engine.
+// Set up the template engine.
 //
-// load and configure Smarty
 $APP->smarty = new Smarty();
 $APP->smarty->error_reporting = 0;
 $APP->smarty->template_dir = $APP->root . "/views/templates/";
