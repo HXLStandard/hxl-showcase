@@ -4,6 +4,11 @@
 ////////////////////////////////////////////////////////////////////////
 
 //
+// Set your preferred error reporting here.
+//
+error_reporting(E_ALL|E_STRICT);
+
+//
 // Google Analytics tracking id (uncomment if available)
 //
 //$APP->config->ga_tracking_id = 'XXXXXX-XX'; 
