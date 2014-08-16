@@ -293,11 +293,11 @@ function process_filters(HttpRequest $request, $import_id, $allowed_filters) {
 
       // Different treatment for the first one
       if ($n == 1) {
-        $sql_filter = 'select V1.row from value_view V1';
-        $where_clause = sprintf(" where V1.import=%d and V1.tag='%s' and V1.norm='%s'", $import_id, escape_sql($tag), escape_sql(normalise_text($content)));
+        $sql_filter = 'select F1.row from value_view F1';
+        $where_clause = sprintf(" where F1.import=%d and F1.tag='%s' and F1.norm='%s'", $import_id, escape_sql($tag), escape_sql(normalise_text($content)));
       } else {
         $sql_filter .= sprintf(
-          ' join value_view V%d on V1.row=V%d.row and V%d.tag=\'%s\' and V%d.norm=\'%s\'',
+          ' join value_view F%d on F1.row=F%d.row and F%d.tag=\'%s\' and F%d.norm=\'%s\'',
           $n, $n, $n, escape_sql($tag), $n, escape_sql(normalise_text($content))
         );
       }
@@ -308,7 +308,7 @@ function process_filters(HttpRequest $request, $import_id, $allowed_filters) {
     $sql_filter = sprintf('(%s %s)', $sql_filter, $where_clause);
   } else {
     // count all rows
-    $sql_filter = sprintf('(select R.row from row R join value V using(row) join col C using(col) where C.import=%d)', $import_id);
+    $sql_filter = sprintf('(select R.row from row R join value F using(row) join col C using(col) where C.import=%d)', $import_id);
   }
 
   // Return the results
