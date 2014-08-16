@@ -2,7 +2,12 @@
 
 <html>
   <head>
-    <title>#{$tag->tag|escape} in {$import->dataset_name|escape}</title>
+    {if $tags|count == 1}
+    {$title = "#`$tags[0]->tag` in `$import->dataset_name`"}
+    {else}
+    {$title = "#`$tags[0]->tag` and #`$tags[1]->tag` in `$import->dataset_name`"}
+    {/if}
+    <title>{$title|escape}</title>
     {include file="fragments/metadata.tpl"}
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -23,7 +28,7 @@
     </nav>
 
     <main>
-      <h1>#{$tag->tag|escape} in {$import->dataset_name|escape}</h1>
+      <h1>{$title|escape}</h1>
 
       <p><i><a href="{$baseurl|escape}">View a different tag</a></i></p>
 
@@ -65,13 +70,19 @@
 
         <table>
           <thead>
-            <th>Value</th>
+            <th>#{$tags[0]->tag|escape}</th>
+            {if $tags|count > 1}
+            <th>#{$tags[1]->tag|escape}</th>
+            {/if}
             <th>Count</th>
           </thead>
           <tbody>
             {foreach $stats as $stat}
             <tr>
-              <td>{$stat->content|none}</td>
+              <td>{$stat->content1|none}</td>
+              {if $tags|count > 1}
+              <td>{$stat->content2|none}</td>
+              {/if}
               <td>{$stat->count|number_format}</td>
             </tr>
             {/foreach}

@@ -11,23 +11,41 @@ class StatsController extends AbstractController {
 
     $params->dataset = $request->get('dataset');
     $params->import = $request->get('import');
-    $params->tag = $request->get('tag');
+    $params->tags = $request->get('tag');
+    if (!is_array($params->tags)) {
+      $params->tags = array($params->tags);
+    }
 
     $import = get_import($params->dataset, $params->import);
-    $tag = get_tag($params->tag);
+
+    $tags = array();
+    foreach ($params->tags as $tag_param) {
+      array_push($tags, get_tag($tag_param));
+    }
 
     list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
 
-    if ($tag->datatype == 'Number') {
-      $stats = get_histogram($tag, $filter_fragment);
+    if (count($tags) == 1) {
+      if ($tag->datatype == 'Number') {
+        $stats = get_histogram($tag, $filter_fragment);
+      } else {
+        $stats = do_query(
+          'select content as content1, count(distinct row) as count' .
+          ' from value_view' .
+          ' where tag=? and row in ' . $filter_fragment .
+          ' group by content1' .
+          ' order by count(distinct row) desc',
+          $tags[0]->tag
+        );
+      }
     } else {
       $stats = do_query(
-        'select content, count(distinct row) as count' .
-        ' from value_view' .
-        ' where tag=? and row in ' . $filter_fragment .
-        ' group by content' .
+        'select V1.content as content1, V2.content as content2, count(distinct row) as count' .
+        ' from value_view V1 join value_view V2 using(row)' .
+        ' where V1.tag=? and V2.tag=? and row in ' . $filter_fragment .
+        ' group by V1.content, V2.content' .
         ' order by count(distinct row) desc',
-        $params->tag
+        $tags[0]->tag, $tags[1]->tag
       );
     }
 
@@ -45,7 +63,7 @@ class StatsController extends AbstractController {
       $response->setParameter('filters', $filters);
       $response->setParameter('filter_tags', $filter_tags);
       $response->setParameter('import', $import);
-      $response->setParameter('tag', $tag);
+      $response->setParameter('tags', $tags);
       $response->setParameter('cols', $cols);
       $response->setParameter('stats', $stats);
       $response->setTemplate('stats');
