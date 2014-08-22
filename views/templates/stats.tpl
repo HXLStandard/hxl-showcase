@@ -83,8 +83,6 @@
                 (This is a fairly-large sample. Depending on how well it's been collected, the values can be meaningful.)
                 {/if}
               </td>
-
-(If this number is small, you should be careful about trusting some of the other aggregates below.)</td>
             </tr>
             <tr>
               <th>Sum of values</th>
