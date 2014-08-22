@@ -20,6 +20,7 @@ class StatsController extends AbstractController {
 
     if ($tag->datatype == 'Number') {
       $stats = get_histogram($tag, $filter_fragment);
+      $aggregates = get_aggregates($tag, $filter_fragment);
     } else {
       $stats = do_query(
         'select content, count(distinct row) as count' .
@@ -48,6 +49,7 @@ class StatsController extends AbstractController {
       $response->setParameter('tag', $tag);
       $response->setParameter('cols', $cols);
       $response->setParameter('stats', $stats);
+      $response->setParameter('aggregates', $aggregates);
       $response->setTemplate('stats');
       break;
     }
@@ -55,7 +57,7 @@ class StatsController extends AbstractController {
   }
 
   private static function dump_csv($stats) {
-    header('Content-type: text/csv;charset=utf8');
+    header('Content-type: text/plain;charset=utf8');
     $output = fopen('php://output', 'w');
     fputcsv($output, array('content', 'count'));
     foreach ($stats as $stat) {

@@ -266,6 +266,33 @@ function get_histogram($tag, $filter_fragment) {
   return $stats;
 }
 
+function get_aggregates($tag, $filter_fragment) {
+  $funcs = array('count', 'sum', 'avg', 'max', 'min', 'stddev_pop');
+  $aggregates = new stdClass();
+  foreach ($funcs as $func) {
+    $aggregates->$func = get_aggregate($tag, $filter_fragment, $func);
+  }
+  $aggregates->coeff_var = $aggregates->stddev_pop / $aggregates->avg;
+  return $aggregates;
+}
+
+/**
+ * Get an aggregate value.
+ */
+function get_aggregate($tag, $filter_fragment, $sql_function) {
+  $result = do_query(
+    sprintf(
+      'select %s(value::float8) from value_view where tag=? and row in %s',
+      $sql_function, $filter_fragment
+    ),
+    $tag->tag
+  );
+  return $result->fetchColumn();
+}
+
+
+
+
 
 /**
  * Process the requested filters, and create a SQL (sub)query.
