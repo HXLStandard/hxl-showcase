@@ -114,13 +114,13 @@
               <td>{$aggregates->coeff_var|number_format:2}</td>
               <td>
                 {if $aggregates->coeff_var < 0.25}
-                (The values are fairly consistent close to the mean.)
+                (The values are mostly close to the mean.)
                 {elseif $aggregates->coeff_var < 0.50}
-                (The values vary somewhat, but there is still a cluster closer to the mean.)
+                (The values vary, but still tend to the mean.)
                 {elseif $aggregates->coeff_var < 0.75}
                 (The values vary considerably across a wide range.)
                 {else}
-                (The values vary extremely, and have little or no consistency.)
+                (There is little or no consistency.)
                 {/if}
               </td>
             </tr>
