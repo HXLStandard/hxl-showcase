@@ -282,7 +282,7 @@ function get_aggregates($tag, $filter_fragment) {
 function get_aggregate($tag, $filter_fragment, $sql_function) {
   $result = do_query(
     sprintf(
-      'select %s(value::float8) from value_view where tag=? and row in %s',
+      'select %s(norm::float8) from value_view where tag=? and row in %s',
       $sql_function, $filter_fragment
     ),
     $tag->tag

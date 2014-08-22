@@ -110,7 +110,7 @@
               <td> </td>
             </tr>
             <tr>
-              <th>Coefficient of variance</th>
+              <th>Coefficient of variation</th>
               <td>{$aggregates->coeff_var|number_format:2}</td>
               <td>
                 {if $aggregates->coeff_var < 0.25}
