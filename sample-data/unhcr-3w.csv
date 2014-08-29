@@ -1,0 +1,2252 @@
+"Country name","Admin level 1",Latitude,Longitude,"Sector (English)","Sector (Arabic)","Organisation URL","Organisation name"
+#country,#adm1,#lat_deg,#lon_deg,#sector,,,#org
+Chad,"Logone Oriental",8.25,16.42,"Camp Management",,,CNARR
+Chad,"Logone Oriental",8.25,16.42,"Child Protection",,,"LWF Chad"
+Chad,"Logone Oriental",8.25,16.42,"Community Services",,,"CARE International"
+Chad,"Logone Oriental",8.25,16.42,"Core Relief Items (CRIs)",,,"LWF Chad"
+Chad,"Logone Oriental",8.25,16.42,Education,,,ACRA
+Chad,"Logone Oriental",8.25,16.42,Environment,,,"LWF Chad"
+Chad,"Logone Oriental",8.25,16.42,"Food Security",,,"LWF Chad"
+Chad,"Logone Oriental",8.25,16.42,"Gender-Based Violence",,,"CARE International"
+Chad,"Logone Oriental",8.25,16.42,Health,,,"CSSI Chad"
+Chad,"Logone Oriental",8.25,16.42,HIV/AIDS,,,"CSSI Chad"
+Chad,"Logone Oriental",8.25,16.42,Livelihood,,,"LWF Chad"
+Chad,"Logone Oriental",8.25,16.42,Nutrition,,,"CSSI Chad"
+Chad,"Logone Oriental",8.25,16.42,Protection,,,APLFT
+Chad,"Logone Oriental",8.25,16.42,Shelter,,,"ADES Chad"
+Chad,"Logone Oriental",8.25,16.42,"Water & Sanitation",,,"CARE International"
+Cameroon,Adamawa,6.5,13.5,"Camp Management",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,Adamawa,6.5,13.5,"Child Protection",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,Adamawa,6.5,13.5,"Community Services",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,Adamawa,6.5,13.5,"Core Relief Items (CRIs)",,https://www.ifrc.org/,IFRC
+Cameroon,Adamawa,6.5,13.5,"Core Relief Items (CRIs)",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,Adamawa,6.5,13.5,Education,,http://plan-international.org/,"PLAN International"
+Cameroon,Adamawa,6.5,13.5,Education,,http://www.unicef.org/,UNICEF
+Cameroon,Adamawa,6.5,13.5,"Food Security",,https://www.ifrc.org/,IFRC
+Cameroon,Adamawa,6.5,13.5,"Food Security",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,Adamawa,6.5,13.5,"Food Security",,http://www.wfp.org/,WFP
+Cameroon,Adamawa,6.5,13.5,Health,,http://internationalmedicalcorps.org,IMC
+Cameroon,Adamawa,6.5,13.5,Health,,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,Adamawa,6.5,13.5,Nutrition,,http://internationalmedicalcorps.org,IMC
+Cameroon,Adamawa,6.5,13.5,Protection,,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,Adamawa,6.5,13.5,Shelter,,http://www.pu-ami.org/,PU-AMI
+Cameroon,East,5.61599,14.0625,Agriculture,,http://www.fao.org/,FAO
+Cameroon,East,5.61599,14.0625,"Camp Management",,https://www.ifrc.org/,IFRC
+Cameroon,East,5.61599,14.0625,"Camp Management",,http://www.pu-ami.org/,PU-AMI
+Cameroon,East,5.61599,14.0625,"Camp Management",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,East,5.61599,14.0625,"Child Protection",,http://asseja.net/,ASSEJA
+Cameroon,East,5.61599,14.0625,"Child Protection",,http://plan-international.org/,"PLAN International"
+Cameroon,East,5.61599,14.0625,"Child Protection",,http://www.unicef.org/,UNICEF
+Cameroon,East,5.61599,14.0625,"Community Services",,https://www.ifrc.org/,IFRC
+Cameroon,East,5.61599,14.0625,Coordination,,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,East,5.61599,14.0625,"Core Relief Items (CRIs)",,http://www.iom.int,IOM
+Cameroon,East,5.61599,14.0625,"Gender-Based Violence",,http://www.africahumanitarian.org/,AHA
+Cameroon,East,5.61599,14.0625,"Gender-Based Violence",,,"CARE International"
+Cameroon,East,5.61599,14.0625,"Gender-Based Violence",,http://www.unwomen.org/,"UN Women"
+Cameroon,East,5.61599,14.0625,"Gender-Based Violence",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,East,5.61599,14.0625,Health,,http://www.africahumanitarian.org/,AHA
+Cameroon,East,5.61599,14.0625,Health,,https://www.ifrc.org/,IFRC
+Cameroon,East,5.61599,14.0625,Health,,http://www.iom.int,IOM
+Cameroon,East,5.61599,14.0625,Health,,http://www.msf.org/,MSF
+Cameroon,East,5.61599,14.0625,Health,,http://www.unfpa.org/public/,UNFPA
+Cameroon,East,5.61599,14.0625,Health,,http://www.unicef.org/,UNICEF
+Cameroon,East,5.61599,14.0625,Health,,http://www.who.int/en/,WHO
+Cameroon,East,5.61599,14.0625,Livelihood,,http://www.ird.org/,IRD
+Cameroon,East,5.61599,14.0625,Livelihood,,http://www.pu-ami.org/,PU-AMI
+Cameroon,East,5.61599,14.0625,"Mental Health and Psychosocial Support",,,"CARE International"
+Cameroon,East,5.61599,14.0625,"Mental Health and Psychosocial Support",,http://plan-international.org/,"PLAN International"
+Cameroon,East,5.61599,14.0625,Nutrition,,http://www.actioncontrelafaim.org/en/,ACF
+Cameroon,East,5.61599,14.0625,Nutrition,,http://www.africahumanitarian.org/,AHA
+Cameroon,East,5.61599,14.0625,Nutrition,,https://www.ifrc.org/,IFRC
+Cameroon,East,5.61599,14.0625,Nutrition,,http://www.msf.org/,MSF
+Cameroon,East,5.61599,14.0625,Nutrition,,http://plan-international.org/,"PLAN International"
+Cameroon,East,5.61599,14.0625,Nutrition,,http://www.unicef.org/,UNICEF
+Cameroon,East,5.61599,14.0625,Nutrition,,http://www.wfp.org/,WFP
+Cameroon,East,5.61599,14.0625,Protection,,https://www.ifrc.org/,IFRC
+Cameroon,East,5.61599,14.0625,Registration,,http://www.iom.int,IOM
+Cameroon,East,5.61599,14.0625,Registration,,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,East,5.61599,14.0625,"Reproductive Health",,http://www.unfpa.org/public/,UNFPA
+Cameroon,East,5.61599,14.0625,Shelter,,https://www.ifrc.org/,IFRC
+Cameroon,East,5.61599,14.0625,Shelter,,http://www.ird.org/,IRD
+Cameroon,East,5.61599,14.0625,Shelter,,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,East,5.61599,14.0625,Transportation,,http://www.iom.int,IOM
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://www.actioncontrelafaim.org/en/,ACF
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://www.ird.org/,IRD
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://www.msf.org/,MSF
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://plan-international.org/,"PLAN International"
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://www.pu-ami.org/,PU-AMI
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://www.solidarites.org/en/,Solidarités
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://www.unhcr.org/pages/4a03e1926.html,UNHCR
+Cameroon,East,5.61599,14.0625,"Water & Sanitation",,http://www.unicef.org/,UNICEF
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Agriculture,,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,"Camp Management",,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,"Child Protection",,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,"Child Protection",,,CEMIR
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,"Community Services",,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,"Community Services",,,CEMIR
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Education,,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Education,,,CEMIR
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,"Gender-Based Violence",,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,"Gender-Based Violence",,,CEMIR
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Health,,,MDA
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,HIV/AIDS,,,MDA
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Livelihood,,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Protection,,,UNHCR
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Shelter,,,AARREC
+"Congo (Brazaville)",Likouala,-0.307616,15.9961,Telecom,,,UNHCR
+"Congo (Brazaville)","Congo (Brazaville)",0.527336,16.5234,"Child Protection",,,CEMIR
+"Congo (Brazaville)","Congo (Brazaville)",0.527336,16.5234,"Community Services",,,CEMIR
+"Congo (Brazaville)","Congo (Brazaville)",0.527336,16.5234,Education,,,CEMIR
+"Congo (Brazaville)","Congo (Brazaville)",0.527336,16.5234,Health,,,MDA
+"Congo (Brazaville)","Congo (Brazaville)",0.527336,16.5234,HIV/AIDS,,,MDA
+"Congo (Brazaville)","Congo (Brazaville)",0.527336,16.5234,Protection,,,UNHCR
+"Congo (Brazaville)","Congo (Brazaville)",0.527336,16.5234,Telecom,,,UNHCR
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Agency Operational Support",,http://www.unops.org/francais/Pages/default.aspx,UNOPS
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Community Services",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Crop Production",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Domestic Needs / Household Support",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,Education,,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,Health,,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Income Generation",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Income Generation",,http://www.saara.gouv.ci/,SAARA
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Legal Assistance / Protection",,http://www.saara.gouv.ci/,SAARA
+"Côte d'Ivoire","District Autonome d'Abidjan",5.3754,-4.03748,"Transport / Logistics",,http://www.iom.int/cms/en/sites/iom/home.html,OIM
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Community Services",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Domestic Needs / Household Support",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,Education,,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,Health,,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Income Generation",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Income Generation",,http://www.saara.gouv.ci/,SAARA
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Legal Assistance / Protection",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Legal Assistance / Protection",,justice.gouv.ci,MJDHLP
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Legal Assistance / Protection",,http://www.saara.gouv.ci/,SAARA
+"Côte d'Ivoire",Bas-Sassandra,5.26601,-6.8335,"Transport / Logistics",,http://www.iom.int/cms/en/sites/iom/home.html,OIM
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Community Services",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Community Services",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Community Services",,http://www.ivorycoast.nrc.no/,NRC
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Crop Production",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Domestic Needs / Household Support",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Domestic Needs / Household Support",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,Education,,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,Education,,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,Health,,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,Health,,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Income Generation",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Income Generation",,,AWECO
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Income Generation",,http://www.caritas-ci.org/,"CARITAS Côte d'Ivoire"
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Income Generation",,http://www.saara.gouv.ci/,SAARA
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Legal Assistance / Protection",,www.asapsu.org,ASAPSU
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Legal Assistance / Protection",,justice.gouv.ci,MJDHLP
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Legal Assistance / Protection",,http://www.saara.gouv.ci/,SAARA
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,Other,,,AWECO
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Shelter / Other Infrastructure",,http://www.ivorycoast.nrc.no/,NRC
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Transport / Logistics",,http://www.iom.int/cms/en/sites/iom/home.html,OIM
+"Côte d'Ivoire",Montagnes,6.83917,-7.69043,"Water & Sanitation",,http://www.ivorycoast.nrc.no/,NRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Camp Management",,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Child Protection",,http://www.savethechildren.net/ethiopia/members_programmes/usa.html,"SC US"
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Child Protection",,,UNICEF
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Core Relief Items (CRIs)",,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Core Relief Items (CRIs)",,http://www.zoa-international.com/,ZOA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,,DICAC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,http://www.jrsea.org,JRS
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,http://www.lwf-kenya.org/,LWF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,http://www.nrc.no/,NRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,,SC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,,UNICEF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Education,,,WVI
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,http://www.drc.dk/,DRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,http://www.lwf-kenya.org/,LWF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,,PAPDA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,,PWO
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,,SeE
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,,WVI
+Ethiopia,"Dollo Ado",4.18276,42.0498,Environment,,http://www.zoa-international.com/,ZOA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Food,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Food,,http://www.savethechildren.net/ethiopia/members_programmes/usa.html,"SC US"
+Ethiopia,"Dollo Ado",4.18276,42.0498,Food,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Food,,http://www.wfp.org/countries/kenya,WFP
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Gender-Based Violence",,http://www.internationalmedicalcorps.org/,IMC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,,Humedica
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,http://www.internationalmedicalcorps.org/,IMC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,,PAPDA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,,RaDO
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,http://www.unfpa.org/,UNFPA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,,UNICEF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Health,,,WHO
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,http://www.drc.dk/,DRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,http://www.lwf-kenya.org/,LWF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,http://www.nrc.no/,NRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,,PAPDA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,,PWO
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,,SC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,,WVI
+Ethiopia,"Dollo Ado",4.18276,42.0498,Livelihood,,http://www.zoa-international.com/,ZOA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Logistics,,,AHADA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Logistics,,http://www.iom.int,IOM
+Ethiopia,"Dollo Ado",4.18276,42.0498,Logistics,,http://www.thw.de/,THW
+Ethiopia,"Dollo Ado",4.18276,42.0498,Logistics,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,http://www.actionagainsthunger.org/,ACF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,"http:// www.goal.ie",GOAL
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,http://www.internationalmedicalcorps.org/,IMC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,,MSF-H
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,,SC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,http://www.savethechildren.net/ethiopia/members_programmes/usa.html,"SC US"
+Ethiopia,"Dollo Ado",4.18276,42.0498,Nutrition,,,UNICEF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.drc.dk/,DRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.helpage.org,HelpAge
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.internationalmedicalcorps.org/,IMC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.iom.int,IOM
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.rescue.org/,IRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,,PAPDA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,,PWO
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,,RaDO
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,,SC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.savethechildren.net/ethiopia/members_programmes/usa.html,"SC US"
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Protection,,,UNICEF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Registration,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Registration,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.africahumanitarian.org/,AHA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,,AHADA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.drc.dk/,DRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.iom.int,IOM
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,,IRD
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.lwf-kenya.org/,LWF
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.nrc.no/,NRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.oxfam.org.uk/,Oxfam-GB
+Ethiopia,"Dollo Ado",4.18276,42.0498,Shelter,,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,http://www.arra.org.et,ARRA
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,http://www.drc.dk/,DRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,http://www.internationalmedicalcorps.org/,IMC
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,http://www.rescue.org/,IRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,http://www.lwf-kenya.org/,LWF
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,http://www.nrc.no/,NRC
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,,UNICEF
+Ethiopia,"Dollo Ado",4.18276,42.0498,"Water & Sanitation",,,WVI
+Djibouti,Djibouti,11.753,42.5779,"Community Services",,http://www.lwf-kenya.org/,LWF
+Djibouti,Djibouti,11.753,42.5779,Education,,http://www.lwf-kenya.org/,LWF
+Ethiopia,"Addis Ababa",9.00038,38.7507,"Community Services",,http://www.jrsea.org,JRS
+Ethiopia,"Addis Ababa",9.00038,38.7507,Education,,http://www.jrsea.org,JRS
+Ethiopia,"Addis Ababa",9.00038,38.7507,Food,,http://www.jrsea.org,JRS
+Ethiopia,"Addis Ababa",9.00038,38.7507,Livelihood,,http://www.jrsea.org,JRS
+Kenya,Dadaab,0.09819,40.2607,"Child Protection",,http://www.savethechildren.org.uk,SCUK
+Kenya,Dadaab,0.09819,40.2607,"Community Services",,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,"Community Services",,http://www.lwf-kenya.org/,LWF
+Kenya,Dadaab,0.09819,40.2607,"Community Services",,,UNV
+Kenya,Dadaab,0.09819,40.2607,"Core Relief Items (CRIs)",,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,"Core Relief Items (CRIs)",,http://www.giz.de/en/home.html,GIZ
+Kenya,Dadaab,0.09819,40.2607,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,Education,,http://www.adeo.or.ke,ADEO
+Kenya,Dadaab,0.09819,40.2607,Education,,,AVSI
+Kenya,Dadaab,0.09819,40.2607,Education,,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,Education,,http://www.drc.dk/,DRC
+Kenya,Dadaab,0.09819,40.2607,Education,,http://www.filmaid.org,FilmAid
+Kenya,Dadaab,0.09819,40.2607,Education,,http://www.lwf-kenya.org/,LWF
+Kenya,Dadaab,0.09819,40.2607,Education,,http://www.nrc.no/,NRC
+Kenya,Dadaab,0.09819,40.2607,Education,,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,Education,,,UNICEF
+Kenya,Dadaab,0.09819,40.2607,Education,,"http:// www.windle.org",WTK
+Kenya,Dadaab,0.09819,40.2607,Environment,,http://www.faidakenya.org,FaIDA
+Kenya,Dadaab,0.09819,40.2607,Environment,,http://www.rrdo.org,RRDO
+Kenya,Dadaab,0.09819,40.2607,Food,,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,Food,,http://www.nrc.no/,NRC
+Kenya,Dadaab,0.09819,40.2607,Food,,http://www.savethechildren.org.uk,SCUK
+Kenya,Dadaab,0.09819,40.2607,Food,,http://www.wfp.org/countries/kenya,WFP
+Kenya,Dadaab,0.09819,40.2607,"Gender-Based Violence",,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,"Gender-Based Violence",,http://www.rescue.org/,IRC
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.adeo.or.ke,ADEO
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.drc.dk/,DRC
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.filmaid.org,FilmAid
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.giz.de/en/home.html,GIZ
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.iom.int,IOM
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.rescue.org/,IRC
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.ncck.org/,NCCK
+Kenya,Dadaab,0.09819,40.2607,Health,,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,Health,,,UNV
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.adeo.or.ke,ADEO
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.filmaid.org,FilmAid
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.giz.de/en/home.html,GIZ
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.handicap-international.org,HI
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.ncck.org/,NCCK
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.savethechildren.org.uk,SCUK
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,HIV/AIDS,,"http:// www.windle.org",WTK
+Kenya,Dadaab,0.09819,40.2607,Livelihood,,http://www.iom.int,IOM
+Kenya,Dadaab,0.09819,40.2607,Logistics,,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,Logistics,,http://www.giz.de/en/home.html,GIZ
+Kenya,Dadaab,0.09819,40.2607,Logistics,,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,Nutrition,,http://www.adeo.or.ke,ADEO
+Kenya,Dadaab,0.09819,40.2607,Nutrition,,http://www.giz.de/en/home.html,GIZ
+Kenya,Dadaab,0.09819,40.2607,Nutrition,,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.drc.dk/,DRC
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.filmaid.org,FilmAid
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.giz.de/en/home.html,GIZ
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.lwf-kenya.org/,LWF
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.ncck.org/,NCCK
+Kenya,Dadaab,0.09819,40.2607,Protection,,www.rckkenya.org,RCK
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.savethechildren.org.uk,SCUK
+Kenya,Dadaab,0.09819,40.2607,Protection,,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,Registration,,http://www.refugees.go.ke/,DRA
+Kenya,Dadaab,0.09819,40.2607,Registration,,http://www.unhcr.org,UNHCR
+Kenya,Dadaab,0.09819,40.2607,Shelter,,http://www.iom.int,IOM
+Kenya,Dadaab,0.09819,40.2607,Shelter,,http://www.nrc.no/,NRC
+Kenya,Dadaab,0.09819,40.2607,Shelter,,http://www.shelterbox.org/,"Shelter Box"
+Kenya,Dadaab,0.09819,40.2607,Transportation,,http://www.iom.int,IOM
+Kenya,Dadaab,0.09819,40.2607,"Water & Sanitation",,http://www.care.or.ke,CARE
+Kenya,Dadaab,0.09819,40.2607,"Water & Sanitation",,http://www.welthungerhilfe.de,GAA
+Kenya,Dadaab,0.09819,40.2607,"Water & Sanitation",,http://www.ncck.org/,NCCK
+Kenya,Dadaab,0.09819,40.2607,"Water & Sanitation",,http://www.nrc.no/,NRC
+Kenya,Dadaab,0.09819,40.2607,"Water & Sanitation",,,OXFAM
+Kenya,Dadaab,0.09819,40.2607,"Water & Sanitation",,http://www.oxfam.org.uk/,Oxfam-GB
+Kenya,Dadaab,0.09819,40.2607,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+Kenya,Kakuma,3.70864,34.8612,"Community Services",,http://www.jrsea.org,JRS
+Kenya,Kakuma,3.70864,34.8612,"Community Services",,http://www.lwf-kenya.org/,LWF
+Kenya,Kakuma,3.70864,34.8612,Education,,http://www.jrsea.org,JRS
+Kenya,Kakuma,3.70864,34.8612,Education,,http://www.lwf-kenya.org/,LWF
+Kenya,Kakuma,3.70864,34.8612,Food,,http://www.lwf-kenya.org/,LWF
+Kenya,Kakuma,3.70864,34.8612,Food,,http://www.wfp.org/countries/kenya,WFP
+Kenya,Kakuma,3.70864,34.8612,"Gender-Based Violence",,http://www.jrsea.org,JRS
+Kenya,Kakuma,3.70864,34.8612,Protection,,http://www.jrsea.org,JRS
+Kenya,Kakuma,3.70864,34.8612,Protection,,http://www.lwf-kenya.org/,LWF
+Kenya,Kakuma,3.70864,34.8612,Registration,,http://www.refugees.go.ke/,DRA
+Kenya,Kakuma,3.70864,34.8612,"Water & Sanitation",,http://www.lwf-kenya.org/,LWF
+Kenya,Nairobi,-1.29147,36.8233,"Community Services",,,"Centre for Domestic Training & Development"
+Kenya,Nairobi,-1.29147,36.8233,"Community Services",,http://www.jrsea.org,JRS
+Kenya,Nairobi,-1.29147,36.8233,Education,,http://www.jrsea.org,JRS
+Kenya,Nairobi,-1.29147,36.8233,Food,,http://www.jrsea.org,JRS
+Kenya,Nairobi,-1.29147,36.8233,"Gender-Based Violence",,http://www.nrc.no/,NRC
+Kenya,Nairobi,-1.29147,36.8233,Livelihood,,http://www.jrsea.org,JRS
+Kenya,Nairobi,-1.29147,36.8233,Protection,,http://www.unhcr.org,UNHCR
+Kenya,Nairobi,-1.29147,36.8233,Registration,,http://www.refugees.go.ke/,DRA
+Kenya,Nairobi,-1.29147,36.8233,Registration,,http://www.unhcr.org,UNHCR
+Ethiopia,Jijiga,9.3549,42.7893,"Camp Management",,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,"Child Protection",,http://www.rescue.org/,IRC
+Ethiopia,Jijiga,9.3549,42.7893,"Core Relief Items (CRIs)",,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Education,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Education,,,DICAC
+Ethiopia,Jijiga,9.3549,42.7893,Education,,http://www.rescue.org/,IRC
+Ethiopia,Jijiga,9.3549,42.7893,Environment,,,"Gaia Association"
+Ethiopia,Jijiga,9.3549,42.7893,Environment,,http://www.lwf-kenya.org/,LWF
+Ethiopia,Jijiga,9.3549,42.7893,Environment,,,SeE
+Ethiopia,Jijiga,9.3549,42.7893,Food,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Food,,,RaDO
+Ethiopia,Jijiga,9.3549,42.7893,Food,,http://www.wfp.org/countries/kenya,WFP
+Ethiopia,Jijiga,9.3549,42.7893,"Gender-Based Violence",,http://www.rescue.org/,IRC
+Ethiopia,Jijiga,9.3549,42.7893,Health,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Health,,http://www.iom.int,IOM
+Ethiopia,Jijiga,9.3549,42.7893,Health,,http://www.rescue.org/,IRC
+Ethiopia,Jijiga,9.3549,42.7893,Health,,,RaDO
+Ethiopia,Jijiga,9.3549,42.7893,Livelihood,,,DICAC
+Ethiopia,Jijiga,9.3549,42.7893,Livelihood,,http://www.drc.dk/,DRC
+Ethiopia,Jijiga,9.3549,42.7893,Livelihood,,http://www.rescue.org/,IRC
+Ethiopia,Jijiga,9.3549,42.7893,Livelihood,,http://www.lwf-kenya.org/,LWF
+Ethiopia,Jijiga,9.3549,42.7893,Livelihood,,,MCDO
+Ethiopia,Jijiga,9.3549,42.7893,Livelihood,,,SeE
+Ethiopia,Jijiga,9.3549,42.7893,Livelihood,,http://www.unhcr.org,UNHCR
+Ethiopia,Jijiga,9.3549,42.7893,Logistics,,,AHADA
+Ethiopia,Jijiga,9.3549,42.7893,Logistics,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Logistics,,http://www.iom.int,IOM
+Ethiopia,Jijiga,9.3549,42.7893,Nutrition,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Protection,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Protection,,,ERC
+Ethiopia,Jijiga,9.3549,42.7893,Protection,,http://www.rescue.org/,IRC
+Ethiopia,Jijiga,9.3549,42.7893,Protection,,,MCDO
+Ethiopia,Jijiga,9.3549,42.7893,Protection,,http://www.unhcr.org,UNHCR
+Ethiopia,Jijiga,9.3549,42.7893,Registration,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Registration,,http://www.unhcr.org,UNHCR
+Ethiopia,Jijiga,9.3549,42.7893,Shelter,,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,Shelter,,,DICAC
+Ethiopia,Jijiga,9.3549,42.7893,Transportation,,http://www.iom.int,IOM
+Ethiopia,Jijiga,9.3549,42.7893,"Water & Sanitation",,http://www.arra.org.et,ARRA
+Ethiopia,Jijiga,9.3549,42.7893,"Water & Sanitation",,,JICA
+Ethiopia,Jijiga,9.3549,42.7893,"Water & Sanitation",,,JWCO
+Ethiopia,Jijiga,9.3549,42.7893,"Water & Sanitation",,,KWD
+Ethiopia,Jijiga,9.3549,42.7893,"Water & Sanitation",,http://www.lwf-kenya.org/,LWF
+Ethiopia,Jijiga,9.3549,42.7893,"Water & Sanitation",,,MCDO
+Liberia,"River Gee",5.29062,-7.83641,"Child Protection",,http://www.unicef.org/infobycountry/liberia.html,UNICEF
+Liberia,"River Gee",5.29062,-7.83641,Logistics,,,UNMIL
+Liberia,"River Gee",5.29062,-7.83641,Protection,,http://www.lrrrc.com/,LRRRC
+Liberia,Montserrado,6.48725,-10.5526,"Child Protection",,http://www.unicef.org/infobycountry/liberia.html,UNICEF
+Liberia,Montserrado,6.48725,-10.5526,"Gender-Based Violence",,,"UN Women"
+Liberia,"Grand Gedeh",5.92751,-8.22098,Agriculture,,,ADRA
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Camp Management",,http://www.care.org/,CARE
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Child Protection",,http://www.savethechildren.org.uk,SCUK
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Child Protection",,http://www.unicef.org/infobycountry/liberia.html,UNICEF
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Community Services",,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,Education,,http://www.savethechildren.org.uk,SCUK
+Liberia,"Grand Gedeh",5.92751,-8.22098,Environment,,http://www.care.org/,CARE
+Liberia,"Grand Gedeh",5.92751,-8.22098,Food,,http://www.wfp.org/countries/liberia,WFP
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Food Distribution",,http://www.care.org/,CARE
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Gender-Based Violence",,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,Health,,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Health Care Referral Services",,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,HIV/AIDS,,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,Livelihood,,,ADRA
+Liberia,"Grand Gedeh",5.92751,-8.22098,Logistics,,,AIRD
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Malaria Prevention and Control",,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Mental Health",,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,Nutrition,,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,Protection,,http://www.lrrrc.com/,LRRRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,Registration,,http://www.lrrrc.com/,LRRRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Reproductive Health",,http://www.rescue.org/,IRC
+Liberia,"Grand Gedeh",5.92751,-8.22098,Shelter,,http://www.care.org/,CARE
+Liberia,"Grand Gedeh",5.92751,-8.22098,"Water, Sanitation and Hygiene",,http://www.care.org/,CARE
+Liberia,Maryland,4.69688,-7.71281,Agriculture,,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,"Camp Management",,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,"Child Protection",,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,"Child Protection",,http://www.unicef.org/infobycountry/liberia.html,UNICEF
+Liberia,Maryland,4.69688,-7.71281,"Community Services",,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,Education,,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,Environment,,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,Food,,http://www.wfp.org/countries/liberia,WFP
+Liberia,Maryland,4.69688,-7.71281,"Food Distribution",,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,"Gender-Based Violence",,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,Livelihood,,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,Logistics,,,AIRD
+Liberia,Maryland,4.69688,-7.71281,Protection,,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,Protection,,http://www.lrrrc.com/,LRRRC
+Liberia,Maryland,4.69688,-7.71281,Registration,,http://www.lrrrc.com/,LRRRC
+Liberia,Maryland,4.69688,-7.71281,Shelter,,http://www.drc.dk/,DRC
+Liberia,Maryland,4.69688,-7.71281,"Water, Sanitation and Hygiene",,http://www.drc.dk/,DRC
+Liberia,Nimba,6.9755,-8.6965,"Camp Management",,http://www.care.org/,CARE
+Liberia,Nimba,6.9755,-8.6965,"Child Protection",,http://www.savethechildren.org.uk,SCUK
+Liberia,Nimba,6.9755,-8.6965,"Child Protection",,http://www.unicef.org/infobycountry/liberia.html,UNICEF
+Liberia,Nimba,6.9755,-8.6965,Education,,http://www.savethechildren.org.uk,SCUK
+Liberia,Nimba,6.9755,-8.6965,Food,,http://www.wfp.org/countries/liberia,WFP
+Liberia,Nimba,6.9755,-8.6965,"Food Distribution",,http://www.care.org/,CARE
+Liberia,Nimba,6.9755,-8.6965,"Gender-Based Violence",,http://www.rescue.org/,IRC
+Liberia,Nimba,6.9755,-8.6965,Health,,,AHA
+Liberia,Nimba,6.9755,-8.6965,"Health Care Referral Services",,,AHA
+Liberia,Nimba,6.9755,-8.6965,HIV/AIDS,,,AHA
+Liberia,Nimba,6.9755,-8.6965,"Malaria Prevention and Control",,,AHA
+Liberia,Nimba,6.9755,-8.6965,"Mental Health",,,AHA
+Liberia,Nimba,6.9755,-8.6965,Nutrition,,,AHA
+Liberia,Nimba,6.9755,-8.6965,Protection,,http://www.lrrrc.com/,LRRRC
+Liberia,Nimba,6.9755,-8.6965,Registration,,http://www.lrrrc.com/,LRRRC
+Liberia,Nimba,6.9755,-8.6965,"Reproductive Health",,,AHA
+Liberia,Nimba,6.9755,-8.6965,"Water, Sanitation and Hygiene",,http://www.care.org/,CARE
+"Mali Situation",Niger,15.5807,4.83399,Agriculture,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,"Camp Management",,http://www.acted.org,ACTED
+"Mali Situation",Niger,15.5807,4.83399,"Camp Management",,,ADKOUL
+"Mali Situation",Niger,15.5807,4.83399,"Camp Management",,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation",Niger,15.5807,4.83399,"Child Protection",,,IRC
+"Mali Situation",Niger,15.5807,4.83399,"Child Protection",,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,"Child Protection",,http://www.unicef.org/,UNICEF
+"Mali Situation",Niger,15.5807,4.83399,"Community Services",,,ADKOUL
+"Mali Situation",Niger,15.5807,4.83399,"Community Services",,,ASA
+"Mali Situation",Niger,15.5807,4.83399,"Community Services",,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation",Niger,15.5807,4.83399,"Community Services",,,IRC
+"Mali Situation",Niger,15.5807,4.83399,"Community Services",,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,"Core Relief Items (CRIs)",,,ADKOUL
+"Mali Situation",Niger,15.5807,4.83399,"Core Relief Items (CRIs)",,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation",Niger,15.5807,4.83399,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,"Core Relief Items (CRIs)",,http://www.unicef.org/,UNICEF
+"Mali Situation",Niger,15.5807,4.83399,Education,,,ADKOUL
+"Mali Situation",Niger,15.5807,4.83399,Education,,,GoN
+"Mali Situation",Niger,15.5807,4.83399,Education,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation",Niger,15.5807,4.83399,Education,,http://www.oxfam.org,Oxfam
+"Mali Situation",Niger,15.5807,4.83399,Education,,http://plan-international.org/where-we-work/africa/niger/,"Plan (Niger)"
+"Mali Situation",Niger,15.5807,4.83399,Education,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Education,,http://www.unicef.org/,UNICEF
+"Mali Situation",Niger,15.5807,4.83399,Environment,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Food,,,ADKOUL
+"Mali Situation",Niger,15.5807,4.83399,Food,,,CR-N
+"Mali Situation",Niger,15.5807,4.83399,Food,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation",Niger,15.5807,4.83399,Food,,http://plan-international.org/where-we-work/africa/niger/,"Plan (Niger)"
+"Mali Situation",Niger,15.5807,4.83399,Food,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Food,,http://www.wfp.org/,WFP
+"Mali Situation",Niger,15.5807,4.83399,"Gender-Based Violence",,,IRC
+"Mali Situation",Niger,15.5807,4.83399,"Gender-Based Violence",,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Health,,,APBE
+"Mali Situation",Niger,15.5807,4.83399,Health,,,CR-Q
+"Mali Situation",Niger,15.5807,4.83399,Health,,,GoN/MoH
+"Mali Situation",Niger,15.5807,4.83399,Health,,http://www.who.int/en/,OMS
+"Mali Situation",Niger,15.5807,4.83399,Health,,http://niger.unfpa.org/,UNFPA
+"Mali Situation",Niger,15.5807,4.83399,Health,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Health,,http://www.unicef.org/,UNICEF
+"Mali Situation",Niger,15.5807,4.83399,HIV/AIDS,,,APBE
+"Mali Situation",Niger,15.5807,4.83399,Logistics,,http://www.caritas-africa.org/niger.htm,CADEV
+"Mali Situation",Niger,15.5807,4.83399,Logistics,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation",Niger,15.5807,4.83399,Logistics,,,"OIM / IOM"
+"Mali Situation",Niger,15.5807,4.83399,Logistics,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Nutrition,,,APBE
+"Mali Situation",Niger,15.5807,4.83399,Nutrition,,,CR-Q
+"Mali Situation",Niger,15.5807,4.83399,Nutrition,,,GoN/MoH
+"Mali Situation",Niger,15.5807,4.83399,Nutrition,,,MSF-F
+"Mali Situation",Niger,15.5807,4.83399,Nutrition,,http://www.unicef.org/,UNICEF
+"Mali Situation",Niger,15.5807,4.83399,Nutrition,,http://www.wfp.org/,WFP
+"Mali Situation",Niger,15.5807,4.83399,Protection,,http://www.caritas-africa.org/niger.htm,CADEV
+"Mali Situation",Niger,15.5807,4.83399,Protection,,,CNE
+"Mali Situation",Niger,15.5807,4.83399,Protection,,,GoN
+"Mali Situation",Niger,15.5807,4.83399,Protection,,,IRC
+"Mali Situation",Niger,15.5807,4.83399,Protection,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Registration,,,CNE
+"Mali Situation",Niger,15.5807,4.83399,Registration,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Shelter,,http://www.croix-rouge.lu/,CRL
+"Mali Situation",Niger,15.5807,4.83399,Shelter,,,GoN
+"Mali Situation",Niger,15.5807,4.83399,Shelter,,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,Shelter,,http://www.unicef.org/,UNICEF
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.acted.org,ACTED
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,,ADKOUL
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.adra.org/,ADRA
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.cicr.org/fre,CICR
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,,CR-Q
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.oxfam.org,Oxfam
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://plan-international.org/where-we-work/africa/niger/,"Plan (Niger)"
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.unicef.org/,UNICEF
+"Mali Situation",Niger,15.5807,4.83399,"Water & Sanitation",,http://www.wvi.org/wvi/wviweb.nsf,"Word Vision"
+"Mali Situation",Mauritania,18.3128,-8.26174,"Camp Management",,http://www.lutheranworld.org/lwf/,LWF
+"Mali Situation",Mauritania,18.3128,-8.26174,"Camp Management",,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Child Protection",,http://www.intersos.org/,INTERSOS
+"Mali Situation",Mauritania,18.3128,-8.26174,"Child Protection",,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Child Protection",,http://www.unicef.org/,UNICEF
+"Mali Situation",Mauritania,18.3128,-8.26174,"Community Services",,http://www.intersos.org/,INTERSOS
+"Mali Situation",Mauritania,18.3128,-8.26174,"Community Services",,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Core Relief Items (CRIs)",,http://www.adra.org/,ADRA
+"Mali Situation",Mauritania,18.3128,-8.26174,"Core Relief Items (CRIs)",,http://www.cicr.org/fre,CICR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Core Relief Items (CRIs)",,http://www.lutheranworld.org/lwf/,LWF
+"Mali Situation",Mauritania,18.3128,-8.26174,"Core Relief Items (CRIs)",,,"MSF Belge"
+"Mali Situation",Mauritania,18.3128,-8.26174,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Core Relief Items (CRIs)",,http://www.unicef.org/,UNICEF
+"Mali Situation",Mauritania,18.3128,-8.26174,Education,,http://www.intersos.org/,INTERSOS
+"Mali Situation",Mauritania,18.3128,-8.26174,Education,,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,Education,,http://www.unicef.org/,UNICEF
+"Mali Situation",Mauritania,18.3128,-8.26174,Food,,,CSA
+"Mali Situation",Mauritania,18.3128,-8.26174,Food,,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,Food,,http://www.wfp.org/,WFP
+"Mali Situation",Mauritania,18.3128,-8.26174,Health,,,GoM
+"Mali Situation",Mauritania,18.3128,-8.26174,Health,,,"MSF Belge"
+"Mali Situation",Mauritania,18.3128,-8.26174,Health,,http://niger.unfpa.org/,UNFPA
+"Mali Situation",Mauritania,18.3128,-8.26174,Health,,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,Health,,http://www.unicef.org/,UNICEF
+"Mali Situation",Mauritania,18.3128,-8.26174,Logistics,,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,Nutrition,,,GoM
+"Mali Situation",Mauritania,18.3128,-8.26174,Nutrition,,,"MSF Belge"
+"Mali Situation",Mauritania,18.3128,-8.26174,Nutrition,,http://www.unicef.org/,UNICEF
+"Mali Situation",Mauritania,18.3128,-8.26174,Nutrition,,http://www.wfp.org/,WFP
+"Mali Situation",Mauritania,18.3128,-8.26174,Protection,,,ALPD
+"Mali Situation",Mauritania,18.3128,-8.26174,Protection,,http://www.intersos.org/,INTERSOS
+"Mali Situation",Mauritania,18.3128,-8.26174,Protection,,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,Protection,,http://www.unicef.org/,UNICEF
+"Mali Situation",Mauritania,18.3128,-8.26174,Registration,,,ALPD
+"Mali Situation",Mauritania,18.3128,-8.26174,Registration,,,GoM
+"Mali Situation",Mauritania,18.3128,-8.26174,Registration,,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,Shelter,,,GoM
+"Mali Situation",Mauritania,18.3128,-8.26174,Shelter,,http://www.lutheranworld.org/lwf/,LWF
+"Mali Situation",Mauritania,18.3128,-8.26174,Shelter,,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Water & Sanitation",,http://www.cicr.org/fre,CICR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Water & Sanitation",,,GoM
+"Mali Situation",Mauritania,18.3128,-8.26174,"Water & Sanitation",,,"MSF Belge"
+"Mali Situation",Mauritania,18.3128,-8.26174,"Water & Sanitation",,,Oxfam
+"Mali Situation",Mauritania,18.3128,-8.26174,"Water & Sanitation",,http://www.solidarites.org/default.shtml,"SOLIDARITES INTERNATIONAL"
+"Mali Situation",Mauritania,18.3128,-8.26174,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+"Mali Situation",Mauritania,18.3128,-8.26174,"Water & Sanitation",,http://www.unicef.org/,UNICEF
+"Nigeria Situation",Niger,14.4347,12.3486,"Child Protection",,http://www.unicef.org/,UNICEF
+"Nigeria Situation",Niger,14.4347,12.3486,"Core Relief Items (CRIs)",,,"OIM / IOM"
+"Nigeria Situation",Niger,14.4347,12.3486,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"Nigeria Situation",Niger,14.4347,12.3486,Food,,http://www.cicr.org/fre,CICR
+"Nigeria Situation",Niger,14.4347,12.3486,Food,,http://www.wfp.org/,WFP
+"Nigeria Situation",Niger,14.4347,12.3486,Health,,http://www.who.int/en/,OMS
+"Nigeria Situation",Niger,14.4347,12.3486,Nutrition,,http://www.wfp.org/,WFP
+"Nigeria Situation",Niger,14.4347,12.3486,Protection,,,CNE
+"Nigeria Situation",Niger,14.4347,12.3486,Protection,,,IRC
+"Nigeria Situation",Niger,14.4347,12.3486,Protection,,http://www.unhcr.org,UNHCR
+"Nigeria Situation",Niger,14.4347,12.3486,Registration,,http://www.acted.org,ACTED
+"Nigeria Situation",Niger,14.4347,12.3486,Shelter,,http://www.croix-rouge.lu/,CRL
+"Nigeria Situation",Niger,14.4347,12.3486,Transportation,,,"OIM / IOM"
+"Nigeria Situation",Niger,14.4347,12.3486,"Water & Sanitation",,http://www.cicr.org/fre,CICR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Agriculture,,,CRS
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Agriculture,,,FAO
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Agriculture,,http://www.help-ev.de/en/projects/burkinafaso/,HELP-Germany
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Agriculture,,,MAE
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Agriculture,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Agriculture,,http://www.veterinairessansfrontieres.be,VSF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Camp Management",,,CONAREF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Camp Management",,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Camp Management",,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Core Relief Items (CRIs)",,http://www.croixrougebk.org,CR-BKF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Core Relief Items (CRIs)",,,CRS
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Education,,,CREDO
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Education,,,MENA
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Education,,http://www.nrc.no/?did=9654105,NRC
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Education,,,"Plan Burkina"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Education,,,TDH
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Education,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Education,,http://www.unicef.org/,UNICEF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Environment,,http://www.help-ev.de/en/projects/burkinafaso/,HELP-Germany
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Environment,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Environment,,,"OCADES CARITAS"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Environment,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Food,,http://www.croixrougebk.org,CR-BKF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Food,,,Hope87
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Food,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Food,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Food,,http://www.wfp.org/,WFP
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.croixrougebk.org,CR-BKF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.croix-rouge.fr/,CR-Fr
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,,CREDO
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.unhcr.org/48fdebb716.html,CSSI
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,,"GoBKF/Ministere de la Sante"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.medicosdelmundo.org,MDM-E
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,,MDM-F
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,,MSF-F
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.nrc.no/?did=9654105,NRC
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.who.int/en/,OMS
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,,"Ordre de Malte"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,,TDH
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://niger.unfpa.org/,UNFPA
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Health,,http://www.unicef.org/,UNICEF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Livelihood,,,CREDO
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Livelihood,,,TDH
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Livelihood,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Logistics,,airdinternational.org,AIRD
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Logistics,,,CONAREF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Logistics,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Logistics,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Nutrition,,,"GoBKF/Ministere de la Sante"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Nutrition,,,MDM-F
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Nutrition,,,MSF-F
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Nutrition,,http://www.savethechildren.ca,"Save The Children"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Nutrition,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Nutrition,,http://www.unicef.org/,UNICEF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Nutrition,,http://www.wfp.org/,WFP
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,,CREDO
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,http://www.drc.dk/home/,DRC
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,,CONAREF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,,"GoBKF/Ministere de la Sante"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,,"OCADES CARITAS"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,,"Plan Burkina"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,,TDH
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,http://niger.unfpa.org/,UNFPA
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Protection,,http://www.unicef.org/,UNICEF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Registration,,,CONAREF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Registration,,http://www.iedarelief.org,IEDA-Relief
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Registration,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Shelter,,http://www.cicr.org/fre,CICR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Shelter,,http://www.croixrougebk.org,CR-BKF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Shelter,,,CONAREF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Shelter,,,GoBKF/CONASUR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Shelter,,http://www.nrc.no/?did=9654105,NRC
+"Mali Situation","Burkina Faso",13.1971,-2.74658,Shelter,,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,http://www.croixrougebk.org,CR-BKF
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,http://www.croix-rouge.mc,CR-Monegasque
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,,CREDO
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,,CRS
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,http://www.help-ev.de/en/projects/burkinafaso/,HELP-Germany
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,http://www.nrc.no/?did=9654105,NRC
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,http://www.oxfam.org,Oxfam
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,,"Plan Burkina"
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+"Mali Situation","Burkina Faso",13.1971,-2.74658,"Water & Sanitation",,http://www.unicef.org/,UNICEF
+"South Sudan",Unity,9.002,30.99,Agriculture,,http://www.acted.org,ACTED
+"South Sudan",Unity,9.002,30.99,"Camp Management",,http://www.intersos.org/en,INTERSOS
+"South Sudan",Unity,9.002,30.99,"Camp Management",,http://www.unhcr.org,UNHCR
+"South Sudan",Unity,9.002,30.99,"Child Protection",,http://www.intersos.org/en,INTERSOS
+"South Sudan",Unity,9.002,30.99,"Child Protection",,http://www.nonviolentpeaceforce.org/,NP
+"South Sudan",Unity,9.002,30.99,"Child Protection",,http://www.unhcr.org,UNHCR
+"South Sudan",Unity,9.002,30.99,"Child Protection",,http://www.unicef.org,UNICEF
+"South Sudan",Unity,9.002,30.99,"Core Relief Items (CRIs)",,http://www.intersos.org/en,INTERSOS
+"South Sudan",Unity,9.002,30.99,"Core Relief Items (CRIs)",,http://www.samaritanspurse.org/,SP
+"South Sudan",Unity,9.002,30.99,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"South Sudan",Unity,9.002,30.99,Education,,http://www.ibis.dk/eng/index.php,IBIS
+"South Sudan",Unity,9.002,30.99,Education,,http://www.intersos.org/en,INTERSOS
+"South Sudan",Unity,9.002,30.99,Education,,http://www.savethechildren.net,"Save the Children"
+"South Sudan",Unity,9.002,30.99,Food,,http://www.samaritanspurse.org/,SP
+"South Sudan",Unity,9.002,30.99,Food,,,WFP
+"South Sudan",Unity,9.002,30.99,Food,,http://www.wvi.org,"World Vision"
+"South Sudan",Unity,9.002,30.99,"Gender-Based Violence",,,IRC
+"South Sudan",Unity,9.002,30.99,Health,,http://www.care.org,CARE
+"South Sudan",Unity,9.002,30.99,Health,,,IRC
+"South Sudan",Unity,9.002,30.99,Health,,http://www.who.int/countries/ssd/en/,Seo
+"South Sudan",Unity,9.002,30.99,Livelihood,,http://www.acted.org,ACTED
+"South Sudan",Unity,9.002,30.99,Nutrition,,http://www.samaritanspurse.org/,SP
+"South Sudan",Unity,9.002,30.99,Protection,,,ICRC
+"South Sudan",Unity,9.002,30.99,Protection,,http://www.intersos.org/en,INTERSOS
+"South Sudan",Unity,9.002,30.99,Protection,,,IRC
+"South Sudan",Unity,9.002,30.99,Protection,,http://www.nonviolentpeaceforce.org/,NP
+"South Sudan",Unity,9.002,30.99,Protection,,http://www.unhcr.org,UNHCR
+"South Sudan",Unity,9.002,30.99,Registration,,http://www.unhcr.org,UNHCR
+"South Sudan",Unity,9.002,30.99,Shelter,,http://www.intersos.org/en,INTERSOS
+"South Sudan",Unity,9.002,30.99,"Water & Sanitation",,,"African Water"
+"South Sudan",Unity,9.002,30.99,"Water & Sanitation",,http://www.intersos.org/en,INTERSOS
+"South Sudan",Unity,9.002,30.99,"Water & Sanitation",,http://www.solidarites.org/defaulteng.shtml,Solidarités
+"South Sudan",Unity,9.002,30.99,"Water & Sanitation",,http://www.samaritanspurse.org/,SP
+"South Sudan","Upper Nile",10.301,33.533,Agriculture,,http://www.cafod.org.uk/,CAFOD
+"South Sudan","Upper Nile",10.301,33.533,"Camp Management",,http://www.acted.org,ACTED
+"South Sudan","Upper Nile",10.301,33.533,"Camp Management",,http://www.drc.dk/,DRC
+"South Sudan","Upper Nile",10.301,33.533,"Camp Management",,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,"Child Protection",,http://www.intersos.org/en,INTERSOS
+"South Sudan","Upper Nile",10.301,33.533,"Child Protection",,http://www.lutheranworld.org/lwf/index.php/themes/dws-country-programs/dws-south-sudan,LWF
+"South Sudan","Upper Nile",10.301,33.533,"Child Protection",,http://www.savethechildren.net,"Save the Children"
+"South Sudan","Upper Nile",10.301,33.533,"Child Protection",,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,"Child Protection",,http://www.unicef.org,UNICEF
+"South Sudan","Upper Nile",10.301,33.533,"Community Services",,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,"Core Relief Items (CRIs)",,http://www.acted.org,ACTED
+"South Sudan","Upper Nile",10.301,33.533,"Core Relief Items (CRIs)",,http://www.drc.dk/,DRC
+"South Sudan","Upper Nile",10.301,33.533,"Core Relief Items (CRIs)",,http://www.iom.int,IOM
+"South Sudan","Upper Nile",10.301,33.533,"Core Relief Items (CRIs)",,http://www.oxfam.org.uk/,OGB
+"South Sudan","Upper Nile",10.301,33.533,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,Education,,http://www.intersos.org/en,INTERSOS
+"South Sudan","Upper Nile",10.301,33.533,Education,,http://www.lutheranworld.org/lwf/index.php/themes/dws-country-programs/dws-south-sudan,LWF
+"South Sudan","Upper Nile",10.301,33.533,Education,,,MoE
+"South Sudan","Upper Nile",10.301,33.533,Education,,http://www.savethechildren.net,"Save the Children"
+"South Sudan","Upper Nile",10.301,33.533,Education,,http://www.unicef.org,UNICEF
+"South Sudan","Upper Nile",10.301,33.533,Education,,http://www.windle.org.uk/,"Windle Trust"
+"South Sudan","Upper Nile",10.301,33.533,Environment,,http://www.acted.org,ACTED
+"South Sudan","Upper Nile",10.301,33.533,Environment,,http://www.drc.dk/,DRC
+"South Sudan","Upper Nile",10.301,33.533,Food,,http://www.acted.org,ACTED
+"South Sudan","Upper Nile",10.301,33.533,Food,,http://www.samaritanspurse.org/,SP
+"South Sudan","Upper Nile",10.301,33.533,Food,,,WFP
+"South Sudan","Upper Nile",10.301,33.533,"Gender-Based Violence",,http://www.arcrelief.org,ARC
+"South Sudan","Upper Nile",10.301,33.533,"Gender-Based Violence",,http://www.drc.dk/,DRC
+"South Sudan","Upper Nile",10.301,33.533,"Gender-Based Violence",,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,Health,,http://internationalmedicalcorps.org/,IMC
+"South Sudan","Upper Nile",10.301,33.533,Health,,http://relief.medair.org,MEDAIR
+"South Sudan","Upper Nile",10.301,33.533,Health,,,MENTOR
+"South Sudan","Upper Nile",10.301,33.533,Health,,http://www.mohgoss.com/,MoH
+"South Sudan","Upper Nile",10.301,33.533,Health,,http://www.sim.org,SIM
+"South Sudan","Upper Nile",10.301,33.533,Health,,http://www.who.int/countries/ssd/en/,Seo
+"South Sudan","Upper Nile",10.301,33.533,HIV/AIDS,,http://www.mohgoss.com/,MoH
+"South Sudan","Upper Nile",10.301,33.533,Livelihood,,http://www.ri.org/,RI
+"South Sudan","Upper Nile",10.301,33.533,Livelihood,,,VSF
+"South Sudan","Upper Nile",10.301,33.533,Logistics,,,UNHAS
+"South Sudan","Upper Nile",10.301,33.533,Logistics,,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,Nutrition,,http://internationalmedicalcorps.org/,IMC
+"South Sudan","Upper Nile",10.301,33.533,Nutrition,,http://www.samaritanspurse.org/,SP
+"South Sudan","Upper Nile",10.301,33.533,Protection,,http://www.drc.dk/,DRC
+"South Sudan","Upper Nile",10.301,33.533,Protection,,,ICRC
+"South Sudan","Upper Nile",10.301,33.533,Protection,,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,Registration,,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,Shelter,,http://www.acted.org,ACTED
+"South Sudan","Upper Nile",10.301,33.533,Shelter,,http://www.drc.dk/,DRC
+"South Sudan","Upper Nile",10.301,33.533,Shelter,,http://www.unhcr.org,UNHCR
+"South Sudan","Upper Nile",10.301,33.533,"Water & Sanitation",,http://www.iom.int,IOM
+"South Sudan","Upper Nile",10.301,33.533,"Water & Sanitation",,http://relief.medair.org,MEDAIR
+"South Sudan","Upper Nile",10.301,33.533,"Water & Sanitation",,http://www.oxfam.org.uk/,OGB
+"South Sudan","Upper Nile",10.301,33.533,"Water & Sanitation",,https://www.pae.com/,PAE
+"South Sudan","Upper Nile",10.301,33.533,"Water & Sanitation",,http://www.solidarites.org/defaulteng.shtml,Solidarités
+"South Sudan","Upper Nile",10.301,33.533,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+Ethiopia,Gambella,7.83333,34.5,"Camp Management",,,ARRA
+Ethiopia,Gambella,7.83333,34.5,"Child Protection",,,ARRA
+Ethiopia,Gambella,7.83333,34.5,"Child Protection",,http://www.savethechildren.net,"Save the Children"
+Ethiopia,Gambella,7.83333,34.5,"Community Services",,,ARRA
+Ethiopia,Gambella,7.83333,34.5,"Community Services",,http://www.helpage.org/,HelpAge
+Ethiopia,Gambella,7.83333,34.5,"Community Services",,http://internationalmedicalcorps.org/,IMC
+Ethiopia,Gambella,7.83333,34.5,"Community Services",,,RaDO
+Ethiopia,Gambella,7.83333,34.5,"Community Services",,http://www.unhcr.org,UNHCR
+Ethiopia,Gambella,7.83333,34.5,"Core Relief Items (CRIs)",,,ARRA
+Ethiopia,Gambella,7.83333,34.5,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+Ethiopia,Gambella,7.83333,34.5,Education,,,ARRA
+Ethiopia,Gambella,7.83333,34.5,Education,,,DICAC
+Ethiopia,Gambella,7.83333,34.5,Education,,https://www.nrc.no/,NRC
+Ethiopia,Gambella,7.83333,34.5,Education,,http://www.bds-ethiopia.net/oice/,OIC-E
+Ethiopia,Gambella,7.83333,34.5,Education,,http://plan-international.org/,PI
+Ethiopia,Gambella,7.83333,34.5,Education,,http://www.savethechildren.net,"Save the Children"
+Ethiopia,Gambella,7.83333,34.5,Environment,,,NRDEP
+Ethiopia,Gambella,7.83333,34.5,Environment,,http://zoa.org/,ZOA
+Ethiopia,Gambella,7.83333,34.5,Food,,,ARRA
+Ethiopia,Gambella,7.83333,34.5,"Gender-Based Violence",,http://internationalmedicalcorps.org/,IMC
+Ethiopia,Gambella,7.83333,34.5,"Gender-Based Violence",,,IRC
+Ethiopia,Gambella,7.83333,34.5,"Gender-Based Violence",,,RaDO
+Ethiopia,Gambella,7.83333,34.5,Health,,,ARRA
+Ethiopia,Gambella,7.83333,34.5,Health,,,"MSF - F"
+Ethiopia,Gambella,7.83333,34.5,HIV/AIDS,,,ARRA
+Ethiopia,Gambella,7.83333,34.5,HIV/AIDS,,,"MSF - F"
+Ethiopia,Gambella,7.83333,34.5,HIV/AIDS,,,RaDO
+Ethiopia,Gambella,7.83333,34.5,Livelihood,,http://www.drc.dk/,DRC
+Ethiopia,Gambella,7.83333,34.5,Livelihood,,https://www.nrc.no/,NRC
+Ethiopia,Gambella,7.83333,34.5,Livelihood,,http://zoa.org/,ZOA
+Ethiopia,Gambella,7.83333,34.5,Logistics,,http://www.unhcr.org,UNHCR
+Ethiopia,Gambella,7.83333,34.5,Nutrition,,http://www.actioncontrelafaim.org/en/,ACF
+Ethiopia,Gambella,7.83333,34.5,Nutrition,,,ARRA
+Ethiopia,Gambella,7.83333,34.5,Protection,,http://www.unhcr.org,UNHCR
+Ethiopia,Gambella,7.83333,34.5,Registration,,,ARRA
+Ethiopia,Gambella,7.83333,34.5,Registration,,http://www.unhcr.org,UNHCR
+Ethiopia,Gambella,7.83333,34.5,Shelter,,http://www.drc.dk/,DRC
+Ethiopia,Gambella,7.83333,34.5,Shelter,,http://www.iom.int,IOM
+Ethiopia,Gambella,7.83333,34.5,Shelter,,https://www.nrc.no/,NRC
+Ethiopia,Gambella,7.83333,34.5,"Water & Sanitation",,http://www.actioncontrelafaim.org/en/,ACF
+Ethiopia,Gambella,7.83333,34.5,"Water & Sanitation",,http://www.drc.dk/,DRC
+Ethiopia,Gambella,7.83333,34.5,"Water & Sanitation",,,IRC
+Ethiopia,Gambella,7.83333,34.5,"Water & Sanitation",,http://www.lutheranworld.org/lwf/index.php/themes/dws-country-programs/dws-south-sudan,LWF
+Ethiopia,Gambella,7.83333,34.5,"Water & Sanitation",,http://www.msf-me.org/en/office/msf-offices-world-wide/netherlands.html,"MSF - H"
+Ethiopia,Gambella,7.83333,34.5,"Water & Sanitation",,https://www.nrc.no/,NRC
+"South Sudan","Central Equatoria",4.801,32.176,"Camp Management",,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,"Child Protection",,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,"Child Protection",,http://www.unhcr.org,UNHCR
+"South Sudan","Central Equatoria",4.801,32.176,"Community Services",,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,"Community Services",,http://www.unhcr.org,UNHCR
+"South Sudan","Central Equatoria",4.801,32.176,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"South Sudan","Central Equatoria",4.801,32.176,Education,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,Environment,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,Food,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,"Gender-Based Violence",,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,Health,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,HIV/AIDS,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,Livelihood,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,Logistics,,http://www.giz.de/en/home.html,GiZ
+"South Sudan","Central Equatoria",4.801,32.176,Logistics,,http://www.unhcr.org,UNHCR
+"South Sudan","Central Equatoria",4.801,32.176,Nutrition,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,Protection,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,Protection,,http://www.unhcr.org,UNHCR
+"South Sudan","Central Equatoria",4.801,32.176,Registration,,http://www.unhcr.org,UNHCR
+"South Sudan","Central Equatoria",4.801,32.176,Shelter,,http://www.across-sudan.org,ACROSS
+"South Sudan","Central Equatoria",4.801,32.176,"Water & Sanitation",,http://www.across-sudan.org,ACROSS
+"South Sudan",Jonglei,7.714,33.22,"Child Protection",,http://www.unhcr.org,UNHCR
+"South Sudan",Jonglei,7.714,33.22,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"South Sudan",Jonglei,7.714,33.22,Education,,,MoE
+"South Sudan",Jonglei,7.714,33.22,Food,,,WFP
+"South Sudan",Jonglei,7.714,33.22,Health,,http://internationalmedicalcorps.org/,IMC
+"South Sudan",Jonglei,7.714,33.22,HIV/AIDS,,http://internationalmedicalcorps.org/,IMC
+"South Sudan",Jonglei,7.714,33.22,HIV/AIDS,,http://www.mohgoss.com/,MoH
+"South Sudan",Jonglei,7.714,33.22,Protection,,http://www.unhcr.org,UNHCR
+"South Sudan",Jonglei,7.714,33.22,Registration,,http://www.unhcr.org,UNHCR
+"South Sudan",Jonglei,7.714,33.22,"Water & Sanitation",,http://internationalmedicalcorps.org/,IMC
+Ethiopia,Assosa,10.0185,34.5863,"Camp Management",,,ARRA
+Ethiopia,Assosa,10.0185,34.5863,"Child Protection",,http://www.savethechildren.net,"Save the Children"
+Ethiopia,Assosa,10.0185,34.5863,"Core Relief Items (CRIs)",,,ARRA
+Ethiopia,Assosa,10.0185,34.5863,Education,,,ARRA
+Ethiopia,Assosa,10.0185,34.5863,Education,,,DICAC
+Ethiopia,Assosa,10.0185,34.5863,Education,,http://www.lutheranworld.org/lwf/index.php/themes/dws-country-programs/dws-south-sudan,LWF
+Ethiopia,Assosa,10.0185,34.5863,Education,,http://www.savethechildren.net,"Save the Children"
+Ethiopia,Assosa,10.0185,34.5863,Environment,,http://www.lutheranworld.org/lwf/index.php/themes/dws-country-programs/dws-south-sudan,LWF
+Ethiopia,Assosa,10.0185,34.5863,Environment,,,NRDEP
+Ethiopia,Assosa,10.0185,34.5863,Food,,,ARRA
+Ethiopia,Assosa,10.0185,34.5863,"Gender-Based Violence",,,IRC
+Ethiopia,Assosa,10.0185,34.5863,Health,,,"MSF - F"
+Ethiopia,Assosa,10.0185,34.5863,HIV/AIDS,,,IRC
+Ethiopia,Assosa,10.0185,34.5863,HIV/AIDS,,,"MSF - F"
+Ethiopia,Assosa,10.0185,34.5863,Logistics,,http://www.iom.int,IOM
+Ethiopia,Assosa,10.0185,34.5863,Nutrition,,,"MSF - F"
+"South Sudan","Western Equatoria",5.654,27,"Camp Management",,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,"Child Protection",,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,"Child Protection",,http://www.unhcr.org,UNHCR
+"South Sudan","Western Equatoria",5.654,27,"Community Services",,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+"South Sudan","Western Equatoria",5.654,27,Education,,http://www.wvi.org,"World Vision"
+"South Sudan","Western Equatoria",5.654,27,Food,,,WFP
+"South Sudan","Western Equatoria",5.654,27,Food,,http://www.wvi.org,"World Vision"
+"South Sudan","Western Equatoria",5.654,27,"Gender-Based Violence",,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,"Gender-Based Violence",,http://www.wvi.org,"World Vision"
+"South Sudan","Western Equatoria",5.654,27,Health,,http://www.wvi.org,"World Vision"
+"South Sudan","Western Equatoria",5.654,27,HIV/AIDS,,http://www.cmmb.org/,CMMB
+"South Sudan","Western Equatoria",5.654,27,Livelihood,,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,Logistics,,http://www.giz.de/en/home.html,GiZ
+"South Sudan","Western Equatoria",5.654,27,Logistics,,http://www.unhcr.org,UNHCR
+"South Sudan","Western Equatoria",5.654,27,Nutrition,,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,Protection,,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,Protection,,http://www.unhcr.org,UNHCR
+"South Sudan","Western Equatoria",5.654,27,Registration,,http://www.unhcr.org,UNHCR
+"South Sudan","Western Equatoria",5.654,27,Shelter,,http://www.intersos.org/en,INTERSOS
+"South Sudan","Western Equatoria",5.654,27,"Water & Sanitation",,http://www.intersos.org/en,INTERSOS
+Jordan,"Ajlun Governorate",32.322,35.7578,"Cash Assistance",,http://www.acted.org/,ACTED
+Jordan,"Ajlun Governorate",32.322,35.7578,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Ajlun Governorate",32.322,35.7578,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Jordan,"Ajlun Governorate",32.322,35.7578,"Child Protection",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Ajlun Governorate",32.322,35.7578,"Core Relief Items (CRIs)",,http://www.acted.org/,ACTED
+Jordan,"Ajlun Governorate",32.322,35.7578,Education,,,IRD
+Jordan,"Ajlun Governorate",32.322,35.7578,Education,,http://www.savethechildren.org,SC
+Jordan,"Ajlun Governorate",32.322,35.7578,Education,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Ajlun Governorate",32.322,35.7578,"Food Security",,http://www.MEDAIR.org,Medair
+Jordan,"Ajlun Governorate",32.322,35.7578,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Ajlun Governorate",32.322,35.7578,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Ajlun Governorate",32.322,35.7578,Health,,http://internationalmedicalcorps.org,IMC
+Jordan,"Ajlun Governorate",32.322,35.7578,Health,,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Ajlun Governorate",32.322,35.7578,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Ajlun Governorate",32.322,35.7578,Protection,,,IRD
+Jordan,"Ajlun Governorate",32.322,35.7578,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Ajlun Governorate",32.322,35.7578,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Ajlun Governorate",32.322,35.7578,Protection,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Ajlun Governorate",32.322,35.7578,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Ajlun Governorate",32.322,35.7578,"Water & Sanitation",,http://www.acted.org/,ACTED
+Jordan,"Karak Govenorate",31.2104,35.7124,"Cash Assistance",,http://www.drc.dk,DRC
+Jordan,"Karak Govenorate",31.2104,35.7124,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Karak Govenorate",31.2104,35.7124,"Core Relief Items (CRIs)",,http://www.drc.dk,DRC
+Jordan,"Karak Govenorate",31.2104,35.7124,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Karak Govenorate",31.2104,35.7124,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Karak Govenorate",31.2104,35.7124,Protection,,http://www.drc.dk,DRC
+Jordan,"Karak Govenorate",31.2104,35.7124,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Karak Govenorate",31.2104,35.7124,Shelter,,http://www.drc.dk,DRC
+Jordan,"Maan Governorate",30.2211,35.7385,"Cash Assistance",,,AVSI
+Jordan,"Maan Governorate",30.2211,35.7385,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Maan Governorate",30.2211,35.7385,"Child Protection",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Maan Governorate",30.2211,35.7385,"Core Relief Items (CRIs)",,,AVSI
+Jordan,"Maan Governorate",30.2211,35.7385,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Jordan,"Maan Governorate",30.2211,35.7385,"Core Relief Items (CRIs)",,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Maan Governorate",30.2211,35.7385,Education,,http://www.savethechildren.org,SC
+Jordan,"Maan Governorate",30.2211,35.7385,Education,,,UNESCO
+Jordan,"Maan Governorate",30.2211,35.7385,Education,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Maan Governorate",30.2211,35.7385,"Gender-Based Violence",,,IRD
+Jordan,"Maan Governorate",30.2211,35.7385,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Maan Governorate",30.2211,35.7385,Health,,http://internationalmedicalcorps.org,IMC
+Jordan,"Maan Governorate",30.2211,35.7385,Health,,,IRD
+Jordan,"Maan Governorate",30.2211,35.7385,Health,,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Maan Governorate",30.2211,35.7385,Health,,http://www.savethechildren.org,SC
+Jordan,"Maan Governorate",30.2211,35.7385,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Maan Governorate",30.2211,35.7385,Health,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Maan Governorate",30.2211,35.7385,Protection,,,IRD
+Jordan,"Maan Governorate",30.2211,35.7385,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Maan Governorate",30.2211,35.7385,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Maan Governorate",30.2211,35.7385,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Aqaba Governorate",29.5673,35.2028,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Aqaba Governorate",29.5673,35.2028,Education,,http://www.savethechildren.org,SC
+Jordan,"Aqaba Governorate",29.5673,35.2028,Education,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Aqaba Governorate",29.5673,35.2028,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Aqaba Governorate",29.5673,35.2028,Health,,http://www.savethechildren.org,SC
+Jordan,"Aqaba Governorate",29.5673,35.2028,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Aqaba Governorate",29.5673,35.2028,Protection,,,IRD
+Jordan,"Aqaba Governorate",29.5673,35.2028,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Tafilah Govenorate",30.8291,35.6108,"Child Protection",,,IRD
+Jordan,"Tafilah Govenorate",30.8291,35.6108,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Tafilah Govenorate",30.8291,35.6108,Protection,,,IRD
+Jordan,"Tafilah Govenorate",30.8291,35.6108,Shelter,,http://www.drc.dk,DRC
+Iraq,Sulaymaniyah,35.5487,45.4312,"Community Services",,http://www.reach-iraq.org,REACH
+Iraq,Sulaymaniyah,35.5487,45.4312,Coordination,,http://www.Qandil.org,Qandil
+Iraq,Sulaymaniyah,35.5487,45.4312,Coordination,,http://www.unhcr.org,UNHCR
+Iraq,Sulaymaniyah,35.5487,45.4312,Coordination,,http://www.wfp.org,WFP
+Iraq,Sulaymaniyah,35.5487,45.4312,Education,,http://www.reach-iraq.org,REACH
+Iraq,Sulaymaniyah,35.5487,45.4312,Education,,http://www.unicef.org,UNICEF
+Iraq,Sulaymaniyah,35.5487,45.4312,Environment,,http://www.reach-iraq.org,REACH
+Iraq,Sulaymaniyah,35.5487,45.4312,Health,,http://www.Qandil.org,Qandil
+Iraq,Sulaymaniyah,35.5487,45.4312,Health,,http://www.unicef.org,UNICEF
+Iraq,Sulaymaniyah,35.5487,45.4312,Health,,http://www.who.org,WHO
+Iraq,Sulaymaniyah,35.5487,45.4312,"Information Management",,http://www.wfp.org,WFP
+Iraq,Sulaymaniyah,35.5487,45.4312,Livelihood,,http://www.reach-iraq.org,REACH
+Iraq,Sulaymaniyah,35.5487,45.4312,Logistics,,http://www.wfp.org,WFP
+Iraq,Sulaymaniyah,35.5487,45.4312,Nutrition,,http://www.wfp.org,WFP
+Iraq,Sulaymaniyah,35.5487,45.4312,Protection,,http://www.icrc.org,ICRC
+Iraq,Sulaymaniyah,35.5487,45.4312,Protection,,http://www.unhcr.org,UNHCR
+Iraq,Sulaymaniyah,35.5487,45.4312,Registration,,http://www.unhcr.org,UNHCR
+Iraq,Sulaymaniyah,35.5487,45.4312,"Reproductive Health",,http://www.who.org,WHO
+Iraq,Sulaymaniyah,35.5487,45.4312,"Water & Sanitation",,http://www.unicef.org,UNICEF
+Egypt,Egypt,31.2357,31.2357,"Child Protection",,,PSTIC
+Egypt,Egypt,31.2357,31.2357,"Child Protection",,http://www.unhcr.org/pages/49e486356.html,UNHCR
+Egypt,Egypt,31.2357,31.2357,"Child Protection",,http://www.unicef.org/egypt/,UNICEF
+Egypt,Egypt,31.2357,31.2357,"Community Services",,,PSTIC
+Egypt,Egypt,31.2357,31.2357,"Community Services",,http://tadamoncouncil.org/default.aspx,Tadamon
+Egypt,Egypt,31.2357,31.2357,"Community Services",,http://www.tdhegypt.org,"TdH - Lausanne"
+Egypt,Egypt,31.2357,31.2357,Coordination,,http://www.unhcr.org/pages/49e486356.html,UNHCR
+Egypt,Egypt,31.2357,31.2357,Education,,http://www.crs.org,CRS
+Egypt,Egypt,31.2357,31.2357,"Food Security",,http://www.wfp.org,WFP
+Egypt,Egypt,31.2357,31.2357,"Gender-Based Violence",,http://www.unhcr.org/pages/49e486356.html,UNHCR
+Egypt,Egypt,31.2357,31.2357,Health,,http://www.caritas.org/,CARITAS
+Egypt,Egypt,31.2357,31.2357,HIV/AIDS,,http://www.refuge-egypt.org/,"Refuge Egypt"
+Egypt,Egypt,31.2357,31.2357,"Information Management",,http://www.unhcr.org/pages/49e486356.html,UNHCR
+Egypt,Egypt,31.2357,31.2357,Livelihood,,http://www.caritas.org/,CARITAS
+Egypt,Egypt,31.2357,31.2357,Livelihood,,http://www.crs.org,CRS
+Egypt,Egypt,31.2357,31.2357,"Mental Health and Psychosocial Support",,,PSTIC
+Egypt,Egypt,31.2357,31.2357,Protection,,http://www.tdhegypt.org,"TdH - Lausanne"
+Egypt,Egypt,31.2357,31.2357,Protection,,http://www.unhcr.org/pages/49e486356.html,UNHCR
+Egypt,Egypt,31.2357,31.2357,Registration,,http://www.unhcr.org/pages/49e486356.html,UNHCR
+Egypt,Egypt,31.2357,31.2357,"Reproductive Health",,http://www.refuge-egypt.org/,"Refuge Egypt"
+Turkey,Turkey,37.8749,36.3615,"Core Relief Items (CRIs)",,http://www.iom.int,IOM
+Turkey,Turkey,37.8749,36.3615,"Core Relief Items (CRIs)",,http://www.unhcr.org.tr,UNHCR
+Turkey,Turkey,37.8749,36.3615,Health,,http://www.euro.who.int/en/countries/turkey,WHO
+Turkey,Turkey,37.8749,36.3615,Shelter,,http://www.unhcr.org.tr,UNHCR
+Jordan,"Amman Governorate",31.9335,35.9253,"Cash Assistance",,,CARE
+Jordan,"Amman Governorate",31.9335,35.9253,"Cash Assistance",,http://www.drc.dk,DRC
+Jordan,"Amman Governorate",31.9335,35.9253,"Cash Assistance",,,PU-AMI
+Jordan,"Amman Governorate",31.9335,35.9253,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Amman Governorate",31.9335,35.9253,"Child Protection",,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Amman Governorate",31.9335,35.9253,"Child Protection",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Amman Governorate",31.9335,35.9253,"Child Protection",,http://www.unhcr.jo,UNHCR
+Jordan,"Amman Governorate",31.9335,35.9253,"Child Protection",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Amman Governorate",31.9335,35.9253,"Community Services",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Amman Governorate",31.9335,35.9253,"Core Relief Items (CRIs)",,,CARE
+Jordan,"Amman Governorate",31.9335,35.9253,"Core Relief Items (CRIs)",,http://www.drc.dk,DRC
+Jordan,"Amman Governorate",31.9335,35.9253,"Core Relief Items (CRIs)",,http://www.icmc.net/,ICMC
+Jordan,"Amman Governorate",31.9335,35.9253,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Jordan,"Amman Governorate",31.9335,35.9253,"Core Relief Items (CRIs)",,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Amman Governorate",31.9335,35.9253,"Core Relief Items (CRIs)",,http://www.mercy.se/,OPM
+Jordan,"Amman Governorate",31.9335,35.9253,"Core Relief Items (CRIs)",,http://www.shelterbox.org,ShelterBox
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,http://www.caritasjordan.org.jo,CARITAS
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,,IRD
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,http://www.mercycorps.org,MercyCorps
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,http://www.questscope.org,Questscope
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,http://www.savethechildren.org,SC
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,,UNESCO
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,http://www.unhcr.jo,UNHCR
+Jordan,"Amman Governorate",31.9335,35.9253,Education,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Amman Governorate",31.9335,35.9253,"Food Security",,http://www.MEDAIR.org,Medair
+Jordan,"Amman Governorate",31.9335,35.9253,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Amman Governorate",31.9335,35.9253,"Gender-Based Violence",,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Amman Governorate",31.9335,35.9253,"Gender-Based Violence",,http://internationalmedicalcorps.org,IMC
+Jordan,"Amman Governorate",31.9335,35.9253,"Gender-Based Violence",,,IRD
+Jordan,"Amman Governorate",31.9335,35.9253,"Gender-Based Violence",,http://www.jordanriver.jo/,JRF
+Jordan,"Amman Governorate",31.9335,35.9253,"Gender-Based Violence",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Amman Governorate",31.9335,35.9253,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Amman Governorate",31.9335,35.9253,"Gender-Based Violence",,http://www.unhcr.jo,UNHCR
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://www.handicap-international.org,HI
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://internationalmedicalcorps.org,IMC
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,,IRD
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://www.islamic-relief.com,IRW
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://www.savethechildren.org,SC
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Amman Governorate",31.9335,35.9253,Health,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Amman Governorate",31.9335,35.9253,"Mental Health and Psychosocial Support",,http://www.cvt.org/,CVT
+Jordan,"Amman Governorate",31.9335,35.9253,"Mental Health and Psychosocial Support",,,JRS
+Jordan,"Amman Governorate",31.9335,35.9253,"Mental Health and Psychosocial Support",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,,ARDD-LA
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,,CARE
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,http://www.drc.dk,DRC
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,,IRD
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,http://www.jordanriver.jo/,JRF
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Amman Governorate",31.9335,35.9253,Protection,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Amman Governorate",31.9335,35.9253,"Reproductive Health",,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Amman Governorate",31.9335,35.9253,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Amman Governorate",31.9335,35.9253,Shelter,,http://www.adra.org,ADRA
+Jordan,"Amman Governorate",31.9335,35.9253,Shelter,,http://www.islamic-relief.com,IRW
+Jordan,"Amman Governorate",31.9335,35.9253,Shelter,,,PU-AMI
+Jordan,"Amman Governorate",31.9335,35.9253,Shelter,,http://www.shelterbox.org,ShelterBox
+Jordan,"Amman Governorate",31.9335,35.9253,"Water & Sanitation",,,JEN
+Jordan,"Amman Governorate",31.9335,35.9253,"Water & Sanitation",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Cash Assistance",,http://www.acted.org/,ACTED
+Jordan,"Irbid Governorate",32.5607,35.8333,"Cash Assistance",,,CARE
+Jordan,"Irbid Governorate",32.5607,35.8333,"Cash Assistance",,http://www.rescue.org/,IRC
+Jordan,"Irbid Governorate",32.5607,35.8333,"Cash Assistance",,http://www.mercycorps.org,MercyCorps
+Jordan,"Irbid Governorate",32.5607,35.8333,"Cash Assistance",,http://www.MEDAIR.org,Medair
+Jordan,"Irbid Governorate",32.5607,35.8333,"Child Protection",,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Jordan,"Irbid Governorate",32.5607,35.8333,"Child Protection",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Child Protection",,http://www.tdh.ch,"TdH - Lausanne"
+Jordan,"Irbid Governorate",32.5607,35.8333,"Child Protection",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Community Services",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Core Relief Items (CRIs)",,http://www.acted.org/,ACTED
+Jordan,"Irbid Governorate",32.5607,35.8333,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Jordan,"Irbid Governorate",32.5607,35.8333,"Core Relief Items (CRIs)",,,IRD
+Jordan,"Irbid Governorate",32.5607,35.8333,"Core Relief Items (CRIs)",,http://www.islamic-relief.com,IRW
+Jordan,"Irbid Governorate",32.5607,35.8333,"Core Relief Items (CRIs)",,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Irbid Governorate",32.5607,35.8333,"Core Relief Items (CRIs)",,http://www.mercycorps.org,MercyCorps
+Jordan,"Irbid Governorate",32.5607,35.8333,"Core Relief Items (CRIs)",,http://www.MEDAIR.org,Medair
+Jordan,"Irbid Governorate",32.5607,35.8333,Education,,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,Education,,,IRD
+Jordan,"Irbid Governorate",32.5607,35.8333,Education,,http://www.mercycorps.org,MercyCorps
+Jordan,"Irbid Governorate",32.5607,35.8333,Education,,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,Education,,http://www.savethechildren.org,SC
+Jordan,"Irbid Governorate",32.5607,35.8333,Education,,,UNESCO
+Jordan,"Irbid Governorate",32.5607,35.8333,"Food Security",,http://www.islamic-relief.com,IRW
+Jordan,"Irbid Governorate",32.5607,35.8333,"Food Security",,http://www.MEDAIR.org,Medair
+Jordan,"Irbid Governorate",32.5607,35.8333,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Irbid Governorate",32.5607,35.8333,"Gender-Based Violence",,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Gender-Based Violence",,http://internationalmedicalcorps.org,IMC
+Jordan,"Irbid Governorate",32.5607,35.8333,"Gender-Based Violence",,http://www.rescue.org/,IRC
+Jordan,"Irbid Governorate",32.5607,35.8333,"Gender-Based Violence",,,IRD
+Jordan,"Irbid Governorate",32.5607,35.8333,"Gender-Based Violence",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Irbid Governorate",32.5607,35.8333,"Gender-Based Violence",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Irbid Governorate",32.5607,35.8333,Health,,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,Health,,http://www.rescue.org/,IRC
+Jordan,"Irbid Governorate",32.5607,35.8333,Health,,,IRD
+Jordan,"Irbid Governorate",32.5607,35.8333,Health,,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Irbid Governorate",32.5607,35.8333,Health,,http://www.medecinsdumonde.org/,MdM
+Jordan,"Irbid Governorate",32.5607,35.8333,Health,,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,Livelihood,,http://www.adra.org,ADRA
+Jordan,"Irbid Governorate",32.5607,35.8333,Livelihood,,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Mental Health and Psychosocial Support",,http://internationalmedicalcorps.org,IMC
+Jordan,"Irbid Governorate",32.5607,35.8333,"Mental Health and Psychosocial Support",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,,CARE
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,http://www.rescue.org/,IRC
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,,IRD
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,http://www.mercycorps.org,MercyCorps
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,http://www.nrc.no/,NRC
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,http://www.tdh.ch,"TdH - Lausanne"
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Irbid Governorate",32.5607,35.8333,Protection,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Reproductive Health",,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Irbid Governorate",32.5607,35.8333,Shelter,,http://www.adra.org,ADRA
+Jordan,"Irbid Governorate",32.5607,35.8333,Shelter,,http://www.intersos.org,INTERSOS
+Jordan,"Irbid Governorate",32.5607,35.8333,Shelter,,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Irbid Governorate",32.5607,35.8333,Shelter,,http://www.mercycorps.org,MercyCorps
+Jordan,"Irbid Governorate",32.5607,35.8333,Shelter,,http://www.MEDAIR.org,Medair
+Jordan,"Irbid Governorate",32.5607,35.8333,Shelter,,http://www.nrc.no/,NRC
+Jordan,"Irbid Governorate",32.5607,35.8333,"Water & Sanitation",,,ACF
+Jordan,"Irbid Governorate",32.5607,35.8333,"Water & Sanitation",,http://www.acted.org/,ACTED
+Jordan,"Irbid Governorate",32.5607,35.8333,"Water & Sanitation",,,IRD
+Jordan,"Irbid Governorate",32.5607,35.8333,"Water & Sanitation",,,JEN
+Jordan,"Irbid Governorate",32.5607,35.8333,"Water & Sanitation",,http://www.ri.org/index.php,RI
+Jordan,"Irbid Governorate",32.5607,35.8333,"Water & Sanitation",,http://www.unicef.org/jordan/,UNICEF
+Iraq,Duhok,36.8752,43.0028,"Camp Management",,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,"Camp Management",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.freunde-waldorf.de/en/,"Friends of Waldorf Education"
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.actioncontrelafaim.org/en/,ACF
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.acted.org,ACTED
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,,DOLSA
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.msf.org,"MSF- CH"
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.savethechildren.net/,"SAVE International"
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.unicef.org,UNICEF
+Iraq,Duhok,36.8752,43.0028,"Child Protection",,http://www.unponteper.it,UPP
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.actioncontrelafaim.org/en/,ACF
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.acted.org,ACTED
+Iraq,Duhok,36.8752,43.0028,"Community Services",,,DRC
+Iraq,Duhok,36.8752,43.0028,"Community Services",,,DVAW
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,"Community Services",,,"Kirkuk Center"
+Iraq,Duhok,36.8752,43.0028,"Community Services",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.msf.ch/,MSF-CH
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.nrc.no,NRC
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.savethechildren.net/,"SAVE International"
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.unfpa.org,UNFPA
+Iraq,Duhok,36.8752,43.0028,"Community Services",,http://www.unponteper.it,UPP
+Iraq,Duhok,36.8752,43.0028,Coordination,,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,,ACF
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,,"Barzani Foundation"
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,http://www.iomiraq.net/,IOM
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,http://www.islamic-relief.com,IRW
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,,PWJ
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,http://www.Qandil.org,Qandil
+Iraq,Duhok,36.8752,43.0028,"Core Relief Items (CRIs)",,http://www.savethechildren.net/,"SAVE International"
+Iraq,Duhok,36.8752,43.0028,Education,,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,Education,,http://www.iomiraq.net/,IOM
+Iraq,Duhok,36.8752,43.0028,Education,,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,Education,,,"KRG- DMC/ DoE"
+Iraq,Duhok,36.8752,43.0028,Education,,,PWJ
+Iraq,Duhok,36.8752,43.0028,Education,,http://www.unesco.org/iraq-office,UNESCO
+Iraq,Duhok,36.8752,43.0028,Education,,http://www.unicef.org,UNICEF
+Iraq,Duhok,36.8752,43.0028,Education,,http://www.wfp.org,WFP
+Iraq,Duhok,36.8752,43.0028,"Food Security",,,"Barzani Foundation"
+Iraq,Duhok,36.8752,43.0028,"Food Security",,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,"Food Security",,http://www.islamic-relief.com,IRW
+Iraq,Duhok,36.8752,43.0028,"Food Security",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Food Security",,,PWJ
+Iraq,Duhok,36.8752,43.0028,"Food Security",,http://www.wfp.org,WFP
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,,DVAW
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,,IMC
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,,"Kirkuk Center"
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,http://www.msf.org,"MSF- CH"
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,http://www.unfpa.org,UNFPA
+Iraq,Duhok,36.8752,43.0028,"Gender-Based Violence",,http://www.unponteper.it,UPP
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,Health,,http://internationalmedicalcorps.org,IMC
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.islamic-relief.com,IRW
+Iraq,Duhok,36.8752,43.0028,Health,,,"Kirkuk Center"
+Iraq,Duhok,36.8752,43.0028,Health,,,"KRG- DMC/ DoH"
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.msf.org,"MSF- CH"
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.nrc.no,NRC
+Iraq,Duhok,36.8752,43.0028,Health,,,"PU- AMI"
+Iraq,Duhok,36.8752,43.0028,Health,,,PWJ
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.unfpa.org,UNFPA
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.unicef.org,UNICEF
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.unponteper.it,UPP
+Iraq,Duhok,36.8752,43.0028,Health,,http://www.who.org,WHO
+Iraq,Duhok,36.8752,43.0028,"Information Management",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Information Management",,http://resource.reach-initiative.org,REACH-Initiative
+Iraq,Duhok,36.8752,43.0028,"Information Management",,http://www.unponteper.it,UPP
+Iraq,Duhok,36.8752,43.0028,Livelihood,,,DRC
+Iraq,Duhok,36.8752,43.0028,Livelihood,,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,Livelihood,,http://www.iomiraq.net/,IOM
+Iraq,Duhok,36.8752,43.0028,Livelihood,,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,Livelihood,,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,Livelihood,,,PWJ
+Iraq,Duhok,36.8752,43.0028,Livelihood,,http://www.reach-iraq.org,REACH
+Iraq,Duhok,36.8752,43.0028,Livelihood,,,UNDP
+Iraq,Duhok,36.8752,43.0028,Livelihood,,http://www.unesco.org/iraq-office,UNESCO
+Iraq,Duhok,36.8752,43.0028,Nutrition,,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,Nutrition,,,"KRG- DMC/ DoH"
+Iraq,Duhok,36.8752,43.0028,Nutrition,,http://www.msf.org,"MSF- CH"
+Iraq,Duhok,36.8752,43.0028,Nutrition,,http://www.unicef.org,UNICEF
+Iraq,Duhok,36.8752,43.0028,Nutrition,,http://www.wfp.org,WFP
+Iraq,Duhok,36.8752,43.0028,Protection,,,DRC
+Iraq,Duhok,36.8752,43.0028,Protection,,,DVAW
+Iraq,Duhok,36.8752,43.0028,Protection,,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,Protection,,http://www.rescue.org,IRC
+Iraq,Duhok,36.8752,43.0028,Protection,,,IRD
+Iraq,Duhok,36.8752,43.0028,Protection,,http://www.islamic-relief.com,IRW
+Iraq,Duhok,36.8752,43.0028,Protection,,,"Kirkuk Center"
+Iraq,Duhok,36.8752,43.0028,Protection,,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,Protection,,,MAG
+Iraq,Duhok,36.8752,43.0028,Protection,,http://resource.reach-initiative.org,REACH-Initiative
+Iraq,Duhok,36.8752,43.0028,Protection,,http://www.savethechildren.net/,"SAVE International"
+Iraq,Duhok,36.8752,43.0028,Protection,,http://www.unfpa.org,UNFPA
+Iraq,Duhok,36.8752,43.0028,Protection,,http://www.unicef.org,UNICEF
+Iraq,Duhok,36.8752,43.0028,Protection,,http://www.unponteper.it,UPP
+Iraq,Duhok,36.8752,43.0028,Registration,,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,Registration,,http://www.islamic-relief.com,IRW
+Iraq,Duhok,36.8752,43.0028,Shelter,,http://www.iomiraq.net/,IOM
+Iraq,Duhok,36.8752,43.0028,Shelter,,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,Shelter,,,KURDS
+Iraq,Duhok,36.8752,43.0028,Shelter,,http://www.nrc.no,NRC
+Iraq,Duhok,36.8752,43.0028,Shelter,,,PWJ
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,,ACF
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.croix-rouge.fr/,FRC
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.harikar.org,Harikar
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.islamic-relief.com,IRW
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,,"KRG- DMC"
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,,KURDS
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.msf.org,"MSF- CH"
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.nrc.no,NRC
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,,"PU- AMI"
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,,PWJ
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.Qandil.org,Qandil
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.savethechildren.net/,"SAVE International"
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.unicef.org,UNICEF
+Iraq,Duhok,36.8752,43.0028,"Water & Sanitation",,http://www.unponteper.it,UPP
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Camp Management",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Cash Assistance",,http://www.acted.org/,ACTED
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Cash Assistance",,,CARE
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Cash Assistance",,http://www.rescue.org/,IRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Cash Assistance",,http://www.mercycorps.org,MercyCorps
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Cash Assistance",,http://www.MEDAIR.org,Medair
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.kua.fi/en,FCA
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.rescue.org/,IRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.mercycorps.org,MercyCorps
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.tdh.ch,"TdH - Lausanne"
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Child Protection",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Community Services",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Community Services",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Coordination,,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Coordination,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.acted.org/,ACTED
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,,IRD
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.islamic-relief.com,IRW
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,,JEN
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.lutheranworld.org,LWF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.mercycorps.org,MercyCorps
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.MEDAIR.org,Medair
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.nrc.no/,NRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Core Relief Items (CRIs)",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://knk.or.jp,"Children without borders-KnK"
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://www.kua.fi/en,FCA
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,,IRD
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://www.mercycorps.org,MercyCorps
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,,"MoE Jordan"
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://www.nrc.no/,NRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://www.ri.org/index.php,RI
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://www.savethechildren.org,SC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,,UNESCO
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Education,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Food Security",,http://www.islamic-relief.com,IRW
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Food Security",,http://www.lutheranworld.org,LWF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Food Security",,http://www.MEDAIR.org,Medair
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Food Security",,http://www.savethechildren.org,SC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Food Security",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Gender-Based Violence",,http://www.rescue.org/,IRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Gender-Based Violence",,,IRD
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Gender-Based Violence",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Gender-Based Violence",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Gender-Based Violence",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://internationalmedicalcorps.org,IMC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.jordan.iom.int/,IOM
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.rescue.org/,IRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,,IRD
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.medecinsdumonde.org/,MdM
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,,"MoH Jordan"
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.savethechildren.org,SC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Health,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Mental Health and Psychosocial Support",,http://www.cvt.org/,CVT
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Mental Health and Psychosocial Support",,http://internationalmedicalcorps.org,IMC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Mental Health and Psychosocial Support",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Mafraq Governorate",32.3213,36.2096,Nutrition,,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.acted.org/,ACTED
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,,CARE
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://internationalmedicalcorps.org,IMC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.rescue.org/,IRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,,IRD
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.lutheranworld.org,LWF
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.mercycorps.org,MercyCorps
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.tdh.ch,"TdH - Lausanne"
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Mafraq Governorate",32.3213,36.2096,Protection,,http://www.unwomen.org/,UNWOMEN
+Jordan,"Mafraq Governorate",32.3213,36.2096,Registration,,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Reproductive Health",,http://www.rescue.org/,IRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.acted.org/,ACTED
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.adra.org,ADRA
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.lutheranworld.org,LWF
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.mercycorps.org,MercyCorps
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.MEDAIR.org,Medair
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.nrc.no/,NRC
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,Shelter,,http://www.unops.org,UNOPS
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Water & Sanitation",,http://www.acted.org/,ACTED
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Water & Sanitation",,,IRD
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Water & Sanitation",,,JEN
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Water & Sanitation",,http://www.oxfam.org.uk,OXFAM
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Water & Sanitation",,http://www.ri.org/index.php,RI
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Water & Sanitation",,http://www.unhcr.jo,UNHCR
+Jordan,"Mafraq Governorate",32.3213,36.2096,"Water & Sanitation",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Camp Management",,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Cash Assistance",,,CARE
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Cash Assistance",,http://www.mercycorps.org,MercyCorps
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Cash Assistance",,,PU-AMI
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Child Protection",,http://www.rescue.org/,IRC
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Child Protection",,http://www.mercycorps.org,MercyCorps
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Child Protection",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Child Protection",,http://www.tdh.ch,"TdH - Lausanne"
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Child Protection",,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Child Protection",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Community Services",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Zarqa Governorate",32.0803,36.0599,Coordination,,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Core Relief Items (CRIs)",,http://www.mercycorps.org,MercyCorps
+Jordan,"Zarqa Governorate",32.0803,36.0599,Education,,http://www.kua.fi/en,FCA
+Jordan,"Zarqa Governorate",32.0803,36.0599,Education,,,IRD
+Jordan,"Zarqa Governorate",32.0803,36.0599,Education,,http://www.mercycorps.org,MercyCorps
+Jordan,"Zarqa Governorate",32.0803,36.0599,Education,,http://www.nrc.no/,NRC
+Jordan,"Zarqa Governorate",32.0803,36.0599,Education,,http://www.savethechildren.org,SC
+Jordan,"Zarqa Governorate",32.0803,36.0599,Education,,,UNESCO
+Jordan,"Zarqa Governorate",32.0803,36.0599,Education,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Food Security",,http://www.acted.org/,ACTED
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Food Security",,http://www.MEDAIR.org,Medair
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Gender-Based Violence",,http://internationalmedicalcorps.org,IMC
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Gender-Based Violence",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Gender-Based Violence",,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,Health,,http://internationalmedicalcorps.org,IMC
+Jordan,"Zarqa Governorate",32.0803,36.0599,Health,,,IRD
+Jordan,"Zarqa Governorate",32.0803,36.0599,Health,,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Zarqa Governorate",32.0803,36.0599,Health,,http://www.savethechildren.org,SC
+Jordan,"Zarqa Governorate",32.0803,36.0599,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,Health,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Mental Health and Psychosocial Support",,http://www.cvt.org/,CVT
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Mental Health and Psychosocial Support",,http://internationalmedicalcorps.org,IMC
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Mental Health and Psychosocial Support",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Zarqa Governorate",32.0803,36.0599,Nutrition,,http://www.acted.org/,ACTED
+Jordan,"Zarqa Governorate",32.0803,36.0599,Protection,,,CARE
+Jordan,"Zarqa Governorate",32.0803,36.0599,Protection,,http://internationalmedicalcorps.org,IMC
+Jordan,"Zarqa Governorate",32.0803,36.0599,Protection,,,IRD
+Jordan,"Zarqa Governorate",32.0803,36.0599,Protection,,http://www.tdh.ch,"TdH - Lausanne"
+Jordan,"Zarqa Governorate",32.0803,36.0599,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Zarqa Governorate",32.0803,36.0599,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,Protection,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Zarqa Governorate",32.0803,36.0599,Registration,,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Zarqa Governorate",32.0803,36.0599,Shelter,,http://www.adra.org,ADRA
+Jordan,"Zarqa Governorate",32.0803,36.0599,Shelter,,http://www.mercycorps.org,MercyCorps
+Jordan,"Zarqa Governorate",32.0803,36.0599,Shelter,,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Water & Sanitation",,http://www.acted.org/,ACTED
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Water & Sanitation",,,JEN
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Water & Sanitation",,http://www.oxfam.org.uk,OXFAM
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Water & Sanitation",,http://www.unhcr.jo,UNHCR
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Water & Sanitation",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Zarqa Governorate",32.0803,36.0599,"Water & Sanitation",,http://www.wvi.org/syria-crisis,WVI
+Lebanon,Bekaa,33.8333,36,"Camp Management",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Child Protection",,,AEC
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.amelinternational.org/,Amel
+Lebanon,Bekaa,33.8333,36,"Child Protection",,,Beyond
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.intersos.org,INTERSOS
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.iom.int,IOM
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.rescue.org,IRC
+Lebanon,Bekaa,33.8333,36,"Child Protection",,,MAP
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.mercycorps.org/,MercyCorps
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.sawagroup.org,"SAWA Lebanon"
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.terredeshommes.it,"TdH - It"
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.unicef.org,UNICEF
+Lebanon,Bekaa,33.8333,36,"Child Protection",,http://www.wvi.org/,WVI
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.iocc.org,IOCC
+Lebanon,Bekaa,33.8333,36,"Community Services",,,LEDA
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.socialaffairs.gov.lb/,MoSA
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.nrc.no,NRC
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.sawagroup.org,"SAWA Lebanon"
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.terredeshommes.it,"TdH - It"
+Lebanon,Bekaa,33.8333,36,"Community Services",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Coordination,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Coordination,,http://www.unicef.org,UNICEF
+Lebanon,Bekaa,33.8333,36,Coordination,,http://www.wfp.org,WFP
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,,"AJEM Lebanon"
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.avsi.org,AVSI
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,,"Dar El Fatwa"
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,"http://www.gvc-italia.org                ",GVC
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.handicap-international.org/,HI
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.iom.int,IOM
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,,IR
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.redcross.org.lb,LRC
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.mercycorps.org/,MercyCorps
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.medair.org,Medair
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.nrc.no,NRC
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.oxfam.org/,OXFAM
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,,"Red Cross FR"
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.terredeshommes.it,"TdH - It"
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.unicef.org,UNICEF
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,,"URDA Lebanon"
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,,"Welfare Association"
+Lebanon,Bekaa,33.8333,36,"Core Relief Items (CRIs)",,http://www.wvi.org/,WVI
+Lebanon,Bekaa,33.8333,36,Education,,http://www.amelinternational.org/,Amel
+Lebanon,Bekaa,33.8333,36,Education,,,Beyond
+Lebanon,Bekaa,33.8333,36,Education,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,Education,,,HOOPS
+Lebanon,Bekaa,33.8333,36,Education,,http://www.iocc.org,IOCC
+Lebanon,Bekaa,33.8333,36,Education,,,IQRAA
+Lebanon,Bekaa,33.8333,36,Education,,,JRS
+Lebanon,Bekaa,33.8333,36,Education,,,LOST
+Lebanon,Bekaa,33.8333,36,Education,,http://www.mouvementsocial.org/,MSL
+Lebanon,Bekaa,33.8333,36,Education,,http://www.nrc.no,NRC
+Lebanon,Bekaa,33.8333,36,Education,,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,Education,,http://www.sawagroup.org,"SAWA Lebanon"
+Lebanon,Bekaa,33.8333,36,Education,,http://www.terredeshommes.it,"TdH - It"
+Lebanon,Bekaa,33.8333,36,Education,,"http://www.unesco.org/beirut                ",UNESCO
+Lebanon,Bekaa,33.8333,36,Education,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Education,,http://www.unicef.org,UNICEF
+Lebanon,Bekaa,33.8333,36,Education,,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,Education,,,"URDA Lebanon"
+Lebanon,Bekaa,33.8333,36,Education,,http://www.wvi.org/,WVI
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,"Food Security",,"http://www.gvc-italia.org                ",GVC
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.handicap-international.org/,HI
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.intersos.org,INTERSOS
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.iocc.org,IOCC
+Lebanon,Bekaa,33.8333,36,"Food Security",,,LOST
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.redcross.org.lb,LRC
+Lebanon,Bekaa,33.8333,36,"Food Security",,,"Red Cross FR"
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.sawagroup.org,"SAWA Lebanon"
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,"Food Security",,,"URDA Lebanon"
+Lebanon,Bekaa,33.8333,36,"Food Security",,,"Welfare Association"
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.wfp.org,WFP
+Lebanon,Bekaa,33.8333,36,"Food Security",,http://www.wvi.org/,WVI
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.abaadmena.org,"ABAAD Lebanon"
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,,AEC
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,,Beyond
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,,"Heartland Alliance"
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://internationalmedicalcorps.org,IMC
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.intersos.org,INTERSOS
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.iom.int,IOM
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,,IRAP
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.rescue.org,IRC
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,,"KAFA Lebanon"
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,,MAP
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.terredeshommes.it,"TdH - It"
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Gender-Based Violence",,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,Health,,,"AJEM Lebanon"
+Lebanon,Bekaa,33.8333,36,Health,,http://www.amelinternational.org/,Amel
+Lebanon,Bekaa,33.8333,36,Health,,,AUB
+Lebanon,Bekaa,33.8333,36,Health,,,Beyond
+Lebanon,Bekaa,33.8333,36,Health,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,Health,,http://www.fundacionfpsc.org,FPSC
+Lebanon,Bekaa,33.8333,36,Health,,http://www.handicap-international.org/,HI
+Lebanon,Bekaa,33.8333,36,Health,,,Humedica
+Lebanon,Bekaa,33.8333,36,Health,,http://internationalmedicalcorps.org,IMC
+Lebanon,Bekaa,33.8333,36,Health,,,Makassed
+Lebanon,Bekaa,33.8333,36,Health,,http://www.medecinsdumonde.org/,MdM
+Lebanon,Bekaa,33.8333,36,Health,,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,Health,,,"Seraphim Global Lebanon"
+Lebanon,Bekaa,33.8333,36,Health,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Health,,http://www.unicef.org,UNICEF
+Lebanon,Bekaa,33.8333,36,Health,,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,Health,,,"URDA Lebanon"
+Lebanon,Bekaa,33.8333,36,Health,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,Bekaa,33.8333,36,HIV/AIDS,,,"AJEM Lebanon"
+Lebanon,Bekaa,33.8333,36,HIV/AIDS,,http://internationalmedicalcorps.org,IMC
+Lebanon,Bekaa,33.8333,36,HIV/AIDS,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,Bekaa,33.8333,36,"Information Management",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Information Management",,http://www.wfp.org,WFP
+Lebanon,Bekaa,33.8333,36,Livelihood,,http://www.actionaid.org/,ActionAid
+Lebanon,Bekaa,33.8333,36,Livelihood,,,"Al Majmoua"
+Lebanon,Bekaa,33.8333,36,Livelihood,,http://www.amelinternational.org/,Amel
+Lebanon,Bekaa,33.8333,36,Livelihood,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,Livelihood,,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,Livelihood,,,"Inter - Agence"
+Lebanon,Bekaa,33.8333,36,Livelihood,,,LOST
+Lebanon,Bekaa,33.8333,36,Livelihood,,http://www.mercycorps.org/,MercyCorps
+Lebanon,Bekaa,33.8333,36,Livelihood,,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,Livelihood,,,UNDP
+Lebanon,Bekaa,33.8333,36,Livelihood,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Logistics,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Mental Health and Psychosocial Support",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Nutrition,,,Beyond
+Lebanon,Bekaa,33.8333,36,Nutrition,,http://internationalmedicalcorps.org,IMC
+Lebanon,Bekaa,33.8333,36,Nutrition,,http://www.iocc.org,IOCC
+Lebanon,Bekaa,33.8333,36,Nutrition,,http://www.ri.org/index.php,RI
+Lebanon,Bekaa,33.8333,36,Nutrition,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Nutrition,,,"Welfare Association"
+Lebanon,Bekaa,33.8333,36,Nutrition,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,Bekaa,33.8333,36,Protection,,,"AJEM Lebanon"
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.fundacionfpsc.org,FPSC
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.handicap-international.org/,HI
+Lebanon,Bekaa,33.8333,36,Protection,,http://internationalmedicalcorps.org,IMC
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.intersos.org,INTERSOS
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.iom.int,IOM
+Lebanon,Bekaa,33.8333,36,Protection,,,LOST
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.mercycorps.org/,MercyCorps
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.nrc.no,NRC
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.oxfam.org/,OXFAM
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Protection,,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,Protection,,,WRF
+Lebanon,Bekaa,33.8333,36,Registration,,,"AJEM Lebanon"
+Lebanon,Bekaa,33.8333,36,Registration,,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,Registration,,http://www.sawagroup.org,"SAWA Lebanon"
+Lebanon,Bekaa,33.8333,36,Registration,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Reproductive Health",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Return,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.drc.dk,DRC
+Lebanon,Bekaa,33.8333,36,Shelter,,"http://www.gvc-italia.org                ",GVC
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.iom.int,IOM
+Lebanon,Bekaa,33.8333,36,Shelter,,,IR
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.medair.org,Medair
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.nrc.no,NRC
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.oxfam.org/,OXFAM
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.savethechildren.net,SC
+Lebanon,Bekaa,33.8333,36,Shelter,,,UNDP
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.unhabitat.org/,UNHABITAT
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,Shelter,,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,Shelter,,,"URDA Lebanon"
+Lebanon,Bekaa,33.8333,36,Transportation,,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.actionagainsthunger.org,ACF
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,"http://www.gvc-italia.org                ",GVC
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.intersos.org,INTERSOS
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.redcross.org.lb,LRC
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.mercycorps.org/,MercyCorps
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.nrc.no,NRC
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.oxfam.org/,OXFAM
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,,"Red Cross FR"
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,,"Red Cross Leb Lebanon"
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,,UNDP
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.unhcr.org/,UNHCR
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.unicef.org,UNICEF
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.unrwa.org,UNRWA
+Lebanon,Bekaa,33.8333,36,"Water & Sanitation",,http://www.wvi.org/,WVI
+Jordan,"Balqa Governorate",32,35.6667,"Cash Assistance",,http://www.oxfam.org.uk,OXFAM
+Jordan,"Balqa Governorate",32,35.6667,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Balqa Governorate",32,35.6667,"Child Protection",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Balqa Governorate",32,35.6667,"Child Protection",,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Balqa Governorate",32,35.6667,"Community Services",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Balqa Governorate",32,35.6667,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Balqa Governorate",32,35.6667,"Gender-Based Violence",,http://www.kinghusseinfoundation.org,IFH/NHF
+Jordan,"Balqa Governorate",32,35.6667,"Gender-Based Violence",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Balqa Governorate",32,35.6667,Health,,,IRD
+Jordan,"Balqa Governorate",32,35.6667,Health,,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Balqa Governorate",32,35.6667,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Balqa Governorate",32,35.6667,"Mental Health and Psychosocial Support",,http://www.nooralhusseinfoundation.org,NHF
+Jordan,"Balqa Governorate",32,35.6667,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Balqa Governorate",32,35.6667,Protection,,http://www.unicef.org/jordan/,UNICEF
+Jordan,"Balqa Governorate",32,35.6667,"Water & Sanitation",,http://www.oxfam.org.uk,OXFAM
+Jordan,"Jarash Governorate",32.2686,35.9088,"Cash Assistance",,http://www.acted.org/,ACTED
+Jordan,"Jarash Governorate",32.2686,35.9088,"Cash Assistance",,,IFRC
+Jordan,"Jarash Governorate",32.2686,35.9088,"Cash Assistance",,,PU-AMI
+Jordan,"Jarash Governorate",32.2686,35.9088,"Cash Assistance",,http://www.unhcr.jo,UNHCR
+Jordan,"Jarash Governorate",32.2686,35.9088,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Jordan,"Jarash Governorate",32.2686,35.9088,"Child Protection",,http://www.unhcr.jo,UNHCR
+Jordan,"Jarash Governorate",32.2686,35.9088,"Core Relief Items (CRIs)",,http://www.acted.org/,ACTED
+Jordan,"Jarash Governorate",32.2686,35.9088,"Core Relief Items (CRIs)",,http://www.jordanhealthaid.org/,JHAS
+Jordan,"Jarash Governorate",32.2686,35.9088,Education,,,IRD
+Jordan,"Jarash Governorate",32.2686,35.9088,"Food Security",,http://www.MEDAIR.org,Medair
+Jordan,"Jarash Governorate",32.2686,35.9088,"Food Security",,http://www.wfp.org,WFP
+Jordan,"Jarash Governorate",32.2686,35.9088,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Jarash Governorate",32.2686,35.9088,"Gender-Based Violence",,http://www.unhcr.jo,UNHCR
+Jordan,"Jarash Governorate",32.2686,35.9088,Health,,http://internationalmedicalcorps.org,IMC
+Jordan,"Jarash Governorate",32.2686,35.9088,Health,,http://www.unhcr.jo,UNHCR
+Jordan,"Jarash Governorate",32.2686,35.9088,Protection,,,IRD
+Jordan,"Jarash Governorate",32.2686,35.9088,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Jarash Governorate",32.2686,35.9088,Protection,,http://www.unhcr.jo,UNHCR
+Jordan,"Jarash Governorate",32.2686,35.9088,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Jarash Governorate",32.2686,35.9088,Shelter,,,PU-AMI
+Jordan,"Jarash Governorate",32.2686,35.9088,"Water & Sanitation",,http://www.acted.org/,ACTED
+Jordan,"Madaba Governorate",31.6627,35.7385,"Cash Assistance",,,AVSI
+Jordan,"Madaba Governorate",31.6627,35.7385,"Core Relief Items (CRIs)",,,AVSI
+Jordan,"Madaba Governorate",31.6627,35.7385,"Core Relief Items (CRIs)",,http://www.mercy.se/,OPM
+Jordan,"Madaba Governorate",31.6627,35.7385,"Gender-Based Violence",,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Madaba Governorate",31.6627,35.7385,Health,,http://internationalmedicalcorps.org,IMC
+Jordan,"Madaba Governorate",31.6627,35.7385,Protection,,,IRD
+Jordan,"Madaba Governorate",31.6627,35.7385,Protection,,http://www.unfpa-jordan.org,UNFPA
+Jordan,"Madaba Governorate",31.6627,35.7385,"Reproductive Health",,http://www.unfpa-jordan.org,UNFPA
+Lebanon,Beirut,33.8889,35.4944,"Camp Management",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Child Protection",,,AEC
+Lebanon,Beirut,33.8889,35.4944,"Child Protection",,http://www.intersos.org,INTERSOS
+Lebanon,Beirut,33.8889,35.4944,"Child Protection",,http://www.rescue.org,IRC
+Lebanon,Beirut,33.8889,35.4944,"Child Protection",,,"Makhzoumi Foundation"
+Lebanon,Beirut,33.8889,35.4944,"Child Protection",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Child Protection",,http://www.unicef.org,UNICEF
+Lebanon,Beirut,33.8889,35.4944,"Child Protection",,http://www.warchildholland.org,WCH
+Lebanon,Beirut,33.8889,35.4944,"Community Services",,http://www.acted.org,ACTED
+Lebanon,Beirut,33.8889,35.4944,"Community Services",,http://www.amelinternational.org/,Amel
+Lebanon,Beirut,33.8889,35.4944,"Community Services",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Beirut,33.8889,35.4944,"Community Services",,http://www.crs.org,CRS
+Lebanon,Beirut,33.8889,35.4944,"Community Services",,http://www.iocc.org,IOCC
+Lebanon,Beirut,33.8889,35.4944,"Community Services",,http://www.socialaffairs.gov.lb/,MoSA
+Lebanon,Beirut,33.8889,35.4944,"Community Services",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Coordination,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Coordination,,http://www.unicef.org,UNICEF
+Lebanon,Beirut,33.8889,35.4944,Coordination,,http://www.wfp.org,WFP
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,http://www.acted.org,ACTED
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,,"AJEM Lebanon"
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,,IR
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,,Makassed
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,,"Makhzoumi Foundation"
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,http://www.unrwa.org,UNRWA
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,,"URDA Lebanon"
+Lebanon,Beirut,33.8889,35.4944,"Core Relief Items (CRIs)",,,"Welfare Association"
+Lebanon,Beirut,33.8889,35.4944,Education,,,"British Council"
+Lebanon,Beirut,33.8889,35.4944,Education,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Beirut,33.8889,35.4944,Education,,,IQRAA
+Lebanon,Beirut,33.8889,35.4944,Education,,http://www.ri.org/index.php,RI
+Lebanon,Beirut,33.8889,35.4944,Education,,"http://www.unesco.org/beirut                ",UNESCO
+Lebanon,Beirut,33.8889,35.4944,Education,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Education,,http://www.unicef.org,UNICEF
+Lebanon,Beirut,33.8889,35.4944,Education,,http://www.unrwa.org,UNRWA
+Lebanon,Beirut,33.8889,35.4944,Education,,,"URDA Lebanon"
+Lebanon,Beirut,33.8889,35.4944,Education,,http://www.warchildholland.org,WCH
+Lebanon,Beirut,33.8889,35.4944,"Food Security",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Beirut,33.8889,35.4944,"Food Security",,,IR
+Lebanon,Beirut,33.8889,35.4944,"Food Security",,,Makassed
+Lebanon,Beirut,33.8889,35.4944,"Food Security",,,PU-AMI
+Lebanon,Beirut,33.8889,35.4944,"Food Security",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Food Security",,,"Welfare Association"
+Lebanon,Beirut,33.8889,35.4944,"Food Security",,http://www.wfp.org,WFP
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,http://www.abaadmena.org,"ABAAD Lebanon"
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,,AEC
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,,"Heartland Alliance"
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,http://www.intersos.org,INTERSOS
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,,IRAP
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,,"Makhzoumi Foundation"
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,,UNFPA
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,http://www.unicef.org,UNICEF
+Lebanon,Beirut,33.8889,35.4944,"Gender-Based Violence",,http://www.unrwa.org,UNRWA
+Lebanon,Beirut,33.8889,35.4944,Health,,,"AJEM Lebanon"
+Lebanon,Beirut,33.8889,35.4944,Health,,http://www.amelinternational.org/,Amel
+Lebanon,Beirut,33.8889,35.4944,Health,,,AUB
+Lebanon,Beirut,33.8889,35.4944,Health,,http://www.fundacionfpsc.org,FPSC
+Lebanon,Beirut,33.8889,35.4944,Health,,http://internationalmedicalcorps.org,IMC
+Lebanon,Beirut,33.8889,35.4944,Health,,http://www.iom.int,IOM
+Lebanon,Beirut,33.8889,35.4944,Health,,,Makassed
+Lebanon,Beirut,33.8889,35.4944,Health,,,"Makhzoumi Foundation"
+Lebanon,Beirut,33.8889,35.4944,Health,,,MAP
+Lebanon,Beirut,33.8889,35.4944,Health,,,PU-AMI
+Lebanon,Beirut,33.8889,35.4944,Health,,http://www.restartcenter.com/,RESTART
+Lebanon,Beirut,33.8889,35.4944,Health,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Health,,http://www.unrwa.org,UNRWA
+Lebanon,Beirut,33.8889,35.4944,Health,,,"URDA Lebanon"
+Lebanon,Beirut,33.8889,35.4944,Health,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,Beirut,33.8889,35.4944,HIV/AIDS,,,"AJEM Lebanon"
+Lebanon,Beirut,33.8889,35.4944,HIV/AIDS,,http://www.crs.org,CRS
+Lebanon,Beirut,33.8889,35.4944,HIV/AIDS,,http://internationalmedicalcorps.org,IMC
+Lebanon,Beirut,33.8889,35.4944,HIV/AIDS,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,Beirut,33.8889,35.4944,"Information Management",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Information Management",,http://www.unicef.org,UNICEF
+Lebanon,Beirut,33.8889,35.4944,"Information Management",,http://www.wfp.org,WFP
+Lebanon,Beirut,33.8889,35.4944,Livelihood,,http://www.amelinternational.org/,Amel
+Lebanon,Beirut,33.8889,35.4944,Livelihood,,,"Makhzoumi Foundation"
+Lebanon,Beirut,33.8889,35.4944,Livelihood,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Livelihood,,,"URDA Lebanon"
+Lebanon,Beirut,33.8889,35.4944,Logistics,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Mental Health and Psychosocial Support",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Nutrition,,http://internationalmedicalcorps.org,IMC
+Lebanon,Beirut,33.8889,35.4944,Nutrition,,http://www.iocc.org,IOCC
+Lebanon,Beirut,33.8889,35.4944,Nutrition,,http://www.ri.org/index.php,RI
+Lebanon,Beirut,33.8889,35.4944,Nutrition,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Nutrition,,,"Welfare Association"
+Lebanon,Beirut,33.8889,35.4944,Nutrition,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,Beirut,33.8889,35.4944,Protection,,,"AJEM Lebanon"
+Lebanon,Beirut,33.8889,35.4944,Protection,,http://www.fundacionfpsc.org,FPSC
+Lebanon,Beirut,33.8889,35.4944,Protection,,http://www.rescue.org,IRC
+Lebanon,Beirut,33.8889,35.4944,Protection,,http://www.nrc.no,NRC
+Lebanon,Beirut,33.8889,35.4944,Protection,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Protection,,http://www.unrwa.org,UNRWA
+Lebanon,Beirut,33.8889,35.4944,Protection,,,WRF
+Lebanon,Beirut,33.8889,35.4944,Registration,,,"AJEM Lebanon"
+Lebanon,Beirut,33.8889,35.4944,Registration,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Reproductive Health",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Return,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Shelter,,http://www.acted.org,ACTED
+Lebanon,Beirut,33.8889,35.4944,Shelter,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,Beirut,33.8889,35.4944,Shelter,,,PU-AMI
+Lebanon,Beirut,33.8889,35.4944,Shelter,,,UNDP
+Lebanon,Beirut,33.8889,35.4944,Shelter,,http://www.unhabitat.org/,UNHABITAT
+Lebanon,Beirut,33.8889,35.4944,Shelter,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,Transportation,,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Water & Sanitation",,http://www.acted.org,ACTED
+Lebanon,Beirut,33.8889,35.4944,"Water & Sanitation",,,"Makhzoumi Foundation"
+Lebanon,Beirut,33.8889,35.4944,"Water & Sanitation",,,PU-AMI
+Lebanon,Beirut,33.8889,35.4944,"Water & Sanitation",,http://www.ri.org/index.php,RI
+Lebanon,Beirut,33.8889,35.4944,"Water & Sanitation",,,UNDP
+Lebanon,Beirut,33.8889,35.4944,"Water & Sanitation",,http://www.unhcr.org/,UNHCR
+Lebanon,Beirut,33.8889,35.4944,"Water & Sanitation",,http://www.unrwa.org,UNRWA
+Iraq,Anbar,34.1891,41.2411,"Camp Management",,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,"Camp Management",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Child Protection",,http://www.rescue.org,IRC
+Iraq,Anbar,34.1891,41.2411,"Child Protection",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Child Protection",,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,"Community Services",,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,"Community Services",,,ISHO
+Iraq,Anbar,34.1891,41.2411,"Community Services",,http://www.rirp.org,RIRP
+Iraq,Anbar,34.1891,41.2411,"Community Services",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Community Services",,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,Coordination,,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,Coordination,,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,Coordination,,http://www.unfpa.org,UNFPA
+Iraq,Anbar,34.1891,41.2411,Coordination,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Coordination,,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,Coordination,,http://www.wfp.org,WFP
+Iraq,Anbar,34.1891,41.2411,"Core Relief Items (CRIs)",,http://www.acted.org,ACTED
+Iraq,Anbar,34.1891,41.2411,"Core Relief Items (CRIs)",,http://www.iomiraq.net/,IOM
+Iraq,Anbar,34.1891,41.2411,"Core Relief Items (CRIs)",,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,"Core Relief Items (CRIs)",,http://www.Qandil.org,Qandil
+Iraq,Anbar,34.1891,41.2411,"Core Relief Items (CRIs)",,http://www.savethechildren.org,SC
+Iraq,Anbar,34.1891,41.2411,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Core Relief Items (CRIs)",,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,Education,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Education,,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,Environment,,http://www.rirp.org,RIRP
+Iraq,Anbar,34.1891,41.2411,Environment,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Environment,,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,"Food Security",,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,"Food Security",,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,"Food Security",,http://www.wfp.org,WFP
+Iraq,Anbar,34.1891,41.2411,"Gender-Based Violence",,http://www.rescue.org,IRC
+Iraq,Anbar,34.1891,41.2411,"Gender-Based Violence",,http://www.savethechildren.org,SC
+Iraq,Anbar,34.1891,41.2411,"Gender-Based Violence",,http://www.unfpa.org,UNFPA
+Iraq,Anbar,34.1891,41.2411,"Gender-Based Violence",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Gender-Based Violence",,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,Health,,http://www.icrc.org,ICRC
+Iraq,Anbar,34.1891,41.2411,Health,,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,Health,,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,Health,,http://www.savethechildren.org,SC
+Iraq,Anbar,34.1891,41.2411,Health,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Health,,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,Health,,http://www.who.org,WHO
+Iraq,Anbar,34.1891,41.2411,HIV/AIDS,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Information Management",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Livelihood,,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,Logistics,,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,Logistics,,http://www.Qandil.org,Qandil
+Iraq,Anbar,34.1891,41.2411,Logistics,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Nutrition,,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,Protection,,http://www.icrc.org,ICRC
+Iraq,Anbar,34.1891,41.2411,Protection,,http://www.rescue.org,IRC
+Iraq,Anbar,34.1891,41.2411,Protection,,http://www.savethechildren.org,SC
+Iraq,Anbar,34.1891,41.2411,Protection,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Registration,,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,Registration,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Reproductive Health",,http://www.unfpa.org,UNFPA
+Iraq,Anbar,34.1891,41.2411,"Reproductive Health",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Reproductive Health",,http://www.unicef.org,UNICEF
+Iraq,Anbar,34.1891,41.2411,"Reproductive Health",,http://www.who.org,WHO
+Iraq,Anbar,34.1891,41.2411,Shelter,,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,Shelter,,,ISHO
+Iraq,Anbar,34.1891,41.2411,Shelter,,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,Shelter,,http://www.rirp.org,RIRP
+Iraq,Anbar,34.1891,41.2411,Shelter,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Telecom,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,Transportation,,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,Transportation,,,ISHO
+Iraq,Anbar,34.1891,41.2411,Transportation,,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,Transportation,,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Water & Sanitation",,http://www.islamic-relief.com,IRW
+Iraq,Anbar,34.1891,41.2411,"Water & Sanitation",,http://momd.gov.iq,MODM
+Iraq,Anbar,34.1891,41.2411,"Water & Sanitation",,http://www.rirp.org,RIRP
+Iraq,Anbar,34.1891,41.2411,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+Iraq,Anbar,34.1891,41.2411,"Water & Sanitation",,http://www.unicef.org,UNICEF
+Lebanon,"North Lebanon",34.4358,35.8257,"Camp Management",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,,AEC
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,,Beyond
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,http://www.rescue.org,IRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,,MAP
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,http://www.unicef.org,UNICEF
+Lebanon,"North Lebanon",34.4358,35.8257,"Child Protection",,http://www.warchildholland.org,WCH
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.acted.org,ACTED
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.iocc.org,IOCC
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,,IRD
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.socialaffairs.gov.lb/,MoSA
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.nrc.no,NRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.restartcenter.com/,RESTART
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,"Community Services",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Coordination,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Coordination,,http://www.unicef.org,UNICEF
+Lebanon,"North Lebanon",34.4358,35.8257,Coordination,,http://www.wfp.org,WFP
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,,"AJEM Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,,CARE
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,,CONCERN
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,,"Dar El Fatwa"
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.handicap-international.org/,HI
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.iom.int,IOM
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.nrc.no,NRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.oxfam.org/,OXFAM
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.ri.org/index.php,RI
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.solidarites.org,Solidarités
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.terredeshommes.it,"TdH - It"
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.unicef.org,UNICEF
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,http://www.unrwa.org,UNRWA
+Lebanon,"North Lebanon",34.4358,35.8257,"Core Relief Items (CRIs)",,,"URDA Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,,Beyond
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,,HOOPS
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.iocc.org,IOCC
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,,IRD
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,,JRS
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.mouvementsocial.org/,MSL
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.nrc.no,NRC
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,,"Relief & Reconciliation"
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.ri.org/index.php,RI
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.terredeshommes.it,"TdH - It"
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.unicef.org,UNICEF
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.unrwa.org,UNRWA
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,,"URDA Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,Education,,http://www.warchildholland.org,WCH
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.fao.org,FAO
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.iocc.org,IOCC
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.rescue.org,IRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.islamic-relief.com,IRW
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,,"Mercy USA"
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.solidarites.org,Solidarités
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.unrwa.org,UNRWA
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,,"URDA Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,"Food Security",,http://www.wfp.org,WFP
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://www.abaadmena.org,"ABAAD Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,,AEC
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,,Beyond
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,,"Heartland Alliance"
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://internationalmedicalcorps.org,IMC
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,,IRAP
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://www.rescue.org,IRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,,IRD
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,,MAP
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Gender-Based Violence",,http://www.unrwa.org,UNRWA
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,,"AJEM Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,,AUB
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,,Beyond
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.fundacionfpsc.org,FPSC
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.handicap-international.org/,HI
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://internationalmedicalcorps.org,IMC
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.iocc.org,IOCC
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,,Makassed
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,,MAP
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.restartcenter.com/,RESTART
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.unrwa.org,UNRWA
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,,"URDA Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,Health,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,"North Lebanon",34.4358,35.8257,HIV/AIDS,,,"AJEM Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,HIV/AIDS,,http://internationalmedicalcorps.org,IMC
+Lebanon,"North Lebanon",34.4358,35.8257,HIV/AIDS,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,"North Lebanon",34.4358,35.8257,"Information Management",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Information Management",,http://www.wfp.org,WFP
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,,"Al Majmoua"
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,http://www.rescue.org,IRC
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,,IRD
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,http://www.mercycorps.org/,MercyCorps
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,,SFCG
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,,UNDP
+Lebanon,"North Lebanon",34.4358,35.8257,Livelihood,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Logistics,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Mental Health and Psychosocial Support",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Nutrition,,http://internationalmedicalcorps.org,IMC
+Lebanon,"North Lebanon",34.4358,35.8257,Nutrition,,http://www.iocc.org,IOCC
+Lebanon,"North Lebanon",34.4358,35.8257,Nutrition,,http://www.ri.org/index.php,RI
+Lebanon,"North Lebanon",34.4358,35.8257,Nutrition,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Nutrition,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,,"AJEM Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.fundacionfpsc.org,FPSC
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.handicap-international.org/,HI
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://internationalmedicalcorps.org,IMC
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.rescue.org,IRC
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,,IRD
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.nrc.no,NRC
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.oxfam.org/,OXFAM
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,http://www.unrwa.org,UNRWA
+Lebanon,"North Lebanon",34.4358,35.8257,Protection,,,WRF
+Lebanon,"North Lebanon",34.4358,35.8257,Registration,,,"AJEM Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,Registration,,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,Registration,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Reproductive Health",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Return,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,,CONCERN
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.drc.dk,DRC
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.iom.int,IOM
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.nrc.no,NRC
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,,PCPM
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,,PU-AMI
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,,SDC
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.solidarites.org,Solidarités
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,,UNDP
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.unhabitat.org/,UNHABITAT
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,http://www.unrwa.org,UNRWA
+Lebanon,"North Lebanon",34.4358,35.8257,Shelter,,,"URDA Lebanon"
+Lebanon,"North Lebanon",34.4358,35.8257,Transportation,,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,,CARE
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.sviluppodeipopoli.org/,CISP
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,,CONCERN
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,,"Mercy USA"
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.nrc.no,NRC
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.oxfam.org/,OXFAM
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,,PU-AMI
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.ri.org/index.php,RI
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.savethechildren.net,SC
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.solidarites.org,Solidarités
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,,UNDP
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.unhcr.org/,UNHCR
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.unicef.org,UNICEF
+Lebanon,"North Lebanon",34.4358,35.8257,"Water & Sanitation",,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,"Camp Management",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Cash Assistance",,http://www.rescue.org,IRC
+Lebanon,"South Lebanon",33.2674,35.2043,"Cash Assistance",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,http://www.drc.dk,DRC
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,http://internationalmedicalcorps.org,IMC
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,http://www.intersos.org,INTERSOS
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,http://www.iom.int,IOM
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,,MAP
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,http://www.mercycorps.org/,MercyCorps
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,"http://www.tdh.ch                ","TdH - Lausanne"
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Child Protection",,http://www.unicef.org,UNICEF
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.intersos.org,INTERSOS
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.iocc.org,IOCC
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.iom.int,IOM
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.makhzoumi-foundation.org/,MF
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.socialaffairs.gov.lb/,MoSA
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.sheild-lb.org,SHEILD
+Lebanon,"South Lebanon",33.2674,35.2043,"Community Services",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Coordination,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Coordination,,http://www.wfp.org,WFP
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,,"AJEM Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.avsi.org,AVSI
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.sviluppodeipopoli.org/,CISP
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.drc.dk,DRC
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.iocc.org,IOCC
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.iom.int,IOM
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,,IR
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.mercycorps.org/,MercyCorps
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.medair.org,Medair
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.sheild-lb.org,SHEILD
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,,"Solidar Suisse"
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.terredeshommes.it,"TdH - It"
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,"http://www.tdh.ch                ","TdH - Lausanne"
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,,"Welfare Association"
+Lebanon,"South Lebanon",33.2674,35.2043,"Core Relief Items (CRIs)",,http://www.wvi.org/,WVI
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,,Alpha
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.amelinternational.org/,Amel
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.avsi.org,AVSI
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,,HOOPS
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.mouvementsocial.org/,MSL
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.nrc.no,NRC
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.terredeshommes.it,"TdH - It"
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.unicef.org,UNICEF
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,Education,,,"URDA Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.actionagainsthunger.org,ACF
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.drc.dk,DRC
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,,IR
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.islamic-relief.com,IRW
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.redcross.org.lb,LRC
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.sheild-lb.org,SHEILD
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,,"Welfare Association"
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.wfp.org,WFP
+Lebanon,"South Lebanon",33.2674,35.2043,"Food Security",,http://www.wvi.org/,WVI
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.abaadmena.org,"ABAAD Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.drc.dk,DRC
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,,"Heartland Alliance"
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://internationalmedicalcorps.org,IMC
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.intersos.org,INTERSOS
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,,MAP
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.mercycorps.org/,MercyCorps
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.sheild-lb.org,SHEILD
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,"http://www.tdh.ch                ","TdH - Lausanne"
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Gender-Based Violence",,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,,"AJEM Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,http://www.amelinternational.org/,Amel
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,,AUB
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,,Beyond
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,,"DCA - Saida Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,http://internationalmedicalcorps.org,IMC
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,http://www.iom.int,IOM
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,,Makassed
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,,MAP
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,,PU-AMI
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,Health,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,"South Lebanon",33.2674,35.2043,HIV/AIDS,,,"AJEM Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,HIV/AIDS,,http://internationalmedicalcorps.org,IMC
+Lebanon,"South Lebanon",33.2674,35.2043,HIV/AIDS,,http://www.makhzoumi-foundation.org/,MF
+Lebanon,"South Lebanon",33.2674,35.2043,HIV/AIDS,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,"South Lebanon",33.2674,35.2043,"Information Management",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Information Management",,http://www.wfp.org,WFP
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.actionagainsthunger.org,ACF
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.amelinternational.org/,Amel
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.drc.dk,DRC
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.iom.int,IOM
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.mercycorps.org/,MercyCorps
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,,SFCG
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,,UNDP
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.unhabitat.org/,UNHABITAT
+Lebanon,"South Lebanon",33.2674,35.2043,Livelihood,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Logistics,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Mental Health and Psychosocial Support",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Nutrition,,http://internationalmedicalcorps.org,IMC
+Lebanon,"South Lebanon",33.2674,35.2043,Nutrition,,http://www.iocc.org,IOCC
+Lebanon,"South Lebanon",33.2674,35.2043,Nutrition,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Nutrition,,http://www.emro.who.int/countries/lbn,WHO
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,,"AJEM Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.drc.dk,DRC
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://internationalmedicalcorps.org,IMC
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.iom.int,IOM
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.mercycorps.org/,MercyCorps
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.nrc.no,NRC
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,,PU-AMI
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.sheild-lb.org,SHEILD
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,Protection,,,WRF
+Lebanon,"South Lebanon",33.2674,35.2043,Registration,,,"AJEM Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,Registration,,http://www.amelinternational.org/,Amel
+Lebanon,"South Lebanon",33.2674,35.2043,Registration,,http://www.sheild-lb.org,SHEILD
+Lebanon,"South Lebanon",33.2674,35.2043,Registration,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Reproductive Health",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Return,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.sviluppodeipopoli.org/,CISP
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.caritasmigrant.org.lb,CLMC
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.iom.int,IOM
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.nrc.no,NRC
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,,PU-AMI
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.sheild-lb.org,SHEILD
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.secours-islamique.org,SIF
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,,"Solidar Suisse"
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,,UNDP
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.unhabitat.org/,UNHABITAT
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,Shelter,,,"URDA Lebanon"
+Lebanon,"South Lebanon",33.2674,35.2043,Transportation,,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.actionagainsthunger.org,ACF
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.sviluppodeipopoli.org/,CISP
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.intersos.org,INTERSOS
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.mercycorps.org/,MercyCorps
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.nrc.no,NRC
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.oxfam.org/,OXFAM
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,,PU-AMI
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,,UNDP
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.unhabitat.org/,UNHABITAT
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.unhcr.org/,UNHCR
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.unrwa.org,UNRWA
+Lebanon,"South Lebanon",33.2674,35.2043,"Water & Sanitation",,http://www.wvi.org/,WVI
+Iraq,Erbil,36.1897,44.0084,"Camp Management",,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,"Camp Management",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Child Protection",,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,"Child Protection",,http://www.savethechildren.net/,"SAVE International"
+Iraq,Erbil,36.1897,44.0084,"Child Protection",,http://www.savethechildren.org,SC
+Iraq,Erbil,36.1897,44.0084,"Child Protection",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Child Protection",,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Child Protection",,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://drc.dk/relief-work/where-we-work/middle-east/iraq/,"DRC Iraq"
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.rescue.org,IRC
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.nrc.no,NRC
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.savethechildren.org,SC
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.unfpa.org,UNFPA
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Community Services",,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.rescue.org,IRC
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.wfp.org,WFP
+Iraq,Erbil,36.1897,44.0084,Coordination,,http://www.who.org,WHO
+Iraq,Erbil,36.1897,44.0084,"Core Relief Items (CRIs)",,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,"Core Relief Items (CRIs)",,,"Barzani Foundation"
+Iraq,Erbil,36.1897,44.0084,"Core Relief Items (CRIs)",,http://www.iomiraq.net/,IOM
+Iraq,Erbil,36.1897,44.0084,"Core Relief Items (CRIs)",,http://www.islamic-relief.com,IRW
+Iraq,Erbil,36.1897,44.0084,"Core Relief Items (CRIs)",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Core Relief Items (CRIs)",,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Core Relief Items (CRIs)",,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,Education,,,"Dar Beru"
+Iraq,Erbil,36.1897,44.0084,Education,,,PWJ
+Iraq,Erbil,36.1897,44.0084,Education,,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,Education,,http://www.reach-iraq.org,REACH
+Iraq,Erbil,36.1897,44.0084,Education,,http://www.unesco.org/iraq-office,UNESCO
+Iraq,Erbil,36.1897,44.0084,Education,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,Education,,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,Environment,,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Food Security",,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,"Food Security",,,"Barzani Foundation"
+Iraq,Erbil,36.1897,44.0084,"Food Security",,http://www.islamic-relief.com,IRW
+Iraq,Erbil,36.1897,44.0084,"Food Security",,http://www.qrcs.org.qa/Arabic/Welcome/Pages/default.aspx,QRCS
+Iraq,Erbil,36.1897,44.0084,"Food Security",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Food Security",,http://www.wfp.org,WFP
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,http://www.rescue.org,IRC
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,http://www.nrc.no,NRC
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,,UNDP
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,http://www.unfpa.org,UNFPA
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Gender-Based Violence",,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,Health,,http://www.msf.org,"MSF- CH"
+Iraq,Erbil,36.1897,44.0084,Health,,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,Health,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,Health,,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,Health,,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,Health,,http://www.who.org,WHO
+Iraq,Erbil,36.1897,44.0084,HIV/AIDS,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://drc.dk/relief-work/where-we-work/middle-east/iraq/,"DRC Iraq"
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://www.savethechildren.org,SC
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,"Information Management",,http://www.wfp.org,WFP
+Iraq,Erbil,36.1897,44.0084,Livelihood,,http://drc.dk/relief-work/where-we-work/middle-east/iraq/,"DRC Iraq"
+Iraq,Erbil,36.1897,44.0084,Livelihood,,http://www.iomiraq.net/,IOM
+Iraq,Erbil,36.1897,44.0084,Livelihood,,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,Livelihood,,http://www.reach-iraq.org,REACH
+Iraq,Erbil,36.1897,44.0084,Livelihood,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,Logistics,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,Logistics,,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,Logistics,,http://www.wfp.org,WFP
+Iraq,Erbil,36.1897,44.0084,Nutrition,,,ACF
+Iraq,Erbil,36.1897,44.0084,Nutrition,,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,Nutrition,,,"Barzani Foundation"
+Iraq,Erbil,36.1897,44.0084,Nutrition,,,UNDP
+Iraq,Erbil,36.1897,44.0084,Nutrition,,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,Nutrition,,http://www.wfp.org,WFP
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,Protection,,http://drc.dk/relief-work/where-we-work/middle-east/iraq/,"DRC Iraq"
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.rescue.org,IRC
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.nrc.no,NRC
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.savethechildren.org,SC
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,Protection,,http://www.unponteper.it,UPP
+Iraq,Erbil,36.1897,44.0084,Registration,,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,Registration,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Reproductive Health",,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Reproductive Health",,http://www.who.org,WHO
+Iraq,Erbil,36.1897,44.0084,Shelter,,http://www.acted.org,ACTED
+Iraq,Erbil,36.1897,44.0084,Shelter,,http://drc.dk/relief-work/where-we-work/middle-east/iraq/,"DRC Iraq"
+Iraq,Erbil,36.1897,44.0084,Shelter,,http://www.islamic-relief.com,IRW
+Iraq,Erbil,36.1897,44.0084,Shelter,,,KURDS
+Iraq,Erbil,36.1897,44.0084,Shelter,,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,Shelter,,http://www.qrcs.org.qa/Arabic/Welcome/Pages/default.aspx,QRCS
+Iraq,Erbil,36.1897,44.0084,Shelter,,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,,ACF
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,,"Barzani Foundation"
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://drc.dk/relief-work/where-we-work/middle-east/iraq/,"DRC Iraq"
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://www.islamic-relief.com,IRW
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,,KURDS
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://www.nrc.no,NRC
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://www.Qandil.org,Qandil
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://www.ri.org/index.php,RI
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://www.unhcr.org,UNHCR
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://www.unicef.org,UNICEF
+Iraq,Erbil,36.1897,44.0084,"Water & Sanitation",,http://www.unponteper.it,UPP
+Thailand-Myanmar,Tak,16.8697,99.129,Protection,,https://www.unhcr.or.th/,UNHCR
+Thailand-Myanmar,"Mae Hong Son",19.3003,97.9685,Protection,,https://www.unhcr.or.th/,UNHCR
+Thailand-Myanmar,Ratchaburi,13.5367,99.8171,Protection,,https://www.unhcr.or.th/,UNHCR
+Thailand-Myanmar,Kanchanaburi,14.0041,99.5483,Protection,,https://www.unhcr.or.th/,UNHCR

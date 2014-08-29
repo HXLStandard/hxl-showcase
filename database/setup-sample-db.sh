@@ -15,6 +15,8 @@ php ../scripts/add-dataset.php iom haiti-dtm 'IOM Haiti DTM, June 2013'
 php ../scripts/import-data.php dpm iom haiti-dtm < ../sample-data/iom-haiti-dtm.csv
 
 php ../scripts/add-source.php unhcr 'United Nations High Commissioner for Refugees (UNHCR)'
+php ../scripts/add-dataset.php unhcr unhcr-3w 'UNHCR global 3W'
+php ../scripts/import-data.php dpm unhcr unhcr-3w < ../sample-data/unhcr-3w.csv
 php ../scripts/add-dataset.php unhcr refugees 'UNHCR refugee data'
 php ../scripts/import-data.php dpm unhcr refugees < ../sample-data/unhcr-refugee-data-full.csv
 
