@@ -55,13 +55,14 @@ class RowIterator implements Iterator {
    */
   function next() {
     $n = -1;
-    $this->current_row = array();
+
+    $lazy_values = array();
+
     if ($this->next_row_value !== null) {
-      array_push($this->current_row, $this->next_row_value);
+      $lazy_values[$this->next_row_value->col] = $this->next_row_value;
       $this->next_row_value = null;
     }
 
-    $lazy_values = array();
     foreach ($this->statement as $value) {
       if ($value->row != $n && $n != -1) {
         $this->current_row_number++;
