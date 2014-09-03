@@ -50,10 +50,7 @@ class RowIterator implements Iterator {
       if ($value->row != $n && $n != -1) {
         $this->current_row_number++;
         $this->next_row_value = $value;
-        $this->current_row = array();
-        foreach ($this->cols as $col) {
-          $this->current_row[$col->col] = $lazy_values[$col->col];
-        }
+        $this->current_row = $this->make_row($lazy_values);
         return;
       } else {
         $n = $value->row;
@@ -65,6 +62,14 @@ class RowIterator implements Iterator {
 
   function valid() {
     return ($this->current_row_number > -1);
+  }
+
+  private function make_row($lazy_values) {
+    $row = array();
+    foreach ($this->cols as $col) {
+      $row[$col->col] = $lazy_values[$col->col];
+    }
+    return $row;
   }
 
 }
