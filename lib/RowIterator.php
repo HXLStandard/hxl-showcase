@@ -16,10 +16,14 @@ class RowIterator implements Iterator {
   private $cols;
   private $statement;
   private $row_count;
-  private $current_row = array();
   private $current_row_number = -1;
   private $next_row_value = null;
 
+  /**
+   * @param $cols An array of col items for structuring each row.
+   * @param $statement A PDO statement for retrieving the values,
+   * sorted by row and col.
+   */
   function __construct($cols, PDOStatement $statement) {
     $this->cols = $cols;
     $this->statement = $statement;

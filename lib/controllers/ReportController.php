@@ -21,7 +21,7 @@ class ReportController extends AbstractController {
     list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
 
     $cols = get_cols($import);
-    $rows = get_rows($filter_fragment);
+    $rows = get_rows($cols, $filter_fragment);
 
     switch($format) {
     case 'csv':

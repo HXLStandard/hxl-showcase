@@ -231,8 +231,8 @@ function get_values($filter_fragment) {
 /**
  * Get the values for an import organised by row.
  */
-function get_rows($filter_fragment) {
-  return new RowIterator(get_values($filter_fragment));
+function get_rows($cols, $filter_fragment) {
+  return new RowIterator($cols, get_values($filter_fragment));
 }
 
 /**
