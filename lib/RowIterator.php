@@ -12,14 +12,16 @@
  * iterator_count will exhaust the rows.
  */
 class RowIterator implements Iterator {
-  
+
+  private $cols;
   private $statement;
   private $row_count;
   private $current_row = array();
   private $current_row_number = -1;
   private $next_row_value = null;
 
-  function __construct(PDOStatement $statement) {
+  function __construct($cols, PDOStatement $statement) {
+    $this->cols = $cols;
     $this->statement = $statement;
   }
 
@@ -38,18 +40,24 @@ class RowIterator implements Iterator {
   function next() {
     $n = -1;
     $this->current_row = array();
-    if ($this->next_row_value) {
+    if ($this->next_row_value !== null) {
       array_push($this->current_row, $this->next_row_value);
       $this->next_row_value = null;
     }
+
+    $lazy_values = array();
     foreach ($this->statement as $value) {
       if ($value->row != $n && $n != -1) {
         $this->current_row_number++;
         $this->next_row_value = $value;
+        $this->current_row = array();
+        foreach ($this->cols as $col) {
+          $this->current_row[$col->col] = $lazy_values[$col->col];
+        }
         return;
       } else {
         $n = $value->row;
-        array_push($this->current_row, $value);
+        $lazy_values[$value->col] = $value;
       }
     }
     $this->current_row_number = -1;
