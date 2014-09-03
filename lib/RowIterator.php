@@ -25,18 +25,30 @@ class RowIterator implements Iterator {
     $this->statement = $statement;
   }
 
+  /**
+   * Implement Iterator->rewind()
+   */
   function rewind() {
     $this->next();
   }
 
+  /**
+   * Implement Iterator->current()
+   */
   function current() {
     return $this->current_row;
   }
 
+  /**
+   * Implement Iterator->key()
+   */
   function key() {
     return $this->current_row_number;
   }
 
+  /**
+   * Implement Iterator->next()
+   */
   function next() {
     $n = -1;
     $this->current_row = array();
@@ -60,10 +72,19 @@ class RowIterator implements Iterator {
     $this->current_row_number = -1;
   }
 
+  /**
+   * Implement Iterator->valid()
+   */
   function valid() {
     return ($this->current_row_number > -1);
   }
 
+  /**
+   * Order and pad a lazy row of values.
+   *
+   * @param $lazy_values An array of values with nulls omitted.
+   * @return An array of values sorted in col order, with null padding added.
+   */
   private function make_row($lazy_values) {
     $row = array();
     foreach ($this->cols as $col) {
