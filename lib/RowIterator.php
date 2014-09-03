@@ -58,22 +58,31 @@ class RowIterator implements Iterator {
 
     $lazy_values = array();
 
+    // Do we have a value left over from the last pass?
     if ($this->next_row_value !== null) {
       $lazy_values[$this->next_row_value->col] = $this->next_row_value;
       $this->next_row_value = null;
     }
 
+    // Read all the values that belong to the same row.
     foreach ($this->statement as $value) {
+
+      // Terminal condition: a new row has started.
       if ($value->row != $n && $n != -1) {
         $this->current_row_number++;
         $this->next_row_value = $value;
         $this->current_row = $this->make_row($lazy_values);
         return;
-      } else {
+      } 
+
+      // Regular condition: add to the current row.
+      else {
         $n = $value->row;
         $lazy_values[$value->col] = $value;
       }
     }
+
+    // End of file condition: we didn't find any values.
     $this->current_row_number = -1;
   }
 
