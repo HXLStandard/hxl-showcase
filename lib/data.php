@@ -247,6 +247,16 @@ function get_row_count($import) {
 }
 
 /**
+ * Return the number of rows in an import.
+ */
+function get_row_count_filtered($filter_fragment) {
+  return do_query(
+    'select count(distinct row) from value_view' .
+    ' where row in ' . $filter_fragment
+  )->fetchColumn();
+}
+
+/**
  * Generate a histogram of a numeric value.
  *
  * Currently hard-coded to 25 buckets.

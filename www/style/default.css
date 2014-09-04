@@ -1,6 +1,10 @@
 @import url(base.css);
 
-@import url(wide.css) (min-width: 30em);
+@import url(wide.css) (min-width: 800px);
+
+body {
+    font-size: 11pt;
+}
 
 header {
     margin-bottom: .5ex;
@@ -211,20 +215,11 @@ section {
     margin: 3ex 0;
 }
 
-#filter-list {
-    margin: 0;
-    padding: 0;
-}
-
-#filter-list li {
-    display: inline;
-    list-style: none;
-    border: solid 1px;
-    padding: .5ex;
-    background: #ffffaa;
-    width: 10ex;
-}
-
 #new-filters a {
     margin-right: 2ex;
+}
+
+.browse-link a {
+    text-weight: bold;
+    font-size: 120%;
 }

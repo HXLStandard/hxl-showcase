@@ -8,7 +8,9 @@
   <body class="twocol">
     {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
-      <li><a href="/">Home</a></li>
+      <li><a href="http://hxlstandard.org">HXL home</a></li>
+      <li><a href="/">Demo</a></li>
+      <li><a href="/source">Data providers</a></li>
       {if $import}
       <li><a href="{$import|source_link}">{$import->source_name|escape}</a></li>
       <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
@@ -27,6 +29,12 @@
       {/if}
 
       <table>
+        {if $filters}
+        <caption>Showing {$filtered_count|number_format} of {$total_count|number_format} row{$total_count|plural:'':'s'} (filtered)</caption>
+        {else}
+        <caption>Showing all {$total_count|number_format} row{$total_count|plural:'':'s'} (no filters)</caption>
+        {/if}
+
         <thead>
           <tr>
             {foreach $cols as $col}
@@ -54,11 +62,14 @@
     <aside>
       <section>
         <h2>Filters</h2>
+        <p>Use HXL hashtags to filter the data.</p>
         {include file="fragments/filters.tpl" type="data"}
       </section>
       <section id="links">
         <h2>Downloads</h2>
+        {if $filters}
         <p>These downloads include only the <b>filtered</b> data.</p>
+        {/if}
         <ul class="links">
           <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a></li>
           <li><a href="{$baseurl}/data.json{$filters|params}">JSON</a></li>

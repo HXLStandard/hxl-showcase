@@ -23,6 +23,9 @@ class ReportController extends AbstractController {
     $cols = get_cols($import);
     $rows = get_rows($cols, $filter_fragment);
 
+    $total_count = get_row_count($import);
+    $filtered_count = get_row_count_filtered($filter_fragment);
+
     switch($format) {
     case 'csv':
       dump_csv($cols, $rows);
@@ -45,6 +48,8 @@ class ReportController extends AbstractController {
       $response->setParameter('import', $import);
       $response->setParameter('cols', $cols);
       $response->setParameter('rows', $rows);
+      $response->setParameter('filtered_count', $filtered_count);
+      $response->setParameter('total_count', $total_count);
       $response->setTemplate('report');
       break;
     }

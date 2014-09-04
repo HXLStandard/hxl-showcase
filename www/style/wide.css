@@ -16,16 +16,26 @@ header #searchbox {
 
 .twocol main {
     float: left;
-    width: 80%;
+    width: 75%;
 }
 
 .twocol aside {
     display: block;
     font-size: 83.33333%;
-    margin-left: 85%;
+    margin-left: 80%;
+    color: #333333;
 }
 
 .twocol aside dl dd {
     margin: 0 0 1ex;
+}
+
+.twocol aside section {
+    border: 1px solid #4B92DB;
+    padding: 1ex;
+}
+
+.twocol aside h2 {
+    font-size: 120%;
 }
 

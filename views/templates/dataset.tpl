@@ -27,20 +27,14 @@
 
       <h1>{$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
 
-      {if $filters}
-      <section id="filters">
-        {include file="fragments/filter-list.tpl"}
-      </section>
-      {/if}
-
       <dl>
         <dt>Source</dt>
-        <dd><a href="{$import|source_link}">{$import->source_name|escape}</a></dd>
+        <dd></dd>
         <dt>Latest upload</dt>
         <dd>{$import->stamp|timeAgo} by <a href="{$import|user_link}">{$import->usr_name|escape}</a></dd>
         <dt>Rows</dt>
         {if $filters}
-        <dd>{$filtered_row_count|number_format} of {$row_count|number_format} (<a href="{$baseurl}/data{$filters|params}">view data</a>)</dd>
+        <dd>{$filtered_row_count|number_format} of {$row_count|number_format}</dd>
         {else}
         <dd>{$row_count|number_format} (<a href="{$baseurl}/data">view data</a>)</dd>
         {/if}
@@ -73,7 +67,7 @@
 
     <aside>
 
-      <p><a href="{$baseurl}/data{$filters|params}">Browse data</a></p>
+      <p class="browse-link"><a href="{$baseurl}/data{$filters|params}">Browse the data</a></p>
 
       <section>
         <h2>Explore</h2>      
