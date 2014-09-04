@@ -138,7 +138,7 @@
         <h2>Downloads</h2>
         <p>These downloads include only the <b>filtered</b> data.</p>
         <ul class="links">
-          <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a></li>
+          <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a> (spreadsheet)</li>
           <li><a href="{$baseurl}/data.json{$filters|params}">JSON</a></li>
           <li><a href="{$baseurl}/data.xml{$filters|params}">XML</a></li>
           <li><a href="{$baseurl}/data.n3{$filters|params}">RDF (N3)</a></li>
