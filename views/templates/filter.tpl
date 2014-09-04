@@ -15,7 +15,7 @@
     <p>Show only data rows where #{$filter_tag->tag|escape} has the following value:</p>
     <ul>
     {foreach $options as $option}
-    {$url = "`$baseurl`/stats`$filters|params:'tag':$params->tag:$params->filter_tag:$option->content`"}
+    {$url = "`$baseurl`/`$params->type``$filters|params:'tag':$params->tag:$params->filter_tag:$option->content`"}
     <li><a href="{$url|escape}" onclick="return do_link('{$url|escape}')">{$option->content|none}</a> <span class="count">{$option->count|number_format}</span></li>
     {/foreach}
     </ul>

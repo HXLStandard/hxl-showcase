@@ -11,6 +11,7 @@ class FilterController extends AbstractController {
     $params->tag = $request->get('tag'); // tag being viewed
     $params->dataset = $request->get('dataset');
     $params->import = $request->get('import');
+    $params->type = $request->get('type'); // type (stats or data)
 
     $import = get_import($params->dataset, $params->import);
 

@@ -54,7 +54,7 @@
     <aside>
       <section>
         <h2>Filters</h2>
-        {include file="fragments/filters.tpl"}
+        {include file="fragments/filters.tpl" type="data"}
       </section>
       <section id="links">
         <h2>Downloads</h2>

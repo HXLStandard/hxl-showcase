@@ -36,7 +36,7 @@ RewriteRule ^data/([\w-]{1,32})/history$ index.php?p=dataset-history&dataset=$1 
 
 RewriteRule ^data/([\w-]{1,32})/stats(?:\.(csv|json))?$ index.php?p=stats&dataset=$1&format=$2 [QSA,L]
 
-RewriteRule ^data/([\w-]{1,32})/(stats|report)/filter/([\w]{1,32})$ index.php?p=filter&dataset=$1&type=$2&filter_tag=$3 [QSA,L]
+RewriteRule ^data/([\w-]{1,32})/(stats|data)/filter/([\w]{1,32})$ index.php?p=filter&dataset=$1&type=$2&filter_tag=$3 [QSA,L]
 
 # Imports
 

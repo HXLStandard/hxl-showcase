@@ -131,7 +131,7 @@
 
       <section>
         <h2>Filters</h2>
-        {include file="fragments/filters.tpl"}
+        {include file="fragments/filters.tpl" type="stats"}
       </section>
 
       <section id="links">
