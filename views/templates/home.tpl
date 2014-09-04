@@ -7,6 +7,10 @@
   </head>
   <body>
 {include file="fragments/header.tpl"}
+    <nav class="breadcrumbs">
+      <li><a href="http://hxlstandard.org">HXL home</a></li>
+    </nav>
+
     <main>
 
       <section id="intro">

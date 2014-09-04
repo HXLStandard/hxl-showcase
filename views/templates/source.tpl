@@ -8,8 +8,9 @@
   <body>
 {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
-      <li><a href="/">Home</a></li>
-      <li><a href="/data">Data providers</a></li>
+      <li><a href="http://hxlstandard.org">HXL home</a></li>
+      <li><a href="/">Demo</a></li>
+      <li><a href="/source">Data providers</a></li>
     </nav>
 
     <main>
