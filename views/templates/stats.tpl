@@ -25,7 +25,7 @@
     </nav>
 
     <main>
-      <h1>Exploring <span class="tag">{$tag->tag|escape}</span> in {$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
+      <h1>Exploring #<span class="tag">{$tag->tag|escape}</span> in {$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
 
       <section id="chart">
         <div id="chart_div"></div>
