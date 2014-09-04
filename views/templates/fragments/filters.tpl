@@ -1,7 +1,7 @@
 <ul class="filters">
           {foreach $filters as $tagname => $tagvalue}
           <li class="active">
-            <a class="toggle" href="data{$filters|params:$tagname:null}">-</a>
+            <a class="toggle" href="{$type|escape:'url'}{$filters|params:tag:$tag->tag:$tagname:null}">-</a>
             <span class="tag">{$tagname|escape}</span> : <span class="value">{$tagvalue|escape}</span>
           </li>
           {/foreach}
