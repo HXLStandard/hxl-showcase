@@ -16,6 +16,7 @@ class DatasetController extends AbstractController {
 
     // Latest import for the dataset if not specified
     $import = get_import($params->dataset, $params->import);
+    $imports = get_imports($params->dataset);
 
     list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
 
@@ -35,6 +36,7 @@ class DatasetController extends AbstractController {
     $response->setParameter('params', $params);
     $response->setParameter('filters', $filters);
     $response->setParameter('import', $import);
+    $response->setParameter('imports', $imports);
     $response->setParameter('cols', $cols);
     $response->setParameter('filtered_row_count', $filtered_row_count);
     $response->setParameter('row_count', $row_count);

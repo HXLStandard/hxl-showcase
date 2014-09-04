@@ -45,10 +45,6 @@ main {
     position: relative;
 }
 
-section {
-    clear: both;
-}
-
 table {
     margin: 2ex 0;
     border-collapse: collapse;
@@ -161,19 +157,54 @@ nav.options li a {
     background: #aaaaaa;
 }
 
-nav.main:after, nav.options:after {
+nav.main:after {
     display: block;
     content: "";
     clear: both;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 1ex 0;
 }
 
 dt {
     font-weight: bold;
 }
 
-.tag {
-    font-family: monospace;
-    font-weight: normal;
+ul.filters {
+    list-style: none;
+    padding: 0;
+}
+
+ul.filters .value {
+    font-style: italic;
+}
+
+ul.filters li {
+    margin: 1ex 0;
+}
+
+ul.filters li.active .tag {
+    font-weight: bold;
+}
+
+a.toggle {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid;
+    width: 1em;
+    text-decoration: none;
+    color: green;
+}
+
+li.active a.toggle {
+    color: red;
 }
 
 section {

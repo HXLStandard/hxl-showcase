@@ -2,15 +2,22 @@
 <!DOCTYPE html>
 
 <html>
+  {if $params->import}
+  {$baseurl=$import|import_link}
+  {else}
+  {$baseurl=$import|dataset_link}
+  {/if}
   <head>
     <title>{$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</title>
-{include file="fragments/metadata.tpl"}
+    {include file="fragments/metadata.tpl"}
   </head>
   <body>
     {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
-      <li><a href="/">Home</a></li>
-      <li><a href="/data">Datasets</a></li>
+      <li><a href="http://hxlstandard.org">HXL home</a></li>
+      <li><a href="/">Demo</a></li>
+      <li><a href="/source">Data providers</a></li>
+      <li><a href="{$import|source_link}">{$import->source_name|escape}</a></li>
       {if $params->import}
       <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
       {/if}
@@ -21,22 +28,15 @@
 
       {if $filters}
       <section id="filters">
-{include file="fragments/filter-list.tpl"}
+        {include file="fragments/filter-list.tpl"}
       </section>
-      {/if}
-
-      {if $params->import}
-      <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
-      {$baseurl=$import|import_link}
-      {else}
-      {$baseurl=$import|dataset_link}
       {/if}
 
       <dl>
         <dt>Source</dt>
         <dd><a href="{$import|source_link}">{$import->source_name|escape}</a></dd>
         <dt>Latest upload</dt>
-        <dd>{$import->stamp|timeAgo} by <a href="{$import|user_link}">{$import->usr_name|escape}</a> (<a href="{$import|dataset_link}/history">history</a>)</dd>
+        <dd>{$import->stamp|timeAgo} by <a href="{$import|user_link}">{$import->usr_name|escape}</a></dd>
         <dt>Rows</dt>
         {if $filters}
         <dd>{$filtered_row_count|number_format} of {$row_count|number_format} (<a href="{$baseurl}/data{$filters|params}">view data</a>)</dd>
@@ -45,19 +45,42 @@
         {/if}
       </dl>
 
-      <section id="analyse">
-        <h2>Analyse</h2>
-
-        <p>Begin your analysis by selecting one of the HXL tags that appears in the dataset:</p>
-
-        <ul>
-          {foreach $cols as $col}
-          <li><a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">#{$col->tag|escape}</a> ({$col->tag_name|escape})</li>
-          {/foreach}
-        </ul>
-
+      <section id="history">
+        <h2>Upload history</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date uploaded</th>
+              <th>Uploaded by</th>
+              <th>Data rows</th>
+            </tr>
+          </thead>
+          <tbody>
+            {foreach item=import from=$imports}
+            <tr>
+              <td><a href="{$import|import_link}">{$import->stamp|timeAgo}</a></td>
+              <td><a href="{$import|user_link}">{$import->usr_name|escape}</a></td>
+              <td>{$import->row_count|number_format}</td>
+            </tr>
+            {/foreach}      
+          </tbody>
+        </table>
       </section>
 
     </main>
+
+
+    <aside>
+      <h2>Explore a tag</h2>      
+
+      <dl>
+        {foreach $cols as $col}
+        <dt><a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">#{$col->tag|escape}</a></dt>
+        <dd>{$col->tag_name|escape}</dd>
+        {/foreach}
+      </dl>
+
+    </aside>
+
   </body>
 </html>

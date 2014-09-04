@@ -11,8 +11,10 @@
   <body>
     {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
-      <li><a href="/">Home</a></li>
-      <li><a href="/data">Datasets</a></li>
+      <li><a href="http://hxlstandard.org">HXL home</a></li>
+      <li><a href="/">Demo</a></li>
+      <li><a href="/source">Data providers</a></li>
+      <li><a href="{$import|source_link}">{$import->source_name|escape}</a></li>
       <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
       {if $params->import}
       <li><a href="{$import|import_link}">{$import->stamp|escape}</a></li>
@@ -22,43 +24,34 @@
       {/if}
     </nav>
 
+    <h1>Exploring <span class="tag">{$tag->tag|escape}</span> in {$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
+
     <main>
-      <h1>#{$tag->tag|escape} in {$import->dataset_name|escape}</h1>
+      <section id="chart">
+        <div id="chart_div"></div>
+      </section>
 
-      <p><i><a href="{$baseurl|escape}">View a different tag</a></i></p>
-
-      {if $params->import}
-      <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
-      {/if}
-
-      <p>This is a summary of the different values that appear for <a
-      href="{$tag|tag_link}">#{$tag->tag|escape}</a>
-      ({$tag->tag_name|escape}) in the dataset <cite><a
-      href="{$dataset|dataset_link}">{$import->dataset_name|escape}</a></cite>.</p>
-
-      <section id="filters">
-        <h2>Data filters</h2>
-        
-        <p>In this section, you can set filters to analyse just <i>part</i> of the dataset, instead of the whole thing.</p>
-
-        {if $filters}
-        <p><b>Active filters:</b></p>
-        {include file="fragments/filter-list.tpl"}
-        {/if}
-
-        <p id="new-filters">
-          <b>Add a new filter:</b>
-          {foreach $filter_tags as $filter_tag}
-          {$url = "stats/filter/`$filter_tag|escape:'url'``$filters|params:'tag':$tag->tag`"}
-          <a href="{$url|escape}" onclick="window.open('{$url|escape}', 'Filter', 'height=600, width=400').focus(); return false;">#{$filter_tag|escape}</a>
-          {/foreach}
-        </p>
+      <section id="summary">
+        <h2>Summary</h2>
+        <table>
+          <thead>
+            <th>Value</th>
+            <th>Count</th>
+          </thead>
+          <tbody>
+            {foreach $stats as $stat}
+            <tr>
+              <td>{$stat->content|none}</td>
+              <td>{$stat->count|number_format}</td>
+            </tr>
+            {/foreach}
+          </tbody>
+        </table>
       </section>
 
       {if $tag->datatype=='Number'}
-      {$chartname='Histogram'}
-      <section id="aggregates">
-        <h2>Aggregates</h2>
+      <section id="analysis">
+        <h2>Analysis</h2>
 
         <p>Because the <a
         href="{$tag|tag_link}">#{$tag->tag|escape}</a> refers to
@@ -127,49 +120,29 @@
           </tbody>
         </table>
       </section>
-      {else}
-      {$chartname='Chart'}
       {/if}
 
-      <section id="chart">
-        <h2>{$chartname|escape}</h2>
+    </main>
 
-        {if $chartname == 'Histogram'}
-        <p>This is a chart of the distribution of values in different
-        ranges for <a href="{$tag|tag_link}">#{$tag->tag|escape}</a> in this dataset, based on any <a href="#filters">filters</a> you've set above.</p>
-        {/if}
 
-        <div id="chart_div"></div>
-
-        <section id="data">
-          <h3>{$chartname|escape} data</h3>
-
-          <p>This is the data used to generate the {$chartname|escape}.  You can download it for your own analysis, or look at the complete (unaggregated) data matching the <a href="#filters">filters</a> you've set above.</p>
-
-          <nav class="options col3">
-            <li><a href="{$baseurl}/data{$filters|params}">Full data</a></li>
-            <li><a href="{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}">Summary CSV</a></li>
-            <li><a href="{$baseurl}/stats.json{$filters|params:'tag':$tag->tag}">Summary JSON</a></li>
-          </nav>
-
-          <table>
-            <thead>
-              <th>Value</th>
-              <th>Count</th>
-            </thead>
-            <tbody>
-              {foreach $stats as $stat}
-              <tr>
-                <td>{$stat->content|none}</td>
-                <td>{$stat->count|number_format}</td>
-              </tr>
-              {/foreach}
-            </tbody>
-          </table>
-        </section>
+    <aside>
+      <section>
+        <h2>Filters</h2>
+        {include file="fragments/filters.tpl"}
       </section>
 
-    </main>
+      <section id="links">
+        <h2>Data</h2>
+        <ul class="links">
+          <li><a href="{$baseurl}/data{$filters|params}">Browse</a></li>
+          <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a></li>
+          <li><a href="{$baseurl}/data.json{$filters|params}">JSON</a></li>
+          <li><a href="{$baseurl}/data.xml{$filters|params}">XML</a></li>
+          <li><a href="{$baseurl}/data.n3{$filters|params}">RDF (N3)</a></li>
+        </ul>
+      </section>
+    </aside>
+
     <script type="text/javascript" src="/scripts/charts.js"></script>
     <script type="text/javascript">
       var chart_url = "{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}";

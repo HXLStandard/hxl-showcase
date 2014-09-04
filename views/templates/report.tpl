@@ -62,7 +62,10 @@
           {/foreach}
         </tbody>
       </table>
-
     </main>
+
+    <aside>
+      {include file="fragments/filters.tpl"}
+    </aside>
   </body>
 </html>

@@ -37,8 +37,11 @@ class ReportController extends AbstractController {
       dump_n3($cols, $rows);
       exit;
     default:
+      $filter_tags = get_filter_tags($params->tag, $filters, get_cols($import));
+      sort($filter_tags);
       $response->setParameter('params', $params);
       $response->setParameter('filters', $filters);
+      $response->setParameter('filter_tags', $filter_tags);
       $response->setParameter('import', $import);
       $response->setParameter('cols', $cols);
       $response->setParameter('rows', $rows);

@@ -342,3 +342,16 @@ function process_filters(HttpRequest $request, $import_id, $allowed_filters) {
   return array($sql_filter, $active_filters);
 }
 
+/**
+ * Return a list of tags suitable for filtering.
+ */
+function get_filter_tags($tag_param, $filters, $cols) {
+  $tags = array();
+  foreach ($cols as $col) {
+    if (!$filters[$col->tag] && ($col->tag != $tag_param)) {
+      $tags[$col->tag] = true;
+    }
+  }
+  return array_keys($tags);
+}
+

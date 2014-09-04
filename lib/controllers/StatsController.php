@@ -40,7 +40,7 @@ class StatsController extends AbstractController {
       self::dump_json($stats);
       exit;
     default:
-      $filter_tags = self::get_filter_tags($params->tag, $filters, get_cols($import));
+      $filter_tags = get_filter_tags($params->tag, $filters, get_cols($import));
       sort($filter_tags);
       $response->setParameter('params', $params);
       $response->setParameter('filters', $filters);
@@ -83,19 +83,6 @@ class StatsController extends AbstractController {
       )));
     }
     print("\n]\n");
-  }
-
-  /**
-   * Return a list of tags suitable for filtering.
-   */
-  private static function get_filter_tags($tag_param, $filters, $cols) {
-    $tags = array();
-    foreach ($cols as $col) {
-      if (!$filters[$col->tag] && ($col->tag != $tag_param)) {
-        $tags[$col->tag] = true;
-      }
-    }
-    return array_keys($tags);
   }
 
 }
