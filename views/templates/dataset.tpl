@@ -11,7 +11,7 @@
     <title>{$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</title>
     {include file="fragments/metadata.tpl"}
   </head>
-  <body>
+  <body class="twocol">
     {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="http://hxlstandard.org">HXL home</a></li>
@@ -24,6 +24,7 @@
     </nav>
 
     <main>
+
       <h1>{$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
 
       {if $filters}
@@ -71,14 +72,30 @@
 
 
     <aside>
-      <h2>Explore a tag</h2>      
 
-      <dl>
-        {foreach $cols as $col}
-        <dt><a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">#{$col->tag|escape}</a></dt>
-        <dd>{$col->tag_name|escape}</dd>
-        {/foreach}
-      </dl>
+      <p><a href="{$baseurl}/data{$filters|params}">Browse data</a></p>
+
+      <section>
+        <h2>Explore</h2>      
+        <p>Select one of these HXL hashtags to start visualising and analysing the dataset.</p>
+        <dl>
+          {foreach $cols as $col}
+          <dt><a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">#{$col->tag|escape}</a></dt>
+          <dd>{$col->tag_name|escape}</dd>
+          {/foreach}
+        </dl>
+      </section>
+
+      <section id="links">
+        <h2>Downloads</h2>
+        <p>These downloads include the full dataset.</p>
+        <ul class="links">
+          <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a></li>
+          <li><a href="{$baseurl}/data.json{$filters|params}">JSON</a></li>
+          <li><a href="{$baseurl}/data.xml{$filters|params}">XML</a></li>
+          <li><a href="{$baseurl}/data.n3{$filters|params}">RDF (N3)</a></li>
+        </ul>
+      </section>
 
     </aside>
 

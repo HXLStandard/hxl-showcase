@@ -14,17 +14,18 @@ header #searchbox {
     margin: 0;
 }
 
-main {
-    float: right;
+.twocol main {
+    float: left;
     width: 80%;
 }
 
-aside {
+.twocol aside {
     display: block;
     font-size: 83.33333%;
+    margin-left: 85%;
 }
 
-aside dl dd {
+.twocol aside dl dd {
     margin: 0 0 1ex;
 }
 

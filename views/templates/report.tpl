@@ -5,7 +5,7 @@
     <title>Report</title>
 {include file="fragments/metadata.tpl"}
   </head>
-  <body>
+  <body class="twocol">
     {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="/">Home</a></li>
@@ -14,30 +14,17 @@
       <li><a href="{$import|dataset_link}">{$import->dataset_name|escape}</a></li>
       {if $params->import}
       <li><a href="{$import|import_link}">{$import->stamp|escape}</a></li>
+      {$baseurl=$import|import_link}
+      {else}
+      {$baseurl=$import|dataset_link}
       {/if}
       {/if}
     </nav>
+
     <main>
       {if $import}
-      <h1>{$import->dataset_name|escape}</h1>
+      <h1>{$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
       {/if}
-
-      {if $filters}
-      <section id="filters">
-{include file="fragments/filter-list.tpl"}
-      </section>
-      {/if}
-
-      {if $params->import}
-      <p><b>Showing version imported on {$import->stamp|escape} by {$import->usr_name}.</b></p>
-      {/if}
-
-      <nav class="options col4">
-        <li><a href="data.csv{$filters|params:'tag':$tag->tag}">CSV</a></li>
-        <li><a href="data.json{$filters|params:'tag':$tag->tag}">JSON</a></li>
-        <li><a href="data.xml{$filters|params:'tag':$tag->tag}">XML</a></li>
-        <li><a href="data.n3{$filters|params:'tag':$tag->tag}">RDF (N3)</a></li>
-      </nav>
 
       <table>
         <thead>
@@ -65,7 +52,20 @@
     </main>
 
     <aside>
-      {include file="fragments/filters.tpl"}
+      <section>
+        <h2>Filters</h2>
+        {include file="fragments/filters.tpl"}
+      </section>
+      <section id="links">
+        <h2>Downloads</h2>
+        <p>These downloads include only the <b>filtered</b> data.</p>
+        <ul class="links">
+          <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a></li>
+          <li><a href="{$baseurl}/data.json{$filters|params}">JSON</a></li>
+          <li><a href="{$baseurl}/data.xml{$filters|params}">XML</a></li>
+          <li><a href="{$baseurl}/data.n3{$filters|params}">RDF (N3)</a></li>
+        </ul>
+      </section>
     </aside>
   </body>
 </html>

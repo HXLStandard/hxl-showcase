@@ -8,7 +8,7 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/jquery.csv-0.71.min.js"></script>
   </head>
-  <body>
+  <body class="twocol">
     {include file="fragments/header.tpl"}
     <nav class="breadcrumbs">
       <li><a href="http://hxlstandard.org">HXL home</a></li>
@@ -24,9 +24,9 @@
       {/if}
     </nav>
 
-    <h1>Exploring <span class="tag">{$tag->tag|escape}</span> in {$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
-
     <main>
+      <h1>Exploring <span class="tag">{$tag->tag|escape}</span> in {$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
+
       <section id="chart">
         <div id="chart_div"></div>
       </section>
@@ -126,15 +126,18 @@
 
 
     <aside>
+
+      <p><a href="{$baseurl}/data{$filters|params}">Browse data</a></p>
+
       <section>
         <h2>Filters</h2>
         {include file="fragments/filters.tpl"}
       </section>
 
       <section id="links">
-        <h2>Data</h2>
+        <h2>Downloads</h2>
+        <p>These downloads include only the <b>filtered</b> data.</p>
         <ul class="links">
-          <li><a href="{$baseurl}/data{$filters|params}">Browse</a></li>
           <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a></li>
           <li><a href="{$baseurl}/data.json{$filters|params}">JSON</a></li>
           <li><a href="{$baseurl}/data.xml{$filters|params}">XML</a></li>
