@@ -83,7 +83,15 @@ class RowIterator implements Iterator {
     }
 
     // End of file condition: we didn't find any values.
-    $this->current_row_number = -1;
+    if ($lazy_values) {
+      $this->current_row_number++;
+      $this->next_row_value = null;
+      $this->current_row = $this->make_row($lazy_values);
+    } else {
+      $this->current_row_number = -1;
+      $this->next_row_value = null;
+      $this->current_row = null;
+    }
   }
 
   /**
