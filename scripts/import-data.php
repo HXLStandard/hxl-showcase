@@ -36,7 +36,8 @@ $import_id = add_import($usr, $dataset);
 $n = 0;
 $hxl = new HXLReader(STDIN);
 $first_row = true;
-$col_ids = [];
+$col_ids = array();
+$tags = array();
 
 // Process each row
 foreach ($hxl as $row) {
@@ -48,14 +49,24 @@ foreach ($hxl as $row) {
   foreach ($row as $i => $value) {
     if ($first_row) {
       // If it's the first row, we need to create each column as we go (and save for future use)
+      $tag = get_tag($value->column->hxlTag);
       if (!get_tag($value->column->hxlTag)) {
         printf("Adding previously-unknown HXL tag %s\n", $value->column->hxlTag);
         add_tag($value->column->hxlTag, $value->column->headerText, 'Text');
+        $tag = get_tag($value->column->hxlTag);
       }
+      array_push($tags, $tag);
       array_push($col_ids, add_col($import_id, $value->column->hxlTag, $value->column->headerText));
     }
     // add the actual value
-    add_value($row_id, $col_ids[$i], $value->content, $value->content);
+
+    if ($tags[$i]->datatype == 'Number') {
+      $norm = 0 + $value->content;
+    } else {
+      $norm = strtolower(trim(preg_replace('/\s+/', ' ', $value->content)));
+    }
+    
+    add_value($row_id, $col_ids[$i], $value->content, $norm);
   }
   // Past the first row
   $first_row = false;
