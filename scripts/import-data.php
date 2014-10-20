@@ -18,6 +18,27 @@
 require_once(__DIR__ . '/../lib/init.php');
 require_once(__DIR__ . '/../lib/libhxl-php/HXL/HXL.php');
 
+function guess_tag_type($tag) {
+  if (preg_match('/_num$/', $tag)) {
+    return 'Number';
+  }
+  else if (preg_match('/_id$', $tag)) {
+    return 'Code';
+  }
+  else if (preg_match('/_(num|deg)$', $tag)) {
+    return 'Number';
+  }
+  else if (preg_match('/_date$', $tag)) {
+    return 'Date';
+  }
+  else if (preg_match('/_link$', $tag)) {
+    return 'URL';
+  }
+  else {
+    return 'Text';
+  }
+}
+
 if (count($argv) == 4) {
   list($script, $usr, $source, $dataset) = $argv;
 } else {
@@ -52,7 +73,7 @@ foreach ($hxl as $row) {
       $tag = get_tag($value->column->hxlTag);
       if (!get_tag($value->column->hxlTag)) {
         printf("Adding previously-unknown HXL tag %s\n", $value->column->hxlTag);
-        add_tag($value->column->hxlTag, $value->column->headerText, 'Text');
+        add_tag($value->column->hxlTag, $value->column->headerText, guess_tag_type($value->column->hxlTag));
         $tag = get_tag($value->column->hxlTag);
       }
       array_push($tags, $tag);
