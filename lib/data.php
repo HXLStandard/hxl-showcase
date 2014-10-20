@@ -62,14 +62,17 @@ function add_usr($usr, $usr_name) {
  * Add a HXL tag.
  */
 function add_tag($tag, $tag_name, $datatype) {
+  $tag = preg_replace('/^#/', '', $tag);
   do_query('insert into tag (tag, tag_name, datatype) values (?, ?, ?)', $tag, $tag_name, $datatype);
 }
 
 function update_tag($tag, $tag_name, $datatype) {
+  $tag = preg_replace('/^#/', '', $tag);
   do_query('update tag set tag_name=?, datatype=? where tag=?', $tag_name, $datatype, $tag);
 }
 
 function get_tag($tag_param) {
+  $tag_param = preg_replace('/^#/', '', $tag_param);
   return do_query(
     'select * from tag_view where tag=?',
     $tag_param
@@ -170,6 +173,7 @@ function get_import($dataset_param, $stamp_param = null) {
  * Add a new column for an import.
  */
 function add_col($import, $tag, $header) {
+  $tag = preg_replace('/^#/', '', $tag);
   do_query('insert into col (import, tag, header) values (?, ?, ?)', $import, $tag, $header);
   return do_query('select lastval()')->fetchColumn();
 }
