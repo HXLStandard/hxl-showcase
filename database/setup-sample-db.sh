@@ -14,6 +14,10 @@ php ../scripts/add-source.php iom 'International Organization for Migration (IOM
 php ../scripts/add-dataset.php iom haiti-dtm 'IOM Haiti DTM, June 2013'
 php ../scripts/import-data.php dpm iom haiti-dtm < ../sample-data/iom-haiti-dtm.csv
 
+php ../scripts/add-source.php iati 'International Aid Transparency Initiative (IATI)'
+php ../scripts/add-dataset.php iati iati-sla 'IATI Sierra Leone aid activities'
+php ../scripts/import-data.php dpm iati iati-sla < ../sample-data/iati-sierraleone.csv
+
 php ../scripts/add-source.php unhcr 'United Nations High Commissioner for Refugees (UNHCR)'
 php ../scripts/add-dataset.php unhcr unhcr-3w 'UNHCR global 3W'
 php ../scripts/import-data.php dpm unhcr unhcr-3w < ../sample-data/unhcr-3w.csv
