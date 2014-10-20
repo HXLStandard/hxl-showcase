@@ -22,16 +22,16 @@ function guess_tag_type($tag) {
   if (preg_match('/_num$/', $tag)) {
     return 'Number';
   }
-  else if (preg_match('/_id$', $tag)) {
+  else if (preg_match('/_id$/', $tag)) {
     return 'Code';
   }
-  else if (preg_match('/_(num|deg)$', $tag)) {
+  else if (preg_match('/_(num|deg)$/', $tag)) {
     return 'Number';
   }
-  else if (preg_match('/_date$', $tag)) {
+  else if (preg_match('/_date$/', $tag)) {
     return 'Date';
   }
-  else if (preg_match('/_link$', $tag)) {
+  else if (preg_match('/_link$/', $tag)) {
     return 'URL';
   }
   else {
