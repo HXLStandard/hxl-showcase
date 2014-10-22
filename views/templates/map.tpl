@@ -27,28 +27,12 @@
     <main>
       <h1>Mapping #<span class="tag">{$tag->tag|escape}</span> in {$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
 
+{if $count > 400}
+      <p class="warning">Mapping only first 400 of {$count|number_format} locations. Please filter using the options on the right to narrow your view.</p>
+{/if}
+
       <section id="chart">
         <div id="chart_div"></div>
-      </section>
-
-      <section id="summary">
-        <h2>Summary</h2>
-        <table>
-          <thead>
-            <th>#lat_deg</th>
-            <th>#lon_deg</th>
-            <th>#{$params->tag|escape}</th>
-          </thead>
-          <tbody>
-            {foreach $locations as $location}
-            <tr>
-              <td>{$location->lat_deg|escape}</td>
-              <td>{$location->lon_deg|escape}</td>
-              <td>{$location->value|escape}</td>
-            </tr>
-            {/foreach}
-          </tbody>
-        </table>
       </section>
 
     </main>
@@ -56,21 +40,25 @@
 
     <aside>
 
-      <p class="browse-link"><a href="{$baseurl}/data{$filters|params}">Browse the data</a></p>
+      <p class="browse-link">
+        <a href="{$baseurl}/stats{$filters|params:'tag':$params->tag}">Analyze</a> |
+        <a><strong>Map</strong></a> |
+        <a href="{$baseurl}/data{$filters|params:'tag':$params->tag}">Browse</a>
+      </p>
 
       <section>
         <h2>Filters</h2>
-        {include file="fragments/filters.tpl" type="stats"}
+        {include file="fragments/filters.tpl" type="map"}
       </section>
 
       <section id="links">
         <h2>Downloads</h2>
         <p>These downloads include only the <b>filtered</b> data.</p>
         <ul class="links">
-          <li><a href="{$baseurl}/data.csv{$filters|params}">CSV</a> (spreadsheet)</li>
-          <li><a href="{$baseurl}/data.json{$filters|params}">JSON</a></li>
-          <li><a href="{$baseurl}/data.xml{$filters|params}">XML</a></li>
-          <li><a href="{$baseurl}/data.n3{$filters|params}">RDF (N3)</a></li>
+          <li><a href="{$baseurl}/map.csv{$filters|params}">CSV</a> (spreadsheet)</li>
+          <li><a href="{$baseurl}/map.json{$filters|params}">JSON</a></li>
+          <li><a href="{$baseurl}/map.xml{$filters|params}">XML</a></li>
+          <li><a href="{$baseurl}/map.n3{$filters|params}">RDF (N3)</a></li>
         </ul>
       </section>
     </aside>

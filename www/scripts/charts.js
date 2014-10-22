@@ -10,10 +10,6 @@ function drawChart() {
         // this new DataTable object holds all the data
         var data = new google.visualization.arrayToDataTable(arrayData);
 
-        // this view can select a subset of the data at a time
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0,1]);
-        
         var options = {};
 
         // set chart options
@@ -22,7 +18,9 @@ function drawChart() {
             var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         } else if (chart_type == 'map') {
             var chart = new google.visualization.Map(document.getElementById('chart_div'));
-            view.setColumns([0,1, 2]);
+            options = {
+                showTip: true
+            };
         } else {
             options = {
                 hAxis: {title: data.getColumnLabel(0), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
@@ -31,6 +29,6 @@ function drawChart() {
             };
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         }
-        chart.draw(view, options);
+        chart.draw(data, options);
     });
 }

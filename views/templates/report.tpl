@@ -60,6 +60,13 @@
     </main>
 
     <aside>
+{if $params->tag}
+      <p class="browse-link">
+        <a href="{$baseurl}/stats{$filters|params:'tag':$params->tag}">Analyze</a> |
+        <a href="{$baseurl}/map{$filters|params:'tag':$params->tag}">Map</a> |
+        <a><strong>Browse</strong></a>
+      </p>
+{/if}
       <section>
         <h2>Filters</h2>
         <p>Use HXL hashtags to filter the data.</p>

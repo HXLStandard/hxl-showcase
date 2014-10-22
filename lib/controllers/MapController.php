@@ -47,6 +47,7 @@ class MapController extends AbstractController {
       $response->setParameter('tag', $tag);
       $response->setParameter('cols', $cols);
       $response->setParameter('locations', $locations);
+      $response->setParameter('count', $locations->rowCount());
       $response->setParameter('aggregates', $aggregates);
       $response->setTemplate('map');
       break;

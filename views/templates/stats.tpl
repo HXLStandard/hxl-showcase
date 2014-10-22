@@ -127,7 +127,11 @@
 
     <aside>
 
-      <p class="browse-link"><a href="{$baseurl}/data{$filters|params}">Browse the data</a></p>
+      <p class="browse-link">
+        <a><strong>Analyze</strong></a> |
+        <a href="{$baseurl}/map{$filters|params:'tag':$params->tag}">Map</a> |
+        <a href="{$baseurl}/data{$filters|params:'tag':$params->tag}">Browse</a>
+      </p>
 
       <section>
         <h2>Filters</h2>

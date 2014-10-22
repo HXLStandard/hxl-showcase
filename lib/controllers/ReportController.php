@@ -13,6 +13,7 @@ class ReportController extends AbstractController {
 
     $format = $request->get('format');
 
+    $params->tag = $request->get('tag'); // not used, but passed on to links
     $params->dataset = $request->get('dataset');
     $params->import = $request->get('import');
 

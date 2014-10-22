@@ -223,3 +223,9 @@ section {
     text-weight: bold;
     font-size: 120%;
 }
+
+.warning {
+    border: solid 1px;
+    padding: 1ex 1em;
+    background: yellow;
+}
