@@ -63,7 +63,9 @@
 {if $params->tag}
       <p class="browse-link">
         <a href="{$baseurl}/stats{$filters|params:'tag':$params->tag}">Analyze</a> |
+{if $cols|is_geocoded}
         <a href="{$baseurl}/map{$filters|params:'tag':$params->tag}">Map</a> |
+{/if}
         <a><strong>Browse</strong></a>
       </p>
 {/if}

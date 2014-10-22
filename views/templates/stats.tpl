@@ -129,7 +129,9 @@
 
       <p class="browse-link">
         <a><strong>Analyze</strong></a> |
+{if $cols|is_geocoded}
         <a href="{$baseurl}/map{$filters|params:'tag':$params->tag}">Map</a> |
+{/if}
         <a href="{$baseurl}/data{$filters|params:'tag':$params->tag}">Browse</a>
       </p>
 

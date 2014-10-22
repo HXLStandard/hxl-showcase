@@ -15,6 +15,7 @@ class StatsController extends AbstractController {
 
     $import = get_import($params->dataset, $params->import);
     $tag = get_tag($params->tag);
+    $cols = get_cols($import);
 
     list($filter_fragment, $filters) = process_filters($request, $import->import, get_tags());
 
@@ -40,7 +41,7 @@ class StatsController extends AbstractController {
       self::dump_json($stats);
       exit;
     default:
-      $filter_tags = get_filter_tags($params->tag, $filters, get_cols($import));
+      $filter_tags = get_filter_tags($params->tag, $filters, $cols);
       sort($filter_tags);
       $response->setParameter('params', $params);
       $response->setParameter('filters', $filters);

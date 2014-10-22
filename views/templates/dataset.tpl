@@ -76,8 +76,11 @@
           {foreach $cols as $col}
           <dt>#{$col->tag|escape}</dt>
           <dd>
-              <a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">Analyze</a> |
-              <a href="{$baseurl}/map{$filters|params:'tag':$col->tag}">Map</a><br />
+              <a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">Analyze</a>
+{if $cols|is_geocoded}
+              | <a href="{$baseurl}/map{$filters|params:'tag':$col->tag}">Map</a>
+{/if}
+              <br />
               {$col->tag_name|escape}
           </dd>
           {/foreach}
