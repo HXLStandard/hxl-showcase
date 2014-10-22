@@ -20,6 +20,7 @@ $APP->paths = array(
   'user-list' => 'UserListController',
   'user' => 'UserController',
   'stats' => 'StatsController',
+  'map' => 'MapController',
 );
 
 // end
