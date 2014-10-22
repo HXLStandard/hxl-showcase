@@ -51,79 +51,6 @@
         </table>
       </section>
 
-      {if $tag->datatype=='Number'}
-      <section id="analysis">
-        <h2>Analysis</h2>
-
-        <p>Because the <a
-        href="{$tag|tag_link}">#{$tag->tag|escape}</a> refers to
-        numeric data, this section shows some different
-        <i>aggregate</i> functions applied to the numbers matching any
-        <a href="#filters">filters</a> you've set above. Not all of
-        these aggregates will make sense for every hashtag, but they
-        can help you analyse your data (e.g. how consistent is the
-        data? what are the highest and lowest numbers?).</p>
-
-        <table>
-          <tbody>
-            <tr>
-              <th>Sample size</th>
-              <td>{$aggregates->count|number_format}</td>
-              <td>
-                {if $aggregates->count < 10}
-                (This is a pretty small sample, so be careful about drawing too many conclusions from the data below.)
-                {elseif $aggregates->count < 100}
-                (This is a reasonable-sized sample, but you should still use it with care.)
-                {else}
-                (This is a fairly-large sample. Depending on how well it's been collected, the values can be meaningful.)
-                {/if}
-              </td>
-            </tr>
-            <tr>
-              <th>Sum of values</th>
-              <td>{$aggregates->sum|number_format}</td>
-              <td>(All matching numbers added up.)</td>
-            </tr>
-            <tr>
-              <th>Minimum value</th>
-              <td>{$aggregates->min|number_format}</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Maximum value</th>
-              <td>{$aggregates->max|number_format}</td>
-              <td> </td>
-            </tr>
-            <tr>
-              <th>Average (mean)</th>
-              <td>{$aggregates->avg|number_format}</td>
-              <td> </td>
-            </tr>
-            <tr>
-              <th>Standard deviation (population)</th>
-              <td>{$aggregates->stddev_pop|number_format:2}</td>
-              <td> </td>
-            </tr>
-            <tr>
-              <th>Coefficient of variation</th>
-              <td>{$aggregates->coeff_var|number_format:2}</td>
-              <td>
-                {if $aggregates->coeff_var < 0.25}
-                (The values are mostly close to the mean.)
-                {elseif $aggregates->coeff_var < 0.50}
-                (The values vary, but still tend to the mean.)
-                {elseif $aggregates->coeff_var < 0.75}
-                (The values vary considerably across a wide range.)
-                {else}
-                (There is little or no consistency.)
-                {/if}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      {/if}
-
     </main>
 
 
@@ -150,15 +77,11 @@
 
     <script type="text/javascript" src="/scripts/charts.js"></script>
     <script type="text/javascript">
-      var chart_url = "{$baseurl}/stats.csv{$filters|params:'tag':$tag->tag}";
-      {if $tag->datatype == 'Number'}
-      var chart_type = 'column';
-      {else}
-      var chart_type = 'pie';
-      {/if}
+      var chart_url = "{$baseurl}/map.csv{$filters|params:'tag':$tag->tag}";
+      var chart_type = 'map';
       {literal}
       // Load the Google stuff
-      google.load("visualization", "1", {packages:["corechart"]});
+      google.load("visualization", "1", {packages:["corechart", "map"]});
 
       // Set the callback
       google.setOnLoadCallback(drawChart);

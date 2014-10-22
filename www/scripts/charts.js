@@ -20,6 +20,9 @@ function drawChart() {
         // create the chart object and draw it
         if (chart_type == 'column') {
             var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        } else if (chart_type == 'map') {
+            var chart = new google.visualization.Map(document.getElementById('chart_div'));
+            view.setColumns([0,1, 2]);
         } else {
             options = {
                 hAxis: {title: data.getColumnLabel(0), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
