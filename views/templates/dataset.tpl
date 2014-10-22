@@ -67,15 +67,19 @@
 
     <aside>
 
-      <p class="browse-link"><a href="{$baseurl}/data{$filters|params}">Browse the data</a></p>
+      <p class="browse-link"><a href="{$baseurl}/data{$filters|params}">Browse</a></p>
 
       <section>
         <h2>Explore</h2>      
-        <p>Select one of these HXL hashtags to start visualising and analysing the dataset.</p>
+        <p>Select one of these HXL hashtags to start analyzing or mapping the dataset.</p>
         <dl>
           {foreach $cols as $col}
-          <dt><a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">#{$col->tag|escape}</a></dt>
-          <dd>{$col->tag_name|escape}</dd>
+          <dt>#{$col->tag|escape}</dt>
+          <dd>
+              <a href="{$baseurl}/stats{$filters|params:'tag':$col->tag}">Analyze</a> |
+              <a href="{$baseurl}/map{$filters|params:'tag':$col->tag}">Map</a><br />
+              {$col->tag_name|escape}
+          </dd>
           {/foreach}
         </dl>
       </section>

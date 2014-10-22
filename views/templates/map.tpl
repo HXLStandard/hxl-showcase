@@ -55,10 +55,10 @@
         <h2>Downloads</h2>
         <p>These downloads include only the <b>filtered</b> data.</p>
         <ul class="links">
-          <li><a href="{$baseurl}/map.csv{$filters|params}">CSV</a> (spreadsheet)</li>
-          <li><a href="{$baseurl}/map.json{$filters|params}">JSON</a></li>
-          <li><a href="{$baseurl}/map.xml{$filters|params}">XML</a></li>
-          <li><a href="{$baseurl}/map.n3{$filters|params}">RDF (N3)</a></li>
+          <li><a href="{$baseurl}/map.csv{$filters|params:'tag':$params->tag}">CSV</a> (spreadsheet)</li>
+          <li><a href="{$baseurl}/map.json{$filters|params:'tag':$params->tag}">JSON</a></li>
+          <li><a href="{$baseurl}/map.xml{$filters|params:'tag':$params->tag}">XML</a></li>
+          <li><a href="{$baseurl}/map.n3{$filters|params:'tag':$params->tag}">RDF (N3)</a></li>
         </ul>
       </section>
     </aside>
