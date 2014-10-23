@@ -4,9 +4,9 @@
   <head>
     <title>#{$tag->tag|escape} in {$import->dataset_name|escape}</title>
     {include file="fragments/metadata.tpl"}
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.csv-0.71.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   </head>
   <body class="twocol">
     {include file="fragments/header.tpl"}
@@ -63,17 +63,18 @@
       </section>
     </aside>
 
-    <script type="text/javascript" src="/scripts/charts.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+    <script type="text/javascript" src="/scripts/map.js"></script>
     <script type="text/javascript">
-      var chart_url = "{$baseurl}/map.csv{$filters|params:'tag':$tag->tag}";
-      var chart_type = 'map';
-      {literal}
-      // Load the Google stuff
-      google.load("visualization", "1", {packages:["corechart", "map"]});
-
-      // Set the callback
-      google.setOnLoadCallback(drawChart);
-      {/literal}
+      initmap();
+      var url = '{$baseurl}/map.json{$filters|params:'tag':$params->tag}';
+{literal}
+      $.getJSON(url, function (locations) {
+        $.each(locations, function(i, location) {
+          var marker = L.marker([location[0], location[1]]).addTo(map);
+        });
+      });
+{/literal}
     </script>
   </body>
 </html>

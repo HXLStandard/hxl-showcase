@@ -4,3 +4,6 @@ body {
     color: #000011;
 }
 
+#chart_div {
+    height: 500px;
+}
