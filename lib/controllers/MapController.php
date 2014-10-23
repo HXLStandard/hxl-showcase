@@ -24,7 +24,7 @@ class MapController extends AbstractController {
       'join value_view LON using(row) ' .
       'join value_view TAG using(row) ' .
       "where LAT.tag='lat_deg' and LON.tag='lon_deg' and TAG.tag=? " .
-      " and LAT.content <> '' and LON.content <> '' " .
+      " and LAT.norm <> '0' and LON.norm <> '0' " .
       ' and row in ' . $filter_fragment .
       'order by row',
       $params->tag

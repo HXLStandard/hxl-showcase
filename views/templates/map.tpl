@@ -4,9 +4,12 @@
   <head>
     <title>#{$tag->tag|escape} in {$import->dataset_name|escape}</title>
     {include file="fragments/metadata.tpl"}
+    <link rel="stylesheet" href="/scripts/leaflet-0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="/scripts/leaflet-0.7.3/plugins/markercluster-0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="/scripts/leaflet-0.7.3/plugins/markercluster-0.4.0/MarkerCluster.Default.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="/scripts/leaflet-0.7.3/leaflet.js"></script>
+    <script src="/scripts/leaflet-0.7.3/plugins/markercluster-0.4.0/leaflet.markercluster.js"></script>
   </head>
   <body class="twocol">
     {include file="fragments/header.tpl"}
@@ -26,10 +29,6 @@
 
     <main>
       <h1>Mapping #<span class="tag">{$tag->tag|escape}</span> in {$import->dataset_name|escape}{if $params->import} ({$import->stamp|escape}){/if}</h1>
-
-{if $count > 400}
-      <p class="warning">Mapping only first 400 of {$count|number_format} locations. Please filter using the options on the right to narrow your view.</p>
-{/if}
 
       <section id="chart">
         <div id="chart_div"></div>
@@ -66,23 +65,7 @@
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
     <script type="text/javascript" src="/scripts/map.js"></script>
     <script type="text/javascript">
-      initmap();
-      var url = '{$baseurl}/map.json{$filters|params:'tag':$params->tag}';
-{literal}
-      $.getJSON(url, function (locations) {
-        var bounds = null;
-        $.each(locations, function(i, location) {
-          var point = [location[0], location[1]];
-          if (bounds == null) {
-            bounds = L.latLngBounds(point, point);
-          } else {
-            bounds.extend(point);
-          }
-          var marker = L.marker(point).addTo(map);
-        });
-        map.fitBounds(bounds);
-      });
-{/literal}
+      initmap('{$baseurl}/map.json{$filters|params:'tag':$params->tag}');
     </script>
   </body>
 </html>
