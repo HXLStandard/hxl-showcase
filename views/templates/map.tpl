@@ -70,9 +70,17 @@
       var url = '{$baseurl}/map.json{$filters|params:'tag':$params->tag}';
 {literal}
       $.getJSON(url, function (locations) {
+        var bounds = null;
         $.each(locations, function(i, location) {
-          var marker = L.marker([location[0], location[1]]).addTo(map);
+          var point = [location[0], location[1]];
+          if (bounds == null) {
+            bounds = L.latLngBounds(point, point);
+          } else {
+            bounds.extend(point);
+          }
+          var marker = L.marker(point).addTo(map);
         });
+        map.fitBounds(bounds);
       });
 {/literal}
     </script>
