@@ -16,20 +16,29 @@ function initmap(url) {
     map.addLayer(osm);
 
     $.getJSON(url, function (locations) {
-        var bounds = null;
         var markers = new L.MarkerClusterGroup();
         $.each(locations, function(i, location) {
             var point = [location[0], location[1]];
-            if (bounds == null) {
-                bounds = L.latLngBounds(point, point);
-            } else {
-                bounds.extend(point);
-            }
             var marker = L.marker(point);
+            marker.bindPopup(escapeHTML(location[2]));
             markers.addLayer(marker);
-            marker.bindPopup(location[2]);
         });
         map.addLayer(markers);
-        map.fitBounds(bounds);
+        map.fitBounds(markers.getBounds());
+    });
+}
+
+var entityMap = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': '&quot;',
+    "'": '&#39;',
+    "/": '&#x2F;'
+};
+
+function escapeHTML(string) {
+    return String(string).replace(/[&<>"'\/]/g, function (s) {
+        return entityMap[s];
     });
 }

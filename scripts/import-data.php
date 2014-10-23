@@ -81,8 +81,12 @@ foreach ($hxl as $row) {
     }
     // add the actual value
 
-    if ($tags[$i]->datatype == 'Number') {
+    if ($tags[$i]->datatype == 'Number' or preg_match('/_(num|deg)$/', $tags[$i]->tag)) {
       $norm = 0 + $value->content;
+      if (($tags[$i]->tag == 'lat_deg' and abs($norm) > 90) or
+          ($tags[$i]->tag == 'lon_deg' and abs($norm) > 180)) {
+        $norm = 0;
+      }
     } else {
       $norm = strtolower(trim(preg_replace('/\s+/', ' ', $value->content)));
     }
