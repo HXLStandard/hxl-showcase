@@ -12,6 +12,9 @@ php scripts/import-data.php dpm sbtf sbtf-lbr-health < sample-data/sbtf-lbr-heal
 echo "Sierra Leone ..."
 php scripts/import-data.php dpm sbtf sbtf-sle-health < sample-data/sbtf-sle-health.csv
 
+echo "Movement restrictions ..."
+php scripts/import-data.php dpm brc brc-westafrica-movement < sample-data/brc-westafrica-movement.csv
+
 exit 0
 
 # end
